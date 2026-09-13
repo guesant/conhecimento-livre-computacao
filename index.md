@@ -6,6 +6,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 
 ## Automação e provisionamento
 
+- [DevOps, IaC e GitOps](devops-iac-gitops.md): o que é prática e o que é ferramenta, e por que uma ferramenta como o Ansible ou um guarda-chuva como o Argo Project não pertencem a uma única categoria.
 - [Infraestrutura como código](iac-provisionamento.md): o que separa provisionamento de gestão de configuração, e onde o Ansible se encaixa nisso.
 - [Ansible](ansible.md): push versus pull, idempotência, modo de verificação, tags e o Vault.
 - [SSH](ssh.md): chave pessoal versus deploy key, `~/.ssh/config`, `known_hosts` e tunelamento.

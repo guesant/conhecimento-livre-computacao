@@ -1,0 +1,72 @@
+# DevOps, IaC e GitOps: o que é conceito e o que é ferramenta
+
+Uma confusão comum ao ler sobre este tipo de repositório é tratar prática e ferramenta como sinônimos: dizer que "o Ansible é DevOps" ou que "o Argo é GitOps" mistura dois níveis diferentes de abstração. DevOps é a cultura e o conjunto de práticas de engenharia para desenvolver, entregar e operar sistemas; dentro dele existem práticas mais específicas, como infraestrutura como código, GitOps, integração contínua e observabilidade; e cada uma dessas práticas é implementada por uma ou mais ferramentas concretas, que por sua vez não pertencem exclusivamente a uma única prática.
+
+```mermaid
+flowchart TB
+    subgraph DEVOPS["DevOps"]
+        direction TB
+        DEVOPS_DESC["Cultura e práticas de engenharia<br/>para desenvolver, entregar e operar sistemas"]
+        subgraph PRACTICES["Práticas"]
+            direction LR
+            IAC["Infraestrutura como código"]
+            GITOPS["GitOps"]
+            CICD["CI/CD"]
+            OBS["Observabilidade"]
+        end
+    end
+    subgraph TOOLS["Ferramentas"]
+        direction TB
+        TOFU["OpenTofu"]
+        ANSIBLE["Ansible"]
+        ARGOCD["Argo CD"]
+    end
+    IAC -->|implementada por| TOFU
+    IAC -->|também pode ser implementada por| ANSIBLE
+    GITOPS -->|implementada por| ARGOCD
+    CICD -.->|pode executar| TOFU
+    CICD -.->|pode executar| ANSIBLE
+```
+
+A relação entre infraestrutura como código e suas ferramentas já tem uma página própria, [Infraestrutura como código](iac-provisionamento.md), que separa a família de provisionamento (Terraform, Pulumi, OpenTofu, que criam e destroem recursos) da família de gestão de configuração (Ansible, Puppet, Chef, que configuram uma máquina que já existe). O ponto que vale reforçar aqui é que essas duas famílias não são práticas concorrentes: uma ferramenta de provisionamento cria a máquina, uma de configuração prepara o que roda dentro dela, e um mesmo projeto pode perfeitamente usar as duas em sequência, uma entregando o resultado para a outra.
+
+## Uma ferramenta pode pertencer a mais de uma prática
+
+Ansible é o exemplo mais direto: ele implementa infraestrutura como código quando o assunto é configuração de máquina, mas o mesmo Ansible também orquestra, via módulo de comando ou de API, chamadas que não têm nada de declarativo, como rodar um comando pontual de manutenção. Chamar Ansible de "a ferramenta de IaC deste projeto" simplificaria demais o que ele faz de fato.
+
+O mesmo cuidado vale para conjuntos de ferramentas publicados sob um nome guarda-chuva. O Argo Project, por exemplo, é uma coleção de projetos distintos mantidos sob o mesmo guarda-chuva CNCF: Argo CD (GitOps para Kubernetes), Argo Workflows (orquestração de pipelines dentro do cluster), Argo Rollouts (entrega progressiva, canário e blue-green) e Argo Events (automação disparada por evento). GitOps é a prática; Argo CD é uma implementação dela. O Argo Project não está contido em GitOps, é o inverso parcial: um dos projetos do Argo implementa GitOps, os outros três resolvem problemas diferentes que nada têm a ver com sincronizar um cluster a partir de um repositório git.
+
+```mermaid
+flowchart LR
+    ARGO["Argo Project"]
+    ARGO --> CD["Argo CD<br/>GitOps"]
+    ARGO --> WF["Argo Workflows<br/>orquestração de pipeline"]
+    ARGO --> RO["Argo Rollouts<br/>entrega progressiva"]
+    ARGO --> EV["Argo Events<br/>automação por evento"]
+    GITOPS["GitOps, o conceito"]
+    GITOPS -. implementado por .-> CD
+```
+
+## O fluxo real neste repositório
+
+Reduzindo isso ao que o hl-infrastructure de fato faz hoje: o Ansible parte de um Raspberry Pi que já existe fisicamente e prepara o sistema operacional e o cluster k3s; a partir do momento em que o Argo CD sobe, ele passa a reconciliar continuamente o estado do cluster a partir deste mesmo repositório, sem depender do Ansible rodar de novo para isso. A receita `just tofu`, descrita em [a pipeline de CI](../arquitetura/ci.md), já deixa o binário do OpenTofu pronto via Docker, mas ele não substitui o Ansible aqui: não existe nenhum módulo OpenTofu neste repositório ainda, porque não há nenhum recurso de nuvem para provisionar, o próprio hardware já existe antes do primeiro commit.
+
+```mermaid
+flowchart LR
+    GIT["Este repositório"]
+    ANSIBLE["Ansible"]
+    ARGOCD["Argo CD"]
+    PI["Raspberry Pi + k3s"]
+    APPS["Componentes de plataforma e satélites"]
+    GIT --> ANSIBLE
+    GIT --> ARGOCD
+    ANSIBLE -->|bootstrap único| PI
+    PI -->|depois de pronto| ARGOCD
+    ARGOCD -->|reconcilia continuamente| APPS
+```
+
+Se um dia este repositório precisar provisionar um recurso de nuvem de verdade (uma máquina virtual, um bucket de object storage), é aí que o `just tofu` deixa de ser só o binário pronto e passa a ter um módulo real por trás; até lá, a fronteira é exatamente essa: o Ansible cuida do que já existe fisicamente, o Argo CD cuida de tudo que roda dentro do cluster a partir do momento em que ele existe.
+
+## Continue por aqui
+
+[Infraestrutura como código](iac-provisionamento.md) aprofunda a distinção entre provisionamento e gestão de configuração; [Ansible](ansible.md) e [ArgoCD e GitOps](argocd.md) detalham cada ferramenta específica; [CI/CD](ci-cd.md) cobre a terceira prática citada aqui. Na arquitetura, [Ansible: as roles do bootstrap](../arquitetura/ansible.md) e ["GitOps: root e satélites"](../arquitetura/gitops-root-e-satelites.md) mostram como o hl-infrastructure aplica tudo isso na prática.
