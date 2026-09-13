@@ -1,0 +1,11 @@
+# Zero trust
+
+O modelo tradicional de segurança de rede é frequentemente descrito como um "castelo com fosso": um perímetro bem defendido (o firewall na borda da rede) separa um interior confiável de um exterior hostil, e uma vez que algo atravessa esse perímetro para dentro, é tratado como confiável por padrão. Esse modelo tem um ponto cego estrutural: se um atacante consegue atravessar o perímetro uma única vez, por qualquer caminho (uma credencial vazada, uma máquina comprometida, um fornecedor com acesso legítimo), ele se move livremente por dentro, porque o interior nunca foi desenhado para desconfiar de si mesmo.
+
+Zero trust é o princípio oposto: nenhuma posição na rede concede confiança automaticamente, nem estar "dentro" do perímetro. Toda requisição é verificada, autenticada e autorizada explicitamente, no ponto em que acontece, independentemente de vir de dentro ou de fora da rede corporativa tradicional. O NIST (o instituto de padrões dos Estados Unidos) formalizou esse conjunto de princípios no documento SP 800-207, que é hoje a referência mais citada quando alguém descreve uma arquitetura como "zero trust" de forma mais rigorosa do que apenas um termo de marketing.
+
+Aplicar esse princípio na prática não significa eliminar o perímetro, significa parar de depender só dele: cada serviço verifica sua própria autorização, cada conexão interna também é autenticada (e frequentemente cifrada), e o comprometimento de um único ponto passa a ter um raio de dano limitado ao que aquele ponto especificamente tinha permissão de fazer, em vez de a rede inteira.
+
+## Continue por aqui
+
+[Modelo de ameaças](../arquitetura/modelo-de-ameacas.md), na arquitetura, aplica um raciocínio próximo desse princípio sem citar o termo: cada fronteira de confiança do cluster (operador para node, GitHub para cluster, GHCR para cluster) é tratada e mitigada individualmente, em vez de assumir que atravessar uma fronteira concede confiança para as demais. A separação entre os projetos `infra` e `satellites` do ArgoCD, descrita em ["GitOps: root e satélites"](../arquitetura/gitops-root-e-satelites.md), é um exemplo concreto de limitar o raio de dano de um satélite comprometido ao seu próprio namespace.
