@@ -1,5 +1,29 @@
-# Tutorial
+# Aprender
 
-O tutorial ensina os conceitos deste repositório na ordem em que eles aparecem de verdade: primeiro o bootstrap único via Ansible, depois o estado contínuo via GitOps. Ele é uma sequência guiada, do início ao fim, para quem nunca operou este repositório chegar a um cluster funcionando e entender, ao longo do caminho, por que cada etapa existe. Se você já conhece o repositório e só precisa de um passo específico, vá direto ao [operacional](../operacional/index.md); se você quer entender uma peça em profundidade sem repetir o bootstrap inteiro, veja a [arquitetura](../arquitetura/index.md).
+Esta seção explica, sem depender de nenhuma decisão específica do hl-infrastructure, o que cada ferramenta e conceito usado no repositório é e por que existe. Ela não ensina como este repositório usa a ferramenta, isso é o trabalho da [arquitetura](../arquitetura/index.md), nem como executar uma tarefa com ela, isso é o trabalho do [operacional](../operacional/index.md). Uma página daqui deve continuar fazendo sentido fora deste repositório, para qualquer pessoa estudando a ferramenta em si.
 
-- [Primeiro bootstrap](primeiro-bootstrap.md): provisiona um Raspberry Pi do zero até um cluster k3s funcionando, com Cilium, cert-manager, CloudNativePG, ArgoCD, Sealed Secrets e o Argo CD Image Updater instalados.
+Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap](../operacional/primeiro-bootstrap.md), comece por ela aqui antes de rodar o comando.
+
+## Automação e provisionamento
+
+- [Infraestrutura como código](iac-provisionamento.md): o que separa provisionamento de gestão de configuração, e onde o Ansible se encaixa nisso.
+- [Ansible](ansible.md): push versus pull, idempotência, modo de verificação, tags e o Vault.
+- [SSH](ssh.md): chave pessoal versus deploy key, `~/.ssh/config`, `known_hosts` e tunelamento.
+- [firewalld](firewalld.md): zonas, regra permanente versus regra de runtime, e o recarregamento atômico.
+
+## Plataforma Kubernetes
+
+- [k3s](k3s.md): o que diferencia essa distribuição do Kubernetes completo, e o que é um kubeconfig.
+- [Rede interna do cluster](rede-interna-do-cluster.md): o papel de uma CNI, a rede overlay entre pods e a descoberta de serviço via CoreDNS.
+- [TLS automático](tls-automatico.md): o protocolo ACME, a Let's Encrypt, e o padrão de operator aplicado à emissão de certificado.
+- [ArgoCD e GitOps](argocd.md): o conceito de GitOps, o que é uma `Application` e um `AppProject`, e o padrão app-of-apps.
+- [Operators do Kubernetes](kubernetes-operators.md): o par CRD mais controller, e o loop de reconciliação que sustenta boa parte do que este cluster instala.
+
+## CI/CD, segurança e qualidade
+
+- [CI/CD](ci-cd.md): a diferença entre integração contínua, entrega contínua e implantação contínua.
+- [Scanning de vulnerabilidade](vulnerability-scanning.md): as categorias de scanner (dependência, código, segredo, infraestrutura) e o que cada uma pega que as outras não pegam.
+- [Supply chain e SBOM](supply-chain-e-sbom.md): por que a cadeia de suprimentos de software virou alvo, e o que um SBOM declara.
+- [Threat modeling](threat-modeling.md): como nomear ameaças de forma sistemática antes de desenhar uma mitigação.
+- [OWASP](owasp.md): o que é a fundação, seus projetos, e o que o Top 10 realmente lista.
+- [Zero trust](zero-trust.md): o princípio de não confiar por posição na rede, e o que ele substitui.
