@@ -49,7 +49,7 @@ flowchart LR
 
 ## O fluxo real neste repositório
 
-Reduzindo isso ao que o hl-infrastructure de fato faz hoje: o Ansible parte de um Raspberry Pi que já existe fisicamente e prepara o sistema operacional e o cluster k3s; a partir do momento em que o Argo CD sobe, ele passa a reconciliar continuamente o estado do cluster a partir deste mesmo repositório, sem depender do Ansible rodar de novo para isso. A receita `just tofu`, descrita em [a pipeline de CI](../arquitetura/ci.md), já deixa o binário do OpenTofu pronto via Docker, mas ele não substitui o Ansible aqui: não existe nenhum módulo OpenTofu neste repositório ainda, porque não há nenhum recurso de nuvem para provisionar, o próprio hardware já existe antes do primeiro commit.
+Reduzindo isso ao que o hl-infrastructure de fato faz hoje: o Ansible parte de um Raspberry Pi que já existe fisicamente e prepara o sistema operacional e o cluster k3s; a partir do momento em que o Argo CD sobe, ele passa a reconciliar continuamente o estado do cluster a partir deste mesmo repositório, sem depender do Ansible rodar de novo para isso. O OpenTofu também aparece, mas não substitui o Ansible: não há máquina para provisionar, o próprio hardware já existe antes do primeiro commit. O único módulo dele, `tofu/cloudflare`, declara o que vive fora do node e fora do cluster, o túnel e o DNS do blog na Cloudflare.
 
 ```mermaid
 flowchart LR
@@ -65,7 +65,7 @@ flowchart LR
     ARGOCD -->|reconcilia continuamente| APPS
 ```
 
-Se um dia este repositório precisar provisionar um recurso de nuvem de verdade (uma máquina virtual, um bucket de object storage), é aí que o `just tofu` deixa de ser só o binário pronto e passa a ter um módulo real por trás; até lá, a fronteira é exatamente essa: o Ansible cuida do que já existe fisicamente, o Argo CD cuida de tudo que roda dentro do cluster a partir do momento em que ele existe.
+A fronteira ganhou uma terceira peça quando o blog precisou de um túnel e de DNS na Cloudflare: o Ansible cuida do que já existe fisicamente, o Argo CD cuida de tudo que roda dentro do cluster a partir do momento em que ele existe, e o OpenTofu cuida do que vive numa API externa e não pertence a nenhum dos dois, hoje só o túnel, as regras de ingress dele e o registro DNS. A página [OpenTofu: a camada da Cloudflare](../arquitetura/opentofu.md) explica por que ele declara esses recursos mas nunca vê o token que o cloudflared usa.
 
 ## Continue por aqui
 
