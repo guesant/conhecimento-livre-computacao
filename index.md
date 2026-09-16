@@ -27,4 +27,5 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Supply chain e SBOM](supply-chain-e-sbom.md): por que a cadeia de suprimentos de software virou alvo, e o que um SBOM declara.
 - [Threat modeling](threat-modeling.md): como nomear ameaças de forma sistemática antes de desenhar uma mitigação.
 - [OWASP](owasp.md): o que é a fundação, seus projetos, e o que o Top 10 realmente lista.
+- [MITRE ATT&CK](mitre-attack.md): a base de conhecimento de comportamento de atacantes, o que são táticas e técnicas, e como este repositório se lê pela matriz de contêineres.
 - [Zero trust](zero-trust.md): o princípio de não confiar por posição na rede, e o que ele substitui.

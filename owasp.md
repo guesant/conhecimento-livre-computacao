@@ -12,4 +12,4 @@ Entre os outros projetos mantidos pela fundação, dois aparecem com frequência
 
 ## Continue por aqui
 
-[Threat modeling](threat-modeling.md) e [scanning de vulnerabilidade](vulnerability-scanning.md) cobrem, de forma mais sistemática e mais automatizável respectivamente, boa parte do mesmo espaço de problema que o Top 10 lista informalmente. [Mapa de controles](../arquitetura/mapa-de-controles.md), na arquitetura, mostra qual gate concreto deste repositório cobre qual categoria de risco.
+[MITRE ATT&CK](mitre-attack.md) olha o mesmo problema pelo lado do atacante, catalogando o que ele faz depois de explorar uma vulnerabilidade destas. [Threat modeling](threat-modeling.md) e [scanning de vulnerabilidade](vulnerability-scanning.md) cobrem, de forma mais sistemática e mais automatizável respectivamente, boa parte do mesmo espaço de problema que o Top 10 lista informalmente. [Mapa de controles](../arquitetura/mapa-de-controles.md), na arquitetura, mostra qual gate concreto deste repositório cobre qual categoria de risco.
