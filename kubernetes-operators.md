@@ -12,4 +12,4 @@ O mecanismo interno que faz um controller funcionar é o loop de reconciliação
 
 ## Continue por aqui
 
-O hl-infrastructure usa esse padrão em várias camadas: CloudNativePG opera bancos Postgres (veja o exemplo real em [Adicionar um satélite novo](../operacional/adicionar-um-satelite.md)), cert-manager opera certificados (veja [TLS automático](tls-automatico.md)), e o próprio sops-secrets-operator e o Argo CD Image Updater seguem essa mesma estrutura de CRD mais controller, documentados em [Ansible: as roles do bootstrap](../arquitetura/ansible.md).
+O hl-infrastructure usa esse padrão em várias camadas: CloudNativePG opera bancos Postgres (veja o exemplo real em [Adicionar um satélite novo](../operacional/adicionar-um-satelite.md)), cert-manager opera certificados (veja [TLS automático](tls-automatico.md)), e o próprio sops-secrets-operator e o Kargo seguem essa mesma estrutura de CRD mais controller, documentados em [Ansible: as roles do bootstrap](../arquitetura/ansible.md).
