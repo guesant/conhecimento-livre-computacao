@@ -12,6 +12,10 @@ Em vez de vários processos e serviços separados, k3s empacota os componentes e
 
 O `kubeconfig` é o arquivo que o `kubectl` (e qualquer outra ferramenta que fale com a API do Kubernetes) usa para saber a qual cluster se conectar, com qual credencial e, quando há mais de um cluster configurado, qual contexto usar por padrão. Ele contém o endereço do servidor de API, o certificado da autoridade certificadora do cluster (para validar que está falando com o servidor certo) e a credencial de quem está conectando. Perder esse arquivo não significa perder o cluster, mas significa perder o acesso administrativo a ele até gerar ou recuperar um novo.
 
+## Compatibilidade de versão entre kubectl e o API server
+
+O projeto Kubernetes declara um limite explícito de quanto um `kubectl` pode divergir da versão do API server com que ele fala, normalmente até uma versão minor de distância em qualquer direção. Fora dessa janela, o cliente monta uma requisição num formato que o servidor já não entende mais, ou deixa de enviar um campo que o servidor passou a exigir, e o erro só aparece na hora de aplicar um manifesto, não na conexão em si. Isso importa em qualquer lugar que baixe um `kubectl` separado da versão do próprio cluster, como uma imagem de ferramentas de CI, porque as duas versões podem divergir silenciosamente com o tempo se nada as mantiver alinhadas.
+
 ## Continue por aqui
 
-O [primeiro bootstrap](../operacional/primeiro-bootstrap.md) mostra o comando que recupera o `kubeconfig` gerado por este repositório. [Ansible: as roles do bootstrap](../arquitetura/ansible.md) documenta como a role `k3s` instala e configura esta distribuição especificamente para este cluster.
+O [primeiro bootstrap](../operacional/primeiro-bootstrap.md) mostra o comando que recupera o `kubeconfig` gerado por este repositório. [Ansible: as roles do bootstrap](../arquitetura/ansible.md) documenta como a role `k3s` instala e configura esta distribuição especificamente para este cluster, e [A pipeline de CI](../arquitetura/ci.md) mostra onde essa janela de compatibilidade é mantida na prática, entre o `kubectl` da imagem de ferramentas e a versão do k3s.
