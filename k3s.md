@@ -2,7 +2,7 @@
 
 Kubernetes é o sistema que orquestra containers: recebe uma descrição do que deve estar rodando (quais aplicações, quantas réplicas, que recursos cada uma pode consumir) e mantém esse estado, reiniciando o que falha e distribuindo carga entre as máquinas disponíveis. Um cluster Kubernetes completo é composto por vários componentes que normalmente rodam separados (o servidor de API, o `etcd` que guarda o estado, o escalonador, o controller manager, e mais), o que faz sentido operacional quando o cluster tem dezenas ou centenas de máquinas, mas é uma quantidade de peças móveis desproporcional para um cluster pequeno.
 
-k3s é uma distribuição de Kubernetes, mantida pela Rancher/SUSE, feita para reduzir exatamente esse custo operacional sem abandonar a API do Kubernetes: tudo que sabe falar com um cluster Kubernetes comum (`kubectl`, Helm, um manifesto YAML padrão) fala com um cluster k3s sem adaptação. A diferença está em como ele é empacotado e executado, não no que ele expõe para quem usa.
+k3s é uma distribuição de Kubernetes, mantida pela Rancher/SUSE, feita para reduzir exatamente esse custo operacional sem abandonar a API do Kubernetes: tudo que sabe falar com um cluster Kubernetes comum (`kubectl`, [Helm](helm-e-charts.md), um manifesto YAML padrão) fala com um cluster k3s sem adaptação. A diferença está em como ele é empacotado e executado, não no que ele expõe para quem usa.
 
 ## Binário único
 
