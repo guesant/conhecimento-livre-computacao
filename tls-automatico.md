@@ -4,7 +4,7 @@ TLS é o protocolo que cifra uma conexão e prova a identidade de um servidor po
 
 ## ACME e a Let's Encrypt
 
-O protocolo ACME (Automatic Certificate Management Environment) padronizou esse processo: um cliente ACME prova a posse de um domínio de forma automatizada (respondendo a um desafio HTTP num caminho específico daquele domínio, ou publicando um registro DNS específico) e recebe, também de forma automatizada, um certificado válido, tipicamente por 90 dias. A Let's Encrypt é a autoridade certificadora sem fins lucrativos que popularizou esse fluxo, emitindo certificados gratuitos e validados só por esse processo automatizado, sem intervenção humana em nenhum dos dois lados. A validade curta de 90 dias não é uma limitação, é uma escolha deliberada: como a renovação é automática, um certificado de vida curta reduz o estrago de uma chave privada comprometida sem impor nenhum custo operacional a mais em troca.
+O protocolo ACME (Automatic Certificate Management Environment) padronizou esse processo: um cliente ACME prova a posse de um domínio de forma automatizada (respondendo a um desafio HTTP num caminho específico daquele domínio, ou publicando um registro DNS específico) e recebe, também de forma automatizada, um certificado com validade curta. A Let's Encrypt é a autoridade certificadora sem fins lucrativos que popularizou esse fluxo, emitindo certificados gratuitos e validados só por esse processo automatizado, sem intervenção humana em nenhum dos dois lados. Essa validade curta não é uma limitação, é uma escolha deliberada: como a renovação é automática, um certificado de vida curta reduz o estrago de uma chave privada comprometida sem impor nenhum custo operacional a mais em troca.
 
 ## O padrão de operator aplicado à emissão de certificado
 
