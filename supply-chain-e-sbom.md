@@ -12,4 +12,4 @@ Os dois formatos mais usados para representar um SBOM são o SPDX, originado na 
 
 ## Continue por aqui
 
-[Scanning de vulnerabilidade](vulnerability-scanning.md) detalha a categoria de scanner (SCA) que examina justamente essas dependências de terceiros. [A pipeline de CI](../arquitetura/ci.md), na arquitetura, mostra o OSV-Scanner rodando sobre este repositório, consultando exatamente esse tipo de base de vulnerabilidade conhecida.
+[Scanning de vulnerabilidade](vulnerability-scanning.md) detalha a categoria de scanner (SCA) que examina justamente essas dependências de terceiros. [A pipeline de CI](../arquitetura/ci.md), na arquitetura, mostra o OSV-Scanner rodando sobre este repositório, consultando exatamente esse tipo de base de vulnerabilidade conhecida, e o Trivy gerando um SBOM real em formato CycloneDX para cada imagem que o cluster roda, publicado como artefato de cada execução.

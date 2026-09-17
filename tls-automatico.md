@@ -10,6 +10,10 @@ O protocolo ACME (Automatic Certificate Management Environment) padronizou esse 
 
 Dentro de um cluster Kubernetes, esse fluxo inteiro (solicitar, provar posse, renovar antes de expirar, distribuir o certificado renovado para quem precisa dele) pode ser automatizado por um operator dedicado a isso; cert-manager é a implementação mais usada desse padrão. Ele observa objetos declarando "este domínio precisa de um certificado válido, emitido por esta autoridade" e mantém isso verdade continuamente, renovando antes da expiração sem intervenção manual, incluindo casos em que a validade é de só alguns dias. O conceito geral de operator, que sustenta isso, está detalhado em [Operators do Kubernetes](kubernetes-operators.md).
 
+## Quando o domínio não existe na Internet
+
+ACME e a Let's Encrypt resolvem o caso de um domínio público, que qualquer cliente da Internet precisa validar. Um cluster também pode ter nomes internos, que só fazem sentido dentro da própria rede e nunca são resolvíveis por fora, e para esses nomes a Let's Encrypt simplesmente não emite certificado, porque não tem como provar posse de um domínio que não existe publicamente. A saída, nesse caso, é o próprio cert-manager emitir a partir de uma autoridade certificadora interna que ele mesmo cria: um `ClusterIssuer` autoassinado gera um certificado de CA, e um segundo `ClusterIssuer`, apontando para essa CA, emite os certificados de uso final. Nenhum cliente fora da rede confia nessa CA por padrão, então ela precisa ser instalada manualmente nos dispositivos que vão confiar nesses nomes internos, ao contrário de uma CA pública como a Let's Encrypt, que todo navegador já traz embutida.
+
 ## Continue por aqui
 
-O cert-manager é instalado neste cluster pela role documentada em [Ansible: as roles do bootstrap](../arquitetura/ansible.md).
+O cert-manager entra neste cluster como `Application` de plataforma do Argo CD, sincronizada pelo root, e não por uma role própria do Ansible; veja [GitOps: root e satélites](../arquitetura/gitops-root-e-satelites.md). O uso real dele aqui é justamente o caso de domínio interno descrito acima, para os nomes sob `guesant.internal` alcançáveis só pela tailnet: a cadeia de `ClusterIssuer` autoassinados e o certificado curinga que ela emite estão detalhados em [Ingress: os nomes internos pela tailnet](../arquitetura/ingress.md).

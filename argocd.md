@@ -2,11 +2,11 @@
 
 GitOps é uma forma de operar infraestrutura onde um repositório git é a única fonte da verdade sobre o que deveria estar rodando, e um agente dentro do próprio ambiente de destino (não uma pipeline externa empurrando mudanças) observa esse repositório continuamente e converge o estado real para o que está declarado nele. A diferença central em relação a uma pipeline de deploy tradicional (que roda `kubectl apply` a partir de um servidor de CI, por exemplo) é essa inversão: em vez de algo de fora empurrando mudanças para dentro do cluster, algo de dentro do cluster puxa o que precisa aplicar, comparando continuamente contra o git. Isso tem uma consequência prática importante: uma mudança feita manualmente no cluster, fora do git, é detectada como uma divergência (chamada de *drift*) e pode ser revertida automaticamente, porque o agente sempre volta a convergir para o que o git declara.
 
-ArgoCD é a implementação de GitOps mais usada para Kubernetes. Ele roda dentro do próprio cluster, observa um ou mais repositórios git, e mantém o estado do cluster sincronizado com o que esses repositórios declaram.
+ArgoCD é a implementação de GitOps mais usada para [Kubernetes](k3s.md). Ele roda dentro do próprio cluster, observa um ou mais repositórios git, e mantém o estado do cluster sincronizado com o que esses repositórios declaram.
 
 ## `Application` e `AppProject`
 
-Uma `Application`, no ArgoCD, é o objeto que declara "sincronize este caminho deste repositório git para este destino": qual repositório, qual branch ou tag, qual pasta dentro dele, e para qual cluster e namespace o resultado deve ir. Um `AppProject` agrupa `Application`s sob uma política de permissão comum: de quais repositórios elas podem vir, para quais destinos podem apontar, e quais tipos de recurso Kubernetes elas têm permissão de criar. Isso permite, por exemplo, que um projeto restrinja `Application`s de terceiros a só criarem recursos de namespace, nunca um recurso de escopo de cluster inteiro, sem precisar confiar cegamente no conteúdo de cada repositório.
+Uma `Application`, no ArgoCD, é o objeto que declara "sincronize este caminho deste repositório git para este destino": qual repositório, qual branch ou tag, qual pasta dentro dele, e para qual cluster e namespace o resultado deve ir. Um `AppProject` agrupa `Application`s sob uma política de permissão comum: de quais repositórios elas podem vir, para quais destinos podem apontar, e quais tipos de recurso [Kubernetes](k3s.md) elas têm permissão de criar. Isso permite, por exemplo, que um projeto restrinja `Application`s de terceiros a só criarem recursos de namespace, nunca um recurso de escopo de cluster inteiro, sem precisar confiar cegamente no conteúdo de cada repositório.
 
 ## O padrão app-of-apps
 

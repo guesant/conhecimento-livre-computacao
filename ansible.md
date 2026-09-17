@@ -16,7 +16,7 @@ Um **inventário** lista as máquinas que o Ansible gerencia, agrupadas e com va
 
 ## Segredos: o Vault
 
-Um playbook frequentemente precisa de valores sensíveis (senhas, chaves, tokens) que não devem ficar em texto claro dentro de um repositório git. O Ansible Vault resolve isso cifrando um arquivo inteiro (ou um valor dentro de um arquivo) com uma senha, de forma que o arquivo cifrado pode ser commitado com segurança e só é legível por quem tem a senha do Vault. Isso é diferente da estratégia que o hl-infrastructure usa para seus próprios segredos, que ficam num arquivo simplesmente fora do controle de versão; a página [Variáveis](../arquitetura/variaveis.md) explica essa escolha específica deste repositório.
+Um playbook frequentemente precisa de valores sensíveis (senhas, chaves, tokens) que não devem ficar em texto claro dentro de um repositório git. O Ansible Vault resolve isso cifrando um arquivo inteiro (ou um valor dentro de um arquivo) com uma senha, de forma que o arquivo cifrado pode ser commitado com segurança e só é legível por quem tem a senha do Vault. O hl-infrastructure não usa o Vault para os próprios segredos: em vez de uma senha compartilhada, ele cifra com SOPS para um conjunto de chaves públicas age, e o arquivo cifrado também é commitado; a página [Variáveis](../arquitetura/variaveis.md) explica essa escolha específica deste repositório.
 
 ## Testando roles: Molecule
 
@@ -24,4 +24,4 @@ Para quem escreve roles reutilizáveis, o Molecule é a ferramenta mais comum de
 
 ## Continue por aqui
 
-[Ansible: as roles do bootstrap](../arquitetura/ansible.md), na arquitetura, mostra como o hl-infrastructure aplica esses conceitos: a ordem real das suas 19 roles, seu próprio mecanismo de gate para o modo de verificação, e como ele recupera de um conflito de campo imutável num apply de chart. O [primeiro bootstrap](../operacional/primeiro-bootstrap.md), no operacional, é o comando real que dispara essa execução.
+[Ansible: as roles do bootstrap](../arquitetura/ansible.md), na arquitetura, mostra como o hl-infrastructure aplica esses conceitos: a ordem real das roles listadas em `ansible/site.yml`, seu próprio mecanismo de gate para o modo de verificação, e como ele recupera de um conflito de campo imutável num apply de chart. O [primeiro bootstrap](../operacional/primeiro-bootstrap.md), no operacional, é o comando real que dispara essa execução.

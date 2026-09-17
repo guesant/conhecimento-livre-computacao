@@ -20,4 +20,4 @@ Uma ferramenta como o fail2ban não filtra pacote nenhum por conta própria: ela
 
 ## Continue por aqui
 
-[Modelo de ameaças](../arquitetura/modelo-de-ameacas.md) explica por que uma zona de firewall só filtra a chain `INPUT`, e por que isso não protege uma porta exposta por uma `Service` do Kubernetes do tipo `LoadBalancer` ou `NodePort`, cujo tráfego passa pela chain `FORWARD` depois de um DNAT. A role real de firewall do hl-infrastructure está documentada em [Ansible: as roles do bootstrap](../arquitetura/ansible.md).
+[Modelo de ameaças](../arquitetura/modelo-de-ameacas.md) explica por que uma zona de firewall só filtra a chain `INPUT`, e por que isso não protege uma porta exposta por uma `Service` do [Kubernetes](k3s.md) do tipo `LoadBalancer` ou `NodePort`, cujo tráfego passa pela chain `FORWARD` depois de um DNAT. A role real de firewall do hl-infrastructure está documentada em [Ansible: as roles do bootstrap](../arquitetura/ansible.md).
