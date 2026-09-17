@@ -1,6 +1,6 @@
 # Helm e charts
 
-Helm é o gerenciador de pacotes mais usado do [Kubernetes](k3s.md): em vez de escrever e aplicar manifesto por manifesto (um `Deployment`, um `Service`, uma `ConfigMap`, cada um num arquivo YAML separado), Helm empacota um conjunto inteiro de manifestos relacionados, junto com os pontos de variação entre uma instalação e outra, num pacote único chamado chart. Instalar uma aplicação complexa, com dezenas de recursos interdependentes, vira rodar um comando contra um chart, em vez de aplicar cada arquivo na ordem certa manualmente.
+Helm é o gerenciador de pacotes mais usado do [Kubernetes](k3s.md): em vez de escrever e aplicar manifesto por manifesto (um `Deployment`, um `Service`, uma `ConfigMap`, cada um num arquivo YAML separado), Helm empacota um conjunto inteiro de manifestos relacionados, junto com os pontos de variação entre uma instalação e outra, num pacote único chamado chart. Instalar uma aplicação complexa, com muitos recursos interdependentes, vira rodar um comando contra um chart, em vez de aplicar cada arquivo na ordem certa manualmente.
 
 ## O que compõe um chart
 
@@ -16,11 +16,11 @@ Os marcadores dentro de um arquivo em `templates/` usam chaves duplas, `{{ }}`, 
 
 ## Dependências entre charts
 
-Um chart pode declarar dependência de outro chart, listado em `Chart.yaml` como um sub-chart: `helm dependency update` baixa cada dependência declarada, empacotada como um `.tgz`, para dentro de uma pasta `charts/`, e grava a versão exata de cada uma num arquivo `Chart.lock`, no mesmo espírito de um lock file de gerenciador de pacote de qualquer linguagem. Isso separa duas decisões que parecem uma só: a versão do chart em si (o pacote, a estrutura de templates) e a versão da aplicação que ele instala, que podem evoluir em ritmos diferentes.
+Um chart pode declarar dependência de outro chart, listado em `Chart.yaml` como um sub-chart: `helm dependency update` baixa cada dependência declarada, empacotada como um `.tgz`, para dentro de uma pasta `charts/`, e grava a versão exata de cada uma num arquivo `Chart.lock`, no mesmo espírito de um lock file de gerenciador de pacote de qualquer linguagem. Isso separa decisões que parecem uma só: a versão do chart em si (o pacote, a estrutura de templates) e a versão da aplicação que ele instala, que podem evoluir em ritmos diferentes.
 
 ## Vendorizar um chart de terceiro contra escrever um chart local
 
-Existem duas formas comuns de trazer um chart para um projeto, e a diferença entre elas não é técnica, é sobre quem mantém o conteúdo. A primeira é apontar para o chart de um projeto de terceiro, publicado num repositório Helm público, como dependência: o mantenedor do projeto original decide a estrutura dos templates e o que cada versão nova muda, e quem consome só ajusta valores em `values.yaml` e acompanha as versões novas publicadas. A segunda é escrever um chart inteiramente local, sem nenhuma dependência de terceiro, quando o objetivo não é instalar um software publicado por outra pessoa, mas gerar um conjunto de manifestos que só faz sentido dentro do próprio projeto, como um agrupamento de recursos que se repete de instância para instância. Nenhuma das duas é logicamente superior à outra; a escolha certa depende de quem é dono do conteúdo que está sendo empacotado.
+Existem formas comuns de trazer um chart para um projeto, e a diferença entre elas não é técnica, é sobre quem mantém o conteúdo. Uma é apontar para o chart de um projeto de terceiro, publicado num repositório Helm público, como dependência: o mantenedor do projeto original decide a estrutura dos templates e o que cada versão nova muda, e quem consome só ajusta valores em `values.yaml` e acompanha as versões novas publicadas. Outra é escrever um chart inteiramente local, sem nenhuma dependência de terceiro, quando o objetivo não é instalar um software publicado por outra pessoa, mas gerar um conjunto de manifestos que só faz sentido dentro do próprio projeto, como um agrupamento de recursos que se repete de instância para instância. Nenhuma delas é logicamente superior à outra; a escolha certa depende de quem é dono do conteúdo que está sendo empacotado.
 
 ## Continue por aqui
 

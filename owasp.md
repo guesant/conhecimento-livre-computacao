@@ -1,6 +1,6 @@
 # OWASP
 
-OWASP (Open Worldwide Application Security Project, antes Open Web Application Security Project) é uma fundação sem fins lucrativos dedicada a melhorar a segurança de software, mantida por contribuição voluntária de uma comunidade global, sem vínculo com nenhum fornecedor específico de ferramenta de segurança. É comum a sigla ser usada como sinônimo de um único documento, o Top 10, mas a fundação mantém dezenas de projetos e capítulos locais em cidades ao redor do mundo, cobrindo desde ferramentas de teste até guias de desenvolvimento seguro e material educacional.
+OWASP (Open Worldwide Application Security Project, antes Open Web Application Security Project) é uma fundação sem fins lucrativos dedicada a melhorar a segurança de software, mantida por contribuição voluntária de uma comunidade global, sem vínculo com nenhum fornecedor específico de ferramenta de segurança. É comum a sigla ser usada como sinônimo de um único documento, o Top 10, mas a fundação mantém muitos projetos e capítulos locais em cidades ao redor do mundo, cobrindo desde ferramentas de teste até guias de desenvolvimento seguro e material educacional.
 
 ## O Top 10
 
@@ -8,7 +8,7 @@ O OWASP Top 10 é uma lista, revisada periodicamente, das categorias de vulnerab
 
 ## Além do Top 10
 
-Entre os outros projetos mantidos pela fundação, dois aparecem com frequência fora do contexto puramente web: o ASVS (Application Security Verification Standard), um padrão detalhado de requisitos de segurança organizados por nível de rigor, usado como referência para auditoria e certificação; e o Dependency-Check, uma ferramenta de SCA (análise de composição de software, detalhada em [Scanning de vulnerabilidade](vulnerability-scanning.md)) mantida sob o guarda-chuva do projeto.
+Entre os outros projetos mantidos pela fundação, alguns aparecem com frequência fora do contexto puramente web: o ASVS (Application Security Verification Standard), um padrão detalhado de requisitos de segurança organizados por nível de rigor, usado como referência para auditoria e certificação; e o Dependency-Check, uma ferramenta de SCA (análise de composição de software, detalhada em [Scanning de vulnerabilidade](vulnerability-scanning.md)) mantida sob o guarda-chuva do projeto.
 
 ## Continue por aqui
 

@@ -1,6 +1,6 @@
 # k3s
 
-Kubernetes é o sistema que orquestra containers: recebe uma descrição do que deve estar rodando (quais aplicações, quantas réplicas, que recursos cada uma pode consumir) e mantém esse estado, reiniciando o que falha e distribuindo carga entre as máquinas disponíveis. Um cluster Kubernetes completo é composto por vários componentes que normalmente rodam separados (o servidor de API, o `etcd` que guarda o estado, o escalonador, o controller manager, e mais), o que faz sentido operacional quando o cluster tem dezenas ou centenas de máquinas, mas é uma quantidade de peças móveis desproporcional para um cluster pequeno.
+Kubernetes é o sistema que orquestra containers: recebe uma descrição do que deve estar rodando (quais aplicações, quantas réplicas, que recursos cada uma pode consumir) e mantém esse estado, reiniciando o que falha e distribuindo carga entre as máquinas disponíveis. Um cluster Kubernetes completo é composto por vários componentes que normalmente rodam separados (o servidor de API, o `etcd` que guarda o estado, o escalonador, o controller manager, e mais), o que faz sentido operacional quando o cluster tem muitas máquinas, mas é uma quantidade de peças móveis desproporcional para um cluster pequeno.
 
 k3s é uma distribuição de Kubernetes, mantida pela Rancher/SUSE, feita para reduzir exatamente esse custo operacional sem abandonar a API do Kubernetes: tudo que sabe falar com um cluster Kubernetes comum (`kubectl`, [Helm](helm-e-charts.md), um manifesto YAML padrão) fala com um cluster k3s sem adaptação. A diferença está em como ele é empacotado e executado, não no que ele expõe para quem usa.
 
@@ -14,7 +14,7 @@ O `kubeconfig` é o arquivo que o `kubectl` (e qualquer outra ferramenta que fal
 
 ## Compatibilidade de versão entre kubectl e o API server
 
-O projeto Kubernetes declara um limite explícito de quanto um `kubectl` pode divergir da versão do API server com que ele fala, normalmente até uma versão minor de distância em qualquer direção. Fora dessa janela, o cliente monta uma requisição num formato que o servidor já não entende mais, ou deixa de enviar um campo que o servidor passou a exigir, e o erro só aparece na hora de aplicar um manifesto, não na conexão em si. Isso importa em qualquer lugar que baixe um `kubectl` separado da versão do próprio cluster, como uma imagem de ferramentas de CI, porque as duas versões podem divergir silenciosamente com o tempo se nada as mantiver alinhadas.
+O projeto Kubernetes declara um limite explícito de quanto um `kubectl` pode divergir da versão do API server com que ele fala, normalmente até uma versão minor de distância em qualquer direção. Fora dessa janela, o cliente monta uma requisição num formato que o servidor já não entende mais, ou deixa de enviar um campo que o servidor passou a exigir, e o erro só aparece na hora de aplicar um manifesto, não na conexão em si. Isso importa em qualquer lugar que baixe um `kubectl` separado da versão do próprio cluster, como uma imagem de ferramentas de CI, porque essas versões podem divergir silenciosamente com o tempo se nada as mantiver alinhadas.
 
 ## Continue por aqui
 

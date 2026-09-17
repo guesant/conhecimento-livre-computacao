@@ -18,4 +18,4 @@ Uma `Application` pode exigir aprovação manual para cada sincronização, ou p
 
 ## Continue por aqui
 
-["GitOps: root e satélites"](../arquitetura/gitops-root-e-satelites.md), na arquitetura, mostra como o hl-infrastructure usa exatamente esse padrão app-of-apps, com dois `AppProject`s de permissão bem diferente (`infra` e `satellites`), e como um satélite novo é registrado em [Adicionar um satélite novo](../operacional/adicionar-um-satelite.md).
+["GitOps: root e satélites"](../arquitetura/gitops-root-e-satelites.md), na arquitetura, mostra como o hl-infrastructure usa exatamente esse padrão app-of-apps, com `AppProject`s de permissão bem diferente (`infra` e `satellites`), e como um satélite novo é registrado em [Adicionar um satélite novo](../operacional/adicionar-um-satelite.md).

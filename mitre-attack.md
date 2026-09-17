@@ -28,4 +28,4 @@ O kubescape, na CI, automatiza uma parte disso: o framework MITRE dele confere o
 
 ## Continue por aqui
 
-[Threat modeling](threat-modeling.md) é o outro lado da mesma moeda, partindo dos ativos em vez do atacante; o [modelo de ameaças](../arquitetura/modelo-de-ameacas.md) deste repositório é o resultado dos dois olhares, e o [mapa de controles](../arquitetura/mapa-de-controles.md) diz onde está a evidência de cada defesa citada na tabela.
+[Threat modeling](threat-modeling.md) é o outro lado da mesma moeda, partindo dos ativos em vez do atacante; o [modelo de ameaças](../arquitetura/modelo-de-ameacas.md) deste repositório é o resultado de ambos os olhares, e o [mapa de controles](../arquitetura/mapa-de-controles.md) diz onde está a evidência de cada defesa citada na tabela.

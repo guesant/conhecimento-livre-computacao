@@ -8,7 +8,7 @@ Uma zona agrupa um nível de confiança e um conjunto de regras associado: a zon
 
 ## Regra permanente versus regra de runtime
 
-Toda mudança em firewalld pode ser aplicada de duas formas: só na configuração em memória, que vale até o próximo reinício do serviço (runtime), ou também gravada em disco, que sobrevive a um reinício (`--permanent`). Uma regra aplicada só em runtime e nunca tornada permanente desaparece silenciosamente na próxima reinicialização da máquina, o que é uma causa comum e discreta de "a regra que eu apliquei sumiu".
+Toda mudança em firewalld pode ser aplicada de formas diferentes: só na configuração em memória, que vale até o próximo reinício do serviço (runtime), ou também gravada em disco, que sobrevive a um reinício (`--permanent`). Uma regra aplicada só em runtime e nunca tornada permanente desaparece silenciosamente na próxima reinicialização da máquina, o que é uma causa comum e discreta de "a regra que eu apliquei sumiu".
 
 ## O recarregamento atômico
 
@@ -16,7 +16,7 @@ Aplicar uma regra permanente não muda o comportamento em runtime imediatamente;
 
 ## Como um bloqueador de intrusão se encaixa no firewall
 
-Uma ferramenta como o fail2ban não filtra pacote nenhum por conta própria: ela só lê uma fonte de eventos, geralmente um arquivo de log de autenticação ou, num sistema baseado em systemd, o próprio journal, decide que uma origem deve ser banida depois de tentativas repetidas, e delega o bloqueio de verdade a um backend. Numa máquina onde o firewalld já administra as regras, o backend mais coerente é um ipset que o próprio firewalld gerencia, em vez de uma regra escrita direto na tabela do kernel por fora dele: assim as duas ferramentas nunca competem pela mesma configuração, e o firewalld continua sendo a única fonte da verdade sobre o que está bloqueado na máquina.
+Uma ferramenta como o fail2ban não filtra pacote nenhum por conta própria: ela só lê uma fonte de eventos, geralmente um arquivo de log de autenticação ou, num sistema baseado em systemd, o próprio journal, decide que uma origem deve ser banida depois de tentativas repetidas, e delega o bloqueio de verdade a um backend. Numa máquina onde o firewalld já administra as regras, o backend mais coerente é um ipset que o próprio firewalld gerencia, em vez de uma regra escrita direto na tabela do kernel por fora dele: assim as ferramentas nunca competem pela mesma configuração, e o firewalld continua sendo a única fonte da verdade sobre o que está bloqueado na máquina.
 
 ## Continue por aqui
 
