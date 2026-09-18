@@ -19,6 +19,21 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Especificações OCI e a pilha de runtimes](especificacoes-oci-e-pilha-de-runtimes.md): o que Image, Distribution e Runtime Spec padronizam, e a diferença entre engine, runtime de alto nível e runtime de baixo nível.
 - [Imagens, registries e Compose](imagens-registries-e-compose.md): `Dockerfile` contra a OCI Image Spec, tipos de registry, e o schema por trás de um `compose.yml`.
 
+## Rede
+
+- [Modelos OSI/TCP-IP e endereçamento IP](osi-tcpip-e-enderecamento-ip.md): CIDR, blocos privados, e por que IPv6 não é IPv4 com mais bits.
+- [TLS, mTLS e confiança de rede](tls-mtls-e-confianca-de-rede.md): o handshake, a cadeia de certificados, e a mesma lógica de confiança aplicada a rotas BGP.
+- [VPNs, túneis e bordas de rede](vpns-tuneis-e-bordas-de-rede.md): WireGuard, Tailscale, Cloudflare Tunnel, e onde um roteador dedicado entra na arquitetura.
+- [Interfaces, rotas e camada 2 no Linux](interfaces-rotas-e-l2-no-linux.md): `ip link`/`ip address`, ARP/NDP, veth pairs e bridges, VLAN e VXLAN.
+- [Netfilter, nftables e diagnóstico de rede](netfilter-nftables-e-diagnostico.md): hooks, conntrack, a diferença arquitetural entre `iptables` e `nftables`, e a ordem certa de investigar um problema de rede.
+- [Resolução, zonas e registros DNS](resolucao-zonas-e-registros-dns.md): o caminho de uma consulta, delegação, NS e glue records, e os tipos de registro em uso real.
+- [DNSSEC, mDNS e registro de domínio](dnssec-mdns-e-registro-de-dominio.md): a cadeia de assinaturas do DNSSEC, resolução sem servidor, e a diferença entre WHOIS/RDAP e resolução.
+- [Servidores DNS e conectividade WAN](servidores-dns-e-conectividade-wan.md): PowerDNS, Unbound, BIND e CoreDNS, e por que PPPoE/DHCP exigem DNS dinâmico.
+- [UFW e portas publicadas pelo Docker](ufw-e-portas-publicadas-pelo-docker.md): o modelo do UFW frente ao [firewalld](firewalld.md), e por que uma porta publicada pelo Docker escapa da política padrão do host.
+- [Cilium e Calico como CNI](cilium-e-calico-como-cni.md): eBPF contra regras iptables/nftables, e quando cada modelo se encaixa.
+- [Reverse proxy e split-horizon DNS](reverse-proxy-e-split-horizon-dns.md): roteamento por path, host e SNI, e como resolver um nome interno sem expor porta nenhuma.
+- [Service mesh: Istio e Linkerd](service-mesh-istio-e-linkerd.md): o que um sidecar resolve, e quando o custo operacional de um mesh se paga.
+
 ## Automação e provisionamento
 
 - [DevOps, IaC e GitOps](devops-iac-gitops.md): o que é prática e o que é ferramenta, e por que uma ferramenta como o [Ansible](ansible.md) ou um guarda-chuva como o Argo Project não pertencem a uma única categoria.
