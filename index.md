@@ -90,6 +90,8 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Scanning de vulnerabilidade](vulnerability-scanning.md): as categorias de scanner (dependência, código, segredo, infraestrutura) e o que cada uma pega que as outras não pegam.
 - [Supply chain e SBOM](supply-chain-e-sbom.md): por que a cadeia de suprimentos de software virou alvo, e o que um SBOM declara.
 - [Threat modeling](threat-modeling.md): como nomear ameaças de forma sistemática antes de desenhar uma mitigação.
+- [CodeQL e zizmor](codeql-e-zizmor.md): análise semântica de fluxo de dados no código, e a definição de um workflow de CI como sua própria superfície de ataque.
+- [kubeconform e conftest](kubeconform-e-conftest.md): validação de schema antes de validação de política, e por que a ordem entre as duas importa.
 - [Criptografia de segredos no Git](criptografia-de-segredos-no-git.md): por que base64 não é criptografia, e a diferença entre SOPS e Sealed Secrets.
 - [Bootstrap e rotação de segredos](bootstrap-e-rotacao-de-segredos.md): o problema recursivo da primeira credencial, e a ordem segura para trocar uma credencial em uso.
 - [Secret store externo](secret-store-externo.md): o External Secrets Operator, e o mecanismo de unseal do OpenBao e do Vault.
@@ -98,6 +100,9 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Zero trust](zero-trust.md): o princípio de não confiar por posição na rede, e o que ele substitui.
 - [Padrões e governança da internet](padroes-e-governanca-da-internet.md): IETF, W3C/WHATWG, Unicode, ICANN/IANA/LACNIC, NIST, EFF e o Marco Civil, e por que um processo aberto pesa mais que a documentação de um único fornecedor.
 - [Fundações do software livre e aberto](fundacoes-do-software-livre-e-aberto.md): OSI, Apache Software Foundation, Software Freedom Conservancy, Creative Commons e Internet Archive, e o problema jurídico que cada uma resolve.
+- [Linters de qualidade de artefato](linters-de-qualidade-de-artefato.md): hadolint, yamllint, markdownlint, cspell, jscpd e ast-grep, cada um verificando um tipo diferente de arquivo contra um conjunto de regras conhecidas.
+- [commitlint, lychee e Renovate](commitlint-lychee-e-renovate.md): mensagem de commit como regra verificável, link como promessa que expira, e dependência que se atualiza sozinha.
+- [jq e yq: consulta estruturada de JSON e YAML](jq-e-yq.md): por que tratar um documento estruturado como texto plano é frágil, e o limite entre consultar e validar.
 
 ## Diagnóstico
 
