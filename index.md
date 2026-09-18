@@ -46,6 +46,10 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 
 - [k3s](k3s.md): o que diferencia essa distribuição do Kubernetes completo, e o que é um kubeconfig.
 - [Rede interna do cluster](rede-interna-do-cluster.md): o papel de uma CNI, a rede overlay entre pods e a descoberta de serviço via CoreDNS.
+- [Distribuições Kubernetes](distribuicoes-kubernetes.md): o vocabulário básico do Kubernetes, K3s vs. RKE2, e outras distribuições como k0s e kubeadm.
+- [Orquestradores de containers: Compose, Swarm e Kubernetes](orquestradores-de-containers.md): quando cada escopo (um host, um cluster pequeno, produção escalável) faz sentido.
+- [Quorum, etcd e datastore do K3s](quorum-etcd-e-datastore-do-k3s.md): por que o número de servidores precisa ser ímpar, e a alternativa Kine.
+- [Kubernetes gerenciado e HA avançada](kubernetes-gerenciado-e-ha-avancada.md): EKS como exemplo de control plane delegado, e o que fica além de um cluster multinó comum.
 - [TLS automático](tls-automatico.md): o protocolo ACME, a Let's Encrypt, e o padrão de operator aplicado à emissão de certificado.
 - [ArgoCD e GitOps](argocd.md): o conceito de GitOps, o que é uma `Application` e um `AppProject`, e o padrão app-of-apps.
 - [Operators do Kubernetes](kubernetes-operators.md): o par CRD mais controller, e o loop de reconciliação que sustenta boa parte do que este cluster instala.
