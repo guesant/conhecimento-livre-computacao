@@ -35,12 +35,14 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Reverse proxy e split-horizon DNS](reverse-proxy-e-split-horizon-dns.md): roteamento por path, host e SNI, e como resolver um nome interno sem expor porta nenhuma.
 - [Gateway API: GatewayClass, Gateway e HTTPRoute](gateway-api.md): a separação de posse entre infraestrutura e aplicação que o `Ingress` clássico não tinha, e por que isso torna o controlador trocável.
 - [Service mesh: Istio e Linkerd](service-mesh-istio-e-linkerd.md): o que um sidecar resolve, e quando o custo operacional de um mesh se paga.
+- [Kong e o catálogo de um API gateway](kong-e-o-catalogo-de-um-api-gateway.md): modo com banco contra DB-less, Ingress Controller, modo híbrido e o control plane como serviço, cada um com seu próprio trade-off.
 
 ## Automação e provisionamento
 
 - [DevOps, IaC e GitOps](devops-iac-gitops.md): o que é prática e o que é ferramenta, e por que uma ferramenta como o [Ansible](ansible.md) ou um guarda-chuva como o Argo Project não pertencem a uma única categoria.
 - [Infraestrutura como código](iac-provisionamento.md): o que separa provisionamento de gestão de configuração, e onde o [Ansible](ansible.md) se encaixa nisso.
 - [Ansible](ansible.md): push versus pull, idempotência, modo de verificação, tags e o Vault.
+- [Entregar configuração a uma frota de hosts](entregar-configuracao-a-uma-frota-de-hosts.md): push a partir de uma estação, `ansible-pull` como auditoria ou como aplicação, chave por host, GitOps para o sistema operacional e imagem imutável.
 - [SSH](ssh.md): chave pessoal versus deploy key, `~/.ssh/config`, `known_hosts` e tunelamento.
 - [firewalld](firewalld.md): zonas, regra permanente versus regra de runtime, e o recarregamento atômico.
 - [just: executor de tarefas](just-executor-de-tarefas.md): comandos nomeados e descobríveis sem a sintaxe frágil do Make, e por que não substitui o Ansible.
@@ -96,6 +98,8 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Criptografia de segredos no Git](criptografia-de-segredos-no-git.md): por que base64 não é criptografia, e a diferença entre SOPS e Sealed Secrets.
 - [Bootstrap e rotação de segredos](bootstrap-e-rotacao-de-segredos.md): o problema recursivo da primeira credencial, e a ordem segura para trocar uma credencial em uso.
 - [Secret store externo](secret-store-externo.md): o External Secrets Operator, e o mecanismo de unseal do OpenBao e do Vault.
+- [Entregar segredo a um consumidor](entregar-segredo-a-um-consumidor.md): aplicação manual, operator dedicado, ESO, Sealed Secrets, CSI driver, servidor de segredo dedicado e identidade de workload, lado a lado.
+- [Cifrar um cofre de segredos em repouso](cifrar-um-cofre-de-segredos-em-repouso.md): sistema de arquivos cifrado, contêiner cifrado, imagem de disco nativa do SO, compartilhamento de segredo, chave em hardware, gerenciador comercial e TPM.
 - [OWASP](owasp.md): o que é a fundação, seus projetos, e o que o Top 10 realmente lista.
 - [MITRE ATT&CK](mitre-attack.md): a base de conhecimento de comportamento de atacantes, o que são táticas e técnicas, e como este repositório se lê pela matriz de contêineres.
 - [Zero trust](zero-trust.md): o princípio de não confiar por posição na rede, e o que ele substitui.

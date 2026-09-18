@@ -1,0 +1,31 @@
+# Kong e o catálogo de um API gateway
+
+Um API gateway como o Kong precisa guardar, em algum lugar, o catálogo do que ele roteia: quais serviços existem, quais rotas apontam para cada um, quais plugins (limite de taxa, autenticação, transformação de requisição) se aplicam a cada rota. Onde e como esse catálogo vive muda o resto da operação do gateway inteira, e existem caminhos bem diferentes para resolver isso, cada um com um conjunto de trade-offs próprio.
+
+## Modo com banco de dados
+
+O modo tradicional do Kong guarda o catálogo inteiro num banco de dados relacional (PostgreSQL, no Kong 3.x; versões anteriores também aceitavam Cassandra, removida do suporte atual), e uma ferramenta declarativa como o decK sincroniza um arquivo de configuração versionado contra esse banco através da API administrativa do Kong. Isso funciona bem e é a opção mais madura, mas introduz uma dependência: o gateway passa a precisar de um banco de dados disponível para funcionar, o que soma uma peça de infraestrutura a manter, um segredo de credencial de banco a proteger, e, quando mais de uma instalação de Kong aponta para o mesmo banco (por exemplo, durante uma migração de uma topologia para outra), um estado compartilhado onde uma sincronização de catálogo feita por um lado pode remover um registro que o outro lado esperava encontrar.
+
+## Modo DB-less: configuração declarativa sem banco
+
+O Kong também aceita rodar inteiramente sem banco de dados, carregando o catálogo inteiro a partir de um arquivo de configuração declarativo (YAML) na inicialização, ou recarregado via um endpoint específico da API administrativa. Nesse modo, a API administrativa continua respondendo a leituras normalmente, mas operações de escrita (criar uma rota via chamada de API, por exemplo) retornam erro, porque o estado só pode mudar recarregando o arquivo declarativo inteiro, nunca por escrita incremental; isso elimina totalmente a dependência de um banco de dados externo, ao custo de qualquer mudança de catálogo exigir substituir o arquivo inteiro e recarregar, não uma chamada pontual de API. Uma limitação real desse modo é que nem todo plugin do Kong funciona sem banco: plugins que dependem de armazenar estado próprio entre requisições (um plugin de autenticação que precisa persistir uma sessão, por exemplo) podem não ter suporte completo no modo sem banco, e a lista exata de quais plugins têm essa restrição muda entre versões do Kong, valendo a pena confirmar contra a versão específica em uso antes de assumir compatibilidade.
+
+## Kong Ingress Controller: o catálogo como recurso Kubernetes
+
+Dentro de um cluster Kubernetes, uma alternativa completamente diferente é o Kong Ingress Controller, que traduz recursos nativos do Kubernetes (o `Ingress` clássico, ou CRDs próprios do Kong) diretamente em configuração do gateway, sem um arquivo declarativo separado nem uma ferramenta como o decK fazendo a ponte. O catálogo, nesse modelo, é literalmente um conjunto de objetos Kubernetes versionados como qualquer outro manifesto do cluster, o que integra naturalmente com um fluxo GitOps já existente para o resto do cluster, ao custo de acoplar a definição de rota ao modelo de objeto do Kubernetes, uma opção que não se aplica a um Kong rodando fora de um cluster, como um gateway na borda da rede roteando tráfego para múltiplos destinos que não são necessariamente serviços do mesmo cluster.
+
+## Modo híbrido: control plane e data plane separados
+
+O modo híbrido do Kong separa duas responsabilidades em processos diferentes: um control plane, que continua precisando de um banco de dados para guardar o catálogo e onde a configuração é de fato gerenciada, e um ou mais data planes, processos sem banco que recebem a configuração do control plane e efetivamente processam o tráfego. Isso permite escalar o processamento de tráfego (adicionando mais data planes) sem multiplicar o acesso ao banco de dados, e isolar o control plane, mais sensível, do caminho direto de tráfego de produção; o ganho é mais evidente quando existem múltiplos data planes distribuídos, e menos evidente numa topologia de um único nó, onde a separação soma complexidade operacional sem o benefício de escala que a motiva.
+
+## Kong Konnect: control plane como serviço
+
+Konnect é a oferta de control plane gerenciado como serviço (SaaS) do próprio fabricante do Kong, removendo a necessidade de operar um banco de dados ou até um control plane próprio: a configuração é gerenciada numa plataforma hospedada externamente, e um ou mais data planes na infraestrutura própria se conectam a ela. Isso elimina a peça de banco de dados da equação por completo, ao custo de uma dependência externa de rede para gerenciar configuração (mesmo que o tráfego de produção continue passando só pelos data planes locais) e de um modelo de licenciamento comercial diferente do Kong open source autogerenciado; para quem opera num contexto onde dados saindo do próprio ambiente para um serviço de terceiro é uma restrição relevante, essa dependência externa do control plane merece avaliação própria antes de adotar.
+
+## Alternativas a considerar fora do Kong
+
+Nenhum desses modelos é exclusivo do Kong: outros gateways e proxies de borda (Traefik, já coberto em [Reverse proxy e split-horizon DNS](reverse-proxy-e-split-horizon-dns.md), Envoy Gateway, HAProxy) resolvem o mesmo problema de roteamento com arquiteturas de configuração próprias, cada um com seu próprio equilíbrio entre configuração declarativa em arquivo, API dinâmica e integração nativa com Kubernetes. A escolha entre ficar com o Kong num modo específico ou migrar para outro gateway depende do esforço de migração de rotas e plugins já em uso frente ao ganho concreto que a alternativa ofereceria, uma pergunta que só tem resposta específica ao caso real, não uma resposta genérica válida para qualquer ambiente.
+
+## Continue por aqui
+
+[Reverse proxy e split-horizon DNS](reverse-proxy-e-split-horizon-dns.md) cobre os conceitos gerais de roteamento por path, host e SNI que qualquer gateway, Kong incluído, aplica. [Gateway API: GatewayClass, Gateway e HTTPRoute](gateway-api.md) cobre o padrão que o Kong Ingress Controller também pode implementar, como alternativa ao seu modelo de CRD próprio.
