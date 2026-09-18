@@ -1,6 +1,6 @@
 # firewalld
 
-firewalld é um serviço de gestão de firewall para Linux que, por baixo, configura as mesmas tabelas de filtragem de pacote do kernel (nftables nas distribuições atuais, iptables nas mais antigas), mas expõe um modelo mais alto nível baseado em zonas, em vez de exigir que cada regra seja escrita diretamente na sintaxe de baixo nível dessas tabelas. Isso facilita raciocinar sobre a política de firewall como um todo, ao custo de uma camada de abstração a mais entre a regra declarada e o pacote de rede real.
+firewalld é um serviço de gestão de firewall para Linux que, por baixo, configura as mesmas tabelas de filtragem de pacote do kernel (nftables nas distribuições atuais, iptables nas mais antigas), mas expõe um modelo mais alto nível baseado em zonas, em vez de exigir que cada regra seja escrita diretamente na sintaxe de baixo nível dessas tabelas. Isso facilita raciocinar sobre a política de firewall como um todo, ao custo de uma camada de abstração a mais entre a regra declarada e o pacote de rede real. A camada extra também define a fronteira do que a ferramenta enxerga: o que outro processo escreve direto nas tabelas do kernel continua valendo, e o firewalld não sabe que aquilo existe. Por isso a recomendação prática, numa máquina que adota firewalld, é passar toda regra por ele, mesmo as que seriam mais curtas de escrever na sintaxe de baixo nível.
 
 ## Zonas
 
@@ -8,7 +8,7 @@ Uma zona agrupa um nível de confiança e um conjunto de regras associado: a zon
 
 ## Regra permanente versus regra de runtime
 
-Toda mudança em firewalld pode ser aplicada de formas diferentes: só na configuração em memória, que vale até o próximo reinício do serviço (runtime), ou também gravada em disco, que sobrevive a um reinício (`--permanent`). Uma regra aplicada só em runtime e nunca tornada permanente desaparece silenciosamente na próxima reinicialização da máquina, o que é uma causa comum e discreta de "a regra que eu apliquei sumiu".
+Toda mudança em firewalld pode ser aplicada de formas diferentes: só na configuração em memória, que vale até o próximo reinício do serviço (runtime), ou também gravada em disco, que sobrevive a um reinício (`--permanent`). Uma regra aplicada só em runtime e nunca tornada permanente desaparece silenciosamente na próxima reinicialização da máquina, o que é uma causa comum e discreta de "a regra que eu apliquei sumiu". A separação existe justamente para tornar possível testar uma regra arriscada sem se comprometer com ela, já que um reinício desfaz o experimento. Uma automação, ao contrário de uma pessoa testando, quer o oposto, e as tarefas de firewall deste repositório escrevem sempre com `--permanent`, deixando a configuração em memória ser produzida pelo recarregamento no fim da role.
 
 ## O recarregamento atômico
 
@@ -16,7 +16,7 @@ Aplicar uma regra permanente não muda o comportamento em runtime imediatamente;
 
 ## Como um bloqueador de intrusão se encaixa no firewall
 
-Uma ferramenta como o fail2ban não filtra pacote nenhum por conta própria: ela só lê uma fonte de eventos, geralmente um arquivo de log de autenticação ou, num sistema baseado em systemd, o próprio journal, decide que uma origem deve ser banida depois de tentativas repetidas, e delega o bloqueio de verdade a um backend. Numa máquina onde o firewalld já administra as regras, o backend mais coerente é um ipset que o próprio firewalld gerencia, em vez de uma regra escrita direto na tabela do kernel por fora dele: assim as ferramentas nunca competem pela mesma configuração, e o firewalld continua sendo a única fonte da verdade sobre o que está bloqueado na máquina.
+Uma ferramenta como o fail2ban não filtra pacote nenhum por conta própria: ela só lê uma fonte de eventos, geralmente um arquivo de log de autenticação ou, num sistema baseado em systemd, o próprio journal, decide que uma origem deve ser banida depois de tentativas repetidas, e delega o bloqueio de verdade a um backend. Numa máquina onde o firewalld já administra as regras, o backend mais coerente é um ipset que o próprio firewalld gerencia, em vez de uma regra escrita direto na tabela do kernel por fora dele. Assim as ferramentas nunca competem pela mesma configuração, e o firewalld continua sendo a única fonte da verdade sobre o que está bloqueado na máquina. É o arranjo da jaula de sshd deste node, que combina `banaction = firewallcmd-ipset` com `backend = systemd`, lendo as tentativas de login do journal em vez de um arquivo de log. Ler do journal importa num sistema onde o log de autenticação pode nem existir como arquivo separado, e o ipset importa porque guarda muitos endereços banidos numa estrutura só, consultada por uma regra única, em vez de uma regra por endereço.
 
 ## Continue por aqui
 

@@ -12,11 +12,11 @@ Um pod pode ser destruído e recriado a qualquer momento, e cada recriação nor
 
 ## Políticas de rede
 
-Por padrão, o Kubernetes deixa todo pod falar com todo outro pod do cluster, sem restrição nenhuma; a CNI só resolve como um pacote chega ao destino, não se ele deveria chegar. Um objeto `NetworkPolicy` restringe isso: ele declara, por seletor de rótulo, de onde um pod pode receber tráfego e para onde pode enviar, e a CNI é quem aplica essa regra de verdade, porque é ela quem intercepta cada pacote entre pods.
+Por padrão, o Kubernetes deixa todo pod falar com todo outro pod do cluster, sem restrição nenhuma; a CNI só resolve como um pacote chega ao destino, não se ele deveria chegar. Um objeto `NetworkPolicy` restringe isso: ele declara, por seletor de rótulo, de onde um pod pode receber tráfego e para onde pode enviar. Quem aplica essa regra de verdade é a CNI, porque é ela que intercepta cada pacote entre pods, e o objeto no servidor de API é só a declaração do que ela deve fazer. A distinção entre declarar e aplicar não é acadêmica, porque decide o que acontece quando as duas coisas não combinam.
 
-Implementar `NetworkPolicy` é opcional para uma CNI, e nem toda CNI o faz sozinha; Flannel é um exemplo de quem não faz. O Cilium implementa a política nativa e ainda oferece um CRD próprio mais expressivo, a `CiliumNetworkPolicy`, que aceita regra por identidade do Kubernetes, por nome de DNS ou por camada 7, para protocolos como HTTP e Kafka.
+Implementar essa política é opcional para uma CNI, e nem toda CNI o faz sozinha; Flannel é um exemplo de quem não faz. Num cluster assim, o objeto é aceito pelo servidor de API e simplesmente não produz efeito nenhum, sem erro e sem aviso, o que é o pior formato possível para uma falha de segurança. O Cilium implementa a política nativa e ainda oferece um CRD próprio mais expressivo, a `CiliumNetworkPolicy`, que aceita regra por identidade do Kubernetes, por nome de DNS ou por camada 7, para protocolos como HTTP e Kafka.
 
-Há uma sutileza que decide se a segmentação vale alguma coisa. A ausência de uma `NetworkPolicy` para um namespace, por si só, não bloqueia nada, apenas deixa de restringir, e um cluster pode passar a impressão de estar segmentado enquanto a maior parte do tráfego continua liberada. Uma configuração de segmentação séria inverte esse padrão, no Cilium com `policyEnforcementMode: always`, de modo que todo tráfego entre pods é negado até que uma política explícita o libere.
+Há uma sutileza que decide se a segmentação vale alguma coisa. A ausência de uma política para um namespace, por si só, não bloqueia nada, apenas deixa de restringir, e um cluster pode passar a impressão de estar segmentado enquanto a maior parte do tráfego continua liberada. Uma configuração de segmentação séria inverte esse padrão, no Cilium com `policyEnforcementMode: always`, de modo que todo tráfego entre pods é negado até que uma política explícita o libere.
 
 ## Continue por aqui
 

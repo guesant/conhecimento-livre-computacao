@@ -4,9 +4,9 @@ Ansible é uma ferramenta de gestão de configuração: ela conecta numa máquin
 
 ## Idempotência
 
-O conceito mais importante para entender Ansible é a idempotência: rodar o mesmo playbook de novo deve produzir o mesmo resultado, e a execução seguinte não deve fazer nada além de confirmar que o estado já está correto. Isso é o que diferencia um playbook bem escrito de um script shell comum: um script que faz `mkdir pasta` falha ao rodar de novo porque a pasta já existe; uma tarefa Ansible equivalente verifica se a pasta já existe antes de decidir se precisa criá-la, e reporta esse resultado como `ok`, nada mudou, em vez de `changed`, algo mudou, ou de falhar.
+O conceito mais importante para entender Ansible é a idempotência: rodar o mesmo playbook de novo deve produzir o mesmo resultado, e a execução seguinte não deve fazer nada além de confirmar que o estado já está correto. Isso é o que diferencia um playbook bem escrito de um script shell comum. Um script que faz `mkdir pasta` falha ao rodar de novo porque a pasta já existe, enquanto uma tarefa Ansible equivalente verifica se a pasta já existe antes de decidir se precisa criá-la. O resultado dessa checagem aparece no relatório como `ok`, nada mudou, em vez de `changed`, algo mudou, ou de uma falha. Essa distinção entre `ok` e `changed` é o que permite ler uma execução inteira e saber, sem abrir nada, o que aquela rodada realmente mexeu no node.
 
-Checar antes de agir é o que permite rodar o mesmo playbook contra uma máquina nova e contra uma máquina já configurada sem medo de quebrar nada. Na prática, isso muda como se aplica uma mudança pequena: em vez de identificar o delta e aplicá-lo à mão, reexecuta-se o playbook inteiro e deixa-se que as tarefas já satisfeitas não façam nada.
+Checar antes de agir é o que permite rodar o mesmo playbook contra uma máquina nova e contra uma máquina já configurada sem medo de quebrar nada. Na prática, isso muda como se aplica uma mudança pequena: em vez de identificar o delta e aplicá-lo à mão, reexecuta-se o playbook inteiro e deixa-se que as tarefas já satisfeitas não façam nada. A idempotência não é automática, porém, e vem embutida nos módulos que descrevem estado, não em qualquer tarefa. Uma tarefa que dispara um comando cru precisa dizer ela mesma o que conta como mudança, como faz a role `firewall` deste repositório, que trata a resposta `ALREADY_ENABLED` do `firewall-cmd` como sinal de que a regra já estava lá.
 
 ## Modo de verificação (`--check`)
 
@@ -22,7 +22,7 @@ Um playbook frequentemente precisa de valores sensíveis (senhas, chaves, tokens
 
 ## Testando roles: Molecule
 
-Para quem escreve roles reutilizáveis, o Molecule é a ferramenta mais comum de teste: ele sobe um container ou máquina virtual descartável, aplica a role nela, roda verificações sobre o resultado e destrói o ambiente ao final. Isso permite testar uma role de forma isolada e repetível, sem depender de uma máquina real ou de rodar o playbook inteiro para validar uma mudança pequena.
+Para quem escreve roles reutilizáveis, o Molecule é a ferramenta mais comum de teste: ele sobe um container ou máquina virtual descartável, aplica a role nela, roda verificações sobre o resultado e destrói o ambiente ao final. Isso permite testar uma role de forma isolada e repetível, sem depender de uma máquina real ou de rodar o playbook inteiro para validar uma mudança pequena. O ganho é maior quando a role é publicada para terceiros, que a aplicarão em distribuições e versões que quem a escreveu nunca vai ver. O hl-infrastructure não usa Molecule: as roles daqui existem só para este node, e a verificação equivalente é o `ansible-lint` do `just lint-ansible` somado a rodar o playbook com `--check --diff` contra o Pi real, que é a mesma máquina que a execução de verdade vai tocar.
 
 ## Continue por aqui
 

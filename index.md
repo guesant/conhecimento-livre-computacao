@@ -1,8 +1,8 @@
 # Aprender
 
-Esta seção explica, sem depender de nenhuma decisão específica do hl-infrastructure, o que cada ferramenta e conceito usado no repositório é e por que existe. Ela não ensina como este repositório usa a ferramenta, isso é o trabalho da [arquitetura](../arquitetura/index.md), nem como executar uma tarefa com ela, isso é o trabalho do [operacional](../operacional/index.md). Uma página daqui deve continuar fazendo sentido fora deste repositório, para qualquer pessoa estudando a ferramenta em si.
+Esta seção explica, sem depender de nenhuma decisão específica do hl-infrastructure, o que cada ferramenta e conceito usado no repositório é e por que existe. Ela não ensina como este repositório usa a ferramenta, isso é o trabalho da [arquitetura](../arquitetura/index.md), nem como executar uma tarefa com ela, isso é o trabalho do [operacional](../operacional/index.md). Uma página daqui deve continuar fazendo sentido fora deste repositório, para qualquer pessoa estudando a ferramenta em si. Na prática, isso significa que um exemplo pode citar um recurso deste cluster, mas o argumento da página não pode depender de conhecê-lo.
 
-Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap](../operacional/primeiro-bootstrap.md), comece por ela aqui antes de rodar o comando.
+Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap](../operacional/primeiro-bootstrap.md), comece por ela aqui antes de rodar o comando. As páginas abaixo estão agrupadas na ordem em que as camadas se empilham, da automação que prepara o node até os gates de qualidade que rodam sobre o conjunto. Ler a página da ferramenta antes de executar o passo custa poucos minutos e evita o hábito de rodar um comando sem saber o que ele deixa no sistema.
 
 ## Automação e provisionamento
 
