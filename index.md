@@ -44,7 +44,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [SSH](ssh.md): chave pessoal versus deploy key, `~/.ssh/config`, `known_hosts` e tunelamento.
 - [firewalld](firewalld.md): zonas, regra permanente versus regra de runtime, e o recarregamento atômico.
 - [just: executor de tarefas](just-executor-de-tarefas.md): comandos nomeados e descobríveis sem a sintaxe frágil do Make, e por que não substitui o Ansible.
-- [rsync e sshfs](rsync-e-sshfs.md): por que `--delete` não torna o rsync bidirecional, e o que muda quando um filesystem remoto vira um ponto de montagem local via FUSE.
+- [Transferência de arquivo: rsync, sshfs, sftp e rclone](rsync-e-sshfs.md): por que `--delete` não torna o rsync bidirecional, o que muda com um filesystem remoto via FUSE, e por que `rclone` estende essa lógica para armazenamento em nuvem.
 - [systemd: units, timers e dependências](systemd-units-timers-e-dependencias.md): tipo de serviço, a diferença entre ordem e requisito, e o que um timer resolve que o cron não resolve nativamente.
 - [Podman Quadlets: containers como unidades systemd](podman-quadlets.md): por que gerar a unit a partir de um container existente é o caminho errado, e como um arquivo declarativo vira `.service` automaticamente.
 - [GitOps para Podman: orches e materia](gitops-para-podman-orches-e-materia.md): o mesmo padrão de reconciliação contínua do Argo CD, aplicado a um único host sem cluster nenhum por trás.
@@ -65,6 +65,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [TLS automático](tls-automatico.md): o protocolo ACME, a Let's Encrypt, e o padrão de operator aplicado à emissão de certificado.
 - [step-ca e trust-manager](step-ca-e-trust-manager.md): uma CA privada que fala ACME, e como distribuir a confiança nela para vários namespaces sem copiar o certificado à mão.
 - [ArgoCD e GitOps](argocd.md): o conceito de GitOps, o que é uma `Application` e um `AppProject`, e o padrão app-of-apps.
+- [Entrega progressiva: canary, blue-green e Argo Rollouts](entrega-progressiva-canary-blue-green-e-argo-rollouts.md): a diferença entre um rollout cego e um condicionado a uma métrica real, e o que o Argo Image Updater fazia antes de ferramentas como o Kargo existirem.
 - [Operators do Kubernetes](kubernetes-operators.md): o par CRD mais controller, e o loop de reconciliação que sustenta boa parte do que este cluster instala.
 - [Helm e charts](helm-e-charts.md): o que compõe um chart, a sintaxe de template, e a diferença entre `helm template` e `helm install`.
 - [Gerar várias instâncias com Helm](helm-templating-de-lista.md): o padrão `range` sobre uma lista em `values.yaml`, e o risco de colisão com outra sintaxe de chaves duplas.
