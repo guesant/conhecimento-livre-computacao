@@ -43,6 +43,8 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Ansible](ansible.md): push versus pull, idempotência, modo de verificação, tags e o Vault.
 - [SSH](ssh.md): chave pessoal versus deploy key, `~/.ssh/config`, `known_hosts` e tunelamento.
 - [firewalld](firewalld.md): zonas, regra permanente versus regra de runtime, e o recarregamento atômico.
+- [just: executor de tarefas](just-executor-de-tarefas.md): comandos nomeados e descobríveis sem a sintaxe frágil do Make, e por que não substitui o Ansible.
+- [rsync e sshfs](rsync-e-sshfs.md): por que `--delete` não torna o rsync bidirecional, e o que muda quando um filesystem remoto vira um ponto de montagem local via FUSE.
 - [systemd: units, timers e dependências](systemd-units-timers-e-dependencias.md): tipo de serviço, a diferença entre ordem e requisito, e o que um timer resolve que o cron não resolve nativamente.
 - [Podman Quadlets: containers como unidades systemd](podman-quadlets.md): por que gerar a unit a partir de um container existente é o caminho errado, e como um arquivo declarativo vira `.service` automaticamente.
 - [GitOps para Podman: orches e materia](gitops-para-podman-orches-e-materia.md): o mesmo padrão de reconciliação contínua do Argo CD, aplicado a um único host sem cluster nenhum por trás.
@@ -98,6 +100,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 
 - [Diagnóstico de Pod, nó, certificado e Argo CD](diagnostico-de-pod-no-cluster-e-do-argocd.md): por que `kubectl describe` costuma valer mais que os logs de um container, e como ler a causa de um `Pending`, um `NotReady`, um `Certificate` travado ou um `Degraded`.
 - [Smoke test e o limite da automação de checklist](smoke-test-e-o-limite-da-automacao-de-checklist.md): a diferença entre uma verificação rasa e prova de prontidão, saída estruturada para automação, e por que nem todo item de checklist deveria virar código.
+- [Diagnóstico profundo: iperf3, tcpdump e strace](diagnostico-profundo-iperf3-tcpdump-e-strace.md): quando um teste de conectividade simples não basta, e o risco de cada ferramenta competir com ou expor o próprio sistema investigado.
 
 ## Ferramentas e estudo
 
