@@ -110,6 +110,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 
 - [Diagnóstico de Pod, nó, certificado e Argo CD](diagnostico-de-pod-no-cluster-e-do-argocd.md): por que `kubectl describe` costuma valer mais que os logs de um container, e como ler a causa de um `Pending`, um `NotReady`, um `Certificate` travado ou um `Degraded`.
 - [Smoke test e o limite da automação de checklist](smoke-test-e-o-limite-da-automacao-de-checklist.md): a diferença entre uma verificação rasa e prova de prontidão, saída estruturada para automação, e por que nem todo item de checklist deveria virar código.
+- [Padrões defensivos de script operacional](padroes-defensivos-de-script-operacional.md): pré-condição antes de agir, download com checksum, confirmação explícita antes do destrutivo, esperar condição em vez de tempo fixo, e limpeza garantida mesmo em erro.
 - [Diagnóstico profundo: iperf3, tcpdump e strace](diagnostico-profundo-iperf3-tcpdump-e-strace.md): quando um teste de conectividade simples não basta, e o risco de cada ferramenta competir com ou expor o próprio sistema investigado.
 
 ## Ferramentas e estudo
