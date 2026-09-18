@@ -68,6 +68,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Fundamentos de backup, RPO e RTO](fundamentos-de-backup-rpo-e-rto.md): a diferença entre réplica, snapshot e backup, e as duas metas que toda estratégia precisa responder.
 - [Retenção, testes de restauração e Velero](retencao-testes-e-velero.md): por que um Job `Completed` não prova que um backup restaura, e o que o Velero cobre além do snapshot do etcd.
 - [Backup do etcd, do CloudNativePG e da chave age](backup-do-etcd-cnpg-e-chave-age.md): o snapshot nativo do K3s, WAL contínuo mais backup agendado, e por que a chave privada age é o ponto de falha única de todos os outros segredos.
+- [Reconstrução de cluster single-node e recuperação de segredos](reconstrucao-de-cluster-single-node-e-recuperacao-de-segredos.md): restaurar do snapshot contra reconstruir via GitOps, e por que um snapshot de Secrets não é o mesmo que recuperar a capacidade de decifrar segredos novos.
 
 ## CI/CD, segurança e qualidade
 
