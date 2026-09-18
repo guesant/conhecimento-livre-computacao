@@ -93,6 +93,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 ## Diagnóstico
 
 - [Diagnóstico de Pod, nó, certificado e Argo CD](diagnostico-de-pod-no-cluster-e-do-argocd.md): por que `kubectl describe` costuma valer mais que os logs de um container, e como ler a causa de um `Pending`, um `NotReady`, um `Certificate` travado ou um `Degraded`.
+- [Smoke test e o limite da automação de checklist](smoke-test-e-o-limite-da-automacao-de-checklist.md): a diferença entre uma verificação rasa e prova de prontidão, saída estruturada para automação, e por que nem todo item de checklist deveria virar código.
 
 ## Ferramentas e estudo
 
