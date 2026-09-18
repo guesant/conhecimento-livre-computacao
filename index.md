@@ -58,6 +58,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Operators do Kubernetes](kubernetes-operators.md): o par CRD mais controller, e o loop de reconciliação que sustenta boa parte do que este cluster instala.
 - [Helm e charts](helm-e-charts.md): o que compõe um chart, a sintaxe de template, e a diferença entre `helm template` e `helm install`.
 - [Gerar várias instâncias com Helm](helm-templating-de-lista.md): o padrão `range` sobre uma lista em `values.yaml`, e o risco de colisão com outra sintaxe de chaves duplas.
+- [Manutenção de nó: cordon, drain e disco](manutencao-de-no-cordon-drain-e-disco.md): a diferença entre parar de agendar e evacuar, e os dois consumidores de disco que competem pelo mesmo espaço.
 
 ## Observabilidade e backup
 
@@ -66,6 +67,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Alertas acionáveis e distributed tracing](alertas-acionaveis-e-distributed-tracing.md): o que torna um alerta útil em vez de ruído, e o que um trace mostra que uma métrica isolada não mostra.
 - [Fundamentos de backup, RPO e RTO](fundamentos-de-backup-rpo-e-rto.md): a diferença entre réplica, snapshot e backup, e as duas metas que toda estratégia precisa responder.
 - [Retenção, testes de restauração e Velero](retencao-testes-e-velero.md): por que um Job `Completed` não prova que um backup restaura, e o que o Velero cobre além do snapshot do etcd.
+- [Backup do etcd, do CloudNativePG e da chave age](backup-do-etcd-cnpg-e-chave-age.md): o snapshot nativo do K3s, WAL contínuo mais backup agendado, e por que a chave privada age é o ponto de falha única de todos os outros segredos.
 
 ## CI/CD, segurança e qualidade
 
@@ -79,6 +81,10 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [OWASP](owasp.md): o que é a fundação, seus projetos, e o que o Top 10 realmente lista.
 - [MITRE ATT&CK](mitre-attack.md): a base de conhecimento de comportamento de atacantes, o que são táticas e técnicas, e como este repositório se lê pela matriz de contêineres.
 - [Zero trust](zero-trust.md): o princípio de não confiar por posição na rede, e o que ele substitui.
+
+## Diagnóstico
+
+- [Diagnóstico de Pod, nó, certificado e Argo CD](diagnostico-de-pod-no-cluster-e-do-argocd.md): por que `kubectl describe` costuma valer mais que os logs de um container, e como ler a causa de um `Pending`, um `NotReady`, um `Certificate` travado ou um `Degraded`.
 
 ## Continue por aqui
 
