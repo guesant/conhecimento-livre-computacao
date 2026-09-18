@@ -62,6 +62,8 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Helm e charts](helm-e-charts.md): o que compõe um chart, a sintaxe de template, e a diferença entre `helm template` e `helm install`.
 - [Gerar várias instâncias com Helm](helm-templating-de-lista.md): o padrão `range` sobre uma lista em `values.yaml`, e o risco de colisão com outra sintaxe de chaves duplas.
 - [Requests, limits e QoS de um Pod](requests-limits-e-qos-de-um-pod.md): por que ultrapassar o limit de memória mata o container e ultrapassar o de CPU só o deixa mais lento, e as três classes que decidem quem é sacrificado primeiro.
+- [Prontidão de workload: probes, PDB e desligamento gracioso](prontidao-de-workload-probes-pdb-e-desligamento.md): a `startupProbe` que separa inicialização lenta de trava em runtime, o que um PodDisruptionBudget protege e o que ele não protege, e o que acontece entre o `SIGTERM` e o `SIGKILL`.
+- [Jobs, CronJobs e securityContext de um Pod](jobs-cronjobs-e-securitycontext.md): por que um Job precisa terminar em vez de rodar para sempre, e os campos de `securityContext` que reduzem o que um container comprometido consegue fazer.
 - [Manutenção de nó: cordon, drain e disco](manutencao-de-no-cordon-drain-e-disco.md): a diferença entre parar de agendar e evacuar, e os dois consumidores de disco que competem pelo mesmo espaço.
 
 ## Observabilidade e backup
