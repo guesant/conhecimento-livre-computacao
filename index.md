@@ -33,6 +33,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Fail2ban, atualizações automáticas e journal persistente](fail2ban-atualizacoes-automaticas-e-journal.md): a camada que reage a tentativas repetidas depois que o firewall já deixou passar, e por que o journal persistente e a sincronização de horário custam pouco e evitam diagnósticos às cegas.
 - [Cilium e Calico como CNI](cilium-e-calico-como-cni.md): eBPF contra regras iptables/nftables, e quando cada modelo se encaixa.
 - [Reverse proxy e split-horizon DNS](reverse-proxy-e-split-horizon-dns.md): roteamento por path, host e SNI, e como resolver um nome interno sem expor porta nenhuma.
+- [Gateway API: GatewayClass, Gateway e HTTPRoute](gateway-api.md): a separação de posse entre infraestrutura e aplicação que o `Ingress` clássico não tinha, e por que isso torna o controlador trocável.
 - [Service mesh: Istio e Linkerd](service-mesh-istio-e-linkerd.md): o que um sidecar resolve, e quando o custo operacional de um mesh se paga.
 
 ## Automação e provisionamento
