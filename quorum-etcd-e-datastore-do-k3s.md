@@ -6,6 +6,12 @@ Em K3s, o estado do cluster fica num datastore, com dois caminhos possíveis. **
 
 Um único servidor é a escolha certa para laboratórios e ambientes onde a perda é aceitável, ou quando o orçamento não comporta as múltiplas máquinas que HA exige; fora desses casos, se a aplicação precisa rodar sem janelas de indisponibilidade, quorum deixa de ser opcional.
 
+## Servidores, agentes e o endpoint de API
+
+Um cluster K3s com mais de um nó distingue dois papéis: um **servidor** roda o control plane completo (API, scheduler, o datastore descrito acima) e pode agendar workloads comuns também, a menos que seja explicitamente marcado para não fazer isso; um **agente** roda só o kubelet e o proxy de rede, executando workloads sem participar do control plane nem do quorum. Essa distinção significa que nem todo nó adicional aumenta a tolerância a falha do control plane, só servidores adicionais fazem isso; adicionar agentes aumenta a capacidade de executar workloads sem tocar em nada relacionado a quorum, o que os torna a forma mais simples de escalar capacidade horizontal sem reabrir a discussão de número ímpar de servidores.
+
+Com mais de um servidor, outro problema aparece: um kubeconfig ou um agente que se junta ao cluster precisa de um único endereço de API para se conectar, mas existem vários servidores igualmente válidos para atendê-lo, e nenhum deles individualmente deveria ser tratado como o endereço permanente, porque perder justamente aquele servidor derrubaria a capacidade de qualquer cliente novo se conectar mesmo com quorum saudável nos demais. Um balanceador de carga na frente dos servidores (dedicado, ou um recurso mais simples como round-robin em DNS ou um proxy leve) resolve isso apresentando um único endereço estável, que distribui as conexões entre os servidores disponíveis e para de rotear para qualquer um que caia; sem esse endereço compartilhado, a alta disponibilidade do datastore fica sem efeito prático, porque a camada de conexão que deveria ser resiliente continua apontando para uma máquina só.
+
 ## Continue por aqui
 
 [k3s](k3s.md) descreve o binário único e o kubeconfig deste cluster, que roda hoje como nó único, sem a exigência de quorum tratada aqui; esse é o ponto em que os dois textos se encontram e se separam, um cobre o mecanismo geral, o outro a escolha real deste cluster.
