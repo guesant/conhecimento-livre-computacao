@@ -28,6 +28,10 @@ O quorum, o número mínimo de réplicas que precisa concordar para eleger um l�
 
 Alta disponibilidade se justifica quando aplicações em produção dependem do cofre para operar, como autenticação ou credenciais de banco de dados emitidas dinamicamente, e uma indisponibilidade breve já tem impacto real. Em ambientes de desenvolvimento, teste, ou clusters pessoais de nó único, a complexidade adicional de múltiplas réplicas, destravamento automático e um balanceador de carga à frente delas raramente compensa o benefício; uma instância única com backup regular da configuração é suficiente nesse contexto.
 
+## Outras opções: Infisical e serviços gerenciados
+
+Além do ESO e do par OpenBao/Vault, existe uma categoria de plataforma de segredos oferecida como serviço, como o Infisical, que combina um backend hospedado (ou auto-hospedável) com um operator próprio para sincronizar valores para o cluster, de forma parecida ao ESO mas acoplada à sua própria API em vez de a um padrão comum entre múltiplos backends. A escolha entre um serviço desses e o par ESO mais um backend genérico segue a mesma lógica de portabilidade contra profundidade específica já descrita para o ESO: uma plataforma dedicada tende a oferecer uma experiência mais integrada (interface web, convites de equipe, versionamento de segredo) ao custo de acoplar o ambiente à API e ao modelo de autenticação daquele fornecedor específico.
+
 ## Continue por aqui
 
 Nenhuma dessas ferramentas resolve, por si só, o problema de como a primeira credencial de acesso a elas chega ao ambiente; [bootstrap e rotação de segredos](bootstrap-e-rotacao-de-segredos.md) descreve esse problema em geral. [Criptografia de segredos no Git](criptografia-de-segredos-no-git.md) cobre a família de estratégia que este cluster efetivamente usa, SOPS com age, e explica por que ela foi preferida a um secret store externo neste ambiente.
