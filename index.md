@@ -96,6 +96,8 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [OWASP](owasp.md): o que é a fundação, seus projetos, e o que o Top 10 realmente lista.
 - [MITRE ATT&CK](mitre-attack.md): a base de conhecimento de comportamento de atacantes, o que são táticas e técnicas, e como este repositório se lê pela matriz de contêineres.
 - [Zero trust](zero-trust.md): o princípio de não confiar por posição na rede, e o que ele substitui.
+- [Padrões e governança da internet](padroes-e-governanca-da-internet.md): IETF, W3C/WHATWG, Unicode, ICANN/IANA/LACNIC, NIST, EFF e o Marco Civil, e por que um processo aberto pesa mais que a documentação de um único fornecedor.
+- [Fundações do software livre e aberto](fundacoes-do-software-livre-e-aberto.md): OSI, Apache Software Foundation, Software Freedom Conservancy, Creative Commons e Internet Archive, e o problema jurídico que cada uma resolve.
 
 ## Diagnóstico
 
