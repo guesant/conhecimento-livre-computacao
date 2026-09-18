@@ -46,6 +46,8 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Entregar configuração a uma frota de hosts](entregar-configuracao-a-uma-frota-de-hosts.md): push a partir de uma estação, `ansible-pull` como auditoria ou como aplicação, chave por host, GitOps para o sistema operacional e imagem imutável.
 - [SSH](ssh.md): chave pessoal versus deploy key, `~/.ssh/config`, `known_hosts` e tunelamento.
 - [firewalld](firewalld.md): zonas, regra permanente versus regra de runtime, e o recarregamento atômico.
+- [Filas e streaming de eventos](filas-e-streaming-de-eventos.md): fila tradicional contra log append-only, RabbitMQ, Kafka e NATS, e as três semânticas possíveis de garantia de entrega.
+- [Bancos não relacionais: chave-valor e documento](bancos-nao-relacionais-chave-valor-e-documento.md): Redis e MongoDB como exemplos, e o que se perde ao trocar o modelo relacional por um deles.
 - [just: executor de tarefas](just-executor-de-tarefas.md): comandos nomeados e descobríveis sem a sintaxe frágil do Make, e por que não substitui o Ansible.
 - [Transferência de arquivo: rsync, sshfs, sftp e rclone](rsync-e-sshfs.md): por que `--delete` não torna o rsync bidirecional, o que muda com um filesystem remoto via FUSE, e por que `rclone` estende essa lógica para armazenamento em nuvem.
 - [systemd: units, timers e dependências](systemd-units-timers-e-dependencias.md): tipo de serviço, a diferença entre ordem e requisito, e o que um timer resolve que o cron não resolve nativamente.
@@ -69,6 +71,8 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [step-ca e trust-manager](step-ca-e-trust-manager.md): uma CA privada que fala ACME, e como distribuir a confiança nela para vários namespaces sem copiar o certificado à mão.
 - [ArgoCD e GitOps](argocd.md): o conceito de GitOps, o que é uma `Application` e um `AppProject`, e o padrão app-of-apps.
 - [Entrega progressiva: canary, blue-green e Argo Rollouts](entrega-progressiva-canary-blue-green-e-argo-rollouts.md): a diferença entre um rollout cego e um condicionado a uma métrica real, e o que o Argo Image Updater fazia antes de ferramentas como o Kargo existirem.
+- [Feature flags](feature-flags.md): a separação entre quando o código é implantado e quando fica visível, e onde isso se sobrepõe (e onde não) com entrega progressiva.
+- [Teste de carga e chaos engineering](teste-de-carga-e-chaos-engineering.md): quanto o sistema aguenta contra como ele se recupera de uma falha injetada de propósito, duas perguntas diferentes.
 - [Operators do Kubernetes](kubernetes-operators.md): o par CRD mais controller, e o loop de reconciliação que sustenta boa parte do que este cluster instala.
 - [Helm e charts](helm-e-charts.md): o que compõe um chart, a sintaxe de template, e a diferença entre `helm template` e `helm install`.
 - [Gerar várias instâncias com Helm](helm-templating-de-lista.md): o padrão `range` sobre uma lista em `values.yaml`, e o risco de colisão com outra sintaxe de chaves duplas.
@@ -104,6 +108,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [OWASP](owasp.md): o que é a fundação, seus projetos, e o que o Top 10 realmente lista.
 - [MITRE ATT&CK](mitre-attack.md): a base de conhecimento de comportamento de atacantes, o que são táticas e técnicas, e como este repositório se lê pela matriz de contêineres.
 - [Zero trust](zero-trust.md): o princípio de não confiar por posição na rede, e o que ele substitui.
+- [Frameworks de compliance](frameworks-de-compliance.md): SOC 2, ISO 27001 e PCI-DSS, a diferença entre um relatório de auditoria e uma certificação de fato, e a estrutura comum de controle, evidência e auditoria.
 - [Padrões e governança da internet](padroes-e-governanca-da-internet.md): IETF, W3C/WHATWG, Unicode, ICANN/IANA/LACNIC, NIST, EFF e o Marco Civil, e por que um processo aberto pesa mais que a documentação de um único fornecedor.
 - [Fundações do software livre e aberto](fundacoes-do-software-livre-e-aberto.md): OSI, Apache Software Foundation, Software Freedom Conservancy, Creative Commons e Internet Archive, e o problema jurídico que cada uma resolve.
 - [Linters de qualidade de artefato](linters-de-qualidade-de-artefato.md): hadolint, yamllint, markdownlint, cspell, jscpd e ast-grep, cada um verificando um tipo diferente de arquivo contra um conjunto de regras conhecidas.
