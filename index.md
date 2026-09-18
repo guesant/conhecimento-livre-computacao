@@ -43,6 +43,9 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Ansible](ansible.md): push versus pull, idempotência, modo de verificação, tags e o Vault.
 - [SSH](ssh.md): chave pessoal versus deploy key, `~/.ssh/config`, `known_hosts` e tunelamento.
 - [firewalld](firewalld.md): zonas, regra permanente versus regra de runtime, e o recarregamento atômico.
+- [systemd: units, timers e dependências](systemd-units-timers-e-dependencias.md): tipo de serviço, a diferença entre ordem e requisito, e o que um timer resolve que o cron não resolve nativamente.
+- [Podman Quadlets: containers como unidades systemd](podman-quadlets.md): por que gerar a unit a partir de um container existente é o caminho errado, e como um arquivo declarativo vira `.service` automaticamente.
+- [GitOps para Podman: orches e materia](gitops-para-podman-orches-e-materia.md): o mesmo padrão de reconciliação contínua do Argo CD, aplicado a um único host sem cluster nenhum por trás.
 
 ## Plataforma Kubernetes
 
@@ -58,6 +61,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Policy enforcement e Kubescape](policy-enforcement-e-kubescape.md): Pod Security Admission, Kyverno e OPA/Gatekeeper contra a admissão, Kubescape como diagnóstico.
 - [RBAC do Kubernetes](rbac-do-kubernetes.md): a diferença entre definir um papel e atribuí-lo, e por que uma ServiceAccount é a identidade real de um Pod perante a API.
 - [TLS automático](tls-automatico.md): o protocolo ACME, a Let's Encrypt, e o padrão de operator aplicado à emissão de certificado.
+- [step-ca e trust-manager](step-ca-e-trust-manager.md): uma CA privada que fala ACME, e como distribuir a confiança nela para vários namespaces sem copiar o certificado à mão.
 - [ArgoCD e GitOps](argocd.md): o conceito de GitOps, o que é uma `Application` e um `AppProject`, e o padrão app-of-apps.
 - [Operators do Kubernetes](kubernetes-operators.md): o par CRD mais controller, e o loop de reconciliação que sustenta boa parte do que este cluster instala.
 - [Helm e charts](helm-e-charts.md): o que compõe um chart, a sintaxe de template, e a diferença entre `helm template` e `helm install`.
