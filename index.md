@@ -36,6 +36,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Gateway API: GatewayClass, Gateway e HTTPRoute](gateway-api.md): a separação de posse entre infraestrutura e aplicação que o `Ingress` clássico não tinha, e por que isso torna o controlador trocável.
 - [Service mesh: Istio e Linkerd](service-mesh-istio-e-linkerd.md): o que um sidecar resolve, e quando o custo operacional de um mesh se paga.
 - [Kong e o catálogo de um API gateway](kong-e-o-catalogo-de-um-api-gateway.md): modo com banco contra DB-less, Ingress Controller, modo híbrido e o control plane como serviço, cada um com seu próprio trade-off.
+- [Rate limiting: política local e compartilhada](rate-limiting-politica-local-e-compartilhada.md): por que um limite "por réplica" não é o mesmo que um limite agregado, e o que muda ao introduzir um backend compartilhado como o Redis.
 
 ## Automação e provisionamento
 
