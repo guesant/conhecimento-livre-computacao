@@ -65,7 +65,7 @@ flowchart LR
     ARGOCD -->|reconcilia continuamente| APPS
 ```
 
-A fronteira ganhou mais uma peça quando o blog precisou de um túnel e de DNS na Cloudflare, e depois cresceu de novo quando a identidade e o acesso remoto passaram a ser declarados da mesma forma: o [Ansible](ansible.md) cuida do que já existe fisicamente, o [Argo CD](argocd.md) cuida de tudo que roda dentro do cluster a partir do momento em que ele existe, e o [OpenTofu](../arquitetura/opentofu.md) cuida do que vive numa API externa e não pertence a nenhuma das outras camadas. A página [OpenTofu: a camada da Cloudflare](../arquitetura/opentofu.md) explica por que ele declara esses recursos mas nunca vê o token que o cloudflared usa, e lista cada módulo além do da Cloudflare.
+A página [OpenTofu: a camada da Cloudflare](../arquitetura/opentofu.md) explica por que ele declara esses recursos mas nunca vê o token que o cloudflared usa, e lista cada módulo além do da Cloudflare.
 
 ## Continue por aqui
 

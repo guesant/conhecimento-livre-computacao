@@ -4,7 +4,9 @@ Ansible é uma ferramenta de gestão de configuração: ela conecta numa máquin
 
 ## Idempotência
 
-O conceito mais importante para entender Ansible é a idempotência: rodar o mesmo playbook de novo deve produzir o mesmo resultado, e a execução seguinte não deve fazer nada além de confirmar que o estado já está correto. Isso é o que diferencia um playbook bem escrito de um script shell comum: um script que faz `mkdir pasta` falha ao rodar de novo porque a pasta já existe; uma tarefa Ansible equivalente verifica se a pasta já existe antes de decidir se precisa criá-la, e reporta esse resultado como `ok` (nada mudou) em vez de `changed` (algo mudou) ou de falhar. Essa checagem antes de agir é o que permite rodar o mesmo playbook contra uma máquina nova e contra uma máquina já configurada sem medo de quebrar nada, e é o que torna seguro reexecutar o playbook inteiro depois de uma mudança pequena, em vez de tentar aplicar só o delta manualmente.
+O conceito mais importante para entender Ansible é a idempotência: rodar o mesmo playbook de novo deve produzir o mesmo resultado, e a execução seguinte não deve fazer nada além de confirmar que o estado já está correto. Isso é o que diferencia um playbook bem escrito de um script shell comum: um script que faz `mkdir pasta` falha ao rodar de novo porque a pasta já existe; uma tarefa Ansible equivalente verifica se a pasta já existe antes de decidir se precisa criá-la, e reporta esse resultado como `ok`, nada mudou, em vez de `changed`, algo mudou, ou de falhar.
+
+Checar antes de agir é o que permite rodar o mesmo playbook contra uma máquina nova e contra uma máquina já configurada sem medo de quebrar nada. Na prática, isso muda como se aplica uma mudança pequena: em vez de identificar o delta e aplicá-lo à mão, reexecuta-se o playbook inteiro e deixa-se que as tarefas já satisfeitas não façam nada.
 
 ## Modo de verificação (`--check`)
 
