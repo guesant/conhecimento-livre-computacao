@@ -30,6 +30,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [DNSSEC, mDNS e registro de domínio](dnssec-mdns-e-registro-de-dominio.md): a cadeia de assinaturas do DNSSEC, resolução sem servidor, e a diferença entre WHOIS/RDAP e resolução.
 - [Servidores DNS e conectividade WAN](servidores-dns-e-conectividade-wan.md): PowerDNS, Unbound, BIND e CoreDNS, e por que PPPoE/DHCP exigem DNS dinâmico.
 - [UFW e portas publicadas pelo Docker](ufw-e-portas-publicadas-pelo-docker.md): o modelo do UFW frente ao [firewalld](firewalld.md), e por que uma porta publicada pelo Docker escapa da política padrão do host.
+- [Fail2ban, atualizações automáticas e journal persistente](fail2ban-atualizacoes-automaticas-e-journal.md): a camada que reage a tentativas repetidas depois que o firewall já deixou passar, e por que o journal persistente e a sincronização de horário custam pouco e evitam diagnósticos às cegas.
 - [Cilium e Calico como CNI](cilium-e-calico-como-cni.md): eBPF contra regras iptables/nftables, e quando cada modelo se encaixa.
 - [Reverse proxy e split-horizon DNS](reverse-proxy-e-split-horizon-dns.md): roteamento por path, host e SNI, e como resolver um nome interno sem expor porta nenhuma.
 - [Service mesh: Istio e Linkerd](service-mesh-istio-e-linkerd.md): o que um sidecar resolve, e quando o custo operacional de um mesh se paga.
