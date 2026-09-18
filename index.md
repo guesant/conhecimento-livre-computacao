@@ -89,6 +89,11 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 
 - [Diagnóstico de Pod, nó, certificado e Argo CD](diagnostico-de-pod-no-cluster-e-do-argocd.md): por que `kubectl describe` costuma valer mais que os logs de um container, e como ler a causa de um `Pending`, um `NotReady`, um `Certificate` travado ou um `Degraded`.
 
+## Ferramentas e estudo
+
+- [Avaliar ferramentas de operação](avaliar-ferramentas-de-operacao.md): por que uma interface gráfica não cria uma fronteira de segurança nova, e os critérios que decidem se vale adotar uma.
+- [Certificações de infraestrutura e nuvem](certificacoes-de-infraestrutura-e-nuvem.md): a diferença entre certificação, badge e avaliação prática, e por que o formato da prova importa mais que a organização que a emite.
+
 ## Continue por aqui
 
 A [arquitetura](../arquitetura/index.md) explica por que este repositório usa cada uma dessas ferramentas do jeito que usa.
