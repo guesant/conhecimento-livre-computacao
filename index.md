@@ -50,6 +50,9 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Orquestradores de containers: Compose, Swarm e Kubernetes](orquestradores-de-containers.md): quando cada escopo (um host, um cluster pequeno, produção escalável) faz sentido.
 - [Quorum, etcd e datastore do K3s](quorum-etcd-e-datastore-do-k3s.md): por que o número de servidores precisa ser ímpar, e a alternativa Kine.
 - [Kubernetes gerenciado e HA avançada](kubernetes-gerenciado-e-ha-avancada.md): EKS como exemplo de control plane delegado, e o que fica além de um cluster multinó comum.
+- [Modelo de armazenamento do Kubernetes](modelo-de-armazenamento-do-kubernetes.md): PVC, StorageClass e PV, modos de acesso e política de reclamação.
+- [Armazenamento local, distribuído e Longhorn](armazenamento-local-distribuido-e-longhorn.md): a arquitetura do Longhorn, e por que replicação não é backup.
+- [Policy enforcement e Kubescape](policy-enforcement-e-kubescape.md): Pod Security Admission, Kyverno e OPA/Gatekeeper contra a admissão, Kubescape como diagnóstico.
 - [TLS automático](tls-automatico.md): o protocolo ACME, a Let's Encrypt, e o padrão de operator aplicado à emissão de certificado.
 - [ArgoCD e GitOps](argocd.md): o conceito de GitOps, o que é uma `Application` e um `AppProject`, e o padrão app-of-apps.
 - [Operators do Kubernetes](kubernetes-operators.md): o par CRD mais controller, e o loop de reconciliação que sustenta boa parte do que este cluster instala.
