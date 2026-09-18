@@ -59,6 +59,14 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 - [Helm e charts](helm-e-charts.md): o que compõe um chart, a sintaxe de template, e a diferença entre `helm template` e `helm install`.
 - [Gerar várias instâncias com Helm](helm-templating-de-lista.md): o padrão `range` sobre uma lista em `values.yaml`, e o risco de colisão com outra sintaxe de chaves duplas.
 
+## Observabilidade e backup
+
+- [Sinais de observabilidade e saúde de aplicação](sinais-de-observabilidade-e-saude-de-aplicacao.md): métricas, logs e traces, e por que um Pod `Running` não prova que a aplicação está disponível.
+- [Stack Prometheus, Loki e Grafana](stack-prometheus-loki-grafana.md): como os três se conectam, e o trade-off entre retenção e cardinalidade.
+- [Alertas acionáveis e distributed tracing](alertas-acionaveis-e-distributed-tracing.md): o que torna um alerta útil em vez de ruído, e o que um trace mostra que uma métrica isolada não mostra.
+- [Fundamentos de backup, RPO e RTO](fundamentos-de-backup-rpo-e-rto.md): a diferença entre réplica, snapshot e backup, e as duas metas que toda estratégia precisa responder.
+- [Retenção, testes de restauração e Velero](retencao-testes-e-velero.md): por que um Job `Completed` não prova que um backup restaura, e o que o Velero cobre além do snapshot do etcd.
+
 ## CI/CD, segurança e qualidade
 
 - [CI/CD](ci-cd.md): a diferença entre integração contínua, entrega contínua e implantação contínua.
