@@ -1,27 +1,50 @@
 # ArgoCD e GitOps
 
-GitOps é uma forma de operar infraestrutura onde um repositório git é a única fonte da verdade sobre o que deveria estar rodando, e um agente dentro do próprio ambiente de destino (não uma pipeline externa empurrando mudanças) observa esse repositório continuamente e converge o estado real para o que está declarado nele. A diferença central em relação a uma pipeline de deploy tradicional, que roda `kubectl apply` a partir de um servidor de CI, é essa inversão. Em vez de algo de fora empurrando mudanças para dentro do cluster, algo de dentro do cluster puxa o que precisa aplicar, comparando continuamente contra o git. A inversão paga uma conta de credencial antes de qualquer outra: nenhum sistema externo precisa guardar acesso administrativo ao cluster, porque quem tem esse acesso é um agente que já está lá dentro.
+GitOps é uma forma de operar infraestrutura onde um repositório git é a única fonte da verdade sobre o que deveria estar rodando, e um agente dentro do próprio ambiente de destino (não uma pipeline externa empurrando mudanças) observa esse repositório continuamente e converge o estado real para o que está declarado nele. A diferença central em relação a uma pipeline de deploy tradicional, que roda `kubectl apply` a partir de um servidor de CI, é essa inversão.
 
-Dessa inversão vem o efeito que mais muda a operação no dia a dia. Uma mudança feita manualmente no cluster, fora do git, é detectada como uma divergência, chamada de *drift*, e pode ser revertida automaticamente, porque o agente sempre volta a convergir para o que o git declara. O efeito colateral é que a correção rápida no cluster, aquela que alguém aplica direto para resolver um incidente, deixa de sobreviver, e o caminho de volta passa obrigatoriamente por um commit. Isso é desejado na maior parte do tempo e incômodo numa madrugada de incidente, o que faz valer a pena saber, antes de precisar, como suspender a sincronização de uma aplicação específica.
+Em vez de algo de fora empurrando mudanças para dentro do cluster, algo de dentro do cluster puxa o que precisa aplicar, comparando continuamente contra o git. A inversão paga uma conta de credencial antes de qualquer outra: nenhum sistema externo precisa guardar acesso administrativo ao cluster, porque quem tem esse acesso é um agente que já está lá dentro.
 
-ArgoCD é a implementação de GitOps mais usada para [Kubernetes](k3s.md). Ele roda dentro do próprio cluster, observa um ou mais repositórios git, e mantém o estado do cluster sincronizado com o que esses repositórios declaram. Como ele mesmo é um conjunto de pods, existe um problema de origem: alguém precisa instalá-lo antes que haja quem sincronize qualquer coisa. Neste repositório esse primeiro passo é do Ansible, que instala o Argo CD e aplica a aplicação raiz; daí em diante a raiz sincroniza tanto as aplicações filhas quanto os próprios `AppProject` que definem o que cada uma pode fazer.
+Dessa inversão vem o efeito que mais muda a operação no dia a dia. Uma mudança feita manualmente no cluster, fora do git, é detectada como uma divergência, chamada de *drift*, e pode ser revertida automaticamente, porque o agente sempre volta a convergir para o que o git declara.
+
+O efeito colateral é que a correção rápida no cluster, aquela que alguém aplica direto para resolver um incidente, deixa de sobreviver, e o caminho de volta passa obrigatoriamente por um commit. Isso é desejado na maior parte do tempo e incômodo numa madrugada de incidente, o que faz valer a pena saber, antes de precisar, como suspender a sincronização de uma aplicação específica.
+
+ArgoCD é a implementação de GitOps mais usada para [Kubernetes](k3s.md). Ele roda dentro do próprio cluster, observa um ou mais repositórios git, e mantém o estado do cluster sincronizado com o que esses repositórios declaram. Como ele mesmo é um conjunto de pods, existe um problema de origem: alguém precisa instalá-lo antes que haja quem sincronize qualquer coisa.
+
+Neste repositório esse primeiro passo é do Ansible, que instala o Argo CD e aplica a aplicação raiz; daí em diante a raiz sincroniza tanto as aplicações filhas quanto os próprios `AppProject` que definem o que cada uma pode fazer.
 
 ## `Application` e `AppProject`
 
-Uma `Application`, no ArgoCD, é o objeto que declara "sincronize este caminho deste repositório git para este destino": qual repositório, qual branch ou tag, qual pasta dentro dele, e para qual cluster e namespace o resultado deve ir. Um `AppProject` agrupa aplicações sob uma política de permissão comum: de quais repositórios elas podem vir, para quais destinos podem apontar, e quais tipos de recurso [Kubernetes](k3s.md) elas têm permissão de criar. Isso permite, por exemplo, que um projeto restrinja as aplicações de terceiros a só criarem recursos de namespace, nunca um recurso de escopo de cluster inteiro, sem precisar confiar cegamente no conteúdo de cada repositório.
+Uma `Application`, no ArgoCD, é o objeto que declara "sincronize este caminho deste repositório git para este destino": qual repositório, qual branch ou tag, qual pasta dentro dele, e para qual cluster e namespace o resultado deve ir.
+
+Um `AppProject` agrupa aplicações sob uma política de permissão comum: de quais repositórios elas podem vir, para quais destinos podem apontar, e quais tipos de recurso [Kubernetes](k3s.md) elas têm permissão de criar. Isso permite, por exemplo, que um projeto restrinja as aplicações de terceiros a só criarem recursos de namespace, nunca um recurso de escopo de cluster inteiro, sem precisar confiar cegamente no conteúdo de cada repositório.
 
 ## O padrão app-of-apps
 
-Em vez de configurar manualmente cada `Application` uma por uma dentro do cluster, o padrão app-of-apps usa uma aplicação raiz cujo próprio conteúdo, no git, é uma pasta de manifestos de outras aplicações. O ArgoCD sincroniza essa raiz como sincronizaria qualquer outra aplicação, e o resultado dessa sincronização é a criação (ou remoção) das aplicações filhas. O efeito prático é que registrar uma aplicação nova no cluster inteiro se torna "adicionar um arquivo numa pasta e dar `git push`", sem nenhum passo manual dentro do cluster.
+Em vez de configurar manualmente cada `Application` uma por uma dentro do cluster, o padrão app-of-apps usa uma aplicação raiz cujo próprio conteúdo, no git, é uma pasta de manifestos de outras aplicações.
+
+O ArgoCD sincroniza essa raiz como sincronizaria qualquer outra aplicação, e o resultado dessa sincronização é a criação (ou remoção) das aplicações filhas. O efeito prático é que registrar uma aplicação nova no cluster inteiro se torna "adicionar um arquivo numa pasta e dar `git push`", sem nenhum passo manual dentro do cluster.
 
 ## Modos de sincronização
 
-Uma `Application` pode exigir aprovação manual para cada sincronização, ou pode ser configurada com sincronização automática (`selfHeal`, que reverte drift automaticamente, e `prune`, que remove do cluster o que foi removido do git). Automação total é conveniente, mas amplia o raio de dano de um erro no git: um manifesto errado commitado por engano é aplicado sem revisão humana nenhuma no momento do apply. Um projeto que decide automatizar tudo geralmente compensa isso com mais rigor na revisão antes do merge, não menos.
+Uma `Application` pode exigir aprovação manual para cada sincronização, ou pode ser configurada com sincronização automática, controlada por dois campos:
+
+| Campo | Efeito |
+| --- | --- |
+| `selfHeal` | reverte drift automaticamente |
+| `prune` | remove do cluster o que foi removido do git |
+
+Automação total é conveniente, mas amplia o raio de dano de um erro no git: um manifesto errado commitado por engano é aplicado sem revisão humana nenhuma no momento do apply. Um projeto que decide automatizar tudo geralmente compensa isso com mais rigor na revisão antes do merge, não menos.
 
 ## O que o Argo CD não decifra sozinho
 
-O Argo CD renderiza o que um repositório declara (manifestos puros, um chart Helm, uma base Kustomize) e aplica o resultado, mas não sabe nativamente decifrar um arquivo protegido por SOPS (o mecanismo coberto em [Criptografia de segredos no Git](criptografia-de-segredos-no-git.md)): se um manifesto no repositório está cifrado, o Argo CD tentaria aplicar o texto cifrado como se fosse o manifesto real, o que falha ou, pior, aplica um `Secret` com conteúdo ilegível em vez do valor esperado. Fechar essa lacuna exige um passo de decifragem entre "ler o repositório" e "aplicar no cluster", e a forma mais comum de inserir esse passo sem mudar a arquitetura do Argo CD é através de um plugin de geração do Kustomize: o `ksops` (SOPS integrado como um gerador do Kustomize) permite declarar, dentro de uma base Kustomize, quais arquivos cifrados decifrar antes de compor o manifesto final, decifrando em tempo de renderização, dentro do próprio processo do Argo CD, sem nunca gravar o valor decifrado de volta no repositório. Isso soma uma dependência real ao ambiente (o binário do `ksops` precisa estar disponível onde o Argo CD renderiza Kustomize, e a chave privada de decifragem precisa estar acessível a esse processo), então a decisão de adotar esse caminho pesa o ganho de manter GitOps puro com segredo cifrado direto no repositório contra o custo de mais uma peça a operar e manter atualizada.
+O Argo CD renderiza o que um repositório declara (manifestos puros, um chart Helm, uma base Kustomize) e aplica o resultado, mas não sabe nativamente decifrar um arquivo protegido por SOPS (o mecanismo coberto em [Criptografia de segredos no Git](criptografia-de-segredos-no-git.md)): se um manifesto no repositório está cifrado, o Argo CD tentaria aplicar o texto cifrado como se fosse o manifesto real, o que falha ou, pior, aplica um `Secret` com conteúdo ilegível em vez do valor esperado.
+
+Fechar essa lacuna exige um passo de decifragem entre "ler o repositório" e "aplicar no cluster", e a forma mais comum de inserir esse passo sem mudar a arquitetura do Argo CD é através de um plugin de geração do Kustomize.
+
+O `ksops` (SOPS integrado como um gerador do Kustomize) permite declarar, dentro de uma base Kustomize, quais arquivos cifrados decifrar antes de compor o manifesto final, decifrando em tempo de renderização, dentro do próprio processo do Argo CD, sem nunca gravar o valor decifrado de volta no repositório.
+
+Isso soma uma dependência real ao ambiente (o binário do ksops precisa estar disponível onde o Argo CD renderiza Kustomize, e a chave privada de decifragem precisa estar acessível a esse processo), então a decisão de adotar esse caminho pesa o ganho de manter GitOps puro com segredo cifrado direto no repositório contra o custo de mais uma peça a operar e manter atualizada.
 
 ## Continue por aqui
 
-["GitOps: root e satélites"](../arquitetura/gitops-root-e-satelites.md), na arquitetura, mostra como o hl-infrastructure usa exatamente esse padrão app-of-apps, com `AppProject`s de permissão bem diferente (`infra` e `satellites`), e como um satélite novo é registrado em [Adicionar um satélite novo](../operacional/adicionar-um-satelite.md).
+["GitOps: root e satélites"](../arquitetura/gitops-root-e-satelites.md), na arquitetura, mostra como o hl-infrastructure usa exatamente esse padrão app-of-apps, com `AppProject`s de permissão bem diferente (infra e satellites), e como um satélite novo é registrado em [Adicionar um satélite novo](../operacional/adicionar-um-satelite.md).

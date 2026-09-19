@@ -57,6 +57,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 ## Plataforma Kubernetes
 
 - [k3s](k3s.md): o que diferencia essa distribuição do Kubernetes completo, e o que é um kubeconfig.
+- [Namespace do Kubernetes](namespace-do-kubernetes.md): fronteira de nomeação e escopo, não de isolamento de processo, e por que o nome coincide com o namespace do kernel sem ter relação com ele.
 - [Rede interna do cluster](rede-interna-do-cluster.md): o papel de uma CNI, a rede overlay entre pods e a descoberta de serviço via CoreDNS.
 - [Distribuições Kubernetes](distribuicoes-kubernetes.md): o vocabulário básico do Kubernetes, K3s vs. RKE2, e outras distribuições como k0s e kubeadm.
 - [Orquestradores de containers: Compose, Swarm e Kubernetes](orquestradores-de-containers.md): quando cada escopo (um host, um cluster pequeno, produção escalável) faz sentido.
@@ -125,6 +126,7 @@ Se você nunca ouviu falar de uma ferramenta que aparece no [primeiro bootstrap]
 
 ## Ferramentas e estudo
 
+- [Diátaxis](diataxis.md): o framework que separa documentação técnica em tutorial, how-to, referência e explicação, pela necessidade de quem lê em vez do assunto.
 - [Avaliar ferramentas de operação](avaliar-ferramentas-de-operacao.md): por que uma interface gráfica não cria uma fronteira de segurança nova, e os critérios que decidem se vale adotar uma.
 - [Certificações de infraestrutura e nuvem](certificacoes-de-infraestrutura-e-nuvem.md): a diferença entre certificação, badge e avaliação prática, e por que o formato da prova importa mais que a organização que a emite.
 
