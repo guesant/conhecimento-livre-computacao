@@ -1,40 +1,66 @@
 # SAST
 
-Static Application Security Testing analisa software sem executar a aplicação como um atacante externo. A análise pode variar de regras sintáticas simples até modelos semânticos capazes de acompanhar fluxo de dados entre funções e arquivos.
+Static Application Security Testing analisa código ou representações derivadas dele sem precisar exercitar a aplicação como um atacante externo. A família vai de regras sintáticas simples a análise semântica interprocedural e rastreamento de fluxo de dados.
 
-SAST não é sinônimo de grep. Ferramentas mais simples reconhecem padrões locais; analisadores baseados em AST entendem construções da linguagem; análises de control flow representam caminhos possíveis de execução; data flow acompanha como valores se propagam; taint tracking especializa esse modelo em valores não confiáveis, normalmente descrevendo sources, propagação, sanitizers e sinks.
+## O problema
 
-## Caso de uso
+Muitas vulnerabilidades surgem da relação entre uma entrada controlável e uma operação sensível. Revisão humana encontra parte delas, mas software grande possui caminhos demais para inspecionar manualmente a cada mudança.
 
-Considere uma API que recebe um parâmetro HTTP e posteriormente o entrega a uma função de execução de comandos. Uma análise local pode não perceber a relação se o valor atravessa várias funções. Uma análise interprocedural de fluxo de dados pode procurar um caminho entre a entrada controlável e o sink perigoso e verificar se existe sanitização relevante no caminho.
+SAST automatiza hipóteses sobre código. Ele não prova ausência de vulnerabilidades; procura classes de padrões dentro do modelo que a ferramenta consegue representar.
 
-SAST é especialmente útil em pull requests, revisão contínua de bases grandes, identificação de padrões repetitivos e políticas que precisam ser verificadas antes de existir um ambiente executável.
+## Níveis de análise
 
-## Quando não basta
+Regras textuais procuram sequências de texto e são baratas, mas ignoram estrutura. AST entende construções da linguagem. Control-flow graphs representam caminhos de execução. Data-flow acompanha valores. Taint analysis modela sources, propagação, sanitizers e sinks.
 
-SAST não observa configuração real de proxy, WAF, IAM ou banco; não confirma que uma vulnerabilidade é explorável no ambiente implantado; não substitui SCA para vulnerabilidades conhecidas de componentes; e pode não representar corretamente comportamento criado dinamicamente em runtime.
+Quanto mais semântica a análise incorpora, maior pode ser sua capacidade de encontrar relações não locais, e também maior o custo de modelagem e execução.
 
 ## Exemplo conceitual
 
-Uma regra de taint pode modelar entrada HTTP como source, uma API de shell como sink e uma função de validação específica como sanitizer. O finding não significa automaticamente exploração confirmada: significa que o modelo encontrou um caminho que satisfaz a consulta.
+Uma entrada HTTP é uma source. Uma função que monta e executa SQL pode ser sink. A análise procura um caminho em que dado não confiável chega ao sink sem passar por um sanitizer ou API segura reconhecida.
+
+Se a aplicação usa uma abstração interna desconhecida pela ferramenta, o fluxo pode ser perdido até que o modelo seja ensinado.
+
+## Casos de uso
+
+SAST funciona bem para vulnerabilidades expressáveis como propriedades do código: injection, uso de APIs perigosas, validações ausentes e fluxos sensíveis. É especialmente útil cedo no desenvolvimento porque não depende de ambiente implantado.
+
+## Quando não basta
+
+Configuração do proxy em produção, autenticação realmente exposta na rede, comportamento de WAF e vulnerabilidades que só emergem da composição em runtime podem exigir DAST, testes manuais ou análise de infraestrutura.
+
+Dependências vulneráveis são responsabilidade primária de SCA, embora algumas plataformas apresentem ambos os resultados na mesma UI.
+
+## Estratégia de adoção
+
+Comece com regras de alta confiança e superfícies críticas. Meça ruído. Modele frameworks internos quando necessário. Expanda cobertura sem transformar suppressions em rotina automática.
+
+Para código legado, um baseline pode impedir novas violações sem exigir corrigir todo histórico antes de adotar o gate. O baseline deve ser dívida visível, não lixeira permanente.
+
+## Pull request versus varredura completa
+
+Análise incremental em PR reduz feedback e foca mudanças. Varreduras completas periódicas encontram efeitos de novas regras, novas versões do engine e fluxos que atravessam código não alterado.
+
+Os dois modos respondem riscos diferentes e podem coexistir.
 
 ## Boas práticas
 
-Rode a análise cedo e de forma incremental quando possível. Priorize regras relevantes às linguagens e frameworks usados. Faça triagem de falsos positivos em vez de simplesmente desligar categorias inteiras. Mantenha suppressions pequenas, justificadas e revisáveis. Para regras customizadas, teste tanto exemplos vulneráveis quanto exemplos seguros para evitar uma consulta que "funciona" apenas porque marca tudo.
+Execute perto do desenvolvedor e novamente em CI quando o risco justificar. Fixe versão da ferramenta/regras. Preserve localização e caminho de dados no finding. Revise suppressions. Trate severidade junto com reachability e contexto.
 
 ## Más práticas
 
-É má prática tratar qualquer finding como prova automática de vulnerabilidade, medir qualidade pela quantidade de alertas, habilitar milhares de regras sem estratégia de triagem ou criar suppressions globais para fazer a pipeline ficar verde. Também é inadequado usar SAST como substituto de revisão arquitetural: uma consulta encontra o que seu modelo sabe representar.
+Bloquear todo finding desde o primeiro dia; desabilitar a ferramenta depois do primeiro lote de falsos positivos; contar findings como métrica de produtividade; usar SAST como substituto de revisão de design; considerar "zero findings" prova de segurança.
 
-## Implementações
+## Ferramentas e modos
 
-[CodeQL](codeql.md) representa código em uma base consultável e oferece análises semânticas e de fluxo de dados. Outras famílias de ferramenta podem privilegiar regras sobre AST, padrões estruturais ou análise compilada. A escolha depende de linguagem, profundidade desejada, extensibilidade, custo de execução e integração com o fluxo de desenvolvimento.
+[CodeQL](codeql.md) modela código como uma base consultável e oferece análise semântica/dataflow profunda. Semgrep oferece regras estruturais e capacidades de dataflow com uma experiência diferente de autoria. SonarQube/SonarCloud combinam qualidade e segurança numa plataforma de análise.
+
+A escolha depende de linguagens, profundidade necessária, facilidade de criar regras, integração com revisão, custo e tolerância a tempo de análise.
 
 ## Fontes
 
-- OWASP, Static Application Security Testing: https://owasp.org/www-community/Source_Code_Analysis_Tools
-- GitHub, CodeQL data flow analysis: https://codeql.github.com/docs/writing-codeql-queries/about-data-flow-analysis/
+- OWASP Static Application Security Testing: https://owasp.org/www-community/Source_Code_Analysis_Tools
+- CodeQL documentation: https://codeql.github.com/docs/
 
 ## Continue por aqui
 
-[CodeQL](codeql.md) mostra uma implementação concreta desse modelo. [DAST](../dast.md) observa a aplicação por outro ângulo, já em execução.
+[CodeQL](codeql.md) aprofunda uma implementação. [Segurança de aplicações](../index.md) situa SAST junto de SCA, DAST e secret scanning.
