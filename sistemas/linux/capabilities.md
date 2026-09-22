@@ -24,7 +24,7 @@ Adicionar `CAP_SYS_ADMIN` para corrigir genericamente um erro de permissão freq
 
 ## Fontes
 
-- capabilities(7): https://man7.org/linux/man-pages/man7/capabilities.7.html
+- capabilities(7): <https://man7.org/linux/man-pages/man7/capabilities.7.html>
 
 ## Continue por aqui
 
