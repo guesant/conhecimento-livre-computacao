@@ -28,9 +28,9 @@ A profundidade semântica tem custo de extração, execução e manutenção de 
 
 ## Fontes
 
-- CodeQL documentation: https://codeql.github.com/docs/
-- GitHub, About code scanning with CodeQL: https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql
-- CodeQL data flow analysis: https://codeql.github.com/docs/writing-codeql-queries/about-data-flow-analysis/
+- CodeQL documentation: <https://codeql.github.com/docs/>
+- GitHub, About code scanning with CodeQL: <https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql>
+- CodeQL data flow analysis: <https://codeql.github.com/docs/writing-codeql-queries/about-data-flow-analysis/>
 
 ## Continue por aqui
 
