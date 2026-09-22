@@ -16,4 +16,4 @@ Usar traffic management do mesh para compensar contratos de aplicação frágeis
 
 ## Fontes
 
-- Istio documentation: https://istio.io/latest/docs/
+- Istio documentation: <https://istio.io/latest/docs/>
