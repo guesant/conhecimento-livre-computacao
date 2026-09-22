@@ -16,7 +16,7 @@ Tratar "Calico" como uma configuração única ignora que escolhas de dataplane 
 
 ## Fontes
 
-- Calico documentation: https://docs.tigera.io/calico/latest/about/
+- Calico documentation: <https://docs.tigera.io/calico/latest/about/>
 
 ## Continue por aqui
 
