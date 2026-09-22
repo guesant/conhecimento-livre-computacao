@@ -26,8 +26,8 @@ Gitleaks é uma implementação popular dessa categoria. Outros provedores ofere
 
 ## Fontes
 
-- Gitleaks: https://gitleaks.io/
-- GitHub, About secret scanning: https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning
+- Gitleaks: <https://gitleaks.io/>
+- GitHub, About secret scanning: <https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning>
 
 ## Continue por aqui
 
