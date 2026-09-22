@@ -50,9 +50,9 @@ Linters de YAML e validação de schema verificam estrutura, não necessariament
 
 ## Fontes
 
-- Documentação do zizmor: https://docs.zizmor.sh/
-- Audit rules: https://docs.zizmor.sh/audits/
-- Integração com GitHub Actions: https://docs.zizmor.sh/integrations/
+- Documentação do zizmor: <https://docs.zizmor.sh/>
+- Audit rules: <https://docs.zizmor.sh/audits/>
+- Integração com GitHub Actions: <https://docs.zizmor.sh/integrations/>
 
 ## Continue por aqui
 
