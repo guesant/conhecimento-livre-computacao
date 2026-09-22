@@ -1,23 +1,10 @@
-# Entrega progressiva: canary, blue-green e Argo Rollouts
+# Entrega progressiva
 
-Um rollout comum de `Deployment` no Kubernetes já é gradual por padrão, substituindo réplicas antigas por novas dentro dos limites de `maxUnavailable`/`maxSurge`, mas essa gradualidade é cega: o controller não avalia se a versão nova está de fato saudável, só se os novos Pods ficaram `Ready` segundo a probe configurada. Entrega progressiva adiciona uma camada de decisão em cima disso, condicionando o avanço de uma nova versão a um sinal real de saúde (uma métrica de taxa de erro, uma taxa de sucesso de um teste sintético) em vez de só ao tempo decorrido ou ao estado superficial do Pod, e existe especificamente para reduzir o raio de impacto de uma versão ruim antes que ela alcance todo o tráfego.
+Esta página foi descompactada para separar estratégias de sua implementação.
 
-## Canary: uma fração de tráfego primeiro
+- [Canary](entrega/progressiva/canary.md) aumenta exposição gradualmente.
+- [Blue-green](entrega/progressiva/blue-green.md) mantém revisões paralelas e troca a ativa.
+- [Argo Rollouts](entrega/progressiva/argo-rollouts.md) implementa essas e outras estratégias no Kubernetes.
+- [Feature flags](feature-flags.md) controlam ativação de comportamento e podem complementar rollout.
 
-Uma implantação canário direciona uma fração pequena do tráfego real para a versão nova, mantendo a maioria na versão estável, e só aumenta essa fração gradualmente conforme a versão nova demonstra estar saudável sob carga real; o nome vem do canário usado historicamente em minas para detectar gás tóxico antes que afetasse os mineiros, o mesmo princípio de detectar um problema numa exposição pequena e controlada antes de expor todo o sistema a ele. A decisão de avançar, pausar ou reverter cada incremento de tráfego pode ser manual (um humano revisa um painel e aprova o próximo passo) ou automatizada, consultando uma métrica específica (taxa de erro HTTP, latência p99) durante uma janela de tempo antes de decidir avançar sozinha. O ganho real de um canário automatizado sobre um manual é a velocidade de reação: um humano que precisa acordar para revisar um painel introduz um atraso que uma automação com critério objetivo não tem, ao custo de exigir que esse critério esteja definido e calibrado com cuidado antes de confiar nele para decidir sozinho.
-
-## Blue-green: duas versões completas, troca instantânea
-
-Uma implantação blue-green (mencionada também a propósito do Docker Swarm em [Orquestradores de containers](orquestradores-de-containers.md)) segue uma lógica diferente: em vez de misturar tráfego entre versões durante a transição, mantém duas versões completas rodando ao mesmo tempo, uma recebendo todo o tráfego real e a outra pronta e validada mas sem tráfego nenhum, e alterna qual das duas recebe tráfego com uma mudança só, em vez de um deslocamento gradual. A vantagem é um rollback instantâneo, apontar o tráfego de volta para a versão anterior, que nunca deixou de existir; o custo é manter a capacidade de duas versões completas simultaneamente durante a janela de transição, e depender de algo fora do próprio processo de deploy (um load balancer, um Service, uma rota) para executar a troca de tráfego de um lado para o outro.
-
-## Argo Rollouts: o controller que implementa isso no Kubernetes
-
-Um `Deployment` comum do Kubernetes não sabe fazer nem canário nem blue-green sozinho, porque seu controlador entende só o avanço cego já descrito. Argo Rollouts, um dos projetos do guarda-chuva Argo Project junto com o Argo CD já coberto em [ArgoCD e GitOps](argocd.md), substitui o `Deployment` por um recurso próprio (`Rollout`) que entende as duas estratégias nativamente, junto com um recurso `AnalysisTemplate` que declara a consulta de métrica usada para decidir automaticamente se um incremento de canário deve avançar ou reverter. Como um `Rollout` não é um `Deployment`, adotar Argo Rollouts é uma migração de tipo de recurso, não uma configuração adicional sobre o que já existe; em troca, ganha-se a capacidade de expressar "espere, verifique esta métrica, e só então avance" como parte da própria definição declarativa do deploy, em vez de como um passo manual ou um script externo orquestrando a transição.
-
-## Argo Image Updater: a peça que ficou pelo caminho
-
-Antes de existir uma ferramenta dedicada a promover imagens (este cluster usa o Kargo para isso, descrito em [Rollout de imagens](../arquitetura/rollout-de-imagens.md)), o Argo CD Image Updater cumpria um papel parecido: observar um registry de imagens e escrever o digest novo encontrado diretamente no manifesto ou no parâmetro de uma `Application` do Argo CD, fechando o mesmo problema de fundo, o Argo CD só reage a uma mudança de texto no que ele observa, não a uma imagem nova publicada silenciosamente atrás da mesma tag. A diferença que levou ferramentas mais novas a substituí-lo é sobretudo de rastreabilidade: o Image Updater fazia essa escrita sem manter um histórico formal de promoções nem separar ambientes de entrega como estágios distintos, então saber quando e por que uma imagem específica foi promovida dependia de vasculhar o histórico de commits ou de eventos do próprio Argo, sem um registro dedicado a essa pergunta.
-
-## Continue por aqui
-
-[Rollout de imagens](../arquitetura/rollout-de-imagens.md) mostra como o hl-infrastructure resolve o problema de atualizar a imagem sem usar nem o Image Updater nem o Rollouts, com uma estratégia de rollout comum e o Kargo cuidando só da promoção do digest. [Service mesh: Istio e Linkerd](service-mesh-istio-e-linkerd.md) cobre o roteamento por peso de tráfego que um mesh oferece como alternativa ao deslocamento de tráfego que o Argo Rollouts também sabe fazer sozinho contra um Ingress ou Gateway comum.
+Escolha primeiro o modelo de redução de risco; só depois a ferramenta que o automatiza.
