@@ -86,6 +86,6 @@ Exemplos em Aprender demonstram mecanismos. Passos destinados a alterar o cluste
 
 ## Continue por aqui
 
-Se o objetivo é compreender a infraestrutura de baixo para cima, uma ordem útil é Sistemas e Linux → Virtualização e containers → Redes → Kubernetes → Automação/IaC → Entrega/GitOps → Segurança → Observabilidade → Backup.
+Se o objetivo é compreender a infraestrutura de baixo para cima, uma ordem útil é Sistemas e Linux -> Virtualização e containers -> Redes -> Kubernetes -> Automação/IaC -> Entrega/GitOps -> Segurança -> Observabilidade -> Backup.
 
 Essa ordem é uma trilha, não uma dependência rígida. As páginas-mapa de cada domínio permitem entrar diretamente no assunto necessário sem ler a documentação inteira em sequência.
