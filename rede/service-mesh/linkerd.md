@@ -16,4 +16,4 @@ Assumir que uma superfície menor elimina a necessidade de compreender proxies, 
 
 ## Fontes
 
-- Linkerd documentation: https://linkerd.io/2/overview/
+- Linkerd documentation: <https://linkerd.io/2/overview/>
