@@ -16,7 +16,7 @@ Adicionar Rollouts sem métricas confiáveis aumenta complexidade sem produzir s
 
 ## Fontes
 
-- Argo Rollouts: https://argo-rollouts.readthedocs.io/
+- Argo Rollouts: <https://argo-rollouts.readthedocs.io/>
 
 ## Continue por aqui
 
