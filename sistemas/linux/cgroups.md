@@ -24,8 +24,8 @@ Ao atingir limite de memória, processos podem ser encerrados pelo OOM killer no
 
 ## Fontes
 
-- Linux kernel, cgroup v2: https://docs.kernel.org/admin-guide/cgroup-v2.html
-- systemd, Control Group APIs and Delegation: https://systemd.io/CGROUP_DELEGATION/
+- Linux kernel, cgroup v2: <https://docs.kernel.org/admin-guide/cgroup-v2.html>
+- systemd, Control Group APIs and Delegation: <https://systemd.io/CGROUP_DELEGATION/>
 
 ## Continue por aqui
 
