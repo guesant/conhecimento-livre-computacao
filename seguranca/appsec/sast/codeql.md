@@ -34,4 +34,4 @@ A profundidade semântica tem custo de extração, execução e manutenção de 
 
 ## Continue por aqui
 
-[SAST](index.md) explica a abordagem da qual CodeQL é uma implementação. [zizmor](../../../cicd/zizmor.md) analisa outra superfície: a definição do CI/CD.
+[SAST](index.md) explica a abordagem da qual CodeQL é uma implementação. [zizmor](../../cicd/zizmor.md) analisa outra superfície: a definição do CI/CD.
