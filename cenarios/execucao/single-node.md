@@ -72,9 +72,9 @@ Dependência de APIs Kubernetes, GitOps baseado em reconciliação de recursos, 
 
 ## Caminhos de evolução
 
-Compose ou Quadlet → Kubernetes não precisa ser tratado como fracasso. Imagens OCI, health checks, configuração externa, volumes bem definidos e observabilidade portável reduzem custo de migração.
+Compose ou Quadlet -> Kubernetes não precisa ser tratado como fracasso. Imagens OCI, health checks, configuração externa, volumes bem definidos e observabilidade portável reduzem custo de migração.
 
-Kubernetes single-node → multi-node também exige trabalho: storage, quorum/control plane, load balancing, failure domains e políticas que eram irrelevantes num único host passam a importar.
+Kubernetes single-node -> multi-node também exige trabalho: storage, quorum/control plane, load balancing, failure domains e políticas que eram irrelevantes num único host passam a importar.
 
 ## Anti-patterns
 
