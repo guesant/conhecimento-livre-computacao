@@ -34,8 +34,8 @@ Comece por regras de alta confiança; execute cedo; preserve contexto do finding
 
 ## Fontes
 
-- OWASP Source Code Analysis Tools: https://owasp.org/www-community/Source_Code_Analysis_Tools
-- CodeQL documentation: https://codeql.github.com/docs/
+- OWASP Source Code Analysis Tools: <https://owasp.org/www-community/Source_Code_Analysis_Tools>
+- CodeQL documentation: <https://codeql.github.com/docs/>
 
 ## Continue por aqui
 
