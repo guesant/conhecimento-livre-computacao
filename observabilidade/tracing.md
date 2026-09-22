@@ -16,8 +16,8 @@ Amostragem agressiva sem considerar traces raros pode esconder exatamente os cas
 
 ## Fontes
 
-- W3C Trace Context: https://www.w3.org/TR/trace-context/
-- OpenTelemetry tracing: https://opentelemetry.io/docs/concepts/signals/traces/
+- W3C Trace Context: <https://www.w3.org/TR/trace-context/>
+- OpenTelemetry tracing: <https://opentelemetry.io/docs/concepts/signals/traces/>
 
 ## Continue por aqui
 
