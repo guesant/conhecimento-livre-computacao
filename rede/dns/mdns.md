@@ -20,8 +20,8 @@ Estender multicast indiscriminadamente entre VLANs para "fazer descoberta funcio
 
 ## Fontes
 
-- RFC 6762, Multicast DNS: https://www.rfc-editor.org/rfc/rfc6762
-- RFC 6763, DNS-Based Service Discovery: https://www.rfc-editor.org/rfc/rfc6763
+- RFC 6762, Multicast DNS: <https://www.rfc-editor.org/rfc/rfc6762>
+- RFC 6763, DNS-Based Service Discovery: <https://www.rfc-editor.org/rfc/rfc6763>
 
 ## Continue por aqui
 
