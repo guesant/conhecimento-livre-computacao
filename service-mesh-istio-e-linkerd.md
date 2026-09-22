@@ -1,11 +1,12 @@
-# Service mesh: Istio e Linkerd
+# Service mesh, Istio e Linkerd
 
-Um service mesh intercepta a comunicação entre serviços dentro do cluster para aplicar, de forma uniforme e sem alterar código de aplicação, criptografia em trânsito, retries, controle de tráfego e coleta de métricas. Sem ele, cada aplicação que precisa de retries automáticos, circuit breakers, mTLS entre Pods ou métricas padronizadas de latência precisa implementar isso por conta própria, ou depender de bibliotecas específicas de linguagem, o que num cluster com múltiplos times e linguagens significa reimplementar a mesma lógica várias vezes com resultados inconsistentes. Um mesh resolve isso injetando um proxy sidecar ao lado de cada Pod participante: todo o tráfego de rede do Pod passa por esse proxy antes de sair ou depois de entrar, e a aplicação continua fazendo chamadas HTTP ou gRPC normais, sem saber que está sendo interceptada.
+Esta página foi descompactada.
 
-Istio cobre roteamento avançado de camada 7 (por header, por path, por peso de tráfego para canary), mutual TLS automático entre todos os Pods do mesh, circuit breakers, rate limiting e observabilidade completa por padrão, além de federação entre múltiplos clusters; esse escopo tem um custo real, a instalação padrão adiciona uma dezena de componentes de controle além dos sidecars, configurados via recursos customizados como `VirtualService` e `DestinationRule`, com investimento de aprendizado real antes da primeira configuração em produção. Linkerd cobre o mesmo núcleo essencial, mTLS automático, retries e timeouts configuráveis, métricas de latência e erro, com superfície de configuração deliberadamente menor: onde Istio expõe recursos customizados extensos, Linkerd resolve a maioria dos casos comuns com anotações simples no manifest, sem roteamento HTTP tão sofisticado nem federação multi-cluster tão madura. A escolha depende do tamanho do cluster e da complexidade de roteamento necessária: Istio se justifica em clusters com muitos serviços, quando roteamento avançado é requisito real e existe equipe para operar a complexidade adicional; Linkerd se justifica quando o objetivo é adotar as garantias básicas sem esse investimento operacional, ou quando a equipe está adotando service mesh pela primeira vez. Nenhum dos dois se justifica em clusters pequenos sem necessidade real de roteamento avançado ou observabilidade centralizada, porque o overhead de sidecars, em recursos e em latência por hop adicional, supera o benefício quando a comunicação entre serviços já é simples.
+- [Service mesh](rede/service-mesh/index.md)
+- [Sidecar proxy](rede/service-mesh/sidecar.md)
+- [Sidecarless mesh](rede/service-mesh/sidecarless.md)
+- [Istio](rede/service-mesh/istio.md)
+- [Linkerd](rede/service-mesh/linkerd.md)
+- [Cilium Service Mesh](rede/service-mesh/cilium-service-mesh.md)
 
-O Cilium, além de atuar como CNI, implementa parte das funcionalidades de um service mesh diretamente via eBPF, sem exigir um proxy sidecar por Pod, eliminando esse overhead ao custo de cobrir um subconjunto menor de recursos do que Istio ou Linkerd oferecem em conjunto, e com menos tempo de maturação em produção.
-
-## Continue por aqui
-
-[Cilium e Calico como CNI](cilium-e-calico-como-cni.md) cobre a alternativa sem sidecars mencionada acima; [TLS, mTLS e confiança de rede](tls-mtls-e-confianca-de-rede.md) cobre o mTLS que um mesh automatiza entre Pods, o mesmo mecanismo que este cluster usa entre o kubelet e a API do K3s sem sidecar nenhum.
+Comparações e cenários devem relacionar essas páginas sem duplicar suas definições.
