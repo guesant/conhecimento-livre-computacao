@@ -20,8 +20,8 @@ seccomp responde "esta syscall pode ser tentada?". Capabilities e LSMs respondem
 
 ## Fontes
 
-- Linux kernel, seccomp filter: https://docs.kernel.org/userspace-api/seccomp_filter.html
-- seccomp(2): https://man7.org/linux/man-pages/man2/seccomp.2.html
+- Linux kernel, seccomp filter: <https://docs.kernel.org/userspace-api/seccomp_filter.html>
+- seccomp(2): <https://man7.org/linux/man-pages/man2/seccomp.2.html>
 
 ## Continue por aqui
 
