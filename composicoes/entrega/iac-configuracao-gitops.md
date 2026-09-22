@@ -16,7 +16,7 @@ Argo CD e Flux reconciliam recursos de uma plataforma a partir de Git. No Kubern
 
 ## Uma composição comum
 
-IaC cria VM/rede → configuration management prepara OS e instala Kubernetes → bootstrap instala o reconciler GitOps → GitOps passa a gerir workloads e componentes declarativos do cluster.
+IaC cria VM/rede -> configuration management prepara OS e instala Kubernetes -> bootstrap instala o reconciler GitOps -> GitOps passa a gerir workloads e componentes declarativos do cluster.
 
 As fronteiras podem variar. OpenTofu pode instalar Helm; Ansible pode aplicar manifests; CI pode executar kubectl. O fato de ser possível não significa que a responsabilidade deva ser compartilhada.
 
