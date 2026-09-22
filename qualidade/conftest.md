@@ -16,4 +16,4 @@ Transformar toda preferência estilística em política bloqueante cria um siste
 
 ## Fontes
 
-- Conftest: https://www.conftest.dev/
+- Conftest: <https://www.conftest.dev/>
