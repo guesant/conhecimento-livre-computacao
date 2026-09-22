@@ -16,7 +16,7 @@ Copiar manualmente a mesma CA para dezenas de namespaces cria drift. No outro ex
 
 ## Fontes
 
-- trust-manager documentation: https://cert-manager.io/docs/trust/trust-manager/
+- trust-manager documentation: <https://cert-manager.io/docs/trust/trust-manager/>
 
 ## Continue por aqui
 
