@@ -38,9 +38,9 @@ Outras ferramentas podem combinar SCA com scanning de imagens, IaC, secrets ou S
 
 ## Fontes
 
-- OSV-Scanner: https://google.github.io/osv-scanner/
-- Uso do OSV-Scanner v2: https://google.github.io/osv-scanner/usage/
-- OSV: https://osv.dev/
+- OSV-Scanner: <https://google.github.io/osv-scanner/>
+- Uso do OSV-Scanner v2: <https://google.github.io/osv-scanner/usage/>
+- OSV: <https://osv.dev/>
 
 ## Continue por aqui
 
