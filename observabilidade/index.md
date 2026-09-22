@@ -52,7 +52,7 @@ Instalar a stack antes de definir perguntas. Criar dashboards para cada métrica
 
 ## Composição e evolução
 
-[Pipelines de observabilidade](../composicoes/observabilidade/pipeline.md) mostra instrumentação → coleta → armazenamento → consulta → alerta e como a topologia muda entre single-node e ambientes em que a telemetria precisa sobreviver à plataforma observada.
+[Pipelines de observabilidade](../composicoes/observabilidade/pipeline.md) mostra instrumentação -> coleta -> armazenamento -> consulta -> alerta e como a topologia muda entre single-node e ambientes em que a telemetria precisa sobreviver à plataforma observada.
 
 ## Continue por aqui
 
