@@ -16,8 +16,8 @@ Transformar request ID, timestamp ou identificador de usuário em label cria car
 
 ## Fontes
 
-- Grafana Loki documentation: https://grafana.com/docs/loki/latest/
-- Loki labels: https://grafana.com/docs/loki/latest/get-started/labels/
+- Grafana Loki documentation: <https://grafana.com/docs/loki/latest/>
+- Loki labels: <https://grafana.com/docs/loki/latest/get-started/labels/>
 
 ## Continue por aqui
 
