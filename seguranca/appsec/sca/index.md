@@ -30,8 +30,8 @@ SCA e SBOM se sobrepõem na descoberta de componentes, mas respondem perguntas d
 
 ## Fontes
 
-- OSV-Scanner documentation: https://google.github.io/osv-scanner/
-- OWASP, Software Component Verification Standard: https://owasp.org/www-project-software-component-verification-standard/
+- OSV-Scanner documentation: <https://google.github.io/osv-scanner/>
+- OWASP, Software Component Verification Standard: <https://owasp.org/www-project-software-component-verification-standard/>
 
 ## Continue por aqui
 
