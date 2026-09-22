@@ -16,7 +16,7 @@ Desabilitar uma categoria inteira porque um workload excepcional não atende à 
 
 ## Fontes
 
-- KubeLinter: https://docs.kubelinter.io/
+- KubeLinter: <https://docs.kubelinter.io/>
 
 ## Continue por aqui
 
