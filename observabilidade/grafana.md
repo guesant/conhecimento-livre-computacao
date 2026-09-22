@@ -16,7 +16,7 @@ Dashboards com dezenas de gráficos sem hipótese ou ação correspondente produ
 
 ## Fontes
 
-- Grafana documentation: https://grafana.com/docs/grafana/latest/
+- Grafana documentation: <https://grafana.com/docs/grafana/latest/>
 
 ## Continue por aqui
 
