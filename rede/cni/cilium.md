@@ -58,10 +58,10 @@ Habilitar kube-proxy replacement, BGP, mesh e L7 policy simultaneamente sem nece
 
 ## Fontes
 
-- Cilium documentation: https://docs.cilium.io/
-- Cilium networking: https://docs.cilium.io/en/stable/network/concepts/
-- Cilium network policy: https://docs.cilium.io/en/stable/security/policy/
-- Hubble: https://docs.cilium.io/en/stable/observability/hubble/
+- Cilium documentation: <https://docs.cilium.io/>
+- Cilium networking: <https://docs.cilium.io/en/stable/network/concepts/>
+- Cilium network policy: <https://docs.cilium.io/en/stable/security/policy/>
+- Hubble: <https://docs.cilium.io/en/stable/observability/hubble/>
 
 ## Continue por aqui
 
