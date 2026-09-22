@@ -32,8 +32,8 @@ Ferramentas de proxy de segurança, scanners web automatizados, testes de API or
 
 ## Fontes
 
-- OWASP Web Security Testing Guide: https://owasp.org/www-project-web-security-testing-guide/
-- OWASP ZAP: https://www.zaproxy.org/docs/
+- OWASP Web Security Testing Guide: <https://owasp.org/www-project-web-security-testing-guide/>
+- OWASP ZAP: <https://www.zaproxy.org/docs/>
 
 ## Continue por aqui
 
