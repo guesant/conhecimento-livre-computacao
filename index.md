@@ -62,6 +62,12 @@ Segurança de CI/CD trata a pipeline como superfície própria, com [zizmor](seg
 
 [Bancos chave-valor](dados/bancos/key-value.md) e [bancos de documentos](dados/bancos/documentos.md) têm modelos diferentes. [Filas](dados/mensageria/filas.md) e [event streaming](dados/mensageria/event-streaming.md) também são separados porque retenção, consumo, replay e ordenação não funcionam da mesma maneira.
 
+## Cenários, composições e comparações
+
+A árvore por domínio responde onde cada conceito pertence, mas decisões reais atravessam domínios. [Cenários e padrões de solução](cenarios/index.md) partem das restrições do ambiente, como single-node ou pequeno cluster. [Composições](composicoes/index.md) explicam como responsabilidades diferentes se conectam, como CNI + Gateway + mesh ou IaC + configuração + GitOps. [Comparações](comparacoes/index.md) colocam alternativas que disputam uma responsabilidade sob critérios comuns.
+
+Essas páginas não substituem Arquitetura. Elas podem concluir "sob estas premissas, este padrão tende a reduzir complexidade" de forma reutilizável; a decisão concreta de como o `hl-infrastructure` foi montado continua documentada em Arquitetura.
+
 ## Backup e recuperação
 
 Backup começa por RPO e RTO, segue para retenção e testes de restauração e então chega às particularidades de etcd, CloudNativePG, chaves e reconstrução de cluster. A ordem é deliberada: ferramenta de backup sem objetivo de recuperação definido produz cópias, não necessariamente recuperabilidade.
