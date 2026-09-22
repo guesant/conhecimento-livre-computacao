@@ -16,8 +16,8 @@ Publicar um DS incorreto no parent pode tornar uma zona validada inacessível. O
 
 ## Fontes
 
-- RFC 4033, DNS Security Introduction and Requirements: https://www.rfc-editor.org/rfc/rfc4033
-- ICANN DNSSEC: https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en
+- RFC 4033, DNS Security Introduction and Requirements: <https://www.rfc-editor.org/rfc/rfc4033>
+- ICANN DNSSEC: <https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en>
 
 ## Continue por aqui
 
