@@ -60,10 +60,10 @@ OpenTelemetry pode participar da instrumentação e transporte, mas não é simp
 
 ## Fontes
 
-- Prometheus documentation: https://prometheus.io/docs/
-- Data model: https://prometheus.io/docs/concepts/data_model/
-- Storage: https://prometheus.io/docs/prometheus/latest/storage/
-- Prometheus Operator: https://prometheus-operator.dev/
+- Prometheus documentation: <https://prometheus.io/docs/>
+- Data model: <https://prometheus.io/docs/concepts/data_model/>
+- Storage: <https://prometheus.io/docs/prometheus/latest/storage/>
+- Prometheus Operator: <https://prometheus-operator.dev/>
 
 ## Continue por aqui
 
