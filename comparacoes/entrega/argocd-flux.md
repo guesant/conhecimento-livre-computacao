@@ -24,8 +24,8 @@ Escolher pelo número de estrelas ou pela existência de UI ignora o modelo de o
 
 ## Fontes
 
-- Argo CD: https://argo-cd.readthedocs.io/
-- Flux: https://fluxcd.io/flux/
+- Argo CD: <https://argo-cd.readthedocs.io/>
+- Flux: <https://fluxcd.io/flux/>
 
 ## Continue por aqui
 
