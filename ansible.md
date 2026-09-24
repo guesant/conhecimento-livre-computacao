@@ -7,6 +7,18 @@ Ansible é uma ferramenta de gestão de configuração: ela conecta numa máquin
 
 Por isso Ansible costuma ser descrito como *push*: quem inicia a conexão é a máquina do operador, empurrando a configuração para o destino, ao contrário de um modelo *pull* onde o próprio destino puxaria periodicamente sua configuração de um servidor central.
 
+## Como funciona: control node, SSH e facts
+
+Quem inicia e coordena essa conexão chama-se **control node**: a máquina onde os comandos `ansible` e `ansible-playbook` rodam. A cada execução, o control node se conecta a cada host de destino via SSH, copia os módulos necessários para lá, executa-os e remove os arquivos temporários ao final. Nada fica residente no host gerenciado entre uma execução e outra, e é isso que permite gerenciar uma máquina nova sem preparação prévia além de acesso SSH e um interpretador Python.
+
+No início de cada execução, o Ansible coleta **facts**: informações sobre o host de destino, como sistema operacional, endereços de rede e memória, entre outras. Esses facts ficam disponíveis como variáveis dentro do playbook, condicionando uma tarefa ao que o host realmente é, em vez de assumir um ambiente uniforme para o parque inteiro. É essa coleta que permite, por exemplo, aplicar uma tarefa só em hosts com uma característica específica, sem declarar isso à mão em lugar nenhum.
+
+## Ansible e Infraestrutura como Código: camadas diferentes
+
+Uma ferramenta de Infraestrutura como Código, como Terraform ou OpenTofu, resolve um problema diferente do Ansible: ela cria a máquina, alocando a instância, o disco e a rede. O Ansible entra depois, configurando o que roda dentro dela, como pacotes instalados, arquivos de configuração e serviços habilitados.
+
+As duas camadas são complementares, não concorrentes. É comum usar uma ferramenta de IaC para provisionar os hosts e o Ansible para configurá-los na sequência, cada ferramenta resolvendo a parte do problema para a qual foi desenhada.
+
 ## Idempotência
 
 O conceito mais importante para entender Ansible é a idempotência: rodar o mesmo playbook de novo deve produzir o mesmo resultado, e a execução seguinte não deve fazer nada além de confirmar que o estado já está correto. Isso é o que diferencia um playbook bem escrito de um script shell comum.
@@ -35,6 +47,64 @@ Playbooks bem escritos tratam esse limite explicitamente, pulando ou avisando so
 Um **inventário** lista as máquinas que o Ansible gerencia, agrupadas e com variáveis próprias (endereço, usuário SSH, caminho da chave). Um **playbook** é o arquivo que descreve o que aplicar em quais máquinas do inventário.
 
 Uma **role** é uma unidade reutilizável de playbook: uma pasta com uma estrutura de arquivos padronizada (tarefas, templates, variáveis padrão, handlers) que empacota uma responsabilidade específica, como "instalar e configurar um firewall" ou "instalar o k3s". Organizar um playbook grande em roles evita repetir a mesma sequência de tarefas em vários lugares e permite testar e documentar cada responsabilidade separadamente.
+
+## Playbooks na prática: play, hosts, tasks e handlers
+
+Dentro de um playbook, cada bloco que associa um grupo de hosts do inventário a uma lista de tarefas é uma **play**; um playbook pode declarar mais de uma play, e o Ansible as processa em ordem, host por host, em paralelo até um limite de forks configurável. Cada tarefa dentro de uma play referencia um módulo e os parâmetros que ele espera, como o caminho de um arquivo a gerenciar ou o nome de um pacote a instalar.
+
+Um **handler** é uma tarefa especial que só executa quando notificada por outra tarefa que reportou `changed`, e mesmo assim uma única vez ao final da play, não importa quantas tarefas diferentes a notificaram. O exemplo abaixo mostra os dois lados dessa relação: uma tarefa comum e o handler que ela pode acionar.
+
+```yaml
+# playbook.yml
+- name: Configurar journal persistente
+  hosts: servidores
+  become: true
+  tasks:
+    - name: Garantir que /var/log/journal exista
+      ansible.builtin.file:
+        path: /var/log/journal
+        state: directory
+        mode: "0755"
+
+    - name: Definir Storage=persistent em journald.conf
+      ansible.builtin.lineinfile:
+        path: /etc/systemd/journald.conf
+        regexp: "^#?Storage="
+        line: "Storage=persistent"
+      notify: Reiniciar systemd-journald
+
+  handlers:
+    - name: Reiniciar systemd-journald
+      ansible.builtin.systemd:
+        name: systemd-journald
+        state: restarted
+```
+
+A tabela abaixo liga cada elemento do exemplo ao papel que ele cumpre.
+
+| Elemento do exemplo | Papel |
+| --- | --- |
+| `become: true` | eleva privilégio (equivalente a `sudo`) para a play, necessário porque alterar `journald.conf` exige acesso root |
+| `ansible.builtin.file` | garante que o diretório `/var/log/journal` exista antes de seguir adiante |
+| `ansible.builtin.lineinfile` | ajusta a diretiva `Storage=persistent` dentro do arquivo de configuração |
+| `notify` | dispara o handler só quando esta tarefa específica reporta `changed` |
+
+Cada tarefa recebeu um `name` descritivo, que aparece no log da execução e funciona como identificação legível dela quando o playbook roda, em vez do nome técnico do módulo usado. Rodar `ansible-playbook -i inventory.ini playbook.yml` aplica essa play contra o inventário indicado; a segunda execução do mesmo comando deve reportar `changed=0` em todas as tarefas, a confirmação de idempotência já explicada na seção anterior.
+
+## Dentro de uma role: o que cada diretório guarda
+
+Uma role reconhece sua própria estrutura pelo nome de cada subdiretório, sem exigir configuração explícita de onde cada peça está. Isso é o que torna uma role portável entre playbooks diferentes: aplicá-la a um projeto novo é uma questão de referenciá-la numa play, não de copiar arquivos manualmente. A tabela abaixo resume o papel de cada diretório mencionado nesta página.
+
+| Diretório | Guarda |
+| --- | --- |
+| `tasks/` | a lista de tarefas que a role executa |
+| `handlers/` | os handlers que essas tarefas podem notificar |
+| `defaults/` | variáveis de fallback, o valor mais fraco na precedência, pensado para ser sobrescrito |
+| `vars/` | variáveis internas da role |
+| `templates/` | arquivos de template renderizados no host de destino |
+| `files/` | arquivos estáticos copiados ao host sem renderização |
+
+Dividir um projeto em roles bem definidas, uma por responsabilidade, evita um único playbook monolítico, difícil de reutilizar ou testar em partes. Uma role focada numa responsabilidade só, como configurar um serviço específico, também fica mais fácil de documentar e de entender isoladamente, sem carregar o contexto do playbook inteiro que a usa. É esse isolamento que permite testar ou revisar uma role sem reler o projeto inteiro.
 
 ## Segredos: o Vault
 

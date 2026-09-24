@@ -24,7 +24,7 @@ A segunda área é o conjunto de utilitários de linha de comando listado acima,
 
 A terceira área são as APIs de sistema em C listadas acima, que permitem que um programa nativo compile e rode sobre qualquer sistema compatível sem alterar a lógica de acesso ao sistema operacional.
 
-Em nenhuma dessas três áreas o POSIX escolhe um lado das divergências reais entre implementações. Ele define o subconjunto de comportamento que todas são obrigadas a implementar igual, e deixa extensões, como a flag `--color` do GNU ou `date -v` do BSD, como decisão própria de cada implementação, fora do escopo do padrão.
+Em nenhuma dessas três áreas o POSIX escolhe um lado das divergências reais entre implementações. Ele define o subconjunto de comportamento que todas são obrigadas a implementar igual, e deixa extensões, como a flag `--color` do GNU ou `-v` do `date` do BSD, como decisão própria de cada implementação, fora do escopo do padrão.
 
 É por isso que dois sistemas POSIX-compliant, como um Debian e um FreeBSD, ainda podem divergir enormemente em como se instala software ou como o sistema inicia, mesmo compartilhando o mesmo comportamento mínimo de shell e utilitários: gerenciamento de pacotes, formato de inicialização de sistema, interface gráfica e virtualização nunca estiveram no escopo da especificação.
 

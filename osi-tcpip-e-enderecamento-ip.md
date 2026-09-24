@@ -10,6 +10,10 @@ Um balanceador de "camada 4" decide para onde encaminhar um pacote olhando IP de
 
 Essa numeração também organiza a rede de um host Linux: interfaces e endereçamento físico em camadas 1 e 2 (bridges, veth pairs), roteamento entre redes em camada 3, portas de transporte em camada 4.
 
+Vale usar essa numeração para comunicar rápido em que nível um problema ou uma ferramenta opera, como comparar um firewall de borda de camada 3/4 com um web application firewall de camada 7, ou diagnosticar uma falha, um veth pair desconectado é camada 2 e não se resolve mexendo em regra de camada 7.
+
+Não é necessário memorizar as sete camadas do OSI em detalhe para operar uma infraestrutura; o que importa é reconhecer, diante de um termo como L4 ou L7, qual conjunto de decisões aquela camada realmente tem disponível. Essa mesma numeração volta a aparecer mais adiante, na diferença entre terminar TLS e apenas encaminhar seus bytes cifrados, ou entre um proxy que só olha porta e um que lê o conteúdo da requisição.
+
 ## IPv4: de classes a CIDR
 
 Um endereço IPv4 tem 32 bits, escrito como quatro octetos decimais. O esquema antigo de classes fixas (A, B, C) desperdiçava endereços com facilidade; o CIDR (RFC 4632) substituiu isso por um prefixo variável `/N`, onde N bits pertencem à rede e os restantes a hosts.
@@ -29,23 +33,37 @@ Qualquer rede doméstica ou interna usa endereços do bloco RFC 1918, e um host 
 
 K3s aplica a mesma lógica dentro do cluster: por padrão o Flannel aloca Pods e Services a partir dos blocos `10.42.0.0/16` e `10.43.0.0/16`, configuráveis por flag na inicialização do k3s.
 
+Nem todo mapeamento de porta através do NAT depende do operador editar a configuração do roteador: os protocolos UPnP e PCP permitem que o próprio dispositivo da rede local peça a abertura de uma porta, sem intervenção humana.
+
+O perfil IGD do UPnP não implementa nenhuma autenticação por padrão, então qualquer dispositivo da rede, incluindo malware, pode solicitar o mesmo mapeamento que uma aplicação legítima pediria; falhas de implementação já documentadas permitiram abusar disso para amplificação de DDoS. O PCP, sucessor do NAT-PMP, tem desenho mais restrito e mais fácil de auditar, mas o risco permanece: qualquer dispositivo interno pode pedir exposição para fora sem aprovação do operador.
+
 ## IPv6: não é IPv4 com mais bits
 
-Um endereço IPv6 tem 128 bits, em oito grupos hexadecimais, com zeros à esquerda omissíveis e uma sequência de grupos zerados substituível por `::` uma única vez (`2001:db8::1`).
+Um endereço IPv6 tem 128 bits, escrito em oito grupos hexadecimais separados por dois-pontos, com zeros à esquerda de cada grupo omissíveis e uma única sequência de grupos zerados substituível por `::` (`2001:db8::1`). A RFC 3849 reserva o prefixo `2001:db8::/32` para documentação, o equivalente em IPv6 dos blocos TEST-NET do IPv4 já vistos na tabela acima.
+
+Todo host Linux moderno já vem com essa pilha habilitada por padrão, o que significa que um serviço pode estar acessível por IPv6 mesmo quando o operador só pensou em configurar IPv4, e um firewall que cobre só a família IPv4 deixa essa rota de acesso sem filtro nenhum.
 
 O espaço de 128 bits existe porque o IPv4 se esgotou como alocação livre; isso muda a arquitetura em duas direções: NAT deixa de ser necessidade estrutural, já que há endereços suficientes para cada host ter um endereço global roteável, e redes IPv6 tendem a depender de firewall com negação por padrão, não de NAT, para controlar conexões de entrada.
 
-A configuração ganha SLAAC, que permite a um host gerar seu próprio endereço a partir do prefixo anunciado pelo roteador, sem DHCP.
+A configuração de endereço ganha um mecanismo automático nativo: SLAAC permite a um host gerar seu próprio endereço global a partir do prefixo anunciado pelo roteador, sem precisar de um servidor DHCP. DHCPv6 continua existindo como alternativa com estado, útil quando a rede precisa de controle centralizado sobre quais endereços são distribuídos. As duas formas não se excluem: uma rede real pode combinar SLAAC para o endereço principal com DHCPv6 só para opções auxiliares, como servidores DNS.
 
 O erro mais comum de quem chega ao IPv6 é tratá-lo como IPv4 com endereço maior, o que gera diferenças estruturais reais: não existe broadcast (tudo foi redesenhado sobre multicast); ARP não existe, substituído por NDP sobre ICMPv6, então bloquear ICMPv6 inteiro quebra a própria descoberta de vizinhos e rotas; só a origem fragmenta um pacote, e a rede depende de Path MTU Discovery, que também depende de ICMPv6.
 
 O roteador padrão nunca vem do DHCP, só de Router Advertisement; o cabeçalho não tem checksum, porque essa responsabilidade passou para camadas superiores; múltiplos endereços por interface é o normal, não a exceção.
 
-O bloco ULA (`fc00::/7`, RFC 4193) não nasceu de escassez como o RFC 1918, e sim para dar identidade estável a uma rede interna.
+O bloco ULA (`fc00::/7`, na prática `fd00::/8`) não nasceu de escassez de endereços como o RFC 1918 nasceu, e sim para dar a uma rede interna uma identidade estável e não roteável globalmente. Nada impede, tecnicamente, que a mesma rede também tenha endereços públicos ao mesmo tempo, porque múltiplos endereços por interface já é o normal em IPv6.
 
-Subnetting em IPv6 raramente é feito bit a bit: a convenção fixa os últimos 64 bits como identificador de interface, e um site tipicamente recebe um prefixo entre `/48 e /56`, com liberdade de criar sub-redes `/64` a partir dele.
+Cada ULA é gerado uma única vez por um algoritmo pseudoaleatório (RFC 4193) que produz um identificador de site sem depender de nenhum registro central, o que faz dele um bom candidato a identidade permanente quando o prefixo público de uma rede pode mudar.
 
-Kubernetes trata dual stack como estável desde a 1.23, com `--cluster-cidr/--service-cidr` aceitando um valor de cada família e cada Service declarando `ipFamilyPolicy/ipFamilies`.
+Subnetting em IPv6 raramente é feito bit a bit: a convenção fixa os últimos 64 bits de qualquer endereço unicast global como identificador de interface, e um site tipicamente recebe da operadora um prefixo de rede menor que isso, geralmente entre 48 e 56 bits.
+
+Um site assim tem liberdade para criar `2^16` sub-redes `/64` a partir do prefixo alocado, cada uma ainda grande demais para esgotar por uso normal. Essa abundância é o que torna plausível dar a cada Pod de um cluster um endereço global roteável, uma opção que nunca existiu de verdade em IPv4.
+
+Kubernetes trata dual stack como estável desde a versão 1.23, com o mesmo par de flags de cluster e de Service descrito abaixo aceitando um valor de cada família, e cada Service declarando sua `ipFamilyPolicy` e sua lista de `ipFamilies`.
+
+## Dual stack
+
+Dual stack é a configuração em que um host ou um cluster mantém IPv4 e IPv6 simultaneamente ativos, em vez de migrar de um para o outro de uma vez; é o estado mais comum hoje, porque a internet pública ainda depende fortemente de IPv4 para conectividade universal. K3s aceita dual stack nativamente: `--cluster-cidr` e `--service-cidr` recebem um valor IPv4 e um valor IPv6 separados por vírgula, e o cluster passa a alocar um endereço de cada família por Pod e por Service. Na prática, dual stack aumenta a superfície de configuração, porque cada regra de firewall e cada suposição sobre qual é o IP de um host precisa considerar que existem dois endereços válidos e, potencialmente, duas rotas diferentes até o mesmo destino.
 
 Um Pod pode ter só um endereço ULA (equivalente em escopo ao `10.42.0.0/16` atual), só um endereço global roteável (conectividade fim a fim sem tradução, mas exigindo postura de negação explícita por firewall/NetworkPolicy já que não há NAT escondendo topologia), ou os dois ao mesmo tempo.
 

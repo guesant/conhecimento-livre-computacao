@@ -20,7 +20,7 @@ SOPS e Sealed Secrets resolvem a mesma pergunta com modelos de chave diferentes.
 
 A chave privada correspondente fica fora do Git por definição, guardada por quem administra o ambiente, e qualquer identidade que a possua decifra o arquivo, independente de onde ele estiver ou em qual cluster for aplicado.
 
-Sealed Secrets segue outro caminho: um controller dedicado, rodando dentro do cluster de destino, gera um par de chaves e expõe só a pública. Quem cifra um `Secret` usa essa chave pública para produzir um `SealedSecret`, e só aquele controller específico, com a chave privada que nunca sai do cluster, consegue reverter a operação.
+Sealed Secrets segue outro caminho: um controller dedicado, rodando dentro do cluster de destino, gera um par de chaves e expõe só a pública. Quem cifra um `Secret`, tipicamente pela ferramenta de linha de comando `kubeseal`, usa essa chave pública para produzir um `SealedSecret`, e só aquele controller específico, com a chave privada que nunca sai do cluster, consegue reverter a operação.
 
 Isso amarra o arquivo cifrado a um controller e a um cluster: um `SealedSecret` gerado para um ambiente não abre em outro, porque a chave pública usada na cifragem foi gerada por aquele controller e não por outro.
 
@@ -60,6 +60,12 @@ Nenhuma das duas famílias elimina sozinha o problema de como a primeira credenc
 Criptografia no Git tende a ser a escolha mais simples quando o ambiente não tem, ou não quer manter, um serviço externo de segredos, e quando a equipe já está confortável tratando uma chave de descriptografia com o rigor de uma credencial administrativa.
 
 Um secret store externo compensa o serviço adicional quando a rotação de credenciais precisa ser auditável e centralizada, quando várias equipes ou automações diferentes precisam de acesso controlado por política em vez de por posse de uma chave compartilhada, ou quando a fonte de verdade dos segredos já existe fora do Kubernetes por outro motivo.
+
+## Onde a decifragem acontece, num pipeline GitOps
+
+Integrar SOPS a um pipeline GitOps admite mais de um mecanismo de decifragem. Uma opção roda como um plugin de gerenciamento de configuração dentro do próprio `argocd-repo-server`, decifrando o arquivo no momento em que o Argo CD renderiza os manifests, antes de qualquer objeto chegar à API Kubernetes.
+
+Este cluster usa a outra opção: um operator dedicado, o sops-secrets-operator, que lê um recurso customizado já sincronizado pelo Argo CD e só então decifra o valor para escrever o `Secret` correspondente. A diferença prática está em onde a decifragem acontece, no processo que fala com o Git ou num controller que fala com a API, cada uma com sua própria superfície de configuração.
 
 ## Continue por aqui
 

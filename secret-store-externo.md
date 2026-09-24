@@ -35,6 +35,8 @@ OpenBao é um fork open source do HashiCorp Vault, criado depois que o Vault mud
 
 Um cofre OpenBao ou Vault armazena seus dados criptografados em repouso, e para servir qualquer segredo precisa primeiro ser destravado, isto é, receber o material criptográfico gerado na sua própria inicialização que permite decifrar a chave mestra interna. Sem esse material, nem um administrador com acesso root ao host consegue ler o que está armazenado ali dentro.
 
+Na prática, inicializar um cofre novo roda `bao operator init`, que devolve as chaves de unseal e o token root numa única vez. Destravar depois de um reinício roda `bao operator unseal` uma vez por chave, até atingir o limiar mínimo. O comando de status do próprio cofre confirma o resultado, reportando quando ele volta a servir segredos normalmente.
+
 Esse mecanismo cria uma dependência circular interessante quando o cofre roda dentro do mesmo cluster que ele protege: se o cluster reinicia e o cofre precisa ser destravado de novo, mas as chaves de unseal só existem dentro desse mesmo cluster, a recuperação trava num círculo sem saída.
 
 As chaves de unseal, ou uma configuração de destravamento automático usando um serviço de chaves externo, precisam existir fora do domínio de falha que o próprio cofre protege. Um serviço gerenciado fora do cluster, ou hospedado por terceiro, evita esse problema por completo, porque a disponibilidade do cofre deixa de depender da disponibilidade do ambiente que ele protege.
@@ -61,11 +63,15 @@ Esse cálculo é o motivo pelo qual topologias de alta disponibilidade quase sem
 
 Cada réplica ainda precisa passar pelo próprio processo de unseal antes de participar do cluster, o que normalmente exige combinar essa topologia com destravamento automático via KMS externo, porque destravar manualmente cada réplica a cada reinicialização anularia boa parte do ganho de disponibilidade que a própria alta disponibilidade deveria trazer.
 
+O backend de armazenamento compartilhado entre as réplicas também importa para essa topologia. O caminho recomendado hoje é o Integrated Storage, baseado em consenso Raft, em que cada réplica guarda sua própria cópia replicada sem depender de um serviço externo adicional; o Consul já foi a alternativa mais estabelecida, mas perdeu espaço depois de mudar para uma licença fora do padrão aberto, e hoje aparece sobretudo como coordenador de bloqueio combinado com outro backend de dados, não como armazenamento primário.
+
 Alta disponibilidade se justifica quando aplicações em produção dependem do cofre para operar, como autenticação ou credenciais de banco de dados emitidas dinamicamente, e uma indisponibilidade breve já tem impacto real. Em ambientes de desenvolvimento, teste, ou clusters pessoais de nó único, a complexidade adicional de múltiplas réplicas, destravamento automático e um balanceador de carga à frente delas raramente compensa o benefício; uma instância única com backup regular da configuração é suficiente nesse contexto.
 
 ## Outras opções: Infisical e serviços gerenciados
 
 Além do ESO e do par OpenBao/Vault, existe uma categoria de plataforma de segredos oferecida como serviço, como o Infisical, que combina um backend hospedado (ou auto-hospedável) com um operator próprio para sincronizar valores para o cluster, de forma parecida ao ESO mas acoplada à sua própria API em vez de a um padrão comum entre múltiplos backends.
+
+O Infisical Secrets Operator declara essa conexão com três recursos próprios: `InfisicalConnection`, que aponta para a instância; `InfisicalAuth`, que autentica uma Machine Identity; e `InfisicalStaticSecret`, que referencia o projeto, o ambiente e o caminho a sincronizar. É a mesma estrutura de referência declarativa do ESO, só que os três papéis vêm como CRDs separados em vez de um recurso único.
 
 A escolha entre um serviço desses e o par ESO mais um backend genérico segue a mesma lógica de portabilidade contra profundidade específica já descrita para o ESO: uma plataforma dedicada tende a oferecer uma experiência mais integrada (interface web, convites de equipe, versionamento de segredo) ao custo de acoplar o ambiente à API e ao modelo de autenticação daquele fornecedor específico.
 
