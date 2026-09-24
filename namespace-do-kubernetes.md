@@ -1,4 +1,4 @@
-# Compatibilidade: Namespace do Kubernetes
+# Mapa de compatibilidade: namespace Kubernetes
 
 Esta URL antiga é mantida como mapa de compatibilidade. A página canônica está
 em [Namespace](kubernetes/core/namespace.md), na categoria de objetos

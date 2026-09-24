@@ -1,9 +1,10 @@
-# Affinity e anti-affinity
+# Affinity
 
 Affinity expressa preferências ou restrições de scheduling baseadas em labels
-de nós ou de outros Pods. Anti-affinity expressa separação. As regras podem
-ser obrigatórias, bloqueando nós incompatíveis, ou preferenciais, influenciando
-o score sem tornar a colocação impossível.
+de nós ou de outros Pods. A modalidade anti-affinity usa a mesma API para
+expressar separação. As regras podem ser obrigatórias, bloqueando nós
+incompatíveis, ou preferenciais, influenciando o score sem tornar a colocação
+impossível.
 
 ## Node affinity
 

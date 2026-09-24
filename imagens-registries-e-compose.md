@@ -1,4 +1,4 @@
-# Imagens, registries e Compose, mapa legado
+# Mapa de compatibilidade: distribuição de containers
 
 Esta página preserva a URL histórica do primeiro mapa do domínio. O conteúdo
 foi separado porque imagem, camada, digest, registry e Compose possuem modelos

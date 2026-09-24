@@ -1,4 +1,4 @@
-# DNSSEC, mDNS e registro de domínio
+# Mapa de compatibilidade: serviços de nomes
 
 Esta página foi descompactada porque os três assuntos pertencem ao domínio de nomes, mas resolvem problemas diferentes.
 

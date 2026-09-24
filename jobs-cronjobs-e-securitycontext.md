@@ -1,4 +1,4 @@
-# Jobs, CronJobs e SecurityContext
+# Mapa de compatibilidade: workloads batch
 
 Esta página foi descompactada.
 

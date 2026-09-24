@@ -1,4 +1,4 @@
-# kubeconform e Conftest
+# Mapa de compatibilidade: validação declarativa
 
 Esta página foi descompactada.
 

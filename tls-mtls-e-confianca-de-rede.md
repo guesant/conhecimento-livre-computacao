@@ -1,4 +1,4 @@
-# TLS, mTLS e confiança
+# Mapa de compatibilidade: confiança de rede
 
 Esta página foi descompactada e permanece como ponte de compatibilidade.
 

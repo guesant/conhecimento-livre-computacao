@@ -1,4 +1,4 @@
-# Filas e streaming de eventos
+# Mapa de compatibilidade: mensageria
 
 Esta página foi descompactada porque fila e event stream possuem modelos de consumo e retenção diferentes.
 

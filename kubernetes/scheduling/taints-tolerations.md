@@ -1,9 +1,9 @@
-# Taints e tolerations
+# Scheduling por taints
 
-Taint marca um nó com uma condição que impede ou expulsa Pods que não tenham
-uma toleration correspondente. Toleration é uma permissão declarada pelo Pod
-para permanecer ou ser agendado nesse nó. Ela não força scheduling e não
-substitui affinity.
+As páginas de [taints](taints.md) e [tolerations](tolerations.md) separam a
+marca aplicada ao nó da permissão declarada pelo Pod. Esta página preserva o
+mapa relacional para quem precisa entender o mecanismo completo. Uma
+toleration não força scheduling e não substitui affinity.
 
 ## Efeitos
 

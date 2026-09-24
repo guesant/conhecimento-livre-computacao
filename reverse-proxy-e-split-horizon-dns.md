@@ -1,4 +1,4 @@
-# Reverse proxy e split-horizon DNS
+# Mapa de compatibilidade: publicação de serviços
 
 Esta página foi descompactada porque combinava duas responsabilidades.
 

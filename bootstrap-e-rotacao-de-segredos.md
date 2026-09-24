@@ -1,6 +1,14 @@
-# Bootstrap e rotação de segredos
+# Ciclo de vida de segredos
 
-Duas perguntas aparecem em qualquer estratégia de gerenciamento de segredos, não importa qual das famílias descritas em [criptografia de segredos no Git](criptografia-de-segredos-no-git.md) ou [secret store externo](secret-store-externo.md) um ambiente escolha. A primeira é como a credencial inicial chega ao ambiente, antes de qualquer automação existir para entregá-la. A segunda é como uma credencial já em uso é trocada por outra sem causar indisponibilidade nem deixar a antiga utilizável. Esta página trata das duas como conceitos gerais, e cada seção aponta para onde este cluster resolveu o problema de verdade.
+As páginas canônicas de [bootstrap](seguranca/secrets/bootstrap.md) e
+[rotação](seguranca/secrets/rotation.md) tratam cada operação. Esta página
+explica a relação entre elas e como o cluster resolve o ciclo completo.
+
+Duas perguntas aparecem em qualquer estratégia de gerenciamento de segredos,
+independentemente de o ambiente usar [criptografia de segredos no Git](criptografia-de-segredos-no-git.md)
+ou um [secret store externo](secret-store-externo.md): como a credencial inicial
+chega antes da automação, e como uma credencial em uso é trocada sem
+indisponibilidade nem permanência indevida da antiga.
 
 ## O problema do bootstrap
 

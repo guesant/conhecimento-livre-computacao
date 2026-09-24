@@ -1,4 +1,4 @@
-# Especificações OCI e pilha de runtimes
+# Mapa de compatibilidade: runtimes OCI
 
 Esta página foi descompactada recursivamente.
 

@@ -1,6 +1,16 @@
-# Armazenamento local, distribuído e Longhorn
+# Estratégias de armazenamento no Kubernetes
 
-**Armazenamento local** vincula os dados ao disco de um nó específico: rápido, sem rede envolvida, mas o Pod que o usa só pode ser agendado no nó que o contém, e perder o nó é perder os dados sem backup externo. **Armazenamento distribuído** (Longhorn, Ceph, e equivalentes gerenciados em nuvem) replica os dados entre múltiplos nós; um Pod pode ser reagendado em qualquer nó com acesso à rede de armazenamento, e a perda de um nó não derruba o volume enquanto houver réplicas saudáveis. Num cluster de nó único, a distinção entre os dois é menor: não há outro nó para receber uma réplica, e a perda do único host afeta os dois modelos igualmente; a vantagem do distribuído fica limitada à reconstrução de réplicas após a perda de um disco (não do host inteiro) e à possibilidade de expandir para multinó sem migrar de estratégia depois.
+As páginas de [armazenamento local e distribuído](kubernetes/storage/local-distributed.md)
+e [Longhorn](kubernetes/storage/longhorn.md) tratam cada decisão de forma
+canônica. Este texto mantém somente a comparação necessária para escolher
+entre elas no contexto de um cluster Kubernetes.
+
+**Armazenamento local** vincula os dados ao disco de um nó específico: rápido,
+sem rede envolvida, mas o Pod que o usa só pode ser agendado no nó que o
+contém. **Armazenamento distribuído** replica os dados entre múltiplos nós e
+permite reagendar o Pod enquanto houver réplicas saudáveis. Em um cluster de
+nó único, não há outro nó para receber uma réplica, e a perda do host afeta os
+dois modelos igualmente.
 
 Longhorn é um sistema de armazenamento em blocos distribuído para Kubernetes, funcionando como provisionador CSI, sem depender de SAN ou storage externo dedicado. Para cada volume, cria um **engine** (um processo associado ao Pod que usa o volume) e um conjunto de **réplicas**, preferencialmente distribuídas em nós e discos diferentes; o engine escreve de forma síncrona em todas as réplicas ativas, e se uma falha, reconstrói em outro disco elegível a partir de uma réplica saudável. O **armazenamento secundário** (backupstore) é um destino externo, tipicamente compatível com S3 ou NFS, para onde o Longhorn copia backups de volumes, distinto das réplicas primárias; um backup no backupstore sobrevive à perda de todos os nós do cluster, réplicas não. Ceph oferece um modelo mais maduro e flexível (blocos, objetos e arquivos), com maior complexidade operacional; para um cluster pequeno ou de nó único, Longhorn tem curva de operação mais simples.
 

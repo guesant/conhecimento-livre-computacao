@@ -1,4 +1,4 @@
-# jq e yq
+# Mapa de compatibilidade: dados estruturados
 
 Esta página foi descompactada. Use [dados estruturados na linha de comando](ferramentas/dados-estruturados/index.md) como mapa da categoria.
 

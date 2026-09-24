@@ -1,4 +1,9 @@
-# Secret store externo, External Secrets Operator, OpenBao e Vault
+# Secret stores externos
+
+As implementações de [External Secrets Operator](seguranca/secrets/external-secrets.md)
+e [Vault e OpenBao](seguranca/secrets/vault-openbao.md) possuem páginas
+canônicas próprias. Este texto compara a composição de um operator de entrega
+com um backend de segredos e registra os trade-offs de execução externa.
 
 A alternativa a cifrar um segredo antes do commit, descrita em [criptografia de segredos no Git](criptografia-de-segredos-no-git.md), é não versionar o valor de jeito nenhum: mantê-lo inteiramente fora do repositório, num serviço dedicado a armazenar e controlar acesso a segredos, e deixar no Git apenas uma referência declarativa a ele, como um caminho ou uma chave de busca.
 

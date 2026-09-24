@@ -1,4 +1,4 @@
-# CPU, privilégios e system calls
+# Mapa de compatibilidade: execução no Linux
 
 Esta página foi descompactada. O título agrupava três níveis diferentes da pilha apenas porque aparecem em sequência durante a execução de software.
 

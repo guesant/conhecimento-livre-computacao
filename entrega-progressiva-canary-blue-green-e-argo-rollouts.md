@@ -1,4 +1,4 @@
-# Entrega progressiva
+# Mapa de compatibilidade: entrega progressiva
 
 Esta página foi descompactada para separar estratégias de sua implementação.
 

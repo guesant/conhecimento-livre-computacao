@@ -1,4 +1,4 @@
-# Requests, limits e QoS de Pods
+# Mapa de compatibilidade: recursos de Pods
 
 Esta página foi descompactada.
 

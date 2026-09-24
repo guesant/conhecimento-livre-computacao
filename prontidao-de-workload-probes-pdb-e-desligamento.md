@@ -1,4 +1,4 @@
-# Saúde, disrupção e desligamento de workloads
+# Mapa de compatibilidade: ciclo de vida de workloads
 
 Esta página foi descompactada porque agrupava mecanismos diferentes.
 

@@ -1,4 +1,4 @@
-# UFW e portas publicadas pelo Docker
+# Firewall do host e portas publicadas
 
 UFW (Uncomplicated Firewall) é uma interface de linha de comando sobre o mesmo netfilter que [firewalld](firewalld.md) configura, pensada para um firewall de host único com sintaxe curta, sem exigir conhecimento direto de nftables. O modelo é uma lista simples de regras, avaliada na ordem em que aparecem, mais uma política padrão por direção (`incoming`, `outgoing`, `routed`) aplicada quando nenhuma regra corresponde; a convenção recomendada é `deny incoming`/`allow outgoing`, bloquear tudo por padrão e liberar explicitamente o necessário. Uma regra pode ser restrita por porta, protocolo, interface de entrada e origem; regras adicionadas com o UFW já ativo têm efeito imediato, mas mudar a política padrão exige `ufw reload` para valer nas conexões novas. Por baixo, o UFW gera regras iptables/nftables como qualquer outra ferramenta de alto nível.
 

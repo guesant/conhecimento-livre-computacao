@@ -1,4 +1,4 @@
-# systemd: units, timers e dependências
+# systemd
 
 O systemd organiza tudo que pode ser iniciado, parado ou monitorado num host Linux moderno como uma **unit**: um arquivo de configuração descrevendo um recurso e como gerenciá-lo. O tipo mais comum é a `.service`, um processo de longa duração ou uma tarefa que termina; mas o mesmo modelo cobre outros tipos de unit:
 

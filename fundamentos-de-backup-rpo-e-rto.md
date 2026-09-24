@@ -1,4 +1,4 @@
-# Fundamentos de backup, RPO e RTO
+# Mapa de compatibilidade: objetivos de backup
 
 Esta página foi descompactada recursivamente.
 

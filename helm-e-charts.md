@@ -1,4 +1,8 @@
-# Helm e charts
+# Helm
+
+[Helm](containers/packaging/helm.md) e [charts](containers/packaging/chart.md)
+possuem páginas canônicas separadas. Esta página mantém o conteúdo de
+compatibilidade sobre renderização, dependências e escolhas de empacotamento.
 
 Helm é o gerenciador de pacotes mais usado do [Kubernetes](k3s.md): em vez de escrever e aplicar manifesto por manifesto (um Deployment, um Service, uma ConfigMap, cada um num arquivo YAML separado), Helm empacota um conjunto inteiro de manifestos relacionados, junto com os pontos de variação entre uma instalação e outra, num pacote único chamado chart.
 

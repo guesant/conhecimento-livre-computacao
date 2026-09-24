@@ -1,4 +1,4 @@
-# Ferramentas de manutenção de repositório
+# Mapa de compatibilidade: manutenção de repositório
 
 Esta página foi descompactada.
 

@@ -1,4 +1,4 @@
-# CodeQL e zizmor
+# Mapa de compatibilidade: segurança de código e CI
 
 Esta página existia quando CodeQL e zizmor eram explicados juntos por ambos realizarem análise estática. Essa proximidade escondia uma diferença mais importante: eles analisam superfícies distintas.
 

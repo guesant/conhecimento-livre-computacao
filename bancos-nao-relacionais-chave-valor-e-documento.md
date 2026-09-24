@@ -1,4 +1,4 @@
-# Bancos não relacionais: chave-valor e documento
+# Mapa de compatibilidade: bancos não relacionais
 
 "Não relacional" é amplo demais para definir um modelo de dados. Esta página foi descompactada em modelos específicos.
 

@@ -1,4 +1,4 @@
-# Netfilter, nftables e diagnóstico de rede
+# Netfilter
 
 Um hook do netfilter não está limitado a uma única chain: várias ferramentas, o firewall do host, o CNI de um cluster, o Docker, podem registrar suas próprias chains no mesmo hook, e o kernel decide a ordem por prioridade, um número inteiro associado a cada chain de base. Chains de prioridade mais baixa executam primeiro, o que explica por que uma regra de NAT do Docker pode processar um pacote antes que a política de bloqueio do UFW tenha chance de vê-lo. O rastreamento de conexão (conntrack) mantém uma tabela de estado por fluxo, classificando cada pacote como `NEW`, `ESTABLISHED`, `RELATED` (um fluxo secundário ligado a uma conexão já rastreada, como o canal de dados do FTP) ou `INVALID`; é esse estado que permite escrever "aceite tudo que for `ESTABLISHED` ou `RELATED`, rejeite o resto por padrão" em vez de enumerar cada porta de resposta, e é o que sustenta o masquerading, sabendo para qual endereço interno reencaminhar um pacote de resposta depois de desfazer o NAT.
 

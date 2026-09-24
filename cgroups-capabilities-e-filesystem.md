@@ -1,4 +1,4 @@
-# Isolamento e controle de processos no Linux
+# Mapa de compatibilidade: isolamento de processos
 
 Esta página foi descompactada porque cgroups, capabilities, seccomp e isolamento de filesystem são mecanismos independentes.
 

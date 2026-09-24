@@ -1,4 +1,4 @@
-# Teste de carga e chaos engineering
+# Mapa de compatibilidade: testes de resiliência
 
 Esta página foi descompactada. Use [testes de capacidade e resiliência](confiabilidade/testes/index.md) como mapa.
 

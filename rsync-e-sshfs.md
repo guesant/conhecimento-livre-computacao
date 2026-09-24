@@ -1,4 +1,4 @@
-# Compatibilidade: transferência e acesso remoto
+# Mapa de compatibilidade: transferência remota
 
 Esta página foi descompactada. Use o [mapa da categoria](ferramentas/transferencia/index.md).
 

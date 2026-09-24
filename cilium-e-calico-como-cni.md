@@ -1,4 +1,4 @@
-# Cilium e Calico como CNI
+# CNI
 
 O K3s instala Flannel como CNI padrão porque ele é suficiente para o caso comum, conectividade entre Pods sem configuração adicional; Flannel não implementa `NetworkPolicy`, então um cluster que precisa restringir tráfego entre namespaces precisa substituí-lo por um CNI que suporte políticas de rede. Cilium e Calico são as duas opções mais usadas, e a escolha depende menos de qual é "melhor" e mais de qual modelo técnico se encaixa no kernel disponível e no tipo de política necessária.
 

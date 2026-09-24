@@ -1,4 +1,4 @@
-# VMs e hipervisores
+# Máquinas virtuais
 
 Uma máquina virtual (VM) roda seu próprio kernel completo, sobre hardware virtualizado ou paravirtualizado por um hipervisor. KVM, integrado ao kernel Linux, é o hipervisor tipo 1 mais comum em infraestrutura self-hosted.
 

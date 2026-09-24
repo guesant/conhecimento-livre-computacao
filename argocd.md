@@ -1,15 +1,15 @@
-# ArgoCD e GitOps
+# Argo CD
 
 O [tutorial completo de Argo CD](entrega/argocd-tutorial.md) cobre instalação,
-Applications, AppProjects, automação, composição, segredos e diagnóstico.
+Applications, AppProjects, automação, composição, segredos e diagnóstico. A
+página de [GitOps](entrega/gitops.md) explica a prática de reconciliação que o
+Argo CD implementa no Kubernetes.
 
-GitOps é uma forma de operar infraestrutura onde um repositório git é a única fonte da verdade sobre o que deveria estar rodando, e um agente dentro do próprio ambiente de destino (não uma pipeline externa empurrando mudanças) observa esse repositório continuamente e converge o estado real para o que está declarado nele. A diferença central em relação a uma pipeline de deploy tradicional, que roda `kubectl apply` a partir de um servidor de CI, é essa inversão.
-
-Em vez de algo de fora empurrando mudanças para dentro do cluster, algo de dentro do cluster puxa o que precisa aplicar, comparando continuamente contra o git. A inversão paga uma conta de credencial antes de qualquer outra: nenhum sistema externo precisa guardar acesso administrativo ao cluster, porque quem tem esse acesso é um agente que já está lá dentro.
-
-Dessa inversão vem o efeito que mais muda a operação no dia a dia. Uma mudança feita manualmente no cluster, fora do git, é detectada como uma divergência, chamada de *drift*, e pode ser revertida automaticamente, porque o agente sempre volta a convergir para o que o git declara.
-
-O efeito colateral é que a correção rápida no cluster, aquela que alguém aplica direto para resolver um incidente, deixa de sobreviver, e o caminho de volta passa obrigatoriamente por um commit. Isso é desejado na maior parte do tempo e incômodo numa madrugada de incidente, o que faz valer a pena saber, antes de precisar, como suspender a sincronização de uma aplicação específica.
+Argo CD é um controlador de entrega contínua que observa repositórios Git,
+renderiza a configuração declarada e compara o resultado com o estado do
+cluster. A reconciliação pode detectar drift e restaurar o estado declarado,
+mas a revisão, a promoção e a validação da mudança continuam sendo
+responsabilidades do fluxo de entrega.
 
 ArgoCD é a implementação de GitOps mais usada para [Kubernetes](k3s.md). Ele roda dentro do próprio cluster, observa um ou mais repositórios git, e mantém o estado do cluster sincronizado com o que esses repositórios declaram. Como ele mesmo é um conjunto de pods, existe um problema de origem: alguém precisa instalá-lo antes que haja quem sincronize qualquer coisa.
 

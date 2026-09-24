@@ -1,4 +1,4 @@
-# Compatibilidade: processo, namespaces e usuários
+# Mapa de compatibilidade: isolamento de processos
 
 Esta URL antiga é mantida como mapa de compatibilidade. O conteúdo foi separado
 em [Processo Linux](sistemas/linux/process.md), [Linux namespaces](sistemas/linux/namespaces.md),
