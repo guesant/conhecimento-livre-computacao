@@ -16,7 +16,7 @@ O External Secrets Operator (ESO) sincroniza valores de múltiplos backends, com
 
 Um método comum de autenticação contra um backend como o Vault ou o OpenBao dispensa até uma credencial estática guardada no cluster.
 
-O método de autenticação Kubernetes do próprio backend valida diretamente o token projetado de uma ServiceAccount (o mesmo mecanismo de identidade descrito em [RBAC do Kubernetes](rbac-do-kubernetes.md)) contra a API do cluster, então a identidade que autentica no backend é a própria ServiceAccount do operator, sem que nenhum segredo de longo prazo precise ser gerado, distribuído e rotacionado manualmente só para essa conexão inicial.
+O método de autenticação Kubernetes do próprio backend valida diretamente o token projetado de uma ServiceAccount (o mesmo mecanismo de identidade descrito em [RBAC Kubernetes](kubernetes/access/rbac.md)) contra a API do cluster, então a identidade que autentica no backend é a própria ServiceAccount do operator, sem que nenhum segredo de longo prazo precise ser gerado, distribuído e rotacionado manualmente só para essa conexão inicial.
 
 Um ExternalSecret referencia o SecretStore correspondente e especifica quais chaves ou caminhos buscar, gerando e mantendo atualizado o Secret correspondente a cada ciclo de sincronização.
 

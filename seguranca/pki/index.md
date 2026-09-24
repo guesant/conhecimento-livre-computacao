@@ -8,7 +8,7 @@ TLS usa certificados e chaves para autenticação e proteção de transporte. mT
 
 ## Implementações
 
-[step-ca](step-ca.md) implementa uma CA privada e protocolos de provisionamento. [trust-manager](trust-manager.md) distribui bundles de confiança em Kubernetes. cert-manager automatiza ciclo de vida de certificados e pode integrar emissores públicos ou privados.
+[step-ca](step-ca.md) implementa uma CA privada e protocolos de provisionamento. [trust-manager](trust-manager.md) distribui bundles de confiança em Kubernetes. cert-manager automatiza ciclo de vida de certificados e pode integrar emissores públicos ou privados. [Dogtag](dogtag.md) fornece uma CA completa com perfis, revogação e integração com FreeIPA.
 
 ## Continue por aqui
 

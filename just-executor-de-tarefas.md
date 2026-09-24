@@ -1,4 +1,4 @@
-# just: executor de tarefas
+# justfile: executor de tarefas
 
 Um projeto acumula, com o tempo, uma lista de comandos que quem trabalha nele precisa lembrar: como rodar os testes, como formatar o código, como aplicar as migrações. Guardar isso só num README funciona até o README ficar desatualizado ou até alguém digitar o comando errado por memória; `just` resolve isso lendo um `justfile` na raiz do projeto e expondo cada bloco nomeado ali como um comando de primeira classe (`just <nome>`), descobrível de uma vez com `just --list`, em vez de espalhado em prosa. A comparação inevitável é com o `Makefile` do Make, que já cumpre um papel parecido há décadas, mas carrega duas armadilhas sintáticas conhecidas, indentação obrigatória por tab (um espaço no lugar errado quebra a receita de um jeito difícil de enxergar no editor) e a necessidade de declarar manualmente `.PHONY` para toda receita que não produz um arquivo de saída, sem o que o Make pode decidir, silenciosamente, que a receita já está satisfeita e pular a execução. `just` existe especificamente para reter o valor do padrão (comandos nomeados, documentados, com dependência entre si) sem herdar esse histórico de erro sintático.
 
@@ -22,3 +22,5 @@ O limite claro de `just` é o que ele deliberadamente não tenta ser: um executo
 ## Continue por aqui
 
 [Ansible](ansible.md) cobre a ferramenta que resolve o problema que `just` deliberadamente não resolve, convergência de estado numa máquina remota. [Shells e scripts](shells-e-scripts.md) cobre as armadilhas de portabilidade que um script chamado a partir de uma receita `just` ainda precisa respeitar.
+
+Um `justfile` pode orquestrar um build descrito por [CMake](build/cmake.md), [Meson](build/meson.md) ou outro sistema, mas continua sendo a camada de comandos do projeto. A relação entre essas camadas está no mapa de [build systems e toolchains](build/index.md).

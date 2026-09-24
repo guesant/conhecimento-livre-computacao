@@ -10,6 +10,8 @@ Comparações existem quando duas ou mais alternativas disputam uma responsabili
 
 [Cilium e Calico](rede/cilium-calico.md) compara implementações de networking e policy sem reduzir a decisão a performance.
 
+[Istio, Linkerd e Cilium Service Mesh](rede/service-mesh.md) compara mesh dedicada, superfície operacional reduzida e integração com a CNI.
+
 ## GitOps
 
 [Argo CD e Flux](entrega/argocd-flux.md) compara dois reconcilers Kubernetes.
@@ -17,6 +19,10 @@ Comparações existem quando duas ou mais alternativas disputam uma responsabili
 ## IaC
 
 [Terraform/OpenTofu e Pulumi](iac/declarativo-programavel.md) compara HCL declarativo e infraestrutura descrita com linguagens de propósito geral.
+
+## Ferramentas
+
+[Redmine e OpenProject](ferramentas/redmine-openproject.md) compara duas plataformas de gestão de projetos por modelo de trabalho, extensibilidade e custo operacional.
 
 ## Regra de leitura
 

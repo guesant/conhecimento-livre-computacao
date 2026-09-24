@@ -1,5 +1,8 @@
 # Ansible
 
+O [tutorial completo de Ansible](ansible-tutorial.md) mostra como estruturar,
+configurar, testar e executar playbooks com segurança.
+
 Ansible é uma ferramenta de gestão de configuração: ela conecta numa máquina remota, tipicamente por SSH, e garante que essa máquina fique no estado descrito num arquivo, chamado playbook. A diferença mais citada entre Ansible e ferramentas parecidas (Puppet, Chef, Salt) é que ele não exige um agente instalado na máquina de destino: como usa SSH, que já vem pronto na maioria dos sistemas Linux, não há nada para instalar antes de começar a gerenciar uma máquina nova.
 
 Por isso Ansible costuma ser descrito como *push*: quem inicia a conexão é a máquina do operador, empurrando a configuração para o destino, ao contrário de um modelo *pull* onde o próprio destino puxaria periodicamente sua configuração de um servidor central.

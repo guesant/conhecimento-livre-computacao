@@ -19,6 +19,10 @@ Essas técnicas são complementares. Um SAST não substitui SCA porque não resp
 
 Pipelines também executam código, recebem entradas, consomem dependências e frequentemente possuem credenciais privilegiadas. [zizmor](cicd/zizmor.md) é uma ferramenta especializada em análise estática de configurações de CI/CD, especialmente GitHub Actions.
 
+## Identidade e diretórios
+
+[Identidade e diretórios](identidade/index.md) separa diretório LDAP, autenticação Kerberos, PKI, DNS, sincronização de tempo e integração de clientes. [FreeIPA](identidade/freeipa.md) documenta uma composição integrada; [SSSD](identidade/sssd.md) documenta o componente que opera nos hosts Linux.
+
 ## Continue por aqui
 
 [Threat modeling](../threat-modeling.md) ajuda a decidir quais superfícies e ameaças merecem prioridade antes de escolher controles. [Supply chain e SBOM](../supply-chain-e-sbom.md) aprofunda composição, proveniência e artefatos.

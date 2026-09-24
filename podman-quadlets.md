@@ -74,4 +74,4 @@ Um volume ou uma rede declarados dessa forma resolvem a mesma armadilha de um re
 
 ## Continue por aqui
 
-[systemd: units, timers e dependências](systemd-units-timers-e-dependencias.md) cobre o modelo de unit, tipo de serviço e dependência que todo Quadlet gerado herda. [Docker vs. Podman: critérios de escolha](especificacoes-oci-e-pilha-de-runtimes.md#docker-vs-podman-criterios-de-escolha) cobre a arquitetura sem daemon do Podman que torna essa integração nativa com o systemd possível em primeiro lugar.
+[systemd: units, timers e dependências](systemd-units-timers-e-dependencias.md) cobre o modelo de unit, tipo de serviço e dependência que todo Quadlet gerado herda. [Podman](containers/engines/podman.md) cobre a arquitetura sem daemon que torna essa integração nativa com o systemd possível em primeiro lugar.

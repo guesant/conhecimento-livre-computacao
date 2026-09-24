@@ -1,12 +1,12 @@
 # Pinagem por digest e hash em cada ecossistema
 
-[Imagens, registries e Compose](imagens-registries-e-compose.md) já estabelece o conceito central: uma tag é um ponteiro que pode ser reapontado para um conteúdo diferente sem aviso, um digest é o hash do conteúdo em si, então fixá-lo garante que o que chega hoje é byte a byte igual ao que foi avaliado e aprovado, não uma versão futura republicada sob o mesmo nome.
+[Tags e digests de imagens](containers/tag.md) e [digest de imagem](containers/digest.md) estabelecem o conceito central: uma tag é um ponteiro que pode ser reapontado para um conteúdo diferente sem aviso, um digest é o hash do conteúdo em si, então fixá-lo garante que o que chega hoje é byte a byte igual ao que foi avaliado e aprovado, não uma versão futura republicada sob o mesmo nome.
 
 Esse mesmo problema, e a mesma solução de fundo, se repete em praticamente todo ecossistema que distribui pacote ou dependência, cada um com sua própria sintaxe e seu próprio nome para o mecanismo, mas resolvendo exatamente a mesma pergunta: o que exatamente estou baixando, e como sei que da próxima vez será a mesma coisa?
 
 ## Imagens de container: tag e digest juntos
 
-Como já descrito em [Imagens, registries e Compose](imagens-registries-e-compose.md), uma imagem referenciada como `imagem:tag@sha256:...` combina os dois: a tag continua legível para um humano relacionar a imagem às notas de release, mas o runtime resolve o digest para decidir de fato o conteúdo puxado, tornando irrelevante se a tag foi ou não reapontada depois.
+Como já descrito em [digest de imagem](containers/digest.md), uma imagem referenciada como `imagem:tag@sha256:...` combina os dois: a tag continua legível para um humano relacionar a imagem às notas de release, mas o runtime resolve o digest para decidir de fato o conteúdo puxado, tornando irrelevante se a tag foi ou não reapontada depois.
 
 Fixar só a tag, sem o digest, deixa o manifesto vulnerável a exatamente o cenário que motiva essa prática inteira: um registry que permite republicar uma tag (a maioria permite, por padrão) pode servir um conteúdo diferente do que existia quando alguém revisou e aprovou aquela referência, sem que o texto do manifesto precise mudar em nada.
 
@@ -42,4 +42,4 @@ A prática madura em cada ecossistema converge para o mesmo desenho, manter os d
 
 ## Continue por aqui
 
-[Imagens, registries e Compose](imagens-registries-e-compose.md) cobre o caso de container em profundidade. [Integridade, autenticidade e proveniência](supply-chain-e-sbom.md#integridade-autenticidade-e-proveniencia-nao-sao-a-mesma-garantia) cobre a diferença entre um hash de integridade como os desta página e uma assinatura ou atestação de proveniência, uma garantia mais forte sobre quem produziu o artefato, não só sobre se o conteúdo foi alterado.
+[Imagem de container](containers/image.md) cobre o modelo do artefato. [Proveniência](seguranca/supply-chain/provenance.md) cobre a diferença entre um hash de integridade como os desta página e uma assinatura ou atestação, uma garantia mais forte sobre quem produziu o artefato, não só sobre se o conteúdo foi alterado.

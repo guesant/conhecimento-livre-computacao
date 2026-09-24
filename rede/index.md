@@ -8,7 +8,7 @@ Esta área organiza fundamentos de comunicação, resolução de nomes, conectiv
 
 ## DNS
 
-DNS deve ser aprendido em camadas: resolução e registros; servidores autoritativos e recursivos; [DNSSEC](dns/dnssec.md); [mDNS](dns/mdns.md); e [registro de domínio](dns/registro-de-dominio.md). Esses assuntos se relacionam, mas resolvem problemas diferentes.
+DNS deve ser aprendido em camadas: resolução e registros; servidores autoritativos e recursivos; [BIND](dns/bind.md); [DNSSEC](dns/dnssec.md); [mDNS](dns/mdns.md); e [registro de domínio](dns/registro-de-dominio.md). Esses assuntos se relacionam, mas resolvem problemas diferentes.
 
 ## Conectividade privada
 

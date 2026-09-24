@@ -4,4 +4,4 @@ ServiceAccount tokens permitem que workloads se autentiquem perante a API Kubern
 
 Workloads que não precisam da API não precisam carregar essa credencial. Desabilitar automount reduz exposição.
 
-Quando acesso é necessário, use ServiceAccount dedicada e [RBAC](../../rbac-do-kubernetes.md) mínimo.
+Quando acesso é necessário, use ServiceAccount dedicada e [RBAC](../access/rbac.md) mínimo.

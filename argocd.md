@@ -1,5 +1,8 @@
 # ArgoCD e GitOps
 
+O [tutorial completo de Argo CD](entrega/argocd-tutorial.md) cobre instalação,
+Applications, AppProjects, automação, composição, segredos e diagnóstico.
+
 GitOps é uma forma de operar infraestrutura onde um repositório git é a única fonte da verdade sobre o que deveria estar rodando, e um agente dentro do próprio ambiente de destino (não uma pipeline externa empurrando mudanças) observa esse repositório continuamente e converge o estado real para o que está declarado nele. A diferença central em relação a uma pipeline de deploy tradicional, que roda `kubectl apply` a partir de um servidor de CI, é essa inversão.
 
 Em vez de algo de fora empurrando mudanças para dentro do cluster, algo de dentro do cluster puxa o que precisa aplicar, comparando continuamente contra o git. A inversão paga uma conta de credencial antes de qualquer outra: nenhum sistema externo precisa guardar acesso administrativo ao cluster, porque quem tem esse acesso é um agente que já está lá dentro.

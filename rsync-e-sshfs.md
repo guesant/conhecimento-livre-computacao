@@ -1,4 +1,4 @@
-# Transferência e acesso a arquivos remotos
+# Compatibilidade: transferência e acesso remoto
 
 Esta página foi descompactada. Use o [mapa da categoria](ferramentas/transferencia/index.md).
 

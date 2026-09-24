@@ -22,7 +22,7 @@ Ele não observa sozinho configuração real de proxy, exposição de rede ou co
 
 Compare linguagens suportadas, profundidade semântica, autoria de regras, integração com revisão, tempo de execução, qualidade dos modelos de frameworks e custo.
 
-[CodeQL](codeql.md) é uma implementação orientada a consultas sobre uma representação semântica do código. Outras ferramentas ocupam pontos diferentes entre regras estruturais, data flow e plataformas integradas de qualidade.
+[CodeQL](codeql.md) é uma implementação orientada a consultas sobre uma representação semântica do código. [SonarQube](sonarqube.md) combina análise de código com qualidade e manutenção. Outras ferramentas ocupam pontos diferentes entre regras estruturais, data flow e plataformas integradas de qualidade.
 
 ## Boas práticas
 
@@ -39,4 +39,4 @@ Comece por regras de alta confiança; execute cedo; preserve contexto do finding
 
 ## Continue por aqui
 
-Escolha a técnica que precisa entender, como [taint analysis](taint-analysis.md), ou siga para uma implementação como [CodeQL](codeql.md).
+Escolha a técnica que precisa entender, como [taint analysis](taint-analysis.md), ou siga para uma implementação como [CodeQL](codeql.md) ou [SonarQube](sonarqube.md).
