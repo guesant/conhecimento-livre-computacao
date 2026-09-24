@@ -22,6 +22,12 @@ Sem agrupamento, um projeto com muitas dependências geraria uma avalanche de pu
 
 Quando uma dependência é referenciada por tag e digest juntos, a prática de pinagem detalhada em [Pinagem por digest e hash em cada ecossistema](pinagem-por-digest-e-hash.md), Renovate cumpre um segundo papel além de propor uma tag nova: mesmo quando a tag declarada não muda (uma imagem de sistema operacional atualizada semanalmente sob a mesma tag `slim`, por exemplo), o conteúdo por trás dela muda, e o digest fixado no manifesto fica, sem essa atualização, apontando para uma versão cada vez mais antiga da mesma tag. Uma regra de Renovate dedicada a isso mantém o digest de uma referência tag-mais-digest em sincronia com a tag declarada, mesmo sem nenhuma mudança de versão visível no texto do manifesto, o que evita a armadilha de uma imagem "pinada" na aparência do manifesto continuar envelhecendo silenciosamente por baixo.
 
+## Checksums derivados da versão
+
+Alguns artefatos deste repositório não são referenciados como imagem com tag e digest. O instalador do K3s e os charts do Cilium e do Argo CD possuem uma versão em `ansible/group_vars/all/versions.yml` e um checksum do artefato correspondente no mesmo arquivo. O script `.tools/update-version-checksums.sh` baixa os artefatos selecionados por essas versões, calcula os checksums e compara ou atualiza os campos relacionados.
+
+`just version-checksums` executa a verificação sem modificar arquivos. `just version-checksums-update` recalcula e grava os valores. O Renovate executa a atualização no branch da própria proposta sempre que altera `versions.yml`, de modo que a nova versão e seu checksum entrem no mesmo pull request. O CI executa apenas a verificação e falha se os campos divergirem.
+
 ## Continue por aqui
 
 [Pinagem por digest e hash em cada ecossistema](pinagem-por-digest-e-hash.md) cobre a prática que a atualização de digest do Renovate mantém em dia. [Supply chain e SBOM](supply-chain-e-sbom.md) cobre por que manter dependência atualizada é parte da mesma preocupação de cadeia de suprimentos que motiva um SBOM.
