@@ -14,6 +14,8 @@ Um resultado negativo também precisa ser interpretado com o contexto do teste. 
 - [tcpdump](../ferramentas/diagnostico/tcpdump.md) captura pacotes para análise de protocolos e fluxo.
 - [termshark](../ferramentas/diagnostico/termshark.md) explora arquivos de captura em um terminal.
 - [strace](../ferramentas/diagnostico/strace.md) observa chamadas de sistema e sinais de um processo.
+- [tls.peet.ws](../ferramentas/diagnostico/tls-peet-ws.md) exibe sinais observáveis da conexão TLS e HTTP de uma requisição de teste.
+- [TrackMe](../ferramentas/diagnostico/trackme.md) permite observar fingerprints em um ambiente autocontrolado.
 
 ## Composições
 
