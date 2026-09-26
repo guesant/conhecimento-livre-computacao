@@ -8,6 +8,12 @@ Em uma infraestrutura como serviço, o fornecedor entrega máquinas virtuais, di
 
 Uma plataforma como serviço esconde parte do sistema operacional e concentra o fluxo de deploy. Vercel e Heroku são exemplos com propostas diferentes: Vercel privilegia frontends, funções e entrega na borda; Heroku privilegia o ciclo de vida de aplicações web com buildpacks, dynos e add-ons. A redução do trabalho operacional vem acompanhada de restrições de runtime e maior dependência da plataforma.
 
+Plataformas de deploy autohospedadas, como Coolify, Dokploy e CapRover, oferecem uma experiência
+parecida com PaaS sobre servidores escolhidos pelo operador. Elas reduzem o trabalho de configurar
+builds, proxy e certificados, mas não removem a responsabilidade por hosts, armazenamento,
+credenciais, backups e recuperação. [PaaS autohospedado e plataformas de deploy](paas-autohospedado-e-deploy.md)
+explica essa fronteira.
+
 Hospedagem gerenciada e compartilhada abstraem ainda mais a operação. Hostinger, Hostnet e HostGator oferecem produtos para sites, CMS, e-mail, WordPress, cloud hosting e VPS. Eles podem ser adequados para uma aplicação simples, mas não devem ser avaliados como se fossem uma nuvem hyperscale com os mesmos controles de rede, identidade e automação.
 
 Provedores de edge e rede, como Cloudflare e Akamai, ficam entre a aplicação e o usuário. DNS, CDN, proxy reverso, WAF, mitigação de DDoS, funções na borda e conectividade podem reduzir latência e exposição, mas não substituem automaticamente um banco de dados, um worker ou uma plataforma de execução stateful.
@@ -44,6 +50,11 @@ Uma escolha adequada considera, pelo menos, estas dimensões:
 | HostGator | Hospedagem, cloud e VPS | Entrada simples e variedade de planos | Avaliar backups, suporte e controle real |
 | Vercel | PaaS web e edge | Deploy, previews e frontends | Runtime e persistência dependem do desenho |
 | Heroku | PaaS de aplicações | Buildpacks e experiência de deploy | Menor controle da infraestrutura |
+| Coolify | PaaS autohospedado | Control plane para aplicações, bancos e serviços Docker | Operação do host, painel, volumes e credenciais |
+| Dokploy | PaaS autohospedado | Deploy Docker, Compose, múltiplos servidores e bancos | Segurança do painel e recuperação do control plane |
+| CapRover | PaaS autohospedado | Fluxo simples sobre Docker Swarm e Nginx | Limites do Compose e dependência do modelo Swarm |
+| Railway | PaaS cloud gerenciado | Projetos, serviços, ambientes, templates e deploy rápido | Custos, limites e dependência do provedor |
+| AbraCloud | Associação setorial brasileira | Diretório, representação e relacionamento do ecossistema cloud | Não é um provedor cloud único nem um SLA |
 | Cloudflare | Edge, rede e serverless | DNS, CDN, segurança e Workers | Não substitui todo backend stateful |
 
 ## Como escolher
