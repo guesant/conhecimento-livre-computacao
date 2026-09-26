@@ -1,4 +1,4 @@
-# Cenários e padrões de solução
+# Cenários
 
 Páginas de conceito respondem "o que é?". Páginas de ferramenta respondem "como esta implementação funciona?". Esta área responde uma terceira pergunta: "dadas estas restrições, que desenho faz sentido e como as peças se combinam?".
 

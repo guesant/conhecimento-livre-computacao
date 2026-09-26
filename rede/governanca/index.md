@@ -1,4 +1,4 @@
-# Organizações da Internet no Brasil e na América Latina
+# Governança
 
 A Internet não é administrada por uma única organização. Seus recursos, padrões, serviços de interconexão e obrigações legais pertencem a camadas diferentes. Confundir essas camadas produz diagnósticos errados, como esperar que um registro de domínios resolva um problema de roteamento ou que uma autoridade de proteção de dados opere servidores DNS.
 

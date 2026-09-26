@@ -1,4 +1,4 @@
-# Identidade e diretórios
+# Identidade
 
 Gerenciamento de identidade combina um diretório de informações, um protocolo de autenticação, políticas de autorização, nomes de serviço, tempo confiável e, em alguns ambientes, uma autoridade certificadora. Esses papéis se relacionam, mas não são a mesma coisa.
 

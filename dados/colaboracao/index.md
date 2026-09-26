@@ -1,4 +1,4 @@
-# Colaboração distribuída e local-first
+# Colaboração
 
 Aplicações colaborativas precisam resolver problemas diferentes que muitas vezes recebem
 o mesmo nome: disponibilidade offline, sincronização, edição concorrente, persistência

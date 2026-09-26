@@ -1,4 +1,4 @@
-# Comunicação entre processos e APIs
+# Comunicação
 
 Comunicação é o conjunto de mecanismos pelos quais componentes trocam dados,
 solicitam operações e coordenam estado. Os termos usados nesse domínio
@@ -6,13 +6,21 @@ representam camadas diferentes e não devem ser tratados como sinônimos.
 
 IPC descreve comunicação entre processos, normalmente no mesmo sistema. RPC
 descreve a abstração de chamar uma operação que é executada em outro processo.
-gRPC é um framework concreto para RPC. JSON é um formato textual de dados.
-GraphQL é uma linguagem de consulta e um modelo de execução orientado a um
-schema.
+APIs e protocolos definem contratos para consumidores. Comunicação assíncrona
+separa a solicitação do processamento. Streams reativos coordenam valores ao
+longo do tempo.
 
 Uma arquitetura pode combinar todos eles. Um processo pode usar IPC local para
 falar com um agente, gRPC para falar com outro serviço e JSON em uma API
 GraphQL voltada ao navegador.
+
+## Categorias
+
+- [Comunicação entre processos](ipc/index.md) trata IPC e mecanismos locais.
+- [APIs e protocolos](apis/index.md) trata RPC, gRPC, JSON e GraphQL.
+- [Comunicação assíncrona](assinc/index.md) trata filas, eventos e trabalho desacoplado.
+- [Streams reativos](streams/index.md) trata ReactiveX e Kotlin Flow.
+- [Comunicação em tempo real](tempo-real/index.md) trata WebRTC e mídia interativa.
 
 ## Como separar as camadas
 

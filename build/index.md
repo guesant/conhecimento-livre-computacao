@@ -1,6 +1,12 @@
-# Build systems e toolchains
+# Build
 
-Um build de software combina pelo menos três responsabilidades: descrever entradas e dependências, decidir quais saídas precisam ser atualizadas e executar compiladores, linkers ou geradores. Essas responsabilidades podem viver em uma ferramenta única ou em camadas diferentes.
+Um build de software combina pelo menos três responsabilidades: descrever entradas e dependências, decidir quais saídas precisam ser atualizadas e executar compiladores, linkers ou geradores. Essas responsabilidades podem viver em uma ferramenta única ou em camadas diferentes. Esta página organiza o domínio e encaminha cada responsabilidade para sua categoria.
+
+## Categorias
+
+- [Sistemas de build](sistemas-de-build/index.md) tratam entradas, saídas, dependências e execução incremental.
+- [Toolchains](toolchains/index.md) tratam compiladores, SDKs, linkers e ambientes de desenvolvimento.
+- [Orquestração de monorepos](monorepos/index.md) trata a coordenação entre projetos e tarefas relacionadas.
 
 [CMake](cmake.md) e [Meson](meson.md) descrevem o projeto e geram arquivos para um backend. [Ninja](ninja.md) executa um grafo de build de forma rápida e previsível. [Makefile](makefile.md) pode descrever regras e também servir como interface de execução, embora os dois papéis sejam frequentemente confundidos. [justfile](../just-executor-de-tarefas.md) é um arquivo de receitas para comandos, não um sistema de build baseado em timestamps.
 

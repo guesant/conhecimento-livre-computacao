@@ -1,16 +1,20 @@
-# Windows e compatibilidade Unix
+# Windows
 
-Windows pode oferecer ferramentas Unix, toolchains nativas e um ambiente Linux de maneiras diferentes. Cygwin traduz uma API POSIX para o Windows; MinGW compila binários nativos; MSYS2 combina um ambiente shell com vários toolchains; WSL executa distribuições Linux integradas ao Windows.
+Windows pode oferecer ferramentas Unix, toolchains nativas e um ambiente Linux
+de maneiras diferentes. Essas opções formam uma categoria relacionada, mas não
+um único modo de execução.
+
+## Categorias
+
+- Os fundamentos do próprio Windows tratam suas edições, administração,
+  registro, workgroups e filesystems.
+- [Compatibilidade Unix](compatibilidade-unix/index.md) compara ambientes que
+  fornecem APIs, toolchains ou uma distribuição Linux integrada ao Windows.
 
 Essas soluções não têm o mesmo kernel, o mesmo filesystem, o mesmo modelo de processo ou a mesma compatibilidade. Escolher uma depende de o objetivo ser executar software Linux, compilar um executável Windows ou apenas usar ferramentas de terminal.
 
 ## Páginas
 
-- [Cygwin](cygwin.md)
-- [MinGW](mingw.md)
-- [MSYS2](msys2.md)
-- [WSL](wsl.md)
-- [WSL 1 e WSL 2](wsl1-e-wsl2.md)
 - [Workgroups](workgroups.md)
 - [Registro do Windows](registry.md)
 - [System Configuration e `msconfig`](msconfig.md)

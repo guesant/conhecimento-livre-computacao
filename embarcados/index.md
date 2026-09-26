@@ -1,8 +1,19 @@
-# Sistemas embarcados e IoT
+# Sistemas embarcados
 
 Sistemas embarcados combinam hardware especializado, firmware e uma aplicação que executa com recursos limitados. Diferentemente de um servidor geral, o dispositivo normalmente tem uma função delimitada, memória menor, requisitos de energia e uma relação estreita entre o software e os periféricos físicos.
 
-Arduino e ESP32 ocupam partes relacionadas, mas não idênticas, desse espaço. Arduino é um ecossistema de placas, plataformas, bibliotecas, ferramentas e uma API de programação voltada a prototipação e ensino. ESP32 é uma família de SoCs da Espressif, com módulos e placas de desenvolvimento que podem ser programados por ESP-IDF, Arduino Core for ESP32 e outros ambientes.
+Arduino e ESP32 ocupam partes relacionadas, mas não idênticas, desse espaço.
+Arduino é um ecossistema de placas, plataformas, bibliotecas, ferramentas e uma
+API de programação voltada a prototipação e ensino. ESP32 é uma família de SoCs
+da Espressif, com módulos e placas de desenvolvimento que podem ser programados
+por ESP-IDF, Arduino Core for ESP32 e outros ambientes.
+
+## Categorias
+
+- [Microcontroladores](microcontroladores/index.md) trata dispositivos voltados
+  a firmware, periféricos, conectividade e restrições de energia.
+- [Computadores de placa única](computadores-de-placa-unica/index.md) trata
+  computadores que executam um sistema operacional mais geral.
 
 ## Como decompor um dispositivo
 

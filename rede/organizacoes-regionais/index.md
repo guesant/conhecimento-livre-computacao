@@ -1,8 +1,13 @@
-# Organizações e provedores regionais
+# Organizações regionais
 
 A conectividade de uma região é formada por organizações com responsabilidades diferentes. Uma operadora fornece acesso e transporte para assinantes. Um provedor corporativo pode entregar links dedicados, redes privadas e integração entre unidades. Um órgão público de tecnologia coordena serviços digitais e infraestrutura governamental. Um ponto de troca de tráfego oferece interconexão entre sistemas autônomos. Esses papéis podem aparecer no mesmo território, mas não são equivalentes.
 
 Esta área apresenta organizações com atuação em Rondônia e na conectividade de Porto Velho. O objetivo é registrar o papel técnico e institucional de cada uma sem transformar material comercial em recomendação de contratação. Cobertura, preço, disponibilidade, qualidade e condições contratuais devem ser verificadas diretamente com cada organização.
+
+## Categorias
+
+- [Tecnologia da informação pública](tic-publica/index.md) trata órgãos que coordenam infraestrutura e serviços digitais governamentais.
+- [Provedores regionais](provedores/index.md) trata operadoras e fornecedores de conectividade.
 
 ## Como interpretar as categorias
 

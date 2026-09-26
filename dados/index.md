@@ -1,6 +1,14 @@
-# Dados, mensageria e armazenamento
+# Dados
 
-Esta área separa modelos de dados, bancos, filas, streams e armazenamento persistente. Produtos concretos devem ser entendidos como implementações desses modelos, não como a definição da categoria.
+Esta área organiza persistência, consistência, mensageria, armazenamento e colaboração distribuída. Produtos concretos devem ser entendidos como implementações desses modelos, não como a definição da categoria.
+
+## Categorias
+
+- [Bancos e persistência](bancos/index.md) trata modelos de consulta e estado persistido.
+- [Consistência e distribuição](consistencia/index.md) trata replicação, quorum, sharding e consenso.
+- [Mensageria](mensageria/index.md) trata filas, jobs, workers e event streaming.
+- [Armazenamento](armazenamento/index.md) trata objetos, cache e expiração.
+- [Colaboração distribuída](colaboracao/index.md) trata sincronização local-first, CRDTs e resolução de conflitos.
 
 [Exclusão, edição, revisões e WAL](revisoes-exclusao-e-wal.md) compara exclusão lógica, purga física, atualização destrutiva, versionamento editorial e o log de recuperação do PostgreSQL.
 

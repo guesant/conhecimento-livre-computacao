@@ -1,4 +1,4 @@
-# Educação, pesquisa e formação tecnológica
+# Educação
 
 O ecossistema federal também envolve o [MCTI](mcti.md), que formula e coordena políticas de ciência, tecnologia e inovação, o [SERPRO](serpro.md), que desenvolve e opera soluções de tecnologia para o setor público, e a [DATAPREV](dataprev.md), que fornece tecnologia para políticas sociais e processa grandes bases de dados públicos.
 

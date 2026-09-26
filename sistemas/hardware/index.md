@@ -1,4 +1,4 @@
-# Gerenciamento de hardware e boot remoto
+# Hardware
 
 Esta área trata da camada que continua acessível quando o sistema operacional ainda não iniciou ou deixou de responder. O objetivo é separar gerenciamento de plataforma, instalação pela rede e diagnóstico por mídias externas.
 

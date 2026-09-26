@@ -1,6 +1,12 @@
-# Entrega e GitOps
+# Entrega de software
 
-Esta área separa princípios de entrega, estratégias de rollout e implementações concretas.
+Esta área separa publicação de artefatos, reconciliação declarativa, rollouts e ativação de funcionalidades.
+
+## Categorias
+
+- [GitOps e reconciliação](gitops/index.md) trata estado desejado, drift e convergência.
+- [Rollouts e entrega progressiva](rollouts/index.md) trata canary, blue-green e promoção gradual.
+- [Ativação de funcionalidades](ativacao/index.md) trata feature flags e liberação independente do deploy.
 
 ## GitOps
 

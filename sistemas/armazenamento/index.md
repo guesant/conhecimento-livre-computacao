@@ -1,6 +1,11 @@
-# Armazenamento e filesystems
+# Armazenamento
 
 Armazenamento em Linux é composto por camadas diferentes. Um disco fornece um dispositivo de blocos, uma tabela de partições descreve regiões desse dispositivo, um gerenciador de volumes pode combinar ou recortar os blocos, um filesystem organiza arquivos e uma montagem expõe essa estrutura em um caminho.
+
+## Categorias
+
+- [Volumes e redundância](volumes/index.md) trata LVM, RAID e pools.
+- [Filesystems](filesystems/index.md) trata Btrfs, XFS e ZFS como modelos de organização de dados.
 
 Confundir essas camadas produz operações perigosas. LVM não é um filesystem, XFS não é um gerenciador de volumes, e um pool ZFS não é apenas uma partição. Btrfs e ZFS integram funções de filesystem e gerenciamento de armazenamento, mas continuam tendo modelos próprios para redundância, snapshots, recuperação e expansão.
 

@@ -1,7 +1,16 @@
-# Transferência e acesso a arquivos remotos
+# Transferência
 
-Ferramentas diferentes atendem cópia, sincronização, sessão e montagem.
+Esta área separa os problemas de transferência de dados dos modos de acesso a
+arquivos remotos. O protocolo escolhido depende do fluxo, do modelo de
+confiança e de a operação ser uma cópia pontual, uma sincronização ou uma
+montagem contínua.
 
-[rsync](rsync.md) sincroniza em uma direção. [SSHFS](sshfs.md) monta filesystem remoto. [SFTP](sftp.md) oferece sessão de transferência sobre SSH. [FTP](ftp.md) e [FTPS](ftps.md) mantêm o modelo de canais do FTP, com FTPS adicionando TLS. [rclone](rclone.md) integra múltiplos backends de storage.
+## Categorias
 
-A escolha deve começar pelo comportamento desejado, não pelo protocolo disponível.
+- [Transferência de arquivos](transferencia/index.md) reúne protocolos e
+  ferramentas que copiam ou sincronizam dados.
+- [Acesso a arquivos remotos](acesso/index.md) reúne montagens e operações que
+  fazem um filesystem remoto parecer acessível localmente.
+
+A escolha deve começar pelo comportamento desejado, não pelo protocolo
+disponível.

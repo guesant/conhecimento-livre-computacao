@@ -1,4 +1,4 @@
-# Testes de capacidade e resiliência
+# Capacidade
 
 Sistemas podem falhar por saturação ou por falha de componentes. São perguntas diferentes.
 

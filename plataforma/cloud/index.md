@@ -1,6 +1,15 @@
-# Nuvem e hospedagem
+# Nuvem
 
 Computação em nuvem é a entrega sob demanda de capacidade computacional, armazenamento, rede e serviços gerenciados. Hospedagem web, VPS, plataforma de aplicações e rede de borda podem usar a mesma infraestrutura física, mas oferecem responsabilidades e graus de controle diferentes. Por isso, comparar apenas o preço mensal de um recurso não é suficiente.
+
+## Categorias
+
+- Nuvem e infraestrutura reúne compute, armazenamento, rede e serviços
+  gerenciados.
+- Hospedagem gerenciada reduz a responsabilidade operacional, mas também limita
+  o controle sobre o sistema.
+- Plataformas de aplicações concentram build, deploy, runtime e integrações.
+- Edge e entrega aproximam DNS, CDN, proxy, segurança e funções do usuário.
 
 ## Modelos de serviço
 

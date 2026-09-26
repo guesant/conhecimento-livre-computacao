@@ -1,4 +1,4 @@
-# Filesystems em Linux e Windows
+# Filesystems
 
 Filesystem é o formato e o conjunto de estruturas que organizam dados em um volume. Disco, tabela de partição, volume e filesystem são camadas diferentes.
 

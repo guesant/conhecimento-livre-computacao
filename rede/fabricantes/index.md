@@ -1,4 +1,4 @@
-# Fabricantes e plataformas de rede
+# Fabricantes
 
 Fabricantes de rede não representam a mesma camada do sistema. Um switch ou ponto de acesso é um equipamento; um sistema operacional de rede fornece encaminhamento, filtragem e gerenciamento; um controlador centraliza configuração; e um appliance combina hardware, software e suporte. Comparar apenas a velocidade de portas ou a quantidade de recursos costuma esconder diferenças de operação, licenciamento, automação e ciclo de vida.
 

@@ -1,4 +1,4 @@
-# Arquitetura física e lógica da Internet
+# Arquitetura
 
 A Internet é uma rede de redes. Hosts e servidores se conectam a redes de acesso; switches e bridges organizam segmentos locais; roteadores conectam sub-redes e sistemas autônomos; redes de transporte e backbones carregam grandes volumes; serviços como DNS, TLS, HTTP, CDN e aplicações dão significado ao tráfego.
 

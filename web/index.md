@@ -1,6 +1,11 @@
-# Web e compatibilidade
+# Web
 
-Esta categoria reúne referências para construir, verificar e diagnosticar aplicações web. Ela separa a documentação da plataforma web das matrizes de compatibilidade entre navegadores.
+Esta área separa o contrato da plataforma web das matrizes de compatibilidade entre navegadores.
+
+## Categorias
+
+- [Plataforma web](plataforma/index.md) trata HTML, CSS, JavaScript e Web APIs.
+- [Compatibilidade web](compatibilidade/index.md) trata navegadores, versões e suporte real.
 
 [MDN Web Docs](mdn.md) é a referência técnica para HTML, CSS, JavaScript e Web APIs. [Can I Use](caniuse.md) complementa essa referência com dados de suporte por navegador e versão.
 

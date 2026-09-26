@@ -1,6 +1,17 @@
-# Containers e Kubernetes
+# Plataformas de execução
 
-Esta área organiza o caminho de abstração desde isolamento de processos e imagens OCI até orquestração, Kubernetes e implementações concretas.
+Esta área organiza plataformas de execução em três níveis relacionados, mas
+distintos: containers, virtualização e orquestração. Cada categoria resolve um
+problema próprio e pode ser usada sem assumir uma implementação específica.
+
+## Categorias
+
+- [Containers](../containers/index.md) trata empacotamento, isolamento,
+  runtimes, engines, imagens OCI e distribuição.
+- [Virtualização](virtualizacao/index.md) trata máquinas virtuais, hypervisors,
+  microVMs e containers de sistema.
+- [Kubernetes](../kubernetes/index.md) trata orquestração, control plane,
+  workloads, rede, armazenamento e extensibilidade.
 
 ## Containers
 

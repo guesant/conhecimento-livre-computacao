@@ -1,4 +1,4 @@
-# Portais e dashboards de serviços
+# Portais
 
 Portais de serviços e dashboards de homelab reúnem links, estado operacional e atalhos para aplicações internas. Eles resolvem um problema de navegação e descoberta, não substituem observabilidade, autenticação, inventário ou um catálogo de serviços bem definido.
 

@@ -1,4 +1,4 @@
-# PKI e confiança
+# PKI
 
 Public Key Infrastructure organiza identidades criptográficas, autoridades certificadoras, certificados, validação e ciclo de vida de confiança.
 

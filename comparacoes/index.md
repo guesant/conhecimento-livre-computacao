@@ -1,4 +1,4 @@
-# Comparações e critérios de seleção
+# Comparações
 
 Comparações existem quando duas ou mais alternativas disputam uma responsabilidade semelhante. Elas não substituem as páginas individuais: partem de dimensões comuns e mostram como restrições alteram a escolha.
 

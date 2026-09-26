@@ -1,6 +1,12 @@
-# Instalação, boot e recuperação
+# Boot
 
-Esta área reúne técnicas que executam antes do sistema operacional normal ou que inicializam um ambiente temporário para reparar armazenamento, testar hardware e reinstalar a máquina.
+Esta área reúne firmware, inicialização, instalação e recuperação. As categorias são separadas porque confiança de boot, seleção de uma fonte de instalação e reparo de um sistema já instalado possuem riscos e responsabilidades diferentes.
+
+## Categorias
+
+- [Firmware e confiança de boot](firmware/index.md)
+- [Instalação e inicialização](instalacao/index.md)
+- [Recuperação de sistemas](recuperacao/index.md)
 
 ## Firmware e confiança
 

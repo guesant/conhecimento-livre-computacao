@@ -1,4 +1,4 @@
-# Imagens e provisionamento
+# Provisionamento
 
 Provisionar uma máquina é transformar hardware ou uma VM vazia em um sistema identificável, acessível, atualizado e pronto para receber workloads. Há duas estratégias complementares:
 

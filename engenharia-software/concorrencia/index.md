@@ -1,4 +1,4 @@
-# Concorrência e sincronização
+# Concorrência
 
 Concorrência existe quando várias atividades podem avançar durante a mesma janela de
 tempo, mesmo que o hardware execute apenas uma parte delas por vez. O problema não é

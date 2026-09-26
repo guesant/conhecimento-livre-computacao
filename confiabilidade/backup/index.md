@@ -1,4 +1,4 @@
-# Backup e recuperação
+# Backup
 
 Backup é uma disciplina de recuperabilidade, não uma ferramenta. [Backup](backup.md), [snapshot](snapshot.md) e [replicação](replicacao.md) protegem contra conjuntos de falhas diferentes.
 

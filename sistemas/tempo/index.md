@@ -1,4 +1,4 @@
-# Tempo, relógios e fusos
+# Tempo
 
 Data e hora envolvem propriedades diferentes: um instante global, um horário de calendário,
 um fuso político, um offset, o relógio do sistema, o relógio de hardware e uma representação

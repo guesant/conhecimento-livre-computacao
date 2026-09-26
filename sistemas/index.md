@@ -1,6 +1,15 @@
-# Sistemas e Linux
+# Sistemas
 
-Esta área organiza os fundamentos que explicam como processos executam, recebem recursos, atravessam a fronteira com o kernel e são isolados.
+Esta área organiza os fundamentos que explicam como processos executam, recebem recursos, atravessam a fronteira com o kernel, iniciam o sistema e são isolados.
+
+## Categorias
+
+- CPU e arquitetura de processadores
+- Linux, kernel e processos
+- Firmware, boot e recuperação
+- Armazenamento e filesystems
+- Distribuições Linux
+- Desktop Linux
 
 ## CPU e execução
 

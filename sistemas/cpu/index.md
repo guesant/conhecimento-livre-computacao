@@ -1,4 +1,4 @@
-# CPU e arquitetura de processadores
+# CPU
 
 Uma CPU executa instruções definidas por uma arquitetura de conjunto de instruções, ou ISA. A ISA especifica operações, registradores, formatos de instrução e comportamento observável pelo software; uma microarquitetura concreta decide como implementar isso internamente. Esta área separa o contrato da ISA, o ciclo lógico da instrução, o desenho interno e a relação da CPU com memória, GPU, SoC e entrada e saída.
 
