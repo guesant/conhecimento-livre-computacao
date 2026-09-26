@@ -197,6 +197,22 @@ global. A validação deve medir capacidade, temperaturas, pressões, vazão,
 potência elétrica e estabilidade, em vez de observar apenas a temperatura de
 um ponto.
 
+### Turbulência e desempenho do sistema
+
+O efeito da turbulência deve ser avaliado na fronteira completa do equipamento.
+Um aumento do coeficiente de transferência pode permitir uma serpentina menor,
+uma diferença de temperatura menor ou uma capacidade maior. Porém, se a perda
+de carga exigir potência adicional no ventilador, na bomba ou no compressor, o
+COP do conjunto pode permanecer igual ou diminuir.
+
+Essa avaliação também precisa considerar o ponto de operação. Em carga parcial,
+reduzir a vazão pode economizar mais energia auxiliar do que uma geometria
+projetada para manter turbulência máxima economiza em área de troca. Em carga
+alta, por outro lado, a distribuição uniforme do fluxo pode ser mais importante
+que o maior coeficiente local. O resultado correto é o que melhora a capacidade
+e o consumo na faixa de uso relevante, não o que maximiza uma correlação
+isolada.
+
 ## Turbulência em escoamento bifásico
 
 Evaporadores e condensadores frequentemente trabalham com líquido e vapor ao
