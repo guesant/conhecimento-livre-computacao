@@ -16,7 +16,7 @@ explica essa fronteira.
 
 Hospedagem gerenciada e compartilhada abstraem ainda mais a operação. Hostinger, Hostnet e HostGator oferecem produtos para sites, CMS, e-mail, WordPress, cloud hosting e VPS. Eles podem ser adequados para uma aplicação simples, mas não devem ser avaliados como se fossem uma nuvem hyperscale com os mesmos controles de rede, identidade e automação.
 
-Provedores de edge e rede, como Cloudflare e Akamai, ficam entre a aplicação e o usuário. DNS, CDN, proxy reverso, WAF, mitigação de DDoS, funções na borda e conectividade podem reduzir latência e exposição, mas não substituem automaticamente um banco de dados, um worker ou uma plataforma de execução stateful.
+Provedores de edge e rede, como Cloudflare e Akamai, ficam entre a aplicação e o usuário. DNS, CDN, proxy reverso, WAF, mitigação de DDoS, funções na borda e conectividade podem reduzir latência e exposição, mas não substituem automaticamente um banco de dados, um worker ou uma plataforma de execução stateful. Cloudflare Pages, Workers e Tunnel representam problemas diferentes dentro desse espaço: publicação, execução e conectividade.
 
 ## Dimensões de comparação
 
@@ -59,6 +59,12 @@ Uma escolha adequada considera, pelo menos, estas dimensões:
 | now.sh | Produto e domínio históricos | Deploy por CLI, previews e roteamento web | Deve ser interpretado como antecessor da Vercel |
 | AbraCloud | Associação setorial brasileira | Diretório, representação e relacionamento do ecossistema cloud | Não é um provedor cloud único nem um SLA |
 | Cloudflare | Edge, rede e serverless | DNS, CDN, segurança e Workers | Não substitui todo backend stateful |
+| Cloudflare Pages | Publicação web e edge | Builds, previews, artefatos estáticos e Functions | Não é uma VM nem um backend stateful |
+| Cloudflare Workers | Runtime edge | Lógica distribuída, APIs e integrações | Limites de runtime, estado e compatibilidade |
+| Cloudflare Tunnel | Conectividade privada e ingress | Publicar origens privadas por conexão de saída | Não substitui autenticação ou segmentação |
+| Netlify | PaaS web e edge | Builds, previews, funções e entrega web | Runtime e dados exigem desenho separado |
+| GitHub Pages | Hospedagem estática | Publicação integrada a repositórios GitHub | Sem backend persistente ou dados privados |
+| ngrok | Túneis e ingress de desenvolvimento | Endpoints públicos para serviços locais | Exposição pública, limites e dependência externa |
 
 ## Como escolher
 
