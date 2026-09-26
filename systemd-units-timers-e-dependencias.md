@@ -57,4 +57,4 @@ Os logs da execução de um timer e da unit que ele dispara vão para o mesmo jo
 
 ## Continue por aqui
 
-[Fail2ban, atualizações automáticas e journal persistente](fail2ban-atualizacoes-automaticas-e-journal.md) usa um `.timer` como exemplo prático de agendamento alternativo ao cron. [Podman Quadlets: containers como unidades systemd](podman-quadlets.md) mostra como esse mesmo modelo de unit e dependência se estende a containers, sem que o operador escreva a unit `.service` diretamente.
+[Fail2ban](sistemas/linux/fail2ban.md), [atualizações automáticas](sistemas/linux/automatic-updates.md) e [journal persistente](sistemas/linux/journald.md) usam um `.timer` como exemplo prático de agendamento alternativo ao cron. [Podman Quadlets: containers como unidades systemd](podman-quadlets.md) mostra como esse mesmo modelo de unit e dependência se estende a containers, sem que o operador escreva a unit `.service` diretamente.

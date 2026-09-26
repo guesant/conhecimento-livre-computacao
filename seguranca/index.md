@@ -25,4 +25,4 @@ Pipelines também executam código, recebem entradas, consomem dependências e f
 
 ## Continue por aqui
 
-[Threat modeling](../threat-modeling.md) ajuda a decidir quais superfícies e ameaças merecem prioridade antes de escolher controles. [Supply chain e SBOM](../supply-chain-e-sbom.md) aprofunda composição, proveniência e artefatos.
+[Threat modeling](../threat-modeling.md) ajuda a decidir quais superfícies e ameaças merecem prioridade antes de escolher controles. [Supply chain](supply-chain/index.md) e [SBOM](supply-chain/sbom.md) aprofundam composição, proveniência e artefatos.

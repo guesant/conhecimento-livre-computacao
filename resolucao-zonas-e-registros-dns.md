@@ -32,7 +32,7 @@ Isso esconde um problema sutil quando o próprio servidor de nomes de uma zona t
 
 Um glue record é um registro `A` ou `AAAA` do próprio servidor de nomes, publicado diretamente na zona pai junto com o registro de delegação. Ele é entregue na mesma resposta, para que o resolvedor nunca precise fechar o ciclo descrito acima. Glue records só são necessários quando o nome do servidor está dentro, ou abaixo, da própria zona que ele serve.
 
-Um servidor de nomes com nome fora dessa zona não precisa de glue, porque seu endereço já é resolvível normalmente, sem depender da zona delegada. O registro `DS`, publicado da mesma forma ao lado do registro NS na zona pai, estende esse mesmo mecanismo de delegação. Ele forma uma cadeia de assinaturas verificável, o assunto de [DNSSEC, mDNS e registro de domínio](dnssec-mdns-e-registro-de-dominio.md).
+Um servidor de nomes com nome fora dessa zona não precisa de glue, porque seu endereço já é resolvível normalmente, sem depender da zona delegada. O registro `DS`, publicado da mesma forma ao lado do registro NS na zona pai, estende esse mesmo mecanismo de delegação. Ele forma uma cadeia de assinaturas verificável, o assunto de [DNSSEC](rede/dns/dnssec.md). mDNS e registro de domínio são tratados em [mDNS](rede/dns/mdns.md) e [registro de domínio](rede/dns/registro-de-dominio.md).
 
 Os tipos de registro em uso real neste contexto:
 
@@ -55,4 +55,4 @@ Na prática ele importa por dois motivos concretos. Servidores de e-mail costuma
 
 ## Continue por aqui
 
-[DNSSEC, mDNS e registro de domínio](dnssec-mdns-e-registro-de-dominio.md) cobre como um resolvedor confirma que uma resposta não foi forjada, o caso em que não existe servidor DNS nenhum, e a diferença entre resolução e dados de registro; [servidores DNS e conectividade WAN](servidores-dns-e-conectividade-wan.md) cobre os softwares que implementam cada papel e a decisão de rede que antecede qualquer consulta DNS.
+[DNSSEC](rede/dns/dnssec.md) cobre como um resolvedor confirma que uma resposta não foi forjada. [mDNS](rede/dns/mdns.md) trata o caso em que não existe servidor DNS autoritativo para o nome local, e [registro de domínio](rede/dns/registro-de-dominio.md) trata a diferença entre resolução e dados de registro. [Servidores DNS](rede/dns/servers.md) cobre os softwares que implementam cada papel e a decisão de rede que antecede qualquer consulta DNS.

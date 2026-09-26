@@ -38,4 +38,4 @@ A escolha da modalidade deve ser separada da escolha da API Kubernetes.
 
 ## Continue por aqui
 
-[Single-node](single-node.md) compara padrões concretos. [Distribuições Kubernetes](../../distribuicoes-kubernetes.md) trata formas de empacotar a plataforma.
+[Single-node](single-node.md) compara padrões concretos. [Distribuições Kubernetes](../../comparacoes/plataforma/distribuicoes-kubernetes.md) trata formas de empacotar a plataforma.

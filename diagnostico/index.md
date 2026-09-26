@@ -19,9 +19,9 @@ Um resultado negativo também precisa ser interpretado com o contexto do teste. 
 
 ## Composições
 
-[Diagnóstico profundo com iperf3, tcpdump e strace](../diagnostico-profundo-iperf3-tcpdump-e-strace.md) mostra como combinar as ferramentas quando o sintoma pode estar na rede, no transporte ou na interação entre o processo e o sistema operacional.
+[iperf3](../ferramentas/diagnostico/iperf3.md), [tcpdump](../ferramentas/diagnostico/tcpdump.md) e [strace](../ferramentas/diagnostico/strace.md) mostram as evidências necessárias quando o sintoma pode estar na rede, no transporte ou na interação entre o processo e o sistema operacional.
 
-Para um problema Kubernetes, comece pelo recurso e pelos eventos em [diagnóstico de Pod, nó, certificado e Argo CD](../diagnostico-de-pod-no-cluster-e-do-argocd.md). Ferramentas de baixo nível devem ser usadas depois que a hipótese estiver suficientemente delimitada.
+Para um problema Kubernetes, comece pelo recurso e pelos eventos em [diagnóstico de Pod, nó, certificado e Argo CD](../../operacional/diagnostico-de-pod-no-cluster-e-do-argocd.md). Ferramentas de baixo nível devem ser usadas depois que a hipótese estiver suficientemente delimitada.
 
 ## Segurança e custo
 

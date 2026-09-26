@@ -26,7 +26,7 @@ Nenhuma mídia live substitui backup. Uma ferramenta de recuperação que enxerg
 
 - [Gerenciamento de hardware](../hardware/index.md) trata BMC, IPMI e acesso remoto.
 - [Backup e recuperação](../../confiabilidade/backup/index.md) define objetivos e validação.
-- [Reconstrução de cluster](../../reconstrucao-de-cluster-single-node-e-recuperacao-de-segredos.md) é um procedimento de infraestrutura, não uma mídia de boot.
+- [Reconstrução de cluster](../../../operacional/reconstrucao-de-cluster-single-node-e-recuperacao-de-segredos.md) é um procedimento de infraestrutura, não uma mídia de boot.
 
 ## Fontes primárias
 

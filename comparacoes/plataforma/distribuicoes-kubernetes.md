@@ -24,4 +24,4 @@ Comparar apenas consumo de RAM ignora upgrade, datastore, suporte, integração,
 
 ## Continue por aqui
 
-[K3s](../../k3s.md) aprofunda uma implementação. [Kubernetes gerenciado e HA](../../kubernetes-gerenciado-e-ha-avancada.md) trata topologias mais amplas.
+[K3s](../../k3s.md) aprofunda uma implementação. [Kubernetes gerenciado e self-hosted](gerenciado-self-hosted.md) compara a responsabilidade pelo control plane, enquanto [HA multizona](../../kubernetes/arquitetura/ha-multizona.md) trata topologias mais amplas.

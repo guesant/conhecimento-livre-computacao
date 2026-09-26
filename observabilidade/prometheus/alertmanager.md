@@ -25,7 +25,7 @@ até o receptor, não apenas a existência da regra.
 ## Relações
 
 - [Regras do Prometheus](rules.md) produz alertas.
-- [Alertas acionáveis](../../alertas-acionaveis-e-distributed-tracing.md) trata
+- [Alertas acionáveis](../alertas-acionaveis.md) trata
   a operação.
 - [Prometheus](../prometheus.md) é a fonte usual.
 

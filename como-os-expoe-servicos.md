@@ -1,6 +1,6 @@
 # Como Linux, Windows e macOS expõem seus serviços
 
-O mecanismo de transição para modo kernel, descrito em [CPU, privilégios e syscalls](cpu-privilegios-e-syscalls.md), é o mesmo em qualquer sistema operacional moderno: uma instrução especial, uma mudança de privilégio, uma operação executada pelo kernel, um retorno ao chamador.
+O mecanismo de transição para modo kernel, descrito em [CPU](sistemas/cpu/index.md), [níveis de privilégio](sistemas/cpu/niveis-de-privilegio.md) e [system calls](sistemas/kernel/system-calls.md), é o mesmo em qualquer sistema operacional moderno: uma instrução especial, uma mudança de privilégio, uma operação executada pelo kernel, um retorno ao chamador.
 
 O que muda entre Linux, Windows e macOS é tudo o que fica acima e ao redor desse mecanismo: quais bibliotecas o programa chama antes de chegar à chamada de sistema (syscall), que tipo de identificador o kernel devolve para representar um recurso, e como o sistema organiza a descoberta e a configuração desses recursos. Esta página percorre os três casos separadamente e termina com uma comparação direta.
 
@@ -83,8 +83,8 @@ O conceito de chamada de sistema existe nos três, mas a instrução exata que d
 | Windows | `syscall` | `svc` |
 | macOS | `syscall` (Intel) | `svc` (Apple Silicon) |
 
-O kernel precisa ser compilado especificamente para a arquitetura de destino, e a relação entre sistema operacional e arquitetura de CPU, incluindo o que os termos RISC e CISC realmente descrevem, está detalhada em [CPU, privilégios e syscalls](cpu-privilegios-e-syscalls.md).
+O kernel precisa ser compilado especificamente para a arquitetura de destino, e a relação entre sistema operacional e arquitetura de CPU, incluindo o que os termos RISC e CISC realmente descrevem, está detalhada em [CPU](sistemas/cpu/index.md) e [níveis de privilégio](sistemas/cpu/niveis-de-privilegio.md).
 
 ## Continue por aqui
 
-[CPU, privilégios e syscalls](cpu-privilegios-e-syscalls.md) cobre o mecanismo genérico de syscall, o ciclo de execução da CPU e os modos de privilégio que cada sistema operacional descrito aqui constrói sobre sua própria pilha de bibliotecas.
+[CPU](sistemas/cpu/index.md), [níveis de privilégio](sistemas/cpu/niveis-de-privilegio.md) e [system calls](sistemas/kernel/system-calls.md) cobrem o ciclo de execução da CPU e os modos de privilégio que cada sistema operacional descrito aqui constrói sobre sua própria pilha de bibliotecas.

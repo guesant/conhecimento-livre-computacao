@@ -15,7 +15,7 @@ efeitos no cluster e devem ser usados dentro do fluxo de entrega adotado.
 - [Chart](chart.md) é a unidade empacotada pelo Helm.
 - [Compose, Swarm e Kubernetes](../../comparacoes/plataforma/orquestracao.md)
   compara modelos de execução, não gerenciadores de pacotes.
-- [Helm e charts](../../helm-e-charts.md) preserva o mapa de compatibilidade
+- [Chart](chart.md) explica a unidade empacotada que o Helm renderiza.
   desta documentação.
 
 ## Fonte primária

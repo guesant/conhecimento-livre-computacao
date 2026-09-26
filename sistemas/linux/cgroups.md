@@ -29,4 +29,4 @@ Ao atingir limite de memória, processos podem ser encerrados pelo OOM killer no
 
 ## Continue por aqui
 
-[Capabilities](capabilities.md) restringem privilégio, não consumo. [Requests, limits e QoS](../../requests-limits-e-qos-de-um-pod.md) mostra a abstração correspondente no Kubernetes.
+[Capabilities](capabilities.md) restringem privilégio, não consumo. [Requests](../../kubernetes/recursos/requests.md), [limits](../../kubernetes/recursos/limits.md) e [QoS](../../kubernetes/recursos/qos.md) mostram as abstrações correspondentes no Kubernetes.

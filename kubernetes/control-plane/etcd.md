@@ -26,8 +26,8 @@ backup testado.
 
 ## Relações
 
-- [Quorum, etcd e datastore K3s](../../quorum-etcd-e-datastore-do-k3s.md)
-  trata a escolha de topologia.
+- [Quorum](quorum.md) trata a maioria e a tolerância a falhas.
+- [Datastore do K3s](datastore.md) trata a escolha de backend e topologia.
 - [Backup do etcd](../../backup-do-etcd-cnpg-e-chave-age.md) trata o
   procedimento do ambiente.
 - [API server](api-server.md) é o consumidor principal.

@@ -39,4 +39,4 @@ CrossOver, da CodeWeavers, é um produto comercial baseado no mesmo motor Wine, 
 
 ## Continue por aqui
 
-[VMs e hipervisores](vms-e-hipervisores.md) cobre a alternativa de isolamento total que Wine e Bottles deliberadamente não tentam replicar. [Isolamento leve: zones, jails e microVMs](isolamento-leve-zones-jails-e-microvms.md) cobre o espectro de tecnologias entre um container comum e uma VM completa, nenhuma delas voltada à compatibilidade de aplicação que esta página trata. Para o índice geral desta seção, veja [aprender](index.md).
+[VMs e hipervisores](vms-e-hipervisores.md) cobre a alternativa de isolamento total que Wine e Bottles deliberadamente não tentam replicar. [Zones e jails](sistemas/virtualizacao/zones-jails.md) e [microVMs e sandboxes](sistemas/virtualizacao/microvms-e-sandboxes.md) cobrem o espectro de tecnologias entre um container comum e uma VM completa, nenhuma delas voltada à compatibilidade de aplicação que esta página trata. Para o índice geral desta seção, veja [aprender](index.md).

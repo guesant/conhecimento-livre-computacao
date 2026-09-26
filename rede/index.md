@@ -4,7 +4,7 @@ Esta área organiza fundamentos de comunicação, resolução de nomes, conectiv
 
 ## Fundamentos
 
-[OSI e TCP/IP](../osi-tcpip-e-enderecamento-ip.md) fornece o vocabulário de camadas e endereçamento. Interfaces, rotas e camada 2 explicam como um host alcança outros destinos.
+[OSI](fundamentos/osi.md) e [TCP/IP](fundamentos/tcp-ip.md) fornecem o vocabulário de camadas e endereçamento. Interfaces, rotas e camada 2 explicam como um host alcança outros destinos.
 
 ## DNS
 

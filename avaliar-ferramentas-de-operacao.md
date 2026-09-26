@@ -101,4 +101,4 @@ Um serviço de monitoramento externo de disponibilidade, seja um SaaS de uptime,
 
 ## Continue por aqui
 
-[Modelo de ameaças](../arquitetura/modelo-de-ameacas.md) aplica esse mesmo raciocínio de credencial e raio de dano à arquitetura real deste repositório. [RBAC do Kubernetes](rbac-do-kubernetes.md) detalha o mecanismo que uma interface Kubernetes bem desenhada respeita em vez de contornar.
+[Modelo de ameaças](../arquitetura/modelo-de-ameacas.md) aplica esse mesmo raciocínio de credencial e raio de dano à arquitetura real deste repositório. [RBAC do Kubernetes](kubernetes/access/rbac.md) detalha o mecanismo que uma interface Kubernetes bem desenhada respeita em vez de contornar.

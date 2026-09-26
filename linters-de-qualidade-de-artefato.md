@@ -42,4 +42,4 @@ Isso o torna adequado tanto para busca precisa (encontrar todos os usos reais de
 
 ## Continue por aqui
 
-[Shells e scripts](shells-e-scripts.md) e [Ansible](ansible.md) cobrem `shellcheck` e `ansible-lint`, os dois linters de artefato mais específicos deste repositório. [Scanning de vulnerabilidade](vulnerability-scanning.md) cobre a categoria de análise estática voltada a segurança, um objetivo diferente do de qualidade e consistência que os linters desta página perseguem.
+[Shells e scripts](shells-e-scripts.md) e [Ansible](ansible.md) cobrem `shellcheck` e `ansible-lint`, os dois linters de artefato mais específicos deste repositório. [Segurança de aplicações](seguranca/appsec/index.md) cobre a categoria de análise voltada a segurança, um objetivo diferente do de qualidade e consistência que os linters desta página perseguem.

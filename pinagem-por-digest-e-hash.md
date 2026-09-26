@@ -16,7 +16,7 @@ Uma Action de terceiro referenciada por tag (`uses: alguem/acao@v3`, por exemplo
 
 Uma tag de versão num repositório git, ao contrário de um digest de imagem, pode ser movida a qualquer momento por quem controla o repositório, que consegue apontar a tag `v3` para um commit diferente sem aviso, o que faz fixar por tag oferecer garantia zero contra esse cenário específico.
 
-A prática recomendada, e a que [CodeQL e zizmor](codeql-e-zizmor.md) cobre como um dos padrões que uma ferramenta de lint de workflow sinaliza quando ausente, é fixar pelo hash do commit (`uses: alguem/acao@a1b2c3...`, um valor imutável por construção, já que o hash de um commit muda se qualquer coisa nele mudar), mantendo a versão legível como comentário ao lado (`@a1b2c3... # v3.2.1`) só para referência humana, sem que essa parte legível tenha efeito nenhum na resolução real.
+A prática recomendada, e a que [zizmor](seguranca/supply-chain/index.md) cobre como um dos padrões que uma ferramenta de lint de workflow sinaliza quando ausente, é fixar pelo hash do commit (`uses: alguem/acao@a1b2c3...`, um valor imutável por construção, já que o hash de um commit muda se qualquer coisa nele mudar), mantendo a versão legível como comentário ao lado (`@a1b2c3... # v3.2.1`) só para referência humana, sem que essa parte legível tenha efeito nenhum na resolução real.
 
 Um bot de atualização de dependência que entende esse padrão, como o Renovate já descrito em [Renovate: atualização automática de dependência](renovate-atualizacao-automatica-de-dependencia.md), mantém tanto o comentário de versão quanto o hash do commit em sincronia a cada atualização, sem exigir que alguém calcule o hash manualmente a cada bump.
 

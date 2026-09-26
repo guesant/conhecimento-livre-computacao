@@ -26,7 +26,7 @@ Prefira versões resolvidas quando a pergunta exige precisão de versão. Cubra 
 
 ## Relação com SBOM
 
-SCA e SBOM se sobrepõem na descoberta de componentes, mas respondem perguntas diferentes. Um [SBOM](../../../supply-chain-e-sbom.md) é uma representação da composição; SCA usa informação de composição para realizar análises como correspondência com vulnerabilidades conhecidas.
+SCA e SBOM se sobrepõem na descoberta de componentes, mas respondem perguntas diferentes. Um [SBOM](../../supply-chain/sbom.md) é uma representação da composição; SCA usa informação de composição para realizar análises como correspondência com vulnerabilidades conhecidas.
 
 ## Fontes
 
@@ -35,4 +35,4 @@ SCA e SBOM se sobrepõem na descoberta de componentes, mas respondem perguntas d
 
 ## Continue por aqui
 
-[OSV-Scanner](osv-scanner.md) mostra uma implementação concreta. [Supply chain e SBOM](../../../supply-chain-e-sbom.md) amplia o assunto para composição, integridade e proveniência.
+[OSV-Scanner](osv-scanner.md) mostra uma implementação concreta. [Supply chain](../../supply-chain/index.md) e [SBOM](../../supply-chain/sbom.md) ampliam o assunto para composição, integridade e proveniência.

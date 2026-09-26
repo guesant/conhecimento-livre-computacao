@@ -60,6 +60,8 @@ O mesmo princípio de chave que nunca sai de um chip se estende além de SSH e P
 
 Além de abrir uma sessão de terminal, uma conexão SSH pode encapsular outro tráfego de rede: um túnel local expõe uma porta remota como se fosse local, um túnel remoto faz o inverso, e um túnel dinâmico funciona como um proxy SOCKS genérico.
 
+Os quatro modos documentados em [Tunelamento de portas SSH](ssh-port-forwarding.md) são o encaminhamento local com `-L`, remoto com `-R`, dinâmico com `-D` e o encaminhamento de fluxo com `-W`.
+
 Isso é útil para alcançar um serviço que só escuta numa rede interna, um banco de dados que não deveria estar exposto na internet, por exemplo, usando o próprio servidor SSH como ponte, sem abrir uma porta adicional exposta. O custo é que a superfície de acesso passa a depender de quem tem sessão SSH: qualquer pessoa que consiga entrar no node alcança, pelo túnel, tudo que o node alcança.
 
 Um túnel também é uma solução por sessão, que some quando a conexão cai, o que serve para depurar mas não para dar acesso permanente a alguém. Este repositório resolve o acesso permanente por outro caminho, com os nomes internos publicados pela tailnet do Tailscale, descritos em [Ingress: os nomes internos pela tailnet](../arquitetura/ingress.md).

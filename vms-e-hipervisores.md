@@ -93,4 +93,4 @@ O caso de uso mais comum que leva alguém a precisar entender IOMMU na prática,
 
 ## Continue por aqui
 
-[Isolamento leve: zones, jails e microVMs](isolamento-leve-zones-jails-e-microvms.md) cobre o espectro de tecnologias que ficam entre um container comum e a VM completa descrita aqui. [Wine e compatibilidade](wine-e-compatibilidade.md) trata de um problema vizinho, rodar software Windows em Linux, mas sem nenhuma das formas de isolamento desta página. Para o índice geral desta seção, veja [aprender](index.md).
+[Zones e jails](sistemas/virtualizacao/zones-jails.md) e [microVMs e sandboxes](sistemas/virtualizacao/microvms-e-sandboxes.md) cobrem o espectro de tecnologias que ficam entre um container comum e a VM completa descrita aqui. [Wine e compatibilidade](wine-e-compatibilidade.md) trata de um problema vizinho, rodar software Windows em Linux, mas sem nenhuma das formas de isolamento desta página. Para o índice geral desta seção, veja [aprender](index.md).

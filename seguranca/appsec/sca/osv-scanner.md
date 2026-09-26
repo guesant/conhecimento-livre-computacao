@@ -44,4 +44,4 @@ Outras ferramentas podem combinar SCA com scanning de imagens, IaC, secrets ou S
 
 ## Continue por aqui
 
-[SCA](index.md) explica a categoria. [Supply chain e SBOM](../../../supply-chain-e-sbom.md) mostra por que inventário de componentes é útil além do gate imediato de CI.
+[SCA](index.md) explica a categoria. [Supply chain](../../supply-chain/index.md) e [SBOM](../../supply-chain/sbom.md) mostram por que inventário de componentes é útil além do gate imediato de CI.

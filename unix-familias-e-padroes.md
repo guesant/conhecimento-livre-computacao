@@ -20,7 +20,7 @@ A especificação cobre três áreas centrais: a linguagem de comandos do shell,
 
 A primeira área é o Shell Command Language, a sintaxe mínima que um interpretador de comandos garante, sem as extensões de shells como o Bash ou o Zsh; [shells e scripts](shells-e-scripts.md) aprofunda essa base e o que cada shell adiciona por cima dela.
 
-A segunda área é o conjunto de utilitários de linha de comando listado acima, com comportamento e flags mínimas garantidas; [coreutils e documentação](coreutils-e-documentacao.md) detalha onde essas implementações divergem além desse mínimo.
+A segunda área é o conjunto de utilitários de linha de comando listado acima, com comportamento e flags mínimas garantidas; [Coreutils](sistemas/linux/coreutils.md) e [documentação de comandos](sistemas/linux/documentacao.md) detalham onde essas implementações divergem além desse mínimo.
 
 A terceira área são as APIs de sistema em C listadas acima, que permitem que um programa nativo compile e rode sobre qualquer sistema compatível sem alterar a lógica de acesso ao sistema operacional.
 
@@ -78,7 +78,7 @@ Arch Linux prioriza um modelo rolling release, atualizações contínuas sem ver
 
 Essa filosofia atrai um público que quer controle granular sobre cada componente do sistema, ao custo de exigir mais conhecimento prévio do que uma instalação Debian ou Ubuntu guiada; `pacman` é o gerenciador de pacotes, com a AUR, Arch User Repository, como repositório adicional mantido pela comunidade.
 
-Alpine Linux prioriza tamanho reduzido acima de tudo, usando musl libc no lugar da glibc tradicional, BusyBox no lugar do GNU Coreutils completo, e `apk` como gerenciador de pacotes, também minimalista; [coreutils e documentação](coreutils-e-documentacao.md) detalha o que essa troca custa em compatibilidade de flags.
+Alpine Linux prioriza tamanho reduzido acima de tudo, usando musl libc no lugar da glibc tradicional, BusyBox no lugar do GNU Coreutils completo, e `apk` como gerenciador de pacotes, também minimalista; [Coreutils](sistemas/linux/coreutils.md) e [documentação de comandos](sistemas/linux/documentacao.md) detalham o que essa troca custa em compatibilidade de flags.
 
 Essa combinação produz uma imagem base ordens de grandeza menor que uma distro Debian ou Ubuntu completa, o motivo de sua adoção generalizada em imagens de container voltadas a produção, ao custo de scripts que assumem Bash ou flags GNU específicas poderem quebrar sobre ela sem aviso claro.
 
@@ -90,4 +90,4 @@ Mas o padrão garante o denominador comum, não a experiência completa de nenhu
 
 ## Continue por aqui
 
-[Shells e scripts](shells-e-scripts.md) aprofunda a base POSIX sh que esta página apresentou, o que Bash, Zsh e Fish adicionam por cima dela, e as pegadinhas reais de escrever um script portável entre Linux e BSD. [Coreutils e documentação](coreutils-e-documentacao.md) detalha onde GNU Coreutils, BusyBox e a reimplementação em Rust uutils divergem além do mínimo que o POSIX exige, e como encontrar ajuda sobre qualquer um desses comandos. Para o índice geral desta seção, veja [Aprender](index.md).
+[Shells e scripts](shells-e-scripts.md) aprofunda a base POSIX sh que esta página apresentou, o que Bash, Zsh e Fish adicionam por cima dela, e as pegadinhas reais de escrever um script portável entre Linux e BSD. [Coreutils](sistemas/linux/coreutils.md) e [documentação de comandos](sistemas/linux/documentacao.md) detalham onde GNU Coreutils, BusyBox e a reimplementação em Rust uutils divergem além do mínimo que o POSIX exige, e como encontrar ajuda sobre qualquer um desses comandos. Para o índice geral desta seção, veja [Aprender](index.md).

@@ -26,7 +26,7 @@ avaliação, o atraso e a presença das séries esperadas.
 
 - [Prometheus](../prometheus.md) executa e armazena as regras.
 - [Alertmanager](alertmanager.md) roteia alertas.
-- [Alertas acionáveis](../../alertas-acionaveis-e-distributed-tracing.md)
+- [Alertas acionáveis](../alertas-acionaveis.md)
   trata resposta operacional.
 
 ## Fonte primária

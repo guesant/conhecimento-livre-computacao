@@ -39,7 +39,7 @@ comportamento esperado é reduzir acertos de cache, não interromper o GitLab.
 
 - [Cache de GitLab Runner](../../ci/gitlab-runner/cache.md) configura Silo como
   backend S3 distribuído.
-- [Supply chain e SBOM](../../supply-chain-e-sbom.md) orienta pinagem, SBOM e
+- [Supply chain](../../seguranca/supply-chain/index.md) e [SBOM](../../seguranca/supply-chain/sbom.md) orientam pinagem, SBOM e
   verificação da imagem do serviço.
 - [Backup](../../confiabilidade/backup/backup.md) diferencia durabilidade de
   dados de cache descartável.

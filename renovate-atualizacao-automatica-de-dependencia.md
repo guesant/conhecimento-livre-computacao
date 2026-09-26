@@ -30,4 +30,4 @@ Alguns artefatos deste repositório não são referenciados como imagem com tag 
 
 ## Continue por aqui
 
-[Pinagem por digest e hash em cada ecossistema](pinagem-por-digest-e-hash.md) cobre a prática que a atualização de digest do Renovate mantém em dia. [Supply chain e SBOM](supply-chain-e-sbom.md) cobre por que manter dependência atualizada é parte da mesma preocupação de cadeia de suprimentos que motiva um SBOM.
+[Pinagem por digest e hash em cada ecossistema](pinagem-por-digest-e-hash.md) cobre a prática que a atualização de digest do Renovate mantém em dia. [Supply chain](seguranca/supply-chain/index.md) e [SBOM](seguranca/supply-chain/sbom.md) cobrem por que manter dependência atualizada é parte da mesma preocupação de cadeia de suprimentos que motiva um SBOM.

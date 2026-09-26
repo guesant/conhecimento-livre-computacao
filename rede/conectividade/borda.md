@@ -16,4 +16,4 @@ Empilhar proxy, túnel, gateway e ingress sem registrar responsabilidade de cada
 
 ## Continue por aqui
 
-[Reverse proxy e split-horizon DNS](../../reverse-proxy-e-split-horizon-dns.md) mostra duas peças que frequentemente aparecem próximas da borda.
+[Reverse proxy](../proxy/reverse-proxy.md) e [split-horizon DNS](../dns/split-horizon.md) mostram duas peças que frequentemente aparecem próximas da borda.

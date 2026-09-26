@@ -8,7 +8,7 @@ Separe o state do cluster do state de workloads que o GitOps administra. Não fa
 
 ## Relações
 
-O provider Google administra o cluster e os serviços de suporte; os objetos executados nele pertencem ao ciclo de vida de [Kubernetes](../../distribuicoes-kubernetes.md) e do GitOps, conforme a arquitetura escolhida.
+O provider Google administra o cluster e os serviços de suporte; os objetos executados nele pertencem ao ciclo de vida de [Kubernetes](../../comparacoes/plataforma/distribuicoes-kubernetes.md) e do GitOps, conforme a arquitetura escolhida.
 
 ## Fonte primária
 

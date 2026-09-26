@@ -12,4 +12,4 @@ TLS usa certificados e chaves para autenticação e proteção de transporte. mT
 
 ## Continue por aqui
 
-[TLS, mTLS e confiança de rede](../../tls-mtls-e-confianca-de-rede.md) explica o protocolo e o modelo de confiança. [TLS automático](../../tls-automatico.md) explica automação de emissão.
+[TLS](../tls/index.md), [mTLS](../tls/mtls.md) e confiança de rede explicam o protocolo e o modelo de confiança. [TLS automático](../../tls-automatico.md) explica automação de emissão.

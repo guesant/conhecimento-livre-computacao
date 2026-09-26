@@ -103,8 +103,8 @@ O awk tem uma superfície de compatibilidade maior entre implementações, porqu
 
 O ps diverge na própria gramática de flags: o ps do GNU, no Linux, aceita tanto a sintaxe estilo BSD sem hífen (`ps aux`) quanto a sintaxe estilo UNIX System V com hífen (`ps -ef`), porque foi desenhado para aceitar as duas por compatibilidade, enquanto um ps BSD nativo só entende a sintaxe BSD original.
 
-Um script que mistura as duas convenções assumindo que todo ps aceita a sintaxe com hífen quebra num BSD real, e a mesma lógica de superfície reduzida se estende aos comandos coreutils mais básicos, que [coreutils e documentação](coreutils-e-documentacao.md) cobre em detalhe.
+Um script que mistura as duas convenções assumindo que todo ps aceita a sintaxe com hífen quebra num BSD real, e a mesma lógica de superfície reduzida se estende aos comandos coreutils mais básicos, que [Coreutils](sistemas/linux/coreutils.md) e [documentação de comandos](sistemas/linux/documentacao.md) cobrem em detalhe.
 
 ## Continue por aqui
 
-[Famílias unix-like e o padrão POSIX](unix-familias-e-padroes.md) explica o que a especificação POSIX garante e por que ela é o que torna um script portável entre Linux e BSD possível em primeiro lugar. [Coreutils e documentação](coreutils-e-documentacao.md) continua o assunto de portabilidade nos comandos básicos do dia a dia e mostra como encontrar ajuda sobre qualquer um deles. Para o índice geral desta seção, veja [Aprender](index.md).
+[Famílias unix-like e o padrão POSIX](unix-familias-e-padroes.md) explica o que a especificação POSIX garante e por que ela é o que torna um script portável entre Linux e BSD possível em primeiro lugar. [Coreutils](sistemas/linux/coreutils.md) e [documentação de comandos](sistemas/linux/documentacao.md) continuam o assunto de portabilidade nos comandos básicos do dia a dia e mostram como encontrar ajuda sobre qualquer um deles. Para o índice geral desta seção, veja [Aprender](index.md).

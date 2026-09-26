@@ -6,7 +6,7 @@ Nenhuma dessas ferramentas depende de reimplementar criptografia própria; todas
 
 ## Sistema de arquivos cifrado por arquivo: `gocryptfs`
 
-`gocryptfs` cifra um diretório inteiro arquivo por arquivo, incluindo o nome de cada arquivo, montando a versão decifrada sob demanda através de FUSE (o mecanismo que permite implementar um sistema de arquivos inteiro em espaço de usuário, sem exigir um módulo de kernel dedicado, já mencionado em [rsync e sshfs](rsync-e-sshfs.md)).
+`gocryptfs` cifra um diretório inteiro arquivo por arquivo, incluindo o nome de cada arquivo, montando a versão decifrada sob demanda através de FUSE (o mecanismo que permite implementar um sistema de arquivos inteiro em espaço de usuário, sem exigir um módulo de kernel dedicado, já mencionado em [SSHFS](ferramentas/transferencia/sshfs.md)).
 
 O ganho central sobre cifrar um contêiner monolítico inteiro é que cada arquivo dentro do diretório cifrado corresponde a um arquivo cifrado individual no armazenamento subjacente, o que permite sincronizar ou versionar mudanças incrementais; o custo é que cifrar também o nome do arquivo (não só o conteúdo) elimina qualquer possibilidade de diff legível numa ferramenta de controle de versão, porque o nome muda de forma imprevisível junto com qualquer mudança de conteúdo.
 

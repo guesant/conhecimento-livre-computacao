@@ -1,30 +1,22 @@
-# Vault e OpenBao
+# Comparação: Vault e OpenBao
 
-Vault e OpenBao são secret stores que centralizam valores, políticas, auditoria
-e emissão ou integração com identidades. OpenBao é uma alternativa comunitária
-compatível com conceitos do Vault.
+Vault e OpenBao compartilham o modelo de secret store centralizado, com
+políticas, auditoria, autenticação de workloads, armazenamento cifrado e
+unseal. As implementações possuem páginas próprias.
 
-## Unseal e domínio de falha
+- [Vault](vault.md) detalha a implementação HashiCorp.
+- [OpenBao](openbao.md) detalha a implementação comunitária compatível.
+- [Auto-unseal e KMS](auto-unseal.md) explica a dependência externa comum às
+  duas alternativas.
 
-O store cifra dados em repouso e precisa ser destravado para servir valores.
-Auto-unseal usa um KMS ou outra autoridade externa. Guardar a única chave de
-unseal dentro do cluster que o store deveria proteger cria dependência
-circular.
+## Critérios de escolha
 
-## Escolha
+A escolha deve considerar licença, governança, compatibilidade de APIs,
+integrações, suporte, operação e migração. A semelhança de conceitos não
+significa que todos os plugins, recursos ou contratos operacionais sejam
+intercambiáveis.
 
-Um store dedicado é justificável quando rotação, auditoria, múltiplos
-consumidores e políticas centralizadas compensam a operação adicional. Em um
-ambiente pequeno, SOPS e age podem reduzir componentes e ainda oferecer
-separação adequada.
-
-## Relações
-
-- [External Secrets Operator](external-secrets.md) integra o backend.
-- [Bootstrap](bootstrap.md) trata a credencial inicial.
-- [Rotação](rotation.md) descreve a substituição segura.
-
-## Fontes primárias
-
-- [Vault](https://developer.hashicorp.com/vault/docs)
-- [OpenBao](https://openbao.org/docs/)
+Em ambientes pequenos, [SOPS e age](sops-age.md) podem cumprir o requisito
+com menos componentes. [External Secrets Operator](external-secrets.md) é a
+camada de integração declarativa quando os consumidores são workloads
+Kubernetes.

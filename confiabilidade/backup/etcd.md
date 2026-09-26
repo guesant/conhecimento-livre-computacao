@@ -23,8 +23,8 @@ cluster de nó único, a operação é mais simples, mas continua destrutiva.
 
 - [Backup](backup.md) apresenta o vocabulário geral.
 - [Snapshot](snapshot.md) diferencia cópia pontual, réplica e backup.
-- [Datastore do K3s](../../quorum-etcd-e-datastore-do-k3s.md) explica o papel do
-  etcd na topologia usada pelo projeto.
+- [Datastore do K3s](../../kubernetes/control-plane/datastore.md) explica o
+  papel do etcd na topologia usada pelo projeto.
 
 ## Fonte primária
 

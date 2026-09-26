@@ -30,7 +30,7 @@ Nenhum cliente fora da rede confia nessa CA por padrão, então ela precisa ser 
 
 ## `cmctl`: diagnosticar sem esperar o próximo ciclo de reconciliação
 
-O cert-manager expõe seu estado através dos próprios recursos que gerencia, a cadeia `Certificate`, `CertificateRequest` e os recursos de desafio ACME descrita em [Diagnóstico de Pod, nó, certificado e Argo CD](diagnostico-de-pod-no-cluster-e-do-argocd.md), mas inspecionar essa cadeia manualmente a cada vez é mais lento do que precisa ser.
+O cert-manager expõe seu estado através dos próprios recursos que gerencia, a cadeia `Certificate`, `CertificateRequest` e os recursos de desafio ACME descrita em [Diagnóstico de Pod, nó, certificado e Argo CD](../operacional/diagnostico-de-pod-no-cluster-e-do-argocd.md), mas inspecionar essa cadeia manualmente a cada vez é mais lento do que precisa ser.
 
 `cmctl` é o cliente de linha de comando complementar ao próprio cert-manager, com atalhos específicos para isso: `cmctl status certificate` resume o estado de um certificado sem montar manualmente a consulta à cadeia inteira de recursos, e `cmctl renew` força uma tentativa de renovação imediata. Esse segundo comando serve para confirmar que a causa de uma falha já foi corrigida, sem esperar pelo próximo ciclo automático de renovação.
 

@@ -82,4 +82,4 @@ Não use Kubernetes para simular HA em um único host. Não adicione Portainer p
 
 ## Continue por aqui
 
-[Podman Quadlets](../../podman-quadlets.md), [K3s](../../k3s.md), [orquestradores de containers](../../orquestradores-de-containers.md) e [systemd](../../systemd-units-timers-e-dependencias.md) aprofundam as peças.
+[Podman Quadlets](../../podman-quadlets.md), [K3s](../../k3s.md), [orquestração](../../comparacoes/plataforma/orquestracao.md) e [systemd](../../systemd-units-timers-e-dependencias.md) aprofundam as peças.

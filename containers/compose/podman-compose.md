@@ -23,7 +23,7 @@ Para workloads de um único host com requisitos de lifecycle mais explícitos, [
 - [Compose Specification](specification.md) define o contrato compartilhado.
 - [Docker Compose](docker-compose.md) é outra implementação do mesmo modelo.
 - [Podman](../engines/podman.md) fornece o engine e o socket consumido pelo provedor.
-- [GitOps para Podman](../../gitops-para-podman-orches-e-materia.md) descreve um cenário de host único.
+- [Orches](../../entrega/orches.md) e [Materia](../../entrega/materia.md) descrevem um cenário de host único.
 
 ## Fonte primária
 
