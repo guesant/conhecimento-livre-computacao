@@ -10,6 +10,9 @@ Esta área organiza os fundamentos que explicam como processos executam, recebem
 
 [System calls](kernel/system-calls.md) são a interface controlada entre processo e kernel. [Cgroups](linux/cgroups.md) controlam consumo de recursos; [capabilities](linux/capabilities.md) decompõem privilégios tradicionalmente associados a root; [seccomp](linux/seccomp.md) filtra chamadas de sistema.
 
+[Runtimes de execução](runtime/index.md) explica event loops, engines JavaScript e a
+separação entre execução de código, I/O assíncrono e APIs do host.
+
 ## Isolamento
 
 Namespaces, cgroups, capabilities, seccomp, LSMs e isolamento de filesystem são mecanismos relacionados, mas independentes. Combiná-los produz o isolamento típico de containers; nenhum deles, isoladamente, "é um container".

@@ -1,10 +1,14 @@
-# Conectividade WAN
+# WAN
+
+WAN, Wide Area Network, é uma rede que interliga locais em uma área ampla, como cidades, estados, países ou continentes. Ela pode ser privada, operada por uma organização ou fornecida por uma operadora. A Internet pública é uma interconexão de muitas WANs e sistemas autônomos, não uma única WAN administrada por uma entidade.
+
+Uma WAN pode transportar várias LANs e MANs por enlaces privados, MPLS, SD-WAN, VPN, Internet, rádio, fibra ou satélite. O alcance geográfico não determina sozinho o protocolo ou o modelo de propriedade.
 
 Toda resolução DNS pressupõe que o host já alcança a internet. Antes de
 configurar o DNS, o roteador de borda precisa obter um endereço público e
 manter uma forma estável de ser alcançado.
 
-## Como o endereço é obtido
+## Acesso e borda
 
 PPPoE, definido na RFC 2516, autentica o assinante com credenciais do
 provedor antes de entregar o endereço. DHCP, definido na RFC 2131, entrega

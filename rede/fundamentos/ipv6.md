@@ -10,6 +10,20 @@ Uma interface pode ter endereços link-local, ULA e globais ao mesmo tempo.
 Sub-redes normalmente usam prefixo /64, e um prefixo delegado maior permite
 organizar múltiplas redes.
 
+Os principais tipos são global unicast, normalmente dentro de `2000::/3`,
+link-local em `fe80::/10`, unique local address em `fc00::/7` e multicast em
+`ff00::/8`. Anycast usa endereços unicast atribuídos a mais de uma interface;
+não possui um prefixo textual separado que permita identificá-lo apenas lendo
+o endereço. O significado depende da forma como o endereço foi configurado e
+anunciado.
+
+IPv6 não usa classes A, B e C. O prefixo CIDR indica quantos bits pertencem à
+rede, mas a arquitetura recomenda manter `/64` nas sub-redes comuns para que
+SLAAC, Neighbor Discovery e práticas de endereçamento funcionem como esperado.
+Um site pode receber um `/48`, `/56` ou outro prefixo conforme a política do
+provedor e do registro regional; o prefixo recebido deve ser subdividido sem
+tratar todos os 128 bits como endereços de hosts independentes.
+
 ULA fornece endereços estáveis para redes internas. Prefixos globais podem
 mudar conforme a delegação do provedor, portanto o plano interno não deve
 depender de um prefixo externo que pode ser rotacionado.
@@ -24,6 +38,10 @@ explicitamente conforme a política.
 ## Relações
 
 - [IPv4](ipv4.md) usa ARP e broadcast no modelo tradicional.
+- [CIDR e subnetting](cidr-e-subnetting.md) explica prefixos e planejamento de
+  sub-redes para as duas famílias.
+- [Broadcast e multicast](broadcast-multicast.md) explica por que IPv6 usa
+  multicast e não broadcast.
 - [Interfaces e rotas](../../interfaces-rotas-e-l2-no-linux.md) mostra o host.
 - [NDP e vizinhança](../neighbor.md) detalha a descoberta local.
 

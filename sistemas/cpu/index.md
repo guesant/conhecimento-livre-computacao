@@ -1,10 +1,14 @@
-# CPU
+# CPU e arquitetura de processadores
 
-A CPU executa instruções definidas por uma arquitetura de conjunto de instruções, ou ISA. A ISA especifica operações, registradores, formatos de instrução e comportamento observável pelo software; uma microarquitetura concreta decide como implementar isso internamente.
+Uma CPU executa instruções definidas por uma arquitetura de conjunto de instruções, ou ISA. A ISA especifica operações, registradores, formatos de instrução e comportamento observável pelo software; uma microarquitetura concreta decide como implementar isso internamente. Esta área separa o contrato da ISA, o ciclo lógico da instrução, o desenho interno e a relação da CPU com memória, GPU, SoC e entrada e saída.
 
-## Casos de uso
+## Mapa da área
 
-Entender CPU e ISA é útil para interpretar assembly, ABI, virtualização, diferenças entre arquiteturas como x86-64 e AArch64 e por que um binário compilado para uma ISA não executa nativamente em outra.
+- [Conjunto de instruções e microarquitetura](isa-e-microarquitetura.md) separa o contrato da ISA da implementação em silício.
+- [Ciclo de instrução](ciclo-de-instrucao.md) explica fetch, decode, execute, pipeline, ULA e unidade de controle.
+- [CPU, RAM, GPU e SoC](cpu-ram-gpu-e-soc.md) diferencia os componentes e apresenta memória unificada.
+- [Famílias e gerações de processadores](familias-de-processadores.md) organiza Intel, AMD, Arm e Apple Silicon sem confundir produto com arquitetura.
+- [Barramento do sistema](barramento-do-sistema.md) descreve CPU, memória, entrada e saída, DMA, IOMMU e o modelo de von Neumann.
 
 ## Exemplo
 

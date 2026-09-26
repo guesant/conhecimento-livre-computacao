@@ -21,3 +21,5 @@ Esses modelos, apesar de diferenças reais de escopo e de rigor, compartilham um
 ## Continue por aqui
 
 [OWASP](owasp.md) e [MITRE ATT&CK](mitre-attack.md) cobrem o conhecimento técnico de vulnerabilidade e comportamento de ataque que informa boa parte dos controles técnicos que esses frameworks exigem provar. [Zero trust](zero-trust.md) cobre um princípio arquitetural que, quando aplicado, tende a facilitar a conformidade com controles de segmentação e controle de acesso exigidos por frameworks como o PCI-DSS.
+
+[Normas e frameworks de boas práticas](normas-e-frameworks-de-boas-praticas.md) amplia a comparação para desenvolvimento, implantação, suporte, resposta a incidentes, requisitos não funcionais, auditoria, governança e métodos ágeis.

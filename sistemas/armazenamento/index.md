@@ -7,6 +7,8 @@ Confundir essas camadas produz operações perigosas. LVM não é um filesystem,
 ## Páginas canônicas
 
 - [LVM](lvm.md) explica volumes físicos, grupos de volumes, volumes lógicos, thin provisioning e snapshots.
+- [RAID](raid.md) explica striping, espelhamento, paridade, níveis clássicos, rebuild e
+  a diferença entre redundância e backup.
 - [Btrfs](btrfs.md) explica um filesystem copy-on-write com subvolumes, checksums, snapshots e send/receive.
 - [XFS](xfs.md) explica um filesystem journaling orientado a escalabilidade e expansão online.
 - [ZFS](zfs.md) explica a combinação entre pool, vdevs, datasets, checksums, snapshots e replicação.

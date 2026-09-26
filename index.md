@@ -4,6 +4,10 @@ Aprender explica conceitos, abordagens e ferramentas sem depender das decisões 
 
 A regra central é profundidade estreita. Uma página pode ser longa, mas deve aprofundar uma unidade de conhecimento. Quando ferramentas ou abordagens diferentes pertencem à mesma categoria, a categoria recebe uma página-mapa e cada assunto independente recebe endereço próprio.
 
+## Educação, pesquisa e formação tecnológica
+
+[Educação, pesquisa e formação tecnológica](educacao-pesquisa/index.md) explica como universidades, grupos de pesquisa, redes acadêmicas, fundações de apoio, políticas regionais, competições e ICTs se relacionam. A seção inclui RNP, C3SL, UFPR, Fundep, SUFRAMA, OBI, USP, Unicamp, PUCPR, PUC-Rio, NEPEN e Instituto Evolução.
+
 ## Sistemas e Linux
 
 [Sistemas e Linux](sistemas/index.md) começa pela execução: CPU, níveis de privilégio, system calls, processos e mecanismos de isolamento. A partir daí entram namespaces, [cgroups](sistemas/linux/cgroups.md), [capabilities](sistemas/linux/capabilities.md), [seccomp](sistemas/linux/seccomp.md), Unix, shells, coreutils e systemd.
@@ -34,6 +38,17 @@ Operators, namespaces, Jobs, requests/limits, probes, PDBs, storage e manutenç�
 
 Esta área separa DevOps, IaC e GitOps como ideias relacionadas mas distintas. [Infraestrutura como código](iac-provisionamento.md) trata declaração e provisionamento; [Ansible](ansible.md) trata uma implementação de automação e configuração; SSH, just, jq/yq e ferramentas de transferência possuem responsabilidades próprias.
 
+## Ecossistema .NET
+
+[Ecossistema .NET](dotnet/index.md) separa execução de trabalho em background de resiliência
+de chamadas. [Hangfire](dotnet/hangfire.md) persiste e processa jobs fora do ciclo da
+requisição; [Polly](dotnet/polly.md) compõe timeout, retry, circuit breaker, rate limiting
+e outras estratégias para operações que podem falhar de forma transitória.
+
+As bibliotecas podem ser combinadas, mas têm responsabilidades diferentes. Hangfire
+coordena o ciclo de vida do trabalho. Polly controla a execução de uma tentativa ou de
+uma operação dentro desse trabalho.
+
 ## Entrega e GitOps
 
 [Entrega e GitOps](entrega/index.md) organiza reconciliação, CI/CD e estratégias de rollout.
@@ -61,6 +76,29 @@ Segurança de CI/CD trata a pipeline como superfície própria, com [zizmor](seg
 [Dados e mensageria](dados/index.md) evita usar "NoSQL" ou "mensageria" como categorias finais.
 
 [Bancos chave-valor](dados/bancos/key-value.md) e [bancos de documentos](dados/bancos/documentos.md) têm modelos diferentes. [Filas](dados/mensageria/filas.md) e [event streaming](dados/mensageria/event-streaming.md) também são separados porque retenção, consumo, replay e ordenação não funcionam da mesma maneira.
+
+[Cache](dados/cache.md) trata cópias derivadas e invalidação. [Replicação](dados/replicacao.md)
+trata cópias de um estado primário para disponibilidade ou escala de leitura. Nenhuma das
+duas transforma uma cópia em fonte de verdade sem uma decisão explícita de ownership.
+
+[Transações e ACID](dados/transacoes-acid.md) explica atomicidade, consistência, isolamento
+e durabilidade no limite de uma transação. Essas propriedades não são uma garantia
+automática para workflows que atravessam serviços, filas ou bancos diferentes.
+
+## Confiabilidade e resiliência
+
+[Resiliência](confiabilidade/resiliencia.md) trata a capacidade de continuar oferecendo
+comportamento aceitável durante falhas e de se recuperar. [Idempotência](confiabilidade/idempotencia.md)
+reduz o risco de retries e redelivery aplicarem efeitos duplicados. As duas propriedades
+se relacionam, mas não são sinônimas: resiliência trata o comportamento do sistema diante
+de falhas; idempotência trata o efeito de repetir uma operação.
+
+## Engenharia de software
+
+[Engenharia de software](engenharia-software/index.md) organiza princípios de desenho e
+manutenção. [SOLID](engenharia-software/solid.md) ajuda a avaliar responsabilidades,
+dependências, substituibilidade e coesão, mas não deve ser aplicado como uma coleção de
+regras mecânicas sem considerar o domínio.
 
 ## Cenários, composições e comparações
 

@@ -6,6 +6,10 @@ Observabilidade é a capacidade de inferir o estado interno de um sistema a part
 
 [Métricas](metricas.md) representam medições agregáveis e séries temporais. [Logs](logs.md) preservam eventos e contexto discreto. [Distributed tracing](tracing.md) relaciona operações ao longo de uma requisição. Profiles descrevem onde recursos de execução são consumidos ao longo do tempo.
 
+[Correlation ID](correlation-id.md) ajuda a localizar uma operação de negócio através de
+logs, respostas, filas e jobs. Ele complementa o trace ID, mas não representa a mesma
+unidade de observação.
+
 Prometheus, Loki, Grafana e OpenTelemetry ocupam responsabilidades dentro dessa cadeia; eles não definem os sinais.
 
 ## Escolha o sinal pela pergunta
@@ -40,7 +44,7 @@ Coletores locais podem enviar sinais a backends externos ou centralizados. Isso 
 
 ## Implementações
 
-[Prometheus](prometheus.md) cobre métricas e regras. [Loki](loki.md) cobre logs. [Grafana](grafana.md) consulta e visualiza data sources. OpenTelemetry padroniza instrumentação e transporte de múltiplos sinais. Alertmanager cuida de roteamento de alertas no ecossistema Prometheus.
+[Prometheus](prometheus.md) cobre métricas e regras. [Loki](loki.md) cobre logs. [Grafana](grafana.md) consulta e visualiza data sources. [Correlation ID](correlation-id.md) conecta registros sem substituir o contexto de tracing. OpenTelemetry padroniza instrumentação e transporte de múltiplos sinais. Alertmanager cuida de roteamento de alertas no ecossistema Prometheus. [Crescimento de erros e alertas](crescimento-de-erros-e-alertas.md) explica como transformar mudanças na taxa de erro em alertas acionáveis sem confundir crescimento de tráfego com regressão.
 
 ## Boas práticas
 
@@ -56,4 +60,4 @@ Instalar a stack antes de definir perguntas. Criar dashboards para cada métrica
 
 ## Continue por aqui
 
-Aprofunde [métricas](metricas.md), [logs](logs.md), [tracing](tracing.md) ou as implementações [Prometheus](prometheus.md), [Loki](loki.md) e [Grafana](grafana.md).
+Aprofunde [métricas](metricas.md), [logs](logs.md), [tracing](tracing.md), o [crescimento de erros e alertas](crescimento-de-erros-e-alertas.md) ou as implementações [Prometheus](prometheus.md), [Loki](loki.md) e [Grafana](grafana.md).

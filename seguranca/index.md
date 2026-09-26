@@ -23,6 +23,13 @@ Pipelines também executam código, recebem entradas, consomem dependências e f
 
 [Identidade e diretórios](identidade/index.md) separa diretório LDAP, autenticação Kerberos, PKI, DNS, sincronização de tempo e integração de clientes. [FreeIPA](identidade/freeipa.md) documenta uma composição integrada; [SSSD](identidade/sssd.md) documenta o componente que opera nos hosts Linux.
 
+## Hashing de senhas
+
+[Hashing de senhas](criptografia/index.md) explica como armazenar verificadores de senha
+sem texto claro. [Argon2](criptografia/argon2.md) cobre as variantes `i`, `d` e `id`,
+parâmetros e tuning. [bcrypt](criptografia/bcrypt.md) cobre work factor, limite de 72
+bytes e migração de sistemas legados.
+
 ## Continue por aqui
 
 [Threat modeling](../threat-modeling.md) ajuda a decidir quais superfícies e ameaças merecem prioridade antes de escolher controles. [Supply chain](supply-chain/index.md) e [SBOM](supply-chain/sbom.md) aprofundam composição, proveniência e artefatos.

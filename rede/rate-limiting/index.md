@@ -30,6 +30,9 @@ e uma dependência adicional.
   compara o estado.
 - [Filas](../../dados/mensageria/filas.md) podem absorver trabalho em vez de
   rejeitar tudo.
+- [Falhas recorrentes e limitação adaptativa](falhas-recorrentes.md) trata de
+  limitar progressivamente identidades que acumulam falhas recentes, sem
+  transformar uma falha legítima em bloqueio permanente.
 
 ## Fonte primária
 

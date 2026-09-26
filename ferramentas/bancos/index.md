@@ -12,6 +12,8 @@ Essas interfaces devem ficar atrás de autenticação forte e de uma rede admini
 
 [SchemaSpy](schemaspy.md) e [SchemaCrawler](schemacrawler.md) leem metadata por conexão JDBC ou por suas APIs para produzir documentação, diagramas e relatórios. Eles não substituem migrações nem devem ser confundidos com ferramentas de administração interativa.
 
+[Pgpool-II](pgpool-ii.md) fica no caminho entre clientes e PostgreSQL para pooling, health checks e roteamento conforme a topologia. [pgBackRest](pgbackrest.md) gerencia backups, arquivamento de WAL, retenção e restauração do PostgreSQL.
+
 ## Critérios de escolha
 
 Escolha pela operação necessária, pelo suporte ao banco, pelo modelo de autenticação, pela capacidade de executar alterações e pelo modo de publicação do resultado. Para somente documentar o schema, uma ferramenta de descoberta com acesso de leitura reduz o risco em comparação com uma interface capaz de alterar dados.

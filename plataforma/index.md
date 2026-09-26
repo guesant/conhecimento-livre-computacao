@@ -17,3 +17,7 @@ As categorias principais são workloads, rede, armazenamento, identidade/autoriz
 ## Continue por aqui
 
 [Distribuições Kubernetes](../comparacoes/plataforma/distribuicoes-kubernetes.md) compara formas de empacotar a plataforma. [K3s](../k3s.md) aprofunda a distribuição usada neste projeto.
+
+## Nuvem e hospedagem
+
+[Nuvem e hospedagem](cloud/index.md) organiza provedores de infraestrutura, plataformas de aplicação, redes de borda e hospedagem gerenciada. A categoria separa o modelo de responsabilidade do fornecedor específico, para que uma decisão sobre AWS, Vercel, um VPS brasileiro ou hospedagem compartilhada não seja tomada com critérios incompatíveis.
