@@ -24,6 +24,7 @@ Os nomes desta área não desempenham a mesma função:
 | Centro ou grupo de pesquisa | C3SL | Pesquisa aplicada, desenvolvimento e infraestrutura especializada |
 | Rede nacional | RNP | Conectividade e serviços digitais para educação e pesquisa |
 | Fundação de apoio | Fundep | Gestão administrativa, financeira e institucional de projetos |
+| Instituto federal | IFRO Campus Ji-Paraná | Educação profissional, pesquisa, extensão e desenvolvimento regional |
 | Política regional | SUFRAMA e CAPDA | Fomento e acompanhamento de PD&I em uma região definida |
 | Competição educacional | OBI | Estímulo ao raciocínio computacional e à programação |
 | ICT regional | NEPEN e Instituto Evolução | Pesquisa aplicada, capacitação e desenvolvimento em contextos regionais |
@@ -49,6 +50,7 @@ ela própria uma universidade ou um laboratório.
 - [PUCPR](pucpr.md), universidade privada com pesquisa, inovação e parcerias tecnológicas.
 - [PUC-Rio](puc-rio.md), universidade privada com centros e laboratórios de pesquisa e desenvolvimento.
 - [NEPEN](nepen.md), Núcleo de Estudos e Pesquisas do Norte e Nordeste.
+- [IFRO Campus Ji-Paraná](ifro-campus-ji-parana.md), instituição federal de educação profissional, científica e tecnológica em Rondônia.
 - [Instituto Evolução](instituto-evolucao.md), ICT sem fins lucrativos sediada em Ji-Paraná, Rondônia.
 
 ## Como essas entidades se relacionam
@@ -68,6 +70,10 @@ uma universidade.
 No Nordeste, o NEPEN representa uma organização regional voltada a pesquisa e desenvolvimento.
 Sua existência mostra que produção tecnológica também ocorre por meio de organizações da
 sociedade civil e ICTs, não somente dentro de universidades públicas ou privadas.
+
+O IFRO Campus Ji-Paraná representa a educação profissional federal no interior de Rondônia.
+Ele pode participar da formação, da pesquisa aplicada e da extensão, estabelecendo relações
+com universidades, grupos de pesquisa, órgãos públicos e organizações da sociedade.
 
 ## Como avaliar uma oportunidade
 
@@ -101,4 +107,5 @@ Consulte sempre a página oficial correspondente antes de tomar uma decisão.
 - [PUCPR, pesquisa](https://www.pucpr.br/pesquisa)
 - [PUC-Rio, Centro Técnico Científico](https://www.ctc.puc-rio.br/conheca-o-ctc-e-sua-infraestrutura)
 - [NEPEN](https://www.nepen.org.br/)
+- [IFRO, Campus Ji-Paraná](https://portal.ifro.edu.br/ji-parana/o-campus)
 - [Instituto Evolução](https://evolucaoinstituto.org.br/)
