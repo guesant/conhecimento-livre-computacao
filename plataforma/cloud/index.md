@@ -54,6 +54,9 @@ Uma escolha adequada considera, pelo menos, estas dimensões:
 | Dokploy | PaaS autohospedado | Deploy Docker, Compose, múltiplos servidores e bancos | Segurança do painel e recuperação do control plane |
 | CapRover | PaaS autohospedado | Fluxo simples sobre Docker Swarm e Nginx | Limites do Compose e dependência do modelo Swarm |
 | Railway | PaaS cloud gerenciado | Projetos, serviços, ambientes, templates e deploy rápido | Custos, limites e dependência do provedor |
+| Surge.sh | Publicação estática | CLI, CDN, previews, revisões e rollback de arquivos estáticos | Não executa backend ou estado durável |
+| ZEIT | Marca histórica | Empresa e identidade anterior à Vercel | Referências antigas podem misturar produto, marca e domínio |
+| now.sh | Produto e domínio históricos | Deploy por CLI, previews e roteamento web | Deve ser interpretado como antecessor da Vercel |
 | AbraCloud | Associação setorial brasileira | Diretório, representação e relacionamento do ecossistema cloud | Não é um provedor cloud único nem um SLA |
 | Cloudflare | Edge, rede e serverless | DNS, CDN, segurança e Workers | Não substitui todo backend stateful |
 
