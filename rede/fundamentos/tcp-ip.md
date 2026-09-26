@@ -20,7 +20,7 @@ camada.
 | Internet | endereçamento e encaminhamento entre redes | IPv4, IPv6, ICMP e protocolos de roteamento |
 | Acesso à rede | transmissão no enlace e no meio local | Ethernet, Wi-Fi, VLAN, ARP, fibra e rádio |
 
-“Acesso à rede” é um agrupamento. Ele inclui o que o modelo de cinco camadas
+"Acesso à rede" é um agrupamento. Ele inclui o que o modelo de cinco camadas
 separa em enlace e física, mas não significa que Ethernet, Wi-Fi e fibra
 tenham a mesma implementação.
 
@@ -36,8 +36,8 @@ tenham a mesma implementação.
 
 O modelo de cinco camadas é útil em aulas e troubleshooting porque permite
 separar uma falha de cabo de uma falha de quadros. Em documentos técnicos,
-deve-se dizer qual versão do modelo está sendo usada quando “camada 1” ou
-“camada 2” puder causar ambiguidade.
+deve-se dizer qual versão do modelo está sendo usada quando "camada 1" ou
+"camada 2" puder causar ambiguidade.
 
 ## Encapsulamento
 
@@ -69,8 +69,8 @@ proteção associada à apresentação no modelo OSI.
 
 HTTP/3 usa QUIC, que é executado sobre UDP. Isso não significa que a aplicação
 perdeu confiabilidade: QUIC implementa confiabilidade, multiplexação,
-handshake e criptografia em seu próprio protocolo. A separação rígida “UDP é
-sempre não confiável” é insuficiente para descrever essa pilha.
+handshake e criptografia em seu próprio protocolo. A separação rígida "UDP é
+sempre não confiável" é insuficiente para descrever essa pilha.
 
 ### DNS
 

@@ -2,7 +2,7 @@
 
 Um Conflict-free Replicated Data Type, ou CRDT, é uma estrutura de dados replicada cujo modelo de estado ou de operações permite que réplicas aceitem atualizações concorrentes e cheguem a um resultado comum quando receberem informação suficiente. A aplicação pode editar uma réplica sem coordenar cada operação com as demais, e o algoritmo do tipo define como as mudanças serão combinadas.
 
-O nome “conflict-free” não significa que a intenção de todos os usuários será preservada nem que qualquer regra de negócio pode ser combinada automaticamente. Significa que o tipo foi construído para que certas operações concorrentes sejam compatíveis com uma propriedade de convergência. O domínio ainda precisa definir autorização, validação, invariantes, limites e tratamento de situações semanticamente incompatíveis.
+O nome "conflict-free" não significa que a intenção de todos os usuários será preservada nem que qualquer regra de negócio pode ser combinada automaticamente. Significa que o tipo foi construído para que certas operações concorrentes sejam compatíveis com uma propriedade de convergência. O domínio ainda precisa definir autorização, validação, invariantes, limites e tratamento de situações semanticamente incompatíveis.
 
 ## Propriedades
 
@@ -39,7 +39,7 @@ Listas e sequências são mais difíceis. Inserções concorrentes precisam de i
 
 Imagine duas réplicas que conhecem o mesmo estado inicial. Cada uma registra uma alteração local com identidade e causalidade. Quando uma recebe a mudança da outra, o merge compara o que já foi observado e aplica uma combinação determinística. Se a mensagem for repetida, ela deve ser ignorada ou produzir o mesmo estado. Se as mensagens chegarem em ordem diferente, as propriedades do tipo devem produzir o mesmo resultado final.
 
-Essa propriedade resolve divergência de representação, não o significado do domínio. Dois usuários que reservam a última vaga podem produzir um conjunto convergente de operações e ainda violar a regra “a capacidade não pode ser negativa”. Nesse caso, a autoridade precisa validar a reserva, usar uma operação especializada, limitar a edição offline ou aceitar uma reconciliação explícita.
+Essa propriedade resolve divergência de representação, não o significado do domínio. Dois usuários que reservam a última vaga podem produzir um conjunto convergente de operações e ainda violar a regra "a capacidade não pode ser negativa". Nesse caso, a autoridade precisa validar a reserva, usar uma operação especializada, limitar a edição offline ou aceitar uma reconciliação explícita.
 
 ## CRDT e outras técnicas
 

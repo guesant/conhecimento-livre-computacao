@@ -1,6 +1,6 @@
 # Brasa Cloud
 
-Brasa Cloud é uma plataforma brasileira de cloud. O nome aparece às vezes como “Brascloud”, mas a marca apresentada no site oficial é Brasa Cloud. A plataforma informa infraestrutura no Brasil, cobrança em real, servidores virtuais, hospedagem gerenciada, bancos e aplicações.
+Brasa Cloud é uma plataforma brasileira de cloud. O nome aparece às vezes como "Brascloud", mas a marca apresentada no site oficial é Brasa Cloud. A plataforma informa infraestrutura no Brasil, cobrança em real, servidores virtuais, hospedagem gerenciada, bancos e aplicações.
 
 ## Modelo de plataforma
 

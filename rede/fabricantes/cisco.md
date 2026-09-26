@@ -1,6 +1,6 @@
 # Cisco
 
-Cisco é um portfólio amplo de redes, segurança, data center, colaboração e observabilidade. Dentro de redes, a marca atende desde acesso corporativo e wireless até data centers, WAN, ambientes industriais e conectividade em grande escala. Portanto, “usar Cisco” não identifica um único sistema operacional, controlador ou modelo de suporte.
+Cisco é um portfólio amplo de redes, segurança, data center, colaboração e observabilidade. Dentro de redes, a marca atende desde acesso corporativo e wireless até data centers, WAN, ambientes industriais e conectividade em grande escala. Portanto, "usar Cisco" não identifica um único sistema operacional, controlador ou modelo de suporte.
 
 ## Hardware e famílias
 

@@ -150,7 +150,7 @@ Na prática, um requisito não funcional precisa ser mensurável e associado a u
 | Observabilidade | Falhas relevantes podem ser detectadas, diferenciadas e investigadas com sinais e contexto suficientes. |
 | Operabilidade | Uma equipe autorizada consegue operar, atualizar, diagnosticar e recuperar o serviço por procedimentos conhecidos. |
 
-SLOs, SLIs, testes de carga, threat modeling, testes de restauração e critérios de aceite transformam adjetivos em decisões verificáveis. “Rápido”, “seguro” e “escalável” não são requisitos completos até que o contexto, a medida e o limite estejam definidos.
+SLOs, SLIs, testes de carga, threat modeling, testes de restauração e critérios de aceite transformam adjetivos em decisões verificáveis. "Rápido", "seguro" e "escalável" não são requisitos completos até que o contexto, a medida e o limite estejam definidos.
 
 ## Auditoria e evidências
 

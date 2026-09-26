@@ -1,6 +1,6 @@
 # Famílias e gerações de processadores
 
-“Geração” pode significar coisas diferentes: uma revisão de microarquitetura, uma coleção comercial, uma família de produto, um processo de fabricação ou uma geração de SoC. Comparar apenas o número impresso no nome pode esconder mudanças importantes. Esta página usa as famílias para mostrar a evolução e aponta para os catálogos oficiais quando a identificação exata de um modelo for necessária.
+"Geração" pode significar coisas diferentes: uma revisão de microarquitetura, uma coleção comercial, uma família de produto, um processo de fabricação ou uma geração de SoC. Comparar apenas o número impresso no nome pode esconder mudanças importantes. Esta página usa as famílias para mostrar a evolução e aponta para os catálogos oficiais quando a identificação exata de um modelo for necessária.
 
 ## Intel
 
@@ -8,7 +8,7 @@ A história da Intel inclui o 4004, 8008, 8080, 8086, 286, 386, 486, Pentium, Pe
 
 Na evolução mais recente do mercado de PCs, a linha Core passou por Core 2 e pelas microarquiteturas Nehalem, Westmere, Sandy Bridge, Ivy Bridge, Haswell, Broadwell, Skylake e suas sucessoras. A nomenclatura comercial também inclui coleções como Comet Lake, Rocket Lake, Alder Lake, Raptor Lake, Meteor Lake e Arrow Lake. Alder Lake introduziu na linha Core uma arquitetura híbrida com P-cores e E-cores, e Thread Director ajuda o sistema operacional a encaminhar cargas.
 
-O catálogo “geração” não é uma linha perfeitamente uniforme. Há produtos móveis, desktop, workstation e Xeon com codinomes e datas diferentes. Uma CPU de 13ª geração, um Core Ultra e um Xeon não devem ser comparados apenas pelo número. Consulte o nome do codinome, a microarquitetura, os núcleos, as extensões, o envelope térmico e a plataforma.
+O catálogo "geração" não é uma linha perfeitamente uniforme. Há produtos móveis, desktop, workstation e Xeon com codinomes e datas diferentes. Uma CPU de 13ª geração, um Core Ultra e um Xeon não devem ser comparados apenas pelo número. Consulte o nome do codinome, a microarquitetura, os núcleos, as extensões, o envelope térmico e a plataforma.
 
 ## AMD
 
@@ -34,7 +34,7 @@ Esses chips combinam núcleos de desempenho e eficiência, GPU, Neural Engine, m
 
 Compare primeiro o trabalho. Para CPU geral, observe desempenho por núcleo, desempenho sustentado, latência, extensões e eficiência. Para servidor, considere memória máxima, canais, NUMA, I/O, virtualização, confiabilidade e suporte. Para GPU, compare unidades de execução, largura de banda, memória, APIs e workload. Para um SoC, inclua aceleradores e limites térmicos.
 
-Processo de fabricação não é sinônimo de desempenho. “Nanômetros” de fabricantes diferentes não são medidas perfeitamente equivalentes, e uma melhoria de processo pode ser compensada por uma microarquitetura, cache, frequência ou limite de potência diferente. Benchmarks devem declarar aplicação, versão, configuração, duração e comportamento térmico.
+Processo de fabricação não é sinônimo de desempenho. "Nanômetros" de fabricantes diferentes não são medidas perfeitamente equivalentes, e uma melhoria de processo pode ser compensada por uma microarquitetura, cache, frequência ou limite de potência diferente. Benchmarks devem declarar aplicação, versão, configuração, duração e comportamento térmico.
 
 ## Fontes
 

@@ -1,12 +1,12 @@
 # Clustering, redundância e distribuição de bancos
 
-“Cluster de banco” pode descrever arquiteturas muito diferentes. Um conjunto de servidores pode manter uma cópia primária e réplicas para failover, compartilhar o mesmo estado com replicação síncrona, distribuir partições diferentes entre nós ou apenas oferecer um endpoint comum para clientes. Antes de escolher uma tecnologia, defina se o objetivo é continuidade, leitura, capacidade de escrita, isolamento de falhas, distribuição geográfica ou redução de custo.
+"Cluster de banco" pode descrever arquiteturas muito diferentes. Um conjunto de servidores pode manter uma cópia primária e réplicas para failover, compartilhar o mesmo estado com replicação síncrona, distribuir partições diferentes entre nós ou apenas oferecer um endpoint comum para clientes. Antes de escolher uma tecnologia, defina se o objetivo é continuidade, leitura, capacidade de escrita, isolamento de falhas, distribuição geográfica ou redução de custo.
 
 ## Termos que não são equivalentes
 
 Alta disponibilidade mantém um serviço acessível depois de uma falha dentro do cenário previsto. Redundância fornece componentes ou dados adicionais para que uma falha não interrompa a função. Replicação mantém cópias do estado. Distribuição coloca processamento ou dados em mais de um failure domain. Sharding divide o conjunto de dados em partes que possuem donos diferentes.
 
-Um cluster pode ter replicação sem escalar escrita. Pode distribuir réplicas por zonas sem dividir tabelas. Pode ter vários nós e continuar com um único escritor. O termo “cluster” não informa consistência, topologia, failover, partição, quorum ou escala.
+Um cluster pode ter replicação sem escalar escrita. Pode distribuir réplicas por zonas sem dividir tabelas. Pode ter vários nós e continuar com um único escritor. O termo "cluster" não informa consistência, topologia, failover, partição, quorum ou escala.
 
 ## Modelos de distribuição
 

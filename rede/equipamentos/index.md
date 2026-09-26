@@ -2,7 +2,7 @@
 
 Equipamentos de rede não têm todos a mesma função. Um access point fornece acesso sem fio a uma rede local; um modem adapta a rede do assinante ao meio de acesso do provedor; um switch encaminha quadros dentro de uma rede; e um roteador encaminha pacotes entre redes diferentes.
 
-Um equipamento comercial pode combinar várias dessas funções. Um dispositivo vendido como “roteador Wi-Fi residencial” normalmente contém modem ou ONT, roteador IP, firewall, switch Ethernet, access point, DHCP, DNS encaminhador, NAT e uma interface de gerenciamento. A embalagem não deve ser usada como classificação técnica.
+Um equipamento comercial pode combinar várias dessas funções. Um dispositivo vendido como "roteador Wi-Fi residencial" normalmente contém modem ou ONT, roteador IP, firewall, switch Ethernet, access point, DHCP, DNS encaminhador, NAT e uma interface de gerenciamento. A embalagem não deve ser usada como classificação técnica.
 
 ## Comparação rápida
 

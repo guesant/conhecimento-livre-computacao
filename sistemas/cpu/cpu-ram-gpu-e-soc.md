@@ -26,7 +26,7 @@ Um SoC integra CPU, GPU, controlador de memória, mecanismos de vídeo, seguran�
 
 Nos chips Apple Silicon usados em Macs, CPU, GPU, Neural Engine e outros componentes formam um SoC com arquitetura de memória unificada. CPU e GPU acessam a mesma memória física, evitando cópias tradicionais entre RAM e VRAM em muitos fluxos. Isso não significa acesso sem custo: largura de banda, coerência, sincronização, contenção e pressão de memória continuam existindo.
 
-Em um computador com GPU dedicada, uma textura pode precisar ser copiada ou sincronizada entre a memória do sistema e a memória da GPU. Em um sistema unificado, o compartilhamento pode reduzir esse custo, mas CPU e GPU passam a disputar a mesma capacidade e largura de banda. A melhor arquitetura depende do padrão de trabalho, não apenas do nome “unificada”.
+Em um computador com GPU dedicada, uma textura pode precisar ser copiada ou sincronizada entre a memória do sistema e a memória da GPU. Em um sistema unificado, o compartilhamento pode reduzir esse custo, mas CPU e GPU passam a disputar a mesma capacidade e largura de banda. A melhor arquitetura depende do padrão de trabalho, não apenas do nome "unificada".
 
 ## Comparação
 

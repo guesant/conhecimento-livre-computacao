@@ -1,6 +1,6 @@
 # Clean Code
 
-Clean Code é uma família de práticas para tornar o código compreensível, modificável e verificável. O termo ficou associado ao livro de Robert C. Martin, mas as ideias não formam uma especificação formal nem uma lista universal de regras. Um código é “limpo” em relação ao domínio, à equipe, à linguagem, ao ciclo de mudança e ao nível de risco que precisa suportar.
+Clean Code é uma família de práticas para tornar o código compreensível, modificável e verificável. O termo ficou associado ao livro de Robert C. Martin, mas as ideias não formam uma especificação formal nem uma lista universal de regras. Um código é "limpo" em relação ao domínio, à equipe, à linguagem, ao ciclo de mudança e ao nível de risco que precisa suportar.
 
 O objetivo não é fazer todos os arquivos parecerem iguais. É reduzir o esforço necessário para entender uma intenção, localizar uma mudança, testar um comportamento e identificar uma falha. Uma regra que reduz linhas, mas esconde a responsabilidade ou aumenta acoplamento, não melhorou o código.
 
@@ -12,13 +12,13 @@ Evite nomes genéricos, abreviações sem contexto, booleanos ambíguos e reutil
 
 ## Funções e módulos
 
-Uma função deve ter uma responsabilidade coerente, poucas razões para mudar e um nível de abstração relativamente uniforme. “Pequena” não significa necessariamente quatro linhas. Uma função de parsing, validação, persistência e emissão de evento pode estar errada mesmo depois de ser dividida artificialmente em wrappers com os mesmos acoplamentos.
+Uma função deve ter uma responsabilidade coerente, poucas razões para mudar e um nível de abstração relativamente uniforme. "Pequena" não significa necessariamente quatro linhas. Uma função de parsing, validação, persistência e emissão de evento pode estar errada mesmo depois de ser dividida artificialmente em wrappers com os mesmos acoplamentos.
 
 Separe cálculo puro de efeitos colaterais quando isso tornar o comportamento testável. Faça dependências importantes aparecerem no contrato. Evite booleanos que mudam muitos modos ocultos, condicionais profundas e callbacks com regras de negócio espalhadas pelo JSX ou por handlers de infraestrutura.
 
 ## Comentários e estrutura
 
-Comentários devem explicar uma decisão, uma restrição externa, um workaround ou um invariante que não seja inferível do código. Comentários que repetem “incrementa contador” envelhecem quando a implementação muda. Se uma explicação pode ser expressa por nome, função, tipo ou estrutura melhor, prefira a estrutura.
+Comentários devem explicar uma decisão, uma restrição externa, um workaround ou um invariante que não seja inferível do código. Comentários que repetem "incrementa contador" envelhecem quando a implementação muda. Se uma explicação pode ser expressa por nome, função, tipo ou estrutura melhor, prefira a estrutura.
 
 Formatação consistente reduz ruído, mas não substitui desenho. Um arquivo bem formatado pode ter responsabilidade demais; um arquivo com várias classes pode ter baixa coesão mesmo que o linter não reclame. Linters devem apoiar revisão, não decidir sozinhos se o domínio foi bem modelado.
 

@@ -51,7 +51,7 @@ experimento controlado pode ser mais adequado que mais documentação.
 ## MVP
 
 Minimum Viable Product, MVP, é a menor versão de um produto que permite testar uma hipótese
-relevante com usuários ou stakeholders reais e produzir aprendizado útil. A palavra “viável”
+relevante com usuários ou stakeholders reais e produzir aprendizado útil. A palavra "viável"
 não significa apenas que o software inicia. A versão precisa ser adequada ao contexto de uso,
 ter qualidade compatível com o risco e gerar evidência interpretável.
 

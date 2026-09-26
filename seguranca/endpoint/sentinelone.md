@@ -12,7 +12,7 @@ O diferencial esperado de uma plataforma EDR é correlacionar eventos e permitir
 
 ## Limitações
 
-“AI-driven” descreve uma abordagem de produto, não uma métrica independente de precisão. Avalie falsos positivos, cobertura de técnicas relevantes, consumo de recursos, latência da resposta e comportamento quando o endpoint fica sem conectividade com a console.
+"AI-driven" descreve uma abordagem de produto, não uma métrica independente de precisão. Avalie falsos positivos, cobertura de técnicas relevantes, consumo de recursos, latência da resposta e comportamento quando o endpoint fica sem conectividade com a console.
 
 ## Fonte primária
 

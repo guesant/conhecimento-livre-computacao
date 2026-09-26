@@ -40,7 +40,7 @@ Self-stabilization pode ser combinada com reconfiguração, mobilidade, seguran�
 
 As ideias aparecem em protocolos de sincronização, eleição, manutenção de árvores, roteamento, sensores, redes móveis, sistemas de cluster e componentes que reconciliam estado. Em produção, a inspiração costuma aparecer como reconciliação, resync, repair, anti-entropy e reeleição.
 
-Não basta adicionar um loop que “tenta corrigir”. Um mecanismo real precisa de limites, backoff, observabilidade, proteção contra flapping, autoridade para mudanças e uma forma de distinguir estado atrasado de estado inválido. Caso contrário, a própria recuperação pode gerar carga, conflitos ou oscilações.
+Não basta adicionar um loop que "tenta corrigir". Um mecanismo real precisa de limites, backoff, observabilidade, proteção contra flapping, autoridade para mudanças e uma forma de distinguir estado atrasado de estado inválido. Caso contrário, a própria recuperação pode gerar carga, conflitos ou oscilações.
 
 ## Relações
 

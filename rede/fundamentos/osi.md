@@ -76,7 +76,7 @@ A camada de sessão representa a continuidade de uma conversa: abertura,
 manutenção, sincronização, retomada e encerramento. Em algumas arquiteturas
 isso é implementado por uma biblioteca ou pelo protocolo de aplicação, e não
 por um cabeçalho de rede independente. A ausência de um protocolo chamado
-“sessão” não significa que aplicações não mantenham sessões.
+"sessão" não significa que aplicações não mantenham sessões.
 
 ### Apresentação
 

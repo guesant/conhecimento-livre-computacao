@@ -29,7 +29,7 @@ KDE é uma comunidade que desenvolve Plasma, KDE Frameworks, aplicações, bibli
 
 A associação não substitui os mantenedores dos componentes. Plasma, KWin, Frameworks e aplicações têm equipes, revisores e ciclos próprios. O projeto KDE neon, por sua vez, constrói uma distribuição específica dos componentes KDE sobre uma base Ubuntu LTS. Kubuntu integra KDE dentro do ciclo Ubuntu. Fedora KDE, Debian KDE e openSUSE KDE fazem outras escolhas de empacotamento.
 
-Assim, dizer que um desktop é “do KDE” pode significar a origem do código ou a comunidade que o desenvolve, mas não identifica sozinho quem publica o pacote instalado nem quem oferece suporte à máquina.
+Assim, dizer que um desktop é "do KDE" pode significar a origem do código ou a comunidade que o desenvolve, mas não identifica sozinho quem publica o pacote instalado nem quem oferece suporte à máquina.
 
 ## Xfce
 

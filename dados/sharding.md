@@ -46,7 +46,7 @@ MariaDB Spider distribui tabelas por servidores backend e oferece uma forma de p
 
 Sharding faz sentido quando a capacidade ou o isolamento de uma única instância foi medido como insuficiente e a chave de distribuição é estável. Antes dele, considere índices, particionamento local, arquivamento, réplicas de leitura, pool de conexões, otimização de consultas, aumento vertical e separação de workloads.
 
-Não use sharding apenas porque a aplicação tem muitos registros ou porque “horizontal” parece mais moderno. O custo de rebalanço, diagnóstico, operações cross-shard, backups e desenvolvimento pode superar o ganho. Um banco único com backups e réplica bem operados pode ser mais confiável para um workload pequeno ou médio.
+Não use sharding apenas porque a aplicação tem muitos registros ou porque "horizontal" parece mais moderno. O custo de rebalanço, diagnóstico, operações cross-shard, backups e desenvolvimento pode superar o ganho. Um banco único com backups e réplica bem operados pode ser mais confiável para um workload pequeno ou médio.
 
 ## Checklist
 

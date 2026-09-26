@@ -12,7 +12,7 @@ A console centralizada simplifica sincronização de políticas, inventário e r
 
 ## Limitações
 
-Heurística comportamental, detecção sem assinatura e “zero-day” são propriedades de detecção, não uma garantia contra qualquer ameaça nova. Antes da adoção, valide suporte do kernel, custo do agente, comportamento em workloads sensíveis e quais eventos podem ser investigados ou bloqueados no Linux contratado.
+Heurística comportamental, detecção sem assinatura e "zero-day" são propriedades de detecção, não uma garantia contra qualquer ameaça nova. Antes da adoção, valide suporte do kernel, custo do agente, comportamento em workloads sensíveis e quais eventos podem ser investigados ou bloqueados no Linux contratado.
 
 ## Fonte primária
 

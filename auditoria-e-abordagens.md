@@ -173,7 +173,7 @@ Um finding claro contém:
 - responsável e prazo;
 - critério de encerramento.
 
-O relatório deve declarar opinião ou conclusão compatível com o escopo, as amostras e as limitações. Não é correto dizer que “o sistema está conforme” quando apenas alguns controles de um ambiente foram examinados em um período limitado.
+O relatório deve declarar opinião ou conclusão compatível com o escopo, as amostras e as limitações. Não é correto dizer que "o sistema está conforme" quando apenas alguns controles de um ambiente foram examinados em um período limitado.
 
 ### Acompanhamento
 

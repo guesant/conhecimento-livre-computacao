@@ -47,7 +47,7 @@ Para unicidade em tabela grande, pode ser possível criar o índice com `CREATE 
 
 InnoDB usa locks de metadados além dos locks de registros. Uma operação de DDL pode ser classificada como `INSTANT`, `INPLACE` ou `COPY`, conforme a operação, versão, engine e definição da tabela. `INSTANT` altera principalmente metadados; `INPLACE` pode trabalhar sem copiar toda a tabela, mas ainda consumir CPU, memória e I/O; `COPY` cria ou reconstrói uma cópia e pode ser muito mais pesada.
 
-Mesmo com DDL online e `LOCK=NONE`, a operação pode esperar por uma transação que mantém metadata lock. Quando o DDL solicita o lock exclusivo final, consultas novas podem ficar esperando atrás dele. Por isso, “online” significa menor bloqueio durante parte da operação, não “impossível de bloquear”.
+Mesmo com DDL online e `LOCK=NONE`, a operação pode esperar por uma transação que mantém metadata lock. Quando o DDL solicita o lock exclusivo final, consultas novas podem ficar esperando atrás dele. Por isso, "online" significa menor bloqueio durante parte da operação, não "impossível de bloquear".
 
 Antes de executar, confirme o algoritmo e o nível de concorrência aceitos pela versão e pelo engine. Se o banco não puder cumprir `ALGORITHM=INSTANT` ou `LOCK=NONE`, prefira falhar antes a executar silenciosamente uma cópia da tabela em horário de tráfego.
 
@@ -114,7 +114,7 @@ Locks de intenção indicam que uma transação pretende adquirir locks de granu
 
 ### Locks consultivos ou advisory
 
-Um advisory lock representa uma chave definida pela aplicação, como “apenas um deploy de schema por vez”. O banco pode coordenar processos que respeitam a mesma chave, mas não impede sozinho que outro processo ignore o protocolo e escreva na tabela.
+Um advisory lock representa uma chave definida pela aplicação, como "apenas um deploy de schema por vez". O banco pode coordenar processos que respeitam a mesma chave, mas não impede sozinho que outro processo ignore o protocolo e escreva na tabela.
 
 Esse mecanismo pode ser útil para serializar jobs ou migrations, mas não substitui constraints, locks normais ou controle de concorrência sobre os dados. Sempre defina timeout e comportamento de recuperação.
 
@@ -192,7 +192,7 @@ No MySQL, use `SHOW FULL PROCESSLIST`, o Performance Schema, `metadata_locks`, `
 
 Em MariaDB, verifique os instrumentos disponíveis para metadata locks, `lock_wait_timeout`, estado do InnoDB e a situação do Galera. Em Galera, observe também o método de atualização de schema, estado do nó, flow control e filas de aplicação.
 
-O diagnóstico deve ser feito antes e depois da migration. Uma migration “concluída” que deixou lag, transações abortadas, conexões presas ou sessões ociosas ainda pode ter causado um incidente.
+O diagnóstico deve ser feito antes e depois da migration. Uma migration "concluída" que deixou lag, transações abortadas, conexões presas ou sessões ociosas ainda pode ter causado um incidente.
 
 ## Checklist de revisão
 

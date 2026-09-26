@@ -10,7 +10,7 @@ As classes mais comuns, em ordem aproximada de crescimento, são `O(1)`, `O(log 
 
 ## Melhor, pior e caso médio
 
-O melhor caso descreve a entrada mais favorável. O pior caso descreve a entrada mais desfavorável dentro do contrato. O caso médio depende de uma distribuição de entradas e de uma hipótese de probabilidade. Sem declarar essa distribuição, “médio” pode ser apenas uma intuição não verificável.
+O melhor caso descreve a entrada mais favorável. O pior caso descreve a entrada mais desfavorável dentro do contrato. O caso médio depende de uma distribuição de entradas e de uma hipótese de probabilidade. Sem declarar essa distribuição, "médio" pode ser apenas uma intuição não verificável.
 
 Busca linear em uma sequência tem melhor caso `O(1)`, quando o item está no primeiro elemento, e pior caso `O(n)`, quando está no fim ou ausente. Sob uma distribuição uniforme simples, o número esperado de comparações também cresce linearmente. Busca binária tem `O(1)` no melhor caso e `O(log n)` no pior caso, mas exige dados ordenados e acesso eficiente ao meio.
 

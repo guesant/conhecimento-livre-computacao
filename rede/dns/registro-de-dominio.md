@@ -8,7 +8,7 @@ Uma organização pode registrar o domínio em um fornecedor e hospedar a zona a
 
 ## Como registrar um domínio
 
-“Comprar um domínio” normalmente significa registrar o direito de uso de um
+"Comprar um domínio" normalmente significa registrar o direito de uso de um
 nome por um período renovável. O titular não compra a hierarquia DNS nem o
 endereço IP. Ele mantém uma inscrição no registry, por meio de um registrar ou
 do próprio serviço de registro quando esse modelo estiver disponível.

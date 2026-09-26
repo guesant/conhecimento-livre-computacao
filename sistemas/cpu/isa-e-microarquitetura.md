@@ -8,7 +8,7 @@ Microarquitetura é a implementação concreta desse contrato. Ela inclui pipeli
 
 Intel e AMD fabricam processadores x86-64. A compatibilidade de instruções permite executar um grande conjunto de binários nos dois fabricantes, mas extensões, níveis de suporte, recursos de virtualização, características de energia e desempenho podem divergir. O nome comercial do processador não é a ISA.
 
-Arm define arquiteturas e licenças de núcleos e instruções; empresas como Apple, Qualcomm, MediaTek e Ampere projetam implementações próprias ou combinadas. AArch64 é o estado de execução de 64 bits associado ao conjunto A64 de Armv8-A e às extensões posteriores. “ARM” pode significar a empresa, a família de arquiteturas ou uma implementação, dependendo do contexto.
+Arm define arquiteturas e licenças de núcleos e instruções; empresas como Apple, Qualcomm, MediaTek e Ampere projetam implementações próprias ou combinadas. AArch64 é o estado de execução de 64 bits associado ao conjunto A64 de Armv8-A e às extensões posteriores. "ARM" pode significar a empresa, a família de arquiteturas ou uma implementação, dependendo do contexto.
 
 RISC-V é uma ISA aberta e modular. Sua especificação separa uma base de extensões, o que permite implementações diferentes sem exigir que um único fabricante controle a definição. Isso não significa que todos os processadores RISC-V tenham o mesmo desempenho, periféricos ou nível de compatibilidade de sistema operacional.
 

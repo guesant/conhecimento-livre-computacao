@@ -21,7 +21,7 @@ Entre as responsabilidades associadas ao CGI.br estão:
 
 ## Relação com o NIC.br
 
-O CGI.br atua como instância de diretrizes e coordenação. O NIC.br foi criado para implementar decisões e projetos do CGI.br. Por isso, dizer que “o CGI.br opera o Registro.br” é uma simplificação imprecisa. O CGI.br orienta e coordena; o NIC.br executa e mantém serviços e centros como Registro.br, IX.br, CERT.br e outros.
+O CGI.br atua como instância de diretrizes e coordenação. O NIC.br foi criado para implementar decisões e projetos do CGI.br. Por isso, dizer que "o CGI.br opera o Registro.br" é uma simplificação imprecisa. O CGI.br orienta e coordena; o NIC.br executa e mantém serviços e centros como Registro.br, IX.br, CERT.br e outros.
 
 ## O que o CGI.br não é
 

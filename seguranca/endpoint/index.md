@@ -17,7 +17,7 @@ Preço não define cobertura. Verifique prevenção, detecção, resposta remota
 
 ## Critérios de seleção
 
-Compare suporte real à distribuição e ao kernel, modelo de privilégio, impacto de CPU e memória, cobertura de workloads e containers, detecção em runtime, EDR, resposta remota, retenção de eventos, integração com SIEM, gestão central e requisitos de licença. “Suporta Linux” pode significar apenas uma modalidade de proteção, não paridade de recursos com Windows.
+Compare suporte real à distribuição e ao kernel, modelo de privilégio, impacto de CPU e memória, cobertura de workloads e containers, detecção em runtime, EDR, resposta remota, retenção de eventos, integração com SIEM, gestão central e requisitos de licença. "Suporta Linux" pode significar apenas uma modalidade de proteção, não paridade de recursos com Windows.
 
 [Sophos Intercept X for Server](sophos.md), [SentinelOne Singularity Endpoint](sentinelone.md) e [Symantec Endpoint Security](symantec.md) são produtos de categorias próximas. A [comparação de endpoint Linux](../../comparacoes/seguranca/linux-endpoint.md) resume as diferenças sem transformar declarações de fornecedor em garantia independente.
 

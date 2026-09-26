@@ -10,7 +10,7 @@ Um AP não precisa ser o gateway IP da rede. Ele pode operar em uma LAN que poss
 
 ## Modem
 
-Modem é a contração de modulador e demodulador. Ele adapta dados para o meio de acesso do provedor, como cobre telefônico, cabo coaxial ou rádio. Em fibra, o equipamento equivalente pode ser uma ONT ou ONU, embora produtos residenciais frequentemente chamem todo o conjunto de “modem”.
+Modem é a contração de modulador e demodulador. Ele adapta dados para o meio de acesso do provedor, como cobre telefônico, cabo coaxial ou rádio. Em fibra, o equipamento equivalente pode ser uma ONT ou ONU, embora produtos residenciais frequentemente chamem todo o conjunto de "modem".
 
 O modem pode entregar um enlace de camada 2 ou uma interface IP ao equipamento seguinte. Ele não precisa oferecer NAT, Wi-Fi ou firewall. Quando esses recursos existem, pertencem a outras funções do mesmo equipamento.
 
@@ -28,7 +28,7 @@ O roteador normalmente separa domínios de broadcast. Um host pode enviar tráfe
 
 ## O produto residencial multifunção
 
-Um “roteador Wi-Fi” doméstico pode conter:
+Um "roteador Wi-Fi" doméstico pode conter:
 
 1. modem, ONT ou interface de uplink;
 2. roteador IPv4 e IPv6;

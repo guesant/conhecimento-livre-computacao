@@ -18,7 +18,7 @@ Fail-soft encerra ou degrada apenas partes não essenciais, mantendo o núcleo d
 
 Fail-operational mantém a função por algum tempo depois de uma falha, normalmente usando redundância. Aviônicos, sistemas de controle e serviços críticos podem combinar fail-operational e fail-safe: uma primeira falha não interrompe a missão, mas falhas adicionais levam o sistema a um estado seguro.
 
-Não existe um significado universal de “seguro”. O requisito deve dizer seguro para quem, contra qual dano, por quanto tempo e sob quais falhas. O [glossário do NIST](https://csrc.nist.gov/glossary/term/fail_safe) diferencia fail-safe de fail-secure e fail-soft; a escolha final pertence à análise de risco do sistema.
+Não existe um significado universal de "seguro". O requisito deve dizer seguro para quem, contra qual dano, por quanto tempo e sob quais falhas. O [glossário do NIST](https://csrc.nist.gov/glossary/term/fail_safe) diferencia fail-safe de fail-secure e fail-soft; a escolha final pertence à análise de risco do sistema.
 
 ## Fault tolerance
 
@@ -42,7 +42,7 @@ Lockstep executa réplicas em sincronismo e compara seus resultados. O modelo é
 
 Tratamento de erro começa no contrato. Para cada operação, classifique falhas como validação, autenticação, autorização, ausência, conflito, limitação, falha transitória, dependência indisponível, corrupção ou erro inesperado. A classificação deve determinar a resposta, o retry, o código de retorno, a métrica, o log e a necessidade de intervenção.
 
-Erros esperados devem ser representados de forma explícita e tipada quando a linguagem permitir. Exceções são adequadas para interromper um fluxo quando o chamador não pode continuar localmente, mas não devem ser usadas para esconder estados normais como “não encontrado”. O caminho de erro deve preservar contexto suficiente para diagnóstico sem expor segredos ou dados pessoais.
+Erros esperados devem ser representados de forma explícita e tipada quando a linguagem permitir. Exceções são adequadas para interromper um fluxo quando o chamador não pode continuar localmente, mas não devem ser usadas para esconder estados normais como "não encontrado". O caminho de erro deve preservar contexto suficiente para diagnóstico sem expor segredos ou dados pessoais.
 
 Uma API deve retornar um contrato consistente, com status apropriado, código estável, mensagem segura, detalhes úteis e correlation ID. O cliente precisa distinguir retry seguro de erro permanente. O servidor não deve retornar uma mensagem de stack trace ao usuário nem transformar toda falha em `500` quando a causa é entrada inválida ou falta de autorização.
 

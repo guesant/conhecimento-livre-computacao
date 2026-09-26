@@ -4,7 +4,7 @@ Aprender uma tecnologia não é apenas acumular comandos. É construir modelos m
 
 ## Aprender a aprender
 
-Comece definindo o resultado que precisa produzir. “Estudar redes” é amplo demais para orientar uma sessão; “explicar por que uma rota não alcança outra sub-rede e testar a hipótese com a tabela de roteamento” cria um objetivo observável. O objetivo deve dizer o que será capaz de explicar, implementar, medir ou diagnosticar.
+Comece definindo o resultado que precisa produzir. "Estudar redes" é amplo demais para orientar uma sessão; "explicar por que uma rota não alcança outra sub-rede e testar a hipótese com a tabela de roteamento" cria um objetivo observável. O objetivo deve dizer o que será capaz de explicar, implementar, medir ou diagnosticar.
 
 Depois, alterne exposição e recuperação. Leia uma parte curta, feche a fonte e tente reconstruir a ideia, um diagrama, um exemplo e uma limitação. A recuperação revela lacunas melhor do que reler várias vezes. Revisões espaçadas e intercaladas ajudam a evitar que uma solução seja confundida com uma regra geral.
 
@@ -14,7 +14,7 @@ Um bom projeto de estudo tem escopo pequeno, uma propriedade que pode ser verifi
 
 ## Aprender a pesquisar
 
-Uma pesquisa técnica começa convertendo a dúvida em uma afirmação testável. Em vez de buscar “melhor ferramenta de cache”, formule “preciso preservar dados entre reinícios, tolerar perda de cache e limitar latência de leitura em uma única região”. As restrições tornam os resultados comparáveis e impedem que uma recomendação genérica seja tratada como resposta.
+Uma pesquisa técnica começa convertendo a dúvida em uma afirmação testável. Em vez de buscar "melhor ferramenta de cache", formule "preciso preservar dados entre reinícios, tolerar perda de cache e limitar latência de leitura em uma única região". As restrições tornam os resultados comparáveis e impedem que uma recomendação genérica seja tratada como resposta.
 
 Faça uma busca em camadas. Primeiro procure o vocabulário correto. Em seguida, procure a documentação oficial, a especificação, o RFC, o código-fonte ou o changelog da versão relevante. Depois consulte issues, artigos e relatos de uso para descobrir limitações e casos de falha. Fontes secundárias são úteis para descoberta e contexto, mas não devem substituir a fonte primária quando a afirmação é normativa ou depende de versão.
 
@@ -26,7 +26,7 @@ Pesquisar inclui tentar reproduzir. Use um caso mínimo, fixe versões, registre
 
 Uma pergunta técnica que permite investigação normalmente contém contexto, objetivo, restrições, evidência e resultado esperado. Inclua a versão, o ambiente, o comando ou configuração relevante, o erro completo, o que já foi tentado e a diferença entre o comportamento observado e o desejado.
 
-Uma boa pergunta não precisa ser longa. Ela precisa reduzir ambiguidades. “Está lento” pode ser transformado em “a requisição p95 passou de 200 ms para 2 s depois da troca de endpoint; a CPU está abaixo de 40%, a consulta local continua rápida e o tempo medido inclui a conexão TLS”. Essa forma permite escolher a próxima medição.
+Uma boa pergunta não precisa ser longa. Ela precisa reduzir ambiguidades. "Está lento" pode ser transformado em "a requisição p95 passou de 200 ms para 2 s depois da troca de endpoint; a CPU está abaixo de 40%, a consulta local continua rápida e o tempo medido inclui a conexão TLS". Essa forma permite escolher a próxima medição.
 
 Quando pedir uma recomendação, explique as alternativas que já considera e o que é inegociável. Quando pedir ajuda com um erro, forneça um exemplo mínimo reproduzível e remova segredos. Quando não souber o nome do problema, descreva sintomas, sequência temporal e condições de contorno; a pessoa que responde pode ajudar a descobrir o vocabulário.
 
@@ -34,7 +34,7 @@ Quando pedir uma recomendação, explique as alternativas que já considera e o 
 
 Não trate o primeiro resultado como confirmação. Compare fontes independentes, confira a data, leia a seção de limitações e procure um contraexemplo. Não escolha uma ferramenta apenas porque o nome aparece em muitos artigos. Não confunda popularidade com adequação, média com garantia, documentação com comportamento observado ou ausência de erro com prova de correção.
 
-Também evite perguntas que escondem a decisão, como “qual é a melhor arquitetura?”. Pergunte quais propriedades precisam ser preservadas, quais custos são aceitáveis, quais falhas devem ser toleradas e como a solução será operada. A resposta pode então comparar opções sem fingir que existe uma escolha universal.
+Também evite perguntas que escondem a decisão, como "qual é a melhor arquitetura?". Pergunte quais propriedades precisam ser preservadas, quais custos são aceitáveis, quais falhas devem ser toleradas e como a solução será operada. A resposta pode então comparar opções sem fingir que existe uma escolha universal.
 
 ## Relação com ciência e engenharia
 

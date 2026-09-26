@@ -71,7 +71,7 @@ Esse modelo permite comparar revisões, restaurar uma versão anterior criando o
 
 ## Revisão não é auditoria
 
-Uma revisão responde “qual conteúdo ou estado foi produzido e pode ser publicado?”. Auditoria responde “quem executou qual ação, quando, por qual interface ou processo e com qual resultado?”.
+Uma revisão responde "qual conteúdo ou estado foi produzido e pode ser publicado?". Auditoria responde "quem executou qual ação, quando, por qual interface ou processo e com qual resultado?".
 
 Uma revisão pode conter o autor editorial e a mensagem da alteração, mas isso não substitui uma trilha de segurança. A auditoria pode registrar login, ator efetivo, IP ou request id conforme a política, permissão avaliada, entidade afetada, resultado e motivo. Ela deve ser append-only ou protegida por controles que impeçam o auditado de reescrever sua própria evidência.
 
@@ -93,7 +93,7 @@ Marca a entidade como excluída e deixa as revisões intactas. É simples, mas o
 
 Remove identidade, revisões, relações e dados derivados conforme a política de retenção. A operação deve considerar referências externas, backups, réplicas, caches, índices, WAL e exportações. A purga precisa ter uma prova de escopo e um mecanismo para verificar o resultado.
 
-Não use o mesmo botão para “retirar da publicação” e “apagar definitivamente”. São intenções, autorizações e consequências diferentes.
+Não use o mesmo botão para "retirar da publicação" e "apagar definitivamente". São intenções, autorizações e consequências diferentes.
 
 ## WAL, ou Write-Ahead Logging
 
@@ -168,7 +168,7 @@ Uma política deve responder se a exclusão vale para:
 - WAL arquivado;
 - exportações e sistemas consumidores.
 
-Quando a obrigação exige apagamento de dados pessoais, documente o limite técnico e jurídico da operação. Não declare “apagado” apenas porque a linha deixou de aparecer na consulta principal.
+Quando a obrigação exige apagamento de dados pessoais, documente o limite técnico e jurídico da operação. Não declare "apagado" apenas porque a linha deixou de aparecer na consulta principal.
 
 ## Relações com este repositório
 

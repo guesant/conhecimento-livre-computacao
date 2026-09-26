@@ -30,7 +30,7 @@ Essa garantia não significa que toda chamada seja rápida. A operação que dis
 
 ## O caso das listas do CPython
 
-Listas do CPython são arrays dinâmicos, embora a palavra “lista” em Python não implique uma lista ligada. O código histórico do CPython 2.6 usa uma política de sobrealocação para reservar espaço além do tamanho lógico. A fórmula e os detalhes mudaram ao longo das versões, portanto o arquivo histórico é uma evidência de uma implementação específica, não uma especificação da linguagem Python.
+Listas do CPython são arrays dinâmicos, embora a palavra "lista" em Python não implique uma lista ligada. O código histórico do CPython 2.6 usa uma política de sobrealocação para reservar espaço além do tamanho lógico. A fórmula e os detalhes mudaram ao longo das versões, portanto o arquivo histórico é uma evidência de uma implementação específica, não uma especificação da linguagem Python.
 
 O mesmo princípio aparece em outras bibliotecas: capacidade excedente troca memória por menos cópias. Ao analisar uma implementação, leia a versão exata, o alocador e a operação de crescimento. Não deduza o custo de toda linguagem a partir de uma única biblioteca.
 

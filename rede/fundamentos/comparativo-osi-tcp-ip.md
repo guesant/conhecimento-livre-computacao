@@ -37,39 +37,39 @@ universal.
 
 ## Confusões comuns
 
-### “OSI é o que a Internet usa”
+### "OSI é o que a Internet usa"
 
 A Internet usa protocolos TCP/IP, Ethernet, Wi-Fi, TLS, HTTP e muitos outros.
 O OSI ajuda a classificar suas funções, mas não é o conjunto de protocolos
 executado por um computador conectado à Internet.
 
-### “TCP é a camada 4 e sempre fica abaixo de TLS”
+### "TCP é a camada 4 e sempre fica abaixo de TLS"
 
 TCP é um protocolo de transporte. TLS geralmente usa TCP, mas QUIC incorpora
 funções tradicionalmente associadas a transporte confiável e usa UDP. TLS
 também pode ser analisado como uma função de apresentação, aplicação ou
 segurança, dependendo do objetivo da conversa.
 
-### “A camada 2 é o switch e a camada 3 é o roteador”
+### "A camada 2 é o switch e a camada 3 é o roteador"
 
 São papéis, não definições exclusivas de equipamento. Um switch pode fazer
 roteamento de camada 3 e um roteador pode executar bridge de camada 2. A
 camada descreve a informação usada na decisão, não o formato físico do chassi.
 
-### “Cada camada tem um protocolo único”
+### "Cada camada tem um protocolo único"
 
 Uma camada reúne responsabilidades. Transporte pode usar TCP, UDP, QUIC ou
 SCTP. Aplicação pode usar HTTP, DNS, SSH ou um protocolo proprietário. Além
 disso, túneis, proxies, overlays e offloads criam novas fronteiras de
 encapsulamento.
 
-### “Se ping funciona, HTTP deve funcionar”
+### "Se ping funciona, HTTP deve funcionar"
 
 Ping usa ICMP e testa uma propriedade diferente de resolução de nome, porta,
 TLS, autenticação e aplicação. O fato de um pacote ICMP retornar não prova que
 o serviço TCP ou UDP está acessível.
 
-### “VLAN é a camada de segurança”
+### "VLAN é a camada de segurança"
 
 VLAN cria separação de camada 2 e reduz domínios de broadcast. A comunicação
 entre VLANs passa por camada 3 e pode ser filtrada, mas a segurança depende de
@@ -78,8 +78,8 @@ correta de trunks.
 
 ## Usando os modelos no diagnóstico
 
-O OSI é útil quando a pergunta é “qual responsabilidade está falhando?”. O
-TCP/IP é útil quando a pergunta é “qual protocolo ou interface devo observar?”.
+O OSI é útil quando a pergunta é "qual responsabilidade está falhando?". O
+TCP/IP é útil quando a pergunta é "qual protocolo ou interface devo observar?".
 Uma investigação pode combinar os dois: identificar uma falha de enlace no
 modelo OSI, observar uma interface Ethernet no modelo de cinco camadas e usar
 `ip`, `ss` e `tcpdump` para verificar a implementação TCP/IP.
@@ -91,10 +91,10 @@ rejeitam essas hipóteses.
 
 ## Regra prática de comunicação
 
-Ao explicar um problema, nomeie o modelo e o objeto observado. “Falha na
-camada 2” é menos preciso do que “a interface recebeu link, mas o trunk não
-permitiu a VLAN 30”. “Problema na camada 4” é menos preciso do que “o SYN para
-TCP/443 não recebeu resposta”. A combinação de camada, protocolo, endereço,
+Ao explicar um problema, nomeie o modelo e o objeto observado. "Falha na
+camada 2" é menos preciso do que "a interface recebeu link, mas o trunk não
+permitiu a VLAN 30". "Problema na camada 4" é menos preciso do que "o SYN para
+TCP/443 não recebeu resposta". A combinação de camada, protocolo, endereço,
 porta e evidência torna o diagnóstico reproduzível.
 
 ## Fontes primárias

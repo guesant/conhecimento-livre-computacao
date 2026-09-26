@@ -37,7 +37,7 @@ Antes de bloquear o CI, rode a métrica no corpus existente, categorize os achad
 
 Complexidade cognitiva é afetada por nomes, domínio, coesão, dependências, tamanho de abstrações, repetição, acoplamento e consistência. Uma função curta pode ser difícil porque usa nomes vagos ou efeitos implícitos. Uma função longa pode ser relativamente compreensível se representar uma tabela de dados linear e bem nomeada, embora ainda deva ser revisada por manutenção e testes.
 
-Combine a métrica com revisão humana, cobertura, complexidade ciclomática, tamanho de função, duplicação, dependências e histórico de defeitos. A pergunta final não é “qual é o número?”, mas “quanto contexto uma pessoa precisa manter para alterar este comportamento com segurança?”.
+Combine a métrica com revisão humana, cobertura, complexidade ciclomática, tamanho de função, duplicação, dependências e histórico de defeitos. A pergunta final não é "qual é o número?", mas "quanto contexto uma pessoa precisa manter para alterar este comportamento com segurança?".
 
 ## Relações
 
