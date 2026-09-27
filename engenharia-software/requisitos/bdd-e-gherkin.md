@@ -1,4 +1,4 @@
-# BDD e Gherkin
+# Mapa de BDD e Gherkin
 
 Behavior-Driven Development, BDD, é uma abordagem de descoberta e desenvolvimento baseada
 em colaboração, linguagem compartilhada e exemplos concretos de comportamento. Dan North

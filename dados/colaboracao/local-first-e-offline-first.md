@@ -1,4 +1,4 @@
-# Local-first e offline-first
+# Mapa de local-first e offline-first
 
 Local-first é um modelo em que a aplicação trata a réplica local como o caminho primário
 para leitura e escrita. A rede sincroniza em segundo plano, em vez de ser necessária para

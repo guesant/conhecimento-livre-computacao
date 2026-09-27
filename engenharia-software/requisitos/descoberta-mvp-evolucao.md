@@ -1,4 +1,4 @@
-# Descoberta, MVP e evolução do produto
+# Mapa de descoberta, MVP e evolução do produto
 
 Projetos de software raramente começam com conhecimento completo do problema. A equipe
 precisa investigar usuários, domínio, restrições, riscos e formas de medir resultado antes de

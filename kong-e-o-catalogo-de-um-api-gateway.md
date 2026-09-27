@@ -1,4 +1,4 @@
-# Kong e o catálogo de um API gateway
+# Mapa de Kong e o catálogo de um API gateway
 
 Um API gateway como o Kong precisa guardar, em algum lugar, o catálogo do que ele roteia: quais serviços existem, quais rotas apontam para cada um, quais plugins (limite de taxa, autenticação, transformação de requisição) se aplicam a cada rota. Onde e como esse catálogo vive muda o resto da operação do gateway inteira, e existem caminhos bem diferentes para resolver isso, cada um com um conjunto de trade-offs próprio.
 

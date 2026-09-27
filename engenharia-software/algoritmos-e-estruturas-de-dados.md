@@ -1,4 +1,4 @@
-# Algoritmos e estruturas de dados
+# Mapa de algoritmos e estruturas de dados
 
 Algoritmos e estruturas de dados são duas faces do mesmo desenho. A estrutura determina como o estado é organizado e quais operações podem ser eficientes; o algoritmo determina como esse estado é percorrido, transformado ou combinado. A frase do título do livro *Algorithms + Data Structures = Programs*, de Niklaus Wirth, resume uma ideia de engenharia: um programa não é apenas uma sequência de instruções, mas uma escolha explícita de representação e de procedimento.
 

@@ -1,4 +1,4 @@
-# Terraform/OpenTofu e Pulumi
+# Comparação entre Terraform, OpenTofu e Pulumi
 
 Essas ferramentas provisionam infraestrutura por APIs e mantêm estado, mas usam modelos de autoria diferentes.
 
@@ -26,4 +26,4 @@ HCL excessivamente metaprogramado fica difícil de ler. Pulumi usado como aplica
 
 ## Continue por aqui
 
-[Infraestrutura como código](../../iac-provisionamento.md) explica a família antes da escolha de implementação.
+[Infraestrutura como código](../../iac/index.md) explica a família antes da escolha de implementação.

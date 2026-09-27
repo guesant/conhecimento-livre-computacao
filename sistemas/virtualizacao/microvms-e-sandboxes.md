@@ -1,4 +1,4 @@
-# MicroVMs e sandboxes de processo
+# Mapa de MicroVMs e sandboxes de processo
 
 MicroVMs e sandboxes ocupam o espaço entre um container comum e uma máquina
 virtual completa. Cada alternativa adiciona uma fronteira de isolamento e um

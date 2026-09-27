@@ -1,4 +1,4 @@
-# ReactiveX e Rx
+# ReactiveX
 
 ReactiveX é um modelo para compor operações assíncronas e eventos por meio de sequências
 observáveis. A família inclui implementações como RxJava, RxJS, Rx.NET, RxSwift e outras.

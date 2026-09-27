@@ -1,4 +1,4 @@
-# Shells e portabilidade de scripts
+# Portabilidade de scripts shell
 
 Um shell é, ao mesmo tempo, duas coisas que a maioria de quem usa um terminal trata como uma só: um interpretador de linha de comando, que lê o que uma pessoa digita e executa, e uma linguagem de programação completa, usada para escrever scripts que rodam sem ninguém digitando nada.
 

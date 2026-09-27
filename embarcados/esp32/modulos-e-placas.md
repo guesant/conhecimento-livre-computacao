@@ -1,4 +1,4 @@
-# Módulos e placas ESP32
+# Mapa de módulos e placas ESP32
 
 Um módulo ESP32 é uma integração de hardware pronta para ser soldada a uma placa maior. Uma placa de desenvolvimento, como uma DevKit, adiciona alimentação, USB, conversor serial, botões e headers ao módulo ou ao SoC. Um produto final pode usar o módulo, o chip sem módulo ou uma placa própria.
 

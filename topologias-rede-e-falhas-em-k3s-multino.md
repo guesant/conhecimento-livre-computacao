@@ -1,4 +1,4 @@
-# Topologias, rede e falhas num K3s multinó
+# Mapa de topologias, rede e falhas num K3s multinó
 
 Escolher entre um cluster de nó único e um cluster multinó de verdade não é uma escala contínua: existem três arranjos distintos, cada um com uma resposta diferente para a mesma pergunta, quanto vale a alta disponibilidade do control plane frente à complexidade operacional que ela exige.
 

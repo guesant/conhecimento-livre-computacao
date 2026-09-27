@@ -1,4 +1,4 @@
-# Broadcast e multicast
+# Mapa de broadcast e multicast
 
 Broadcast e multicast são formas de entregar um pacote a mais de um destino,
 mas possuem semânticas e domínios diferentes. Unicast identifica um destino

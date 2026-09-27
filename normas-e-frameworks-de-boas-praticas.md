@@ -1,4 +1,4 @@
-# Normas e frameworks de boas práticas
+# Mapa de normas e frameworks de boas práticas
 
 Normas, frameworks, métodos e práticas de engenharia resolvem problemas diferentes. Uma norma define requisitos ou uma forma reconhecida de organizar um sistema de gestão. Um framework oferece uma estrutura para avaliar risco, controle ou capacidade. Um método orienta o trabalho cotidiano de uma equipe. Uma lei ou obrigação contratual define o que é exigido por uma autoridade ou por um cliente. Confundir essas categorias produz auditorias baseadas em nomes e processos que parecem conformes, mas não reduzem o risco real.
 

@@ -1,4 +1,4 @@
-# Compose, Swarm e Kubernetes
+# Comparação entre Compose, Swarm e Kubernetes
 
 As três opções coordenam containers, mas operam em escopos e modelos diferentes.
 

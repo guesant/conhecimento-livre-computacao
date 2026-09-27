@@ -1,4 +1,4 @@
-# Fundações do software livre e aberto
+# Mapa de fundações do software livre e aberto
 
 Um projeto de código aberto sem estrutura jurídica nenhuma por trás enfrenta problemas que a licença sozinha não resolve: quem é dono legal do código quando não existe uma empresa formal, quem pode receber doações em nome do projeto, quem tem legitimidade para processar alguém que viola a licença. Um conjunto de fundações existe especificamente para preencher essa lacuna, cada uma com um modelo ligeiramente diferente de como se relaciona com os projetos que abriga.
 

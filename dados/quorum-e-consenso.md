@@ -1,4 +1,4 @@
-# Quorum, consenso e Raft
+# Mapa de quorum, consenso e Raft
 
 Cluster, replicação e consenso são conceitos relacionados, mas não são sinônimos. Um
 cluster é um conjunto de nós tratado como uma unidade operacional. Replicação mantém

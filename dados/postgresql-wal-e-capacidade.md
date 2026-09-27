@@ -1,4 +1,4 @@
-# PostgreSQL: WAL e capacidade
+# Mapa de WAL e capacidade no PostgreSQL
 
 O Write-Ahead Log, ou WAL, registra alterações antes que as páginas de dados sejam consideradas persistidas. Ele permite recuperação após crash, replicação física, arquivamento contínuo e recuperação para um ponto no tempo.
 

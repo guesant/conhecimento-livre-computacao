@@ -4,9 +4,9 @@ Uma CPU executa instruções definidas por uma arquitetura de conjunto de instru
 
 ## Mapa da área
 
-- [Conjunto de instruções e microarquitetura](isa-e-microarquitetura.md) separa o contrato da ISA da implementação em silício.
+- [Arquitetura de conjunto de instruções](isa.md) separa o contrato da ISA da implementação em silício. [Microarquitetura](microarquitetura.md) explica a implementação interna.
 - [Ciclo de instrução](ciclo-de-instrucao.md) explica fetch, decode, execute, pipeline, ULA e unidade de controle.
-- [CPU, RAM, GPU e SoC](cpu-ram-gpu-e-soc.md) diferencia os componentes e apresenta memória unificada.
+- [CPU](cpu.md), [RAM](ram.md), [GPU](gpu.md) e [System on a chip](soc.md) diferenciam os componentes e apresentam memória unificada.
 - [Famílias e gerações de processadores](familias-de-processadores.md) organiza Intel, AMD, Arm e Apple Silicon sem confundir produto com arquitetura.
 - [Barramento do sistema](barramento-do-sistema.md) descreve CPU, memória, entrada e saída, DMA, IOMMU e o modelo de von Neumann.
 

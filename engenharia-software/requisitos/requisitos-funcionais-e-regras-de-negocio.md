@@ -1,4 +1,4 @@
-# Requisitos funcionais e regras de negócio
+# Mapa de requisitos funcionais e regras de negócio
 
 Requisito funcional descreve um comportamento, uma capacidade ou um resultado que o sistema
 deve fornecer. Em português, algumas equipes usam RF para requisito funcional e RN para

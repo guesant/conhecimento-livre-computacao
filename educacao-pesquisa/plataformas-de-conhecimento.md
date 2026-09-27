@@ -1,4 +1,4 @@
-# Plataformas de conhecimento e formação
+# Mapa de plataformas de conhecimento
 
 Não existe uma plataforma universalmente melhor para aprender computação, engenharia,
 física ou outra área. Cursos com objetivos diferentes precisam de formatos diferentes:

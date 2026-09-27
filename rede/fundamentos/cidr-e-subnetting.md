@@ -1,4 +1,4 @@
-# CIDR e subnetting
+# Mapa de CIDR e subnetting
 
 Classless Inter-Domain Routing, CIDR, representa uma rede por um endereço e um
 prefixo, como `192.168.10.0/24`. O número depois da barra informa quantos bits

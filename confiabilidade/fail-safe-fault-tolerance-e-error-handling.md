@@ -1,4 +1,4 @@
-# Fail-safe, fault tolerance e error handling
+# Mapa de fail-safe, fault tolerance e error handling
 
 Falhas são inevitáveis em sistemas de software e hardware. O objetivo de um projeto confiável não é prometer que nenhum componente falhará, mas definir o que deve acontecer quando uma falha, um erro, uma entrada inválida ou uma condição desconhecida aparecer. Essa decisão precisa considerar segurança, integridade dos dados, disponibilidade, custo e possibilidade de recuperação.
 

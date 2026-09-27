@@ -25,7 +25,7 @@ coloque a credencial em Git, imagem, log ou comando persistido.
 - [Rotação](rotation.md) continua o ciclo.
 - [Secret store externo](../../secret-store-externo.md) depende de uma identidade
   inicial.
-- [SOPS e age](sops-age.md) exige acesso à chave privada de decifragem.
+- [SOPS](sops.md) exige acesso à identity privada de decifragem.
 
 ## Fonte primária
 

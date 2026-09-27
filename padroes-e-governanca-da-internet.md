@@ -1,4 +1,4 @@
-# Padrões e governança da internet
+# Mapa de padrões e governança da internet
 
 Nada obriga um fabricante de software a implementar HTTP de um jeito específico, e ainda assim um navegador qualquer consegue falar com um servidor qualquer, de fornecedores completamente diferentes, sem coordenação direta entre eles. Isso só funciona porque existe um conjunto de organizações cuja função é justamente publicar, de forma aberta e sem custo de licença, a especificação exata que cada peça da internet segue, e manter essas especificações através de um processo público em vez de decidido por um fornecedor sozinho. Entender quem escreve cada tipo de padrão, e como, explica por que citar "o RFC tal" carrega mais peso do que citar a documentação de um produto específico: um RFC sobreviveu a um processo aberto de revisão, o documento de um produto só precisa agradar quem o escreveu.
 

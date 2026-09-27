@@ -8,6 +8,11 @@ Ela não é um ranking de universidades nem uma declaração de preferência ins
 objetivo é explicar que tipo de entidade cada nome representa e como ela pode ser encontrada
 por quem estuda computação, engenharia, ciência e desenvolvimento tecnológico.
 
+O [mapa global de instituições de computação](instituicoes-globais-computacao.md) amplia o
+recorte para universidades, centros, agências, reguladores, entidades de padrões, fundações
+e pesquisadores de diferentes países. Ele deve ser lido como um catálogo curado para
+reconhecimento e pesquisa inicial, não como uma classificação de qualidade.
+
 O catálogo de [plataformas de conhecimento e formação](plataformas-de-conhecimento.md)
 complementa este mapa institucional. Ele separa cursos abertos, plataformas práticas,
 formação profissional, fundamentos científicos e caminhos de pesquisa. Uma plataforma de

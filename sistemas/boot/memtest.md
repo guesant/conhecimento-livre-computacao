@@ -1,4 +1,4 @@
-# MemTest86 e Memtest86+
+# Comparação entre MemTest86 e Memtest86+
 
 MemTest86 e MemTest86+ são ambientes inicializáveis que exercitam a memória sem depender do sistema operacional instalado. Eles ajudam a investigar travamentos, corrupção de dados, reinicializações e instabilidade aparentemente aleatória.
 

@@ -1,11 +1,14 @@
-# Inspeção de binários e bibliotecas
+# Mapa de inspeção de binários e bibliotecas
 
 Um programa executável não é apenas um arquivo que pode ser iniciado. Ele tem um formato, uma arquitetura, uma ABI, bibliotecas necessárias, metadados de build e regras de busca definidas pelo sistema operacional. `file`, `readelf`, `ldd`, `LD_LIBRARY_PATH` e `go version -m` respondem perguntas diferentes sobre esse conjunto.
 
 Uma sequência útil começa pela identificação do arquivo, passa pela inspeção estrutural e termina na observação da resolução de dependências:
 
-```text
-file -> readelf -> ldd ou ld.so -> go version -m
+```mermaid
+flowchart LR
+    file[file] --> readelf[readelf]
+    readelf --> loader[ldd ou ld.so]
+    loader --> go[go version -m]
 ```
 
 Essa sequência não transforma um binário desconhecido em um artefato confiável. Ela apenas torna suas propriedades observáveis. Integridade, origem, assinatura, permissões e comportamento continuam exigindo verificações próprias.

@@ -1,4 +1,4 @@
-# Descoberta e priorização de requisitos
+# Mapa de descoberta e priorização de requisitos
 
 Descoberta reduz incerteza sobre problema, usuário, valor, risco e solução. Priorização decide
 qual trabalho merece atenção primeiro dentro de capacidade, prazo e dependências. Nenhuma

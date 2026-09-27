@@ -1,4 +1,4 @@
-# Argo CD e Flux
+# Comparação entre Argo CD e Flux
 
 Argo CD e Flux implementam reconciliação GitOps para Kubernetes. Ambos podem manter estado do cluster convergente com fontes declarativas, mas possuem modelos de recursos, experiência de usuário e ecossistemas diferentes.
 

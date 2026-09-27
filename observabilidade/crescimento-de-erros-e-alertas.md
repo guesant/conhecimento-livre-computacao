@@ -1,4 +1,4 @@
-# Crescimento de erros e alertas
+# Alertas por crescimento de erros
 
 Uma taxa de erro alta é importante, mas o crescimento da taxa costuma ser o sinal
 mais útil para detectar uma regressão recente. Um serviço pode ter muitos erros

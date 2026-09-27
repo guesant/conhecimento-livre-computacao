@@ -1,4 +1,4 @@
-# Como Linux, Windows e macOS expõem seus serviços
+# Comparação entre modelos de exposição de serviços
 
 O mecanismo de transição para modo kernel, descrito em [CPU](sistemas/cpu/index.md), [níveis de privilégio](sistemas/cpu/niveis-de-privilegio.md) e [system calls](sistemas/kernel/system-calls.md), é o mesmo em qualquer sistema operacional moderno: uma instrução especial, uma mudança de privilégio, uma operação executada pelo kernel, um retorno ao chamador.
 

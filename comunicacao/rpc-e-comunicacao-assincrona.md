@@ -1,4 +1,4 @@
-# RPC e comunicação assíncrona
+# Comparação entre RPC e comunicação assíncrona
 
 RPC e comunicação assíncrona resolvem necessidades diferentes, embora possam aparecer na mesma arquitetura. RPC representa uma operação que o consumidor solicita e normalmente espera concluir dentro de um deadline. Comunicação assíncrona representa trabalho ou um fato que pode ser processado depois, sem manter o produtor bloqueado até a conclusão.
 

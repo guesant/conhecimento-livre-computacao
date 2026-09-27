@@ -10,7 +10,7 @@ Um servidor LDAP organiza entradas hierárquicas e atributos. Kerberos autentica
 
 ## Autenticação, autorização e federação
 
-[Autenticação e autorização](auth.md) separa identidade, sessão, token,
+[Autenticação e autorização](fundamentos/index.md) separa identidade, sessão, token,
 permissão, role e policy. [OAuth 2.0](oauth2.md) trata delegação de acesso a
 recursos. [OpenID Connect](openid-connect.md) adiciona uma camada de
 autenticação e claims de identidade sobre OAuth. [SAML](saml.md) descreve

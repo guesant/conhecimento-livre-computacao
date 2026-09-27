@@ -1,4 +1,4 @@
-# PostgreSQL, MySQL, MariaDB e Galera
+# Comparação entre PostgreSQL, MySQL, MariaDB e Galera
 
 PostgreSQL, MySQL e MariaDB são servidores de banco relacionais com mecanismos, extensões e ecossistemas diferentes. Galera não é um servidor SQL concorrente a todos eles: é uma tecnologia de replicação e clustering usada principalmente com MariaDB e também disponível em ecossistemas MySQL compatíveis. A comparação correta precisa separar o banco, o mecanismo de armazenamento, a solução de alta disponibilidade e a camada de distribuição.
 

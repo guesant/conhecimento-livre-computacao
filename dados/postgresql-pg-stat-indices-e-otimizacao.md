@@ -1,4 +1,4 @@
-# PostgreSQL: pg_stat, índices e otimização
+# Mapa de diagnóstico e otimização do PostgreSQL
 
 Otimizar PostgreSQL não significa adicionar índices até o plano deixar de mostrar `Seq Scan` ou aumentar parâmetros de memória sem medir. A pergunta correta é qual recurso está limitando a operação observada, em qual consulta, sob qual volume e com qual contrato de latência.
 

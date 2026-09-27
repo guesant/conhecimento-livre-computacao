@@ -1,4 +1,4 @@
-# CNI, Service, Gateway e service mesh
+# Mapa da composição de CNI, Service, Gateway e service mesh
 
 Essas tecnologias aparecem juntas em clusters Kubernetes, mas não são camadas substituíveis.
 

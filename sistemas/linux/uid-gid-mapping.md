@@ -1,4 +1,4 @@
-# Mapeamento de UID e GID
+# Mapa de UID e GID
 
 O mapeamento de UID e GID define como uma credencial num user namespace
 corresponde a uma credencial em outro namespace. Ele é a ponte entre a

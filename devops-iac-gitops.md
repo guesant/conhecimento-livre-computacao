@@ -1,6 +1,6 @@
-# DevOps, IaC e GitOps: o que é conceito e o que é ferramenta
+# Mapa de DevOps, IaC e GitOps
 
-Uma confusão comum ao ler sobre este tipo de repositório é tratar prática e ferramenta como sinônimos: dizer que "o [Ansible](ansible.md) é DevOps" ou que "o Argo é [GitOps](argocd.md)" mistura níveis diferentes de abstração. DevOps é a cultura e o conjunto de práticas de engenharia para desenvolver, entregar e operar sistemas, e dentro dele existem práticas mais específicas, como [infraestrutura como código](iac-provisionamento.md), [GitOps](argocd.md), [integração contínua](ci-cd.md) e observabilidade.
+Uma confusão comum ao ler sobre este tipo de repositório é tratar prática e ferramenta como sinônimos: dizer que "o [Ansible](ansible.md) é DevOps" ou que "o Argo é [GitOps](argocd.md)" mistura níveis diferentes de abstração. DevOps é a cultura e o conjunto de práticas de engenharia para desenvolver, entregar e operar sistemas, e dentro dele existem práticas mais específicas, como [infraestrutura como código](iac/index.md), [GitOps](argocd.md), [integração contínua](ci-cd.md) e observabilidade.
 
 Cada uma dessas práticas é implementada por uma ou mais ferramentas concretas, que por sua vez não pertencem exclusivamente a uma única prática.
 
@@ -32,13 +32,13 @@ flowchart TB
     CICD -.->|pode executar| ANSIBLE
 ```
 
-A relação entre infraestrutura como código e suas ferramentas já tem uma página própria, [Infraestrutura como código](iac-provisionamento.md), que separa a família de provisionamento (Terraform, Pulumi, [OpenTofu](../arquitetura/opentofu.md), que criam e destroem recursos) da família de gestão de configuração ([Ansible](ansible.md), Puppet, Chef, que configuram uma máquina que já existe).
+A relação entre infraestrutura como código e suas ferramentas já tem uma página própria, [Infraestrutura como código](iac/index.md), que separa a família de provisionamento (Terraform, Pulumi, [OpenTofu](../arquitetura/opentofu.md), que criam e destroem recursos) da família de gestão de configuração ([Ansible](ansible.md), Puppet, Chef, que configuram uma máquina que já existe).
 
 O ponto que vale reforçar aqui é que essas famílias não são práticas concorrentes. Uma ferramenta de provisionamento cria a máquina e uma de configuração prepara o que roda dentro dela, de modo que um mesmo projeto pode usar ambas em sequência, uma entregando o resultado para a outra. É o caso deste repositório, onde as duas convivem sem que nenhuma precise cobrir o escopo da outra.
 
 ## Uma ferramenta pode pertencer a mais de uma prática
 
-[Ansible](ansible.md) é o exemplo mais direto: ele implementa [infraestrutura como código](iac-provisionamento.md) quando o assunto é configuração de máquina, mas o mesmo Ansible também orquestra, via módulo de comando ou de API, chamadas que não têm nada de declarativo, como rodar um comando pontual de manutenção. Chamar Ansible de "a ferramenta de IaC deste projeto" simplificaria demais o que ele faz de fato.
+[Ansible](ansible.md) é o exemplo mais direto: ele implementa [infraestrutura como código](iac/index.md) quando o assunto é configuração de máquina, mas o mesmo Ansible também orquestra, via módulo de comando ou de API, chamadas que não têm nada de declarativo, como rodar um comando pontual de manutenção. Chamar Ansible de "a ferramenta de IaC deste projeto" simplificaria demais o que ele faz de fato.
 
 As duas faces aparecem lado a lado no mesmo playbook: `ansible/site.yml` encadeia roles que descrevem estado, como ssh_hardening e unattended_upgrades, e a role firewall, que chega ao resultado desejado disparando firewall-cmd e interpretando a saída dele para decidir se algo mudou.
 
@@ -100,4 +100,4 @@ O motivo dessa exclusão é concreto e vale citar aqui: qualquer valor lido por 
 
 ## Continue por aqui
 
-[Infraestrutura como código](iac-provisionamento.md) aprofunda a distinção entre provisionamento e gestão de configuração; [Ansible](ansible.md) e [ArgoCD e GitOps](argocd.md) detalham cada ferramenta específica; [CI/CD](ci-cd.md) cobre a outra prática citada aqui. Na arquitetura, [Ansible: as roles do bootstrap](../arquitetura/ansible.md) e ["GitOps: root e satélites"](../arquitetura/gitops-root-e-satelites.md) mostram como o hl-infrastructure aplica tudo isso na prática.
+[Infraestrutura como código](iac/index.md) aprofunda a distinção entre provisionamento e gestão de configuração; [Ansible](ansible.md) e [ArgoCD e GitOps](argocd.md) detalham cada ferramenta específica; [CI/CD](ci-cd.md) cobre a outra prática citada aqui. Na arquitetura, [Ansible: as roles do bootstrap](../arquitetura/ansible.md) e ["GitOps: root e satélites"](../arquitetura/gitops-root-e-satelites.md) mostram como o hl-infrastructure aplica tudo isso na prática.

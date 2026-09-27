@@ -1,4 +1,4 @@
-# Ingress e Gateway API
+# Comparação entre Ingress e Gateway API
 
 Ingress e Gateway API publicam tráfego HTTP e HTTPS para Services, mas
 organizam responsabilidades de forma diferente. A comparação não é apenas

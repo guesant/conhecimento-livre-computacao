@@ -1,4 +1,4 @@
-# IaC, gestão de configuração e GitOps
+# Mapa da composição de IaC, gestão de configuração e GitOps
 
 Essas três famílias podem coexistir porque reconciliam objetos diferentes em momentos diferentes.
 
@@ -38,4 +38,4 @@ Não use uma ferramenta como martelo universal apenas porque ela possui provider
 
 ## Continue por aqui
 
-[Infraestrutura como código](../../iac-provisionamento.md), [Ansible](../../ansible.md) e [Argo CD](../../argocd.md) explicam as peças.
+[Infraestrutura como código](../../iac/index.md), [Ansible](../../ansible.md) e [Argo CD](../../argocd.md) explicam as peças.

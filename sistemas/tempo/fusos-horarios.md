@@ -1,4 +1,4 @@
-# Fusos horários, UTC e IANA
+# Fusos horários
 
 Um fuso horário é uma regra que relaciona um horário civil local a um instante. Essa regra
 pode incluir offset, horário de verão, mudanças políticas e histórico. Um offset como

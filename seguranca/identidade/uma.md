@@ -277,5 +277,5 @@ são conhecidos e não há autorização delegada assíncrona.
 ## Continue por aqui
 
 [OAuth 2.0](oauth2.md) explica grants e tokens. [OpenID Connect](openid-connect.md)
-explica autenticação federada. [Autenticação e autorização](auth.md) apresenta
+explica autenticação federada. [Autenticação e autorização](fundamentos/index.md) apresenta
 a separação entre identidade e permissão.

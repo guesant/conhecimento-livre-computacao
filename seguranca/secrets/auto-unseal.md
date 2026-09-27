@@ -1,4 +1,4 @@
-# Auto-unseal e KMS
+# Auto-unseal
 
 Auto-unseal substitui a apresentação manual das chaves de unseal por uma
 operação automática contra um serviço de gerenciamento de chaves externo.

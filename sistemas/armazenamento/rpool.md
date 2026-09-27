@@ -12,11 +12,11 @@ Por isso, não copie uma sequência de boot de Solaris para Linux apenas porque 
 
 Uma organização de raiz costuma separar o dataset que representa o ambiente inicializável dos datasets de dados. O sistema pode manter mais de um ambiente e selecionar qual dataset será usado no próximo boot.
 
-```text
-rpool
-`-- ROOT
-    |-- current
-    `-- previous
+```mermaid
+flowchart TD
+    pool[rpool] --> root[ROOT]
+    root --> current[current]
+    root --> previous[previous]
 ```
 
 A árvore é ilustrativa. Os nomes, o dataset de boot e as propriedades devem ser consultados no host real com as ferramentas da plataforma.

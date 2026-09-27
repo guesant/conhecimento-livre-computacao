@@ -34,7 +34,7 @@ O keyservice é diferente de `SSH_AUTH_SOCK`: o socket SSH encaminha pedidos de 
 
 ## Relações
 
-- [SOPS e age](sops-age.md) explica o modelo de cifragem e destinatários.
+- [SOPS](sops.md) explica o modelo de cifragem e destinatários.
 - [Bootstrap](bootstrap.md) trata a primeira credencial necessária para decifrar.
 - [SSH](../../ssh.md) cobre o mecanismo semelhante usado pelo agente SSH, inclusive o socket e o encaminhamento.
 

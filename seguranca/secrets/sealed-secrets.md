@@ -16,12 +16,12 @@ com os SealedSecrets não basta para reconstruir a capacidade de decifrar.
 ## Trade-offs
 
 A solução integra cifragem e materialização no cluster, mas aumenta
-acoplamento a controller e cluster. SOPS e age são mais portáveis entre
+acoplamento a controller e cluster. SOPS com age é mais portátil entre
 ambientes; secret store externo evita manter o valor no Git.
 
 ## Relações
 
-- [SOPS e age](sops-age.md) compara outra estratégia de Git.
+- [SOPS](sops.md) compara outra estratégia de Git.
 - [Secret](secret.md) é o objeto materializado.
 - [Bootstrap](bootstrap.md) continua necessário para operar o controller.
 

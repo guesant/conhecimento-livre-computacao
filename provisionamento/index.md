@@ -28,7 +28,7 @@ A mídia de instalação responde à pergunta de como colocar um sistema no disc
 - [Instalação pela rede](../sistemas/boot/network-install.md)
 - [netboot.xyz](../sistemas/boot/netboot-xyz.md)
 - [Ansible](../ansible.md)
-- [OpenTofu](../iac/opentofu.md)
+- [OpenTofu](../iac/opentofu/index.md)
 
 ## Fontes primárias
 

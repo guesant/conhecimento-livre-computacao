@@ -4,8 +4,12 @@ LVM, Logical Volume Manager, é uma camada de gerenciamento de volumes para Linu
 
 LVM não é um filesystem. Um volume lógico normalmente recebe XFS, ext4 ou outro filesystem depois de ser criado. A sequência conceitual é:
 
-```text
-physical volume -> volume group -> logical volume -> filesystem -> mount
+```mermaid
+flowchart LR
+    physical[Physical volume] --> group[Volume group]
+    group --> logical[Logical volume]
+    logical --> filesystem[Filesystem]
+    filesystem --> mount[Mount]
 ```
 
 ## Componentes

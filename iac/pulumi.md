@@ -25,7 +25,7 @@ imprimir segredos como efeito de debug ou preview.
 
 - [HCL](hcl.md) contrasta linguagem declarativa com linguagem geral.
 - [State](state.md) é necessário independentemente do idioma.
-- [Terraform](terraform.md) e [OpenTofu](opentofu.md) são alternativas.
+- [Terraform](terraform.md) e [OpenTofu](opentofu/index.md) são alternativas.
 
 ## Fonte primária
 

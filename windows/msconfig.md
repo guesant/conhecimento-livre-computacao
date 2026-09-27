@@ -1,4 +1,4 @@
-# System Configuration e `msconfig`
+# System Configuration
 
 System Configuration, acessado pelo comando `msconfig`, é uma ferramenta de diagnóstico do Windows. Ela permite selecionar modos de inicialização, observar serviços e controlar opções de boot para isolar problemas. Não é o substituto geral do Gerenciador de Serviços, do Task Manager, do Registro ou de uma política de gerenciamento.
 

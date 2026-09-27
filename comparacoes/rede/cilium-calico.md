@@ -1,4 +1,4 @@
-# Cilium e Calico
+# Comparação entre Cilium e Calico
 
 Cilium e Calico podem fornecer networking e policy em Kubernetes. A comparação útil começa pelo dataplane e pelas capacidades necessárias, não por uma classificação absoluta.
 

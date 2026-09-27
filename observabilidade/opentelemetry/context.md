@@ -1,4 +1,4 @@
-# Contexto e propagação no OpenTelemetry
+# Contexto no OpenTelemetry
 
 Contexto é o estado associado a uma unidade de execução. Ele permite que uma operação
 seja relacionada enquanto atravessa funções, threads, processos, filas e serviços. O

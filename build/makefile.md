@@ -1,4 +1,4 @@
-# Makefile e GNU Make
+# Mapa de Makefile e GNU Make
 
 GNU Make é um executor de regras que compara timestamps e dependências para decidir quais targets precisam ser refeitos. O `Makefile` é o arquivo que declara essas regras, variáveis e comandos.
 

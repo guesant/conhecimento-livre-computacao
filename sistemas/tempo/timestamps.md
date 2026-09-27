@@ -1,4 +1,4 @@
-# Timestamps e tipos de data
+# Modelagem temporal
 
 Timestamp é um termo usado para várias representações. Ele pode significar um instante,
 um horário local, um número desde uma época ou uma coluna de banco. Antes de escolher o

@@ -1,4 +1,4 @@
-# Kubernetes gerenciado e self-hosted
+# Comparação entre Kubernetes gerenciado e self-hosted
 
 Kubernetes gerenciado e self-hosted expõem a mesma API, mas distribuem de
 forma diferente as responsabilidades do control plane.

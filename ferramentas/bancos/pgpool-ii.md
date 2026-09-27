@@ -8,9 +8,11 @@ Ele não transforma um PostgreSQL isolado em um cluster, não substitui replica�
 
 Uma composição típica possui:
 
-```text
-cliente -> Pgpool-II -> PostgreSQL primary
-                    -> PostgreSQL standby
+```mermaid
+flowchart LR
+    client[Cliente] --> pool[Pgpool-II]
+    pool --> primary[(PostgreSQL primary)]
+    pool --> standby[(PostgreSQL standby)]
 ```
 
 O primary recebe escritas. A standby pode receber WAL e atender determinadas leituras. O Pgpool-II pode detectar indisponibilidade, alterar o destino de conexões ou executar scripts de failover, mas a promoção e a autoridade de escrita precisam ser coordenadas com a solução de replicação e com o mecanismo de fencing.

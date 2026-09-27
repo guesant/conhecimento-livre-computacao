@@ -1,4 +1,4 @@
-# Prometheus, Loki e Grafana
+# Mapa da composição de Prometheus, Loki e Grafana
 
 Esta página foi transformada em mapa da composição. Cada produto possui modelo, casos de uso e limites próprios.
 

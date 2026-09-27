@@ -1,4 +1,4 @@
-# VPNs, túneis e bordas de rede
+# Mapa de VPNs, túneis e bordas de rede
 
 Esta página agora funciona como mapa de três conceitos que antes estavam compactados.
 

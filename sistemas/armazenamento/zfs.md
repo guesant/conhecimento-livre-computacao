@@ -4,8 +4,12 @@ ZFS é um sistema de armazenamento que combina filesystem, gerenciamento de pool
 
 O modelo mental é:
 
-```text
-discos ou partições -> vdevs -> zpool -> datasets ou zvols -> montagem ou consumidor de blocos
+```mermaid
+flowchart LR
+    disks[Discos ou partições] --> vdevs[vdevs]
+    vdevs --> pool[zpool]
+    pool --> datasets[Datasets ou zvols]
+    datasets --> consumers[Montagem ou consumidor de blocos]
 ```
 
 O pool administra a capacidade e a redundância. Datasets são filesystems ZFS com propriedades próprias. Zvols são dispositivos de blocos apresentados pelo ZFS para consumidores que precisam dessa interface.

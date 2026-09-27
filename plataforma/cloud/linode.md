@@ -1,4 +1,4 @@
-# Linode e Akamai Cloud
+# Comparação entre Linode e Akamai Cloud
 
 Linode foi uma plataforma de infraestrutura em nuvem conhecida por máquinas virtuais, armazenamento, rede, API e operação acessível a desenvolvedores. Depois da aquisição pela Akamai, a oferta passou a ser apresentada como Akamai Cloud, mantendo a linhagem de produtos, ferramentas e clientes associados à marca Linode.
 

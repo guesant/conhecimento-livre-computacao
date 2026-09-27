@@ -1,4 +1,4 @@
-# Backlog e hierarquia de trabalho
+# Hierarquia de backlog
 
 Backlog é uma coleção ordenada de oportunidades, problemas, riscos, requisitos e trabalho
 técnico. Ele não é um depósito de todas as ideias já mencionadas. Um item precisa ter contexto,

@@ -1,4 +1,4 @@
-# Comparativo de fabricantes e plataformas de rede
+# Comparação de fabricantes e plataformas de rede
 
 Este comparativo não define uma marca vencedora. Ele separa cenários e critérios para que a decisão considere o problema real, o ciclo de vida e a capacidade da equipe.
 

@@ -1,4 +1,4 @@
-# PouchDB e CouchDB
+# Comparação entre PouchDB e CouchDB
 
 PouchDB é um banco JavaScript executado localmente ou como cliente de um banco remoto.
 Apache CouchDB é um banco de documentos JSON com API HTTP e replicação entre bancos. A

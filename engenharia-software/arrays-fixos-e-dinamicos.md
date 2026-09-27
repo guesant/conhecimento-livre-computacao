@@ -1,4 +1,4 @@
-# Arrays fixos e dinâmicos
+# Comparação entre arrays fixos e dinâmicos
 
 Um array armazena elementos em posições indexadas. A distinção entre array fixo e dinâmico não é apenas uma diferença de sintaxe: ela define como a capacidade é administrada, quando os elementos podem ser movidos e qual previsibilidade de memória a estrutura oferece.
 

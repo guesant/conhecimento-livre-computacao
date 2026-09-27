@@ -1,4 +1,4 @@
-# Fundações e governança dos ambientes desktop
+# Mapa de fundações e governança dos ambientes desktop
 
 Um ambiente de desktop também possui uma cadeia institucional. O projeto upstream define código, APIs, guidelines e prioridades. Uma fundação ou associação pode cuidar de representação legal, marcas, contratos, doações e infraestrutura. Distribuições empacotam o resultado, escolhem versões e alteram defaults. Empresas podem patrocinar pessoas, eventos e builders sem controlar cada decisão técnica.
 

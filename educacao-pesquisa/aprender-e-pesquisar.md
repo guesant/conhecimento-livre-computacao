@@ -1,4 +1,4 @@
-# Aprender, pesquisar e perguntar
+# Mapa de aprendizagem, pesquisa e perguntas
 
 Aprender uma tecnologia não é apenas acumular comandos. É construir modelos mentais, testar hipóteses, recuperar ideias sem consultar o material e relacionar uma decisão a suas consequências. Pesquisar também não é apenas encontrar uma página: é descobrir uma fonte adequada, verificar o escopo da afirmação, reproduzir o comportamento quando possível e registrar o que continua incerto.
 

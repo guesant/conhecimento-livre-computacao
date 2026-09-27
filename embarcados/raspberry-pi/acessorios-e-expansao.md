@@ -1,4 +1,4 @@
-# Acessórios e expansão Raspberry Pi
+# Mapa de acessórios Raspberry Pi
 
 O ecossistema Raspberry Pi inclui placas de expansão, módulos, HATs, carriers, câmeras, displays, fontes, aceleradores e acessórios de armazenamento. Eles não mudam automaticamente a família do computador. A compatibilidade depende do conector, do barramento, do driver, da alimentação e do software.
 

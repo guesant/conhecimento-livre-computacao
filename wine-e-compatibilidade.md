@@ -1,4 +1,4 @@
-# Wine e compatibilidade
+# Mapa de Wine e compatibilidade
 
 As páginas anteriores desta seção tratam de isolamento e virtualização: uma VM roda um sistema operacional convidado completo sobre hardware emulado ou virtualizado, e as tecnologias intermediárias entre container e VM ainda dependem de algum grau desse isolamento. Wine resolve um problema vizinho, mas fundamentalmente diferente: rodar um binário Windows em Linux sem emular hardware nenhum e sem que exista, em nenhum momento, um kernel Windows em execução. Entender essa diferença é o que permite decidir corretamente entre Wine, ou o gerenciador Bottles construído sobre ele, e uma VM completa via QEMU e KVM para um caso de uso real.
 

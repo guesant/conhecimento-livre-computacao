@@ -1,4 +1,4 @@
-# TTL e expiração
+# TTL
 
 TTL, ou Time To Live, é uma duração máxima associada a um valor, mensagem, lease,
 registro ou cache. Quando o prazo termina, o consumidor deve tratar o item como expirado,

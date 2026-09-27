@@ -1,4 +1,4 @@
-# Redmine e OpenProject
+# Comparação entre Redmine e OpenProject
 
 Redmine e OpenProject disputam uma responsabilidade semelhante, mas a comparação não deve ser reduzida a qual interface tem mais funcionalidades. O ponto de partida é o modelo de trabalho, o conjunto de módulos necessário e a capacidade da equipe de operar upgrades, integrações e armazenamento.
 

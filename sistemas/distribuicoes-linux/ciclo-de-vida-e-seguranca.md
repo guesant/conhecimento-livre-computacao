@@ -1,4 +1,4 @@
-# Ciclo de vida, bugs e CVEs
+# Mapa de ciclo de vida, bugs e CVEs
 
 O ciclo de vida de uma distribuição define por quanto tempo uma determinada combinação de pacotes continua recebendo correções, atualizações de segurança e suporte. Ele é diferente do ciclo de desenvolvimento do projeto. Uma distribuição pode lançar uma versão nova a cada seis meses e manter versões de suporte estendido por vários anos.
 

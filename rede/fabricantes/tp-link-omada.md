@@ -1,4 +1,4 @@
-# TP-Link e Omada
+# TP-Link Omada
 
 TP-Link reúne linhas residenciais, prosumer e corporativas. Para redes administradas, Omada é a família mais relevante: ela integra gateways, switches, pontos de acesso, controladores e serviços de gerenciamento para pequenos e médios ambientes. A marca também mantém produtos domésticos como Archer e Deco, que não devem ser tratados como equivalentes ao modelo operacional de Omada.
 

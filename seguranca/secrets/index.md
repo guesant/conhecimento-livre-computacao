@@ -26,8 +26,11 @@ interrupção desnecessária.
 - [Secret](secret.md) define o objeto sensível.
 - [Bootstrap](bootstrap.md) trata a primeira credencial.
 - [Rotação](rotation.md) troca valor em uso.
-- [SOPS e age](sops-age.md) cifra valores no Git.
+- [SOPS](sops.md) cifra valores estruturados no Git.
+- [age](age.md) protege arquivos com recipients e identities.
 - [SOPS keyservice](sops-keyservice.md) delega operações de chave a um serviço local ou remoto.
+- [Custódia de chaves fora do host](custodia-de-chaves-fora-do-host.md) compara
+  YubiKey, agentes, TPM e Secure Enclave contra ataques à estação do operador.
 - [Secret store externo](../../secret-store-externo.md) compara backends.
 
 ## Fonte primária

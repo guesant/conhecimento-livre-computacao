@@ -1,4 +1,4 @@
-# Famílias unix-like e o padrão POSIX
+# Mapa de famílias Unix
 
 "Linux" nomeia só o kernel; a distribuição em volta dele, com userland, gerenciador de pacotes e sistema de inicialização, vem de um projeto separado, e é fácil nunca notar essa costura porque ela é familiar demais. Um sistema BSD inverte essa relação por design: kernel e userland são desenvolvidos, versionados e lançados juntos, pelo mesmo projeto, como uma unidade coesa chamada base system.
 

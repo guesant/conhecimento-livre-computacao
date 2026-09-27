@@ -1,4 +1,4 @@
-# Versionamento de releases e identificadores
+# Mapa de versionamento de releases e identificadores
 
 Uma versão publicada precisa responder duas perguntas diferentes. A primeira é qual contrato ou conjunto de funcionalidades a release oferece. A segunda é qual artefato exato foi produzido e executado. SemVer, CalVer e numeração sequencial tentam comunicar a primeira pergunta. Um hash Git responde principalmente à segunda.
 

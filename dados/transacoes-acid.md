@@ -1,4 +1,4 @@
-# Transações e ACID
+# ACID
 
 ACID é o conjunto de propriedades normalmente associado a transações de bancos
 relacionais: atomicidade, consistência, isolamento e durabilidade. O modelo ajuda a

@@ -16,7 +16,7 @@ definem o schema dos blocos e o significado das expressões que aceitam.
 
 ## Relações
 
-- [OpenTofu](opentofu.md) usa HCL para infraestrutura.
+- [OpenTofu](opentofu/index.md) usa HCL para infraestrutura.
 - [Resource](resource.md) e [Data source](data-source.md) são blocos distintos.
 - [State](state.md) registra resultado conhecido fora do arquivo HCL.
 

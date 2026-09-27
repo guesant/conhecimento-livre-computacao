@@ -1,4 +1,4 @@
-# SUFRAMA e PD&I na Amazônia
+# Mapa de SUFRAMA e PD&I na Amazônia
 
 A Superintendência da Zona Franca de Manaus, SUFRAMA, administra políticas relacionadas ao
 desenvolvimento regional em sua área de atuação. Entre essas responsabilidades está a

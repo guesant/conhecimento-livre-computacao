@@ -1,4 +1,4 @@
-# Clima espacial, indução e erros em eletrônica
+# Mapa de clima espacial, indução e erros em eletrônica
 
 Atividade solar pode afetar sistemas tecnológicos por mecanismos diferentes. A expressão "onda solar" é imprecisa: o Sol emite radiação eletromagnética, vento solar e partículas energéticas; ejeções de massa coronal podem alterar a magnetosfera terrestre e produzir tempestades geomagnéticas. Cada fenômeno interage com a infraestrutura de uma forma diferente.
 

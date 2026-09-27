@@ -17,7 +17,7 @@ por domínio de falha é mais simples do que reagir a uma exposição.
 
 ## Relações
 
-- [SOPS e age](sops-age.md) explica o formato e o fluxo de cifragem.
+- [age](age.md) explica o formato e o fluxo de cifragem.
 - [SOPS keyservice](sops-keyservice.md) trata da delegação de operações da
   chave privada.
 - [Estado fora do Git](../../../operacional/estado-fora-do-git.md) lista o

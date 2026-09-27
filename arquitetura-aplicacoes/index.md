@@ -37,6 +37,14 @@ Microfrontend faz sentido quando a organização precisa de autonomia de equipes
 
 ## Conteúdo desta seção
 
+- [DDD](modelagem/ddd.md) apresenta domínio, bounded contexts, aggregates, entidades, value objects, repositories e linguagem ubíqua.
+- [Arquitetura em camadas](fronteiras/arquitetura-em-camadas.md) separa apresentação, aplicação, domínio e infraestrutura.
+- [Arquitetura Hexagonal](fronteiras/arquitetura-hexagonal.md) usa ports e adapters para proteger o núcleo contra detalhes externos.
+- [Arquitetura Limpa](../engenharia-software/arquitetura-limpa.md) aprofunda a regra de dependência e a inversão de dependências.
+- [Vertical Slice Architecture](organizacao/vertical-slice.md) compara organização por feature com organização por camada técnica.
+- [CQRS](cqrs/cqrs.md) distingue commands, queries, handlers, DTOs, read models, write models e projections.
+- [Event Sourcing](event-sourcing/event-sourcing.md) explica eventos imutáveis, reconstrução de estado, projections e consistência eventual.
+- [Componentes de aplicação](componentes.md) diferencia controllers, validators, services, coesão, acoplamento e CRUD.
 - [Frontend](frontend.md) explica interface, renderização, estado e comunicação com o backend.
 - [Backend](backend.md) explica APIs, domínio, persistência, jobs e integração.
 - [Monólito](monolito.md) explica execução e deploy como uma unidade, incluindo o monólito modular.

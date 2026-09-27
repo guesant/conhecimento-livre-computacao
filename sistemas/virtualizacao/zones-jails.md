@@ -1,4 +1,4 @@
-# Solaris Zones e BSD Jails
+# Comparação entre Solaris Zones e BSD Jails
 
 FreeBSD Jails e Solaris Zones resolveram, cada um à sua forma, o problema de
 isolar múltiplos ambientes sobre um único kernel. Eles antecedem os

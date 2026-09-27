@@ -16,7 +16,7 @@ integrações, suporte, operação e migração. A semelhança de conceitos não
 significa que todos os plugins, recursos ou contratos operacionais sejam
 intercambiáveis.
 
-Em ambientes pequenos, [SOPS e age](sops-age.md) podem cumprir o requisito
+Em ambientes pequenos, [SOPS com age](sops.md) podem cumprir o requisito
 com menos componentes. [External Secrets Operator](external-secrets.md) é a
 camada de integração declarativa quando os consumidores são workloads
 Kubernetes.

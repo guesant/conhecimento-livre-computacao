@@ -1,4 +1,4 @@
-# Interfaces, rotas e camada 2 no Linux
+# Mapa de interfaces, rotas e camada 2 no Linux
 
 Todo pacote que um host Linux envia ou recebe passa por três decisões em sequência: por qual interface ele entra ou sai, por qual rota o kernel escolhe encaminhá-lo, e como ele chega ao vizinho de camada 2 mais próximo nesse caminho. Esta página segue essa ordem, da interface mais próxima do hardware até a rota que decide o próximo salto.
 

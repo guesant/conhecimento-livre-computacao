@@ -36,7 +36,7 @@ Operators, namespaces, Jobs, requests/limits, probes, PDBs, storage e manutenç�
 
 ## Automação e infraestrutura como código
 
-Esta área separa DevOps, IaC e GitOps como ideias relacionadas mas distintas. [Infraestrutura como código](iac-provisionamento.md) trata declaração e provisionamento; [Ansible](ansible.md) trata uma implementação de automação e configuração; SSH, just, jq/yq e ferramentas de transferência possuem responsabilidades próprias.
+Esta área separa DevOps, IaC e GitOps como ideias relacionadas mas distintas. [Infraestrutura como código](iac/index.md) trata declaração e provisionamento; [Ansible](ansible.md) trata uma implementação de automação e configuração; SSH, just, jq/yq e ferramentas de transferência possuem responsabilidades próprias.
 
 ## Ecossistema .NET
 

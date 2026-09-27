@@ -1,4 +1,4 @@
-# Istio, Linkerd e Cilium Service Mesh
+# Comparação entre Istio, Linkerd e Cilium Service Mesh
 
 As três alternativas podem fornecer identidade de workload, mTLS, telemetria e controle de tráfego entre serviços, mas não ocupam exatamente o mesmo ponto da arquitetura. A comparação correta começa pela fronteira que se deseja adicionar: uma mesh dedicada, uma integração mais estreita com a rede existente ou uma superfície menor para os requisitos essenciais.
 

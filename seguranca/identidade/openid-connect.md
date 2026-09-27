@@ -225,4 +225,4 @@ os claims e a finalidade são diferentes.
 
 [OAuth 2.0](oauth2.md) define os grants e tokens subjacentes. [SAML](saml.md)
 é uma alternativa de federação baseada em assertions XML. [Autenticação e
-autorização](auth.md) explica a separação de responsabilidades.
+autorização](fundamentos/index.md) explica a separação de responsabilidades.

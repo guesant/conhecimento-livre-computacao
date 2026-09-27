@@ -1,4 +1,4 @@
-# Clustering, redundância e distribuição de bancos
+# Mapa de clustering, redundância e distribuição de bancos
 
 "Cluster de banco" pode descrever arquiteturas muito diferentes. Um conjunto de servidores pode manter uma cópia primária e réplicas para failover, compartilhar o mesmo estado com replicação síncrona, distribuir partições diferentes entre nós ou apenas oferecer um endpoint comum para clientes. Antes de escolher uma tecnologia, defina se o objetivo é continuidade, leitura, capacidade de escrita, isolamento de falhas, distribuição geográfica ou redução de custo.
 

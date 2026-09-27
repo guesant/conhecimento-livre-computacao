@@ -1,4 +1,4 @@
-# NTP e sincronização de tempo
+# NTP
 
 NTP, Network Time Protocol, sincroniza relógios de hosts usando uma hierarquia de fontes de tempo. Um cliente mede diferenças e atrasos em relação a servidores e ajusta o relógio de forma controlada. O protocolo não é um mecanismo de autenticação de usuários, embora o estado do relógio seja uma dependência de outros protocolos de segurança.
 

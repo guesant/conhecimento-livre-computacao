@@ -59,4 +59,4 @@ Os logs da execução de um timer e da unit que ele dispara vão para o mesmo jo
 
 [Fail2ban](sistemas/linux/fail2ban.md), [atualizações automáticas](sistemas/linux/automatic-updates.md) e [journal persistente](sistemas/linux/journald.md) usam um `.timer` como exemplo prático de agendamento alternativo ao cron. [Podman Quadlets: containers como unidades systemd](podman-quadlets.md) mostra como esse mesmo modelo de unit e dependência se estende a containers, sem que o operador escreva a unit `.service` diretamente.
 
-Para aprofundar a arquitetura, consulte [daemons e serviços](sistemas/systemd/daemon.md), [schedulers e timers](sistemas/systemd/scheduler.md), [eventos e ativação](sistemas/systemd/events.md) e [D-Bus](sistemas/systemd/dbus.md).
+Para aprofundar a arquitetura, consulte [daemons e serviços](sistemas/systemd/execucao/index.md), [schedulers e timers](sistemas/systemd/agendamento/index.md), [eventos e ativação](sistemas/systemd/events.md) e [D-Bus](sistemas/systemd/dbus.md).

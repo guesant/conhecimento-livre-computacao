@@ -1,4 +1,4 @@
-# IntelliJ e JetBrains Gateway
+# Desenvolvimento remoto com IntelliJ
 
 JetBrains Remote Development executa o backend da IDE no ambiente remoto e abre um JetBrains Client local. JetBrains Gateway inicia ou encontra esse backend e pode conectar por SSH ou por plataformas de workspace compatíveis.
 

@@ -18,7 +18,7 @@ Eles têm modelos de estado, escopos de credenciais e riscos operacionais difere
 
 ## Relações
 
-- [OpenTofu](../opentofu.md) explica o ciclo de plano, aplicação e state.
+- [OpenTofu](../opentofu/index.md) explica o ciclo de plano, aplicação e state.
 - [Provider](../provider.md) define o conceito de provider, resource e data source.
 - [Estado](../state.md) explica por que o backend e o lock são parte da segurança operacional.
 

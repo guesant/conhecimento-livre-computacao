@@ -14,12 +14,13 @@ A CPU acessa a memória virtual por meio da MMU, que traduz endereços virtuais 
 
 O caminho moderno pode ser descrito assim:
 
-```text
-CPU -> registradores e unidades de execução
-    -> caches L1, L2 e LLC
-    -> interconexão do processador
-    -> controlador de memória
-    -> canais DRAM
+```mermaid
+flowchart TD
+    cpu[CPU] --> execution[Registradores e unidades de execução]
+    execution --> caches[Caches L1, L2 e LLC]
+    caches --> interconnect[Interconexão do processador]
+    interconnect --> controller[Controlador de memória]
+    controller --> dram[Canais DRAM]
 ```
 
 A largura do barramento não é a única medida de desempenho. Latência, paralelismo, número de canais, localidade, coerência, prefetching e contenção determinam quanto trabalho chega efetivamente à memória.
@@ -46,24 +47,13 @@ Em SoCs, um network on chip ou fabric interno conecta CPU, GPU, aceleradores, me
 
 O modelo de von Neumann reúne memória, unidade de controle, unidade aritmética e lógica e entrada e saída em um sistema no qual instruções e dados ocupam a mesma memória endereçável. A CPU busca instruções e dados por esse caminho compartilhado.
 
-```text
-                  +-------------------+
-                  | Memória            |
-                  | instruções e dados |
-                  +---------+---------+
-                            |
-                  barramento do sistema
-                            |
-             +--------------+--------------+
-             |                             |
-      +------+-------+              +------+-------+
-      | Unidade de   |              | Unidade      |
-      | Controle     |              | Aritmética   |
-      | fetch/decode |              | e Lógica     |
-      +------+-------+              +------+-------+
-             +--------------+--------------+
-                            |
-                       Entrada e saída
+```mermaid
+flowchart TD
+    memory[Memória, instruções e dados] --> bus[Barramento do sistema]
+    bus --> control[Unidade de controle, fetch e decode]
+    bus --> alu[Unidade aritmética e lógica]
+    control --> io[Entrada e saída]
+    alu --> io
 ```
 
 O modelo explica o programa armazenado e o ciclo de busca, decodificação e execução. CPUs reais usam caches separadas para instruções e dados, predição, execução especulativa e várias interconexões, por isso são frequentemente descritas como Harvard modificadas em partes internas, embora mantenham uma visão arquitetural compatível com o modelo de memória do programa.

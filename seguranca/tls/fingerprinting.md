@@ -1,4 +1,4 @@
-# Fingerprinting de TLS e HTTP
+# Mapa de fingerprinting de TLS e HTTP
 
 Fingerprinting de TLS e HTTP é a classificação de uma conexão a partir de propriedades observáveis do handshake e das mensagens, sem depender apenas do endereço IP ou do User-Agent. A técnica pode observar versões, cifras, extensões, grupos, ordem de extensões, parâmetros de HTTP/2, cabeçalhos e outros sinais do cliente ou de um intermediário.
 

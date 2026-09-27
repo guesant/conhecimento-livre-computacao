@@ -1,4 +1,4 @@
-# Jobs persistentes e workers
+# Mapa de jobs persistentes e workers
 
 Um job é uma unidade de trabalho que pode ser enfileirada, persistida, executada e
 observada separadamente da requisição que a criou. Um worker é o processo ou thread que

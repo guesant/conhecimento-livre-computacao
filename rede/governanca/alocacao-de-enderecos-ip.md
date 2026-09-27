@@ -1,4 +1,4 @@
-# Alocação e reserva de endereços IP
+# Mapa de alocação e reserva de endereços IP
 
 Um endereço IP não é comprado da mesma forma que um domínio. Endereços
 privados podem ser escolhidos dentro dos blocos reservados para redes internas.

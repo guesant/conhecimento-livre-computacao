@@ -1,4 +1,4 @@
-# Auditoria e abordagens de auditoria
+# Mapa de auditoria e abordagens de auditoria
 
 Auditoria é um processo sistemático para obter e avaliar evidências diante de critérios definidos. O resultado não é apenas uma lista de falhas. Uma auditoria deve permitir concluir algo sobre um escopo, uma afirmação ou um conjunto de controles, explicando quais evidências foram examinadas, quais limitações existiram e qual ação precisa acontecer depois.
 

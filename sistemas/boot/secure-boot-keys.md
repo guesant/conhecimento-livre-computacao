@@ -1,4 +1,4 @@
-# Chaves e bancos do Secure Boot
+# Mapa de chaves e bancos do Secure Boot
 
 Secure Boot usa variáveis UEFI autenticadas para estabelecer quem pode alterar a política e quais imagens podem ou não ser executadas. As quatro estruturas mais conhecidas são PK, KEK, db e dbx. Elas formam uma hierarquia de autorização, mas não são quatro cópias da mesma chave.
 

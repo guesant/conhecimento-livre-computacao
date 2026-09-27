@@ -1,4 +1,4 @@
-# xterm e X11 remoto
+# Mapa de xterm e X11 remoto
 
 `xterm` é um emulador de terminal para o X Window System. Ele não é um protocolo de acesso remoto, um servidor VNC ou um substituto de SSH. O programa pode executar no host remoto e desenhar sua janela em um servidor X local por meio de X11 forwarding.
 

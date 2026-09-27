@@ -1,4 +1,4 @@
-# Extintores, classes de incêndio e resfriamento
+# Mapa de extintores, classes de incêndio e resfriamento
 
 Esta página apresenta os princípios gerais de seleção de extintores e os
 mecanismos usados para interromper um princípio de incêndio. Ela não substitui

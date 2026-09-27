@@ -1,4 +1,4 @@
-# Segurança e empacotamento
+# Mapa de segurança e empacotamento
 
 Uma distribuição não é segura apenas porque usa um kernel recente ou porque oferece um gerenciador de pacotes assinado. A segurança do sistema resulta da combinação entre imagem inicial, serviços instalados, política MAC, permissões, atualização, origem dos pacotes e configuração do operador.
 

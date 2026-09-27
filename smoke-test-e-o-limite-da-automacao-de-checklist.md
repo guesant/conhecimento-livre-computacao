@@ -1,4 +1,4 @@
-# Smoke test e o limite da automação de checklist
+# Mapa de smoke tests e checklists
 
 Um smoke test é uma verificação rápida e deliberadamente rasa, pensada para responder a uma pergunta bem mais estreita do que "está tudo certo": o ambiente está minimamente acessível e vivo o suficiente para justificar investir tempo num diagnóstico mais profundo? Um exemplo típico confirma que as ferramentas de linha de comando necessárias existem, que a API do que está sendo verificado responde, que os nós ou processos esperados estão no estado básico correto, nada além disso. Tratar um smoke test como prova de prontidão é o erro mais comum dessa prática: ele não confirma que RBAC está correto, que probes estão bem configuradas, ou que um backup realmente restaura, só que o sistema não está numa falha óbvia e imediata que tornaria qualquer diagnóstico mais fino uma perda de tempo. O valor está exatamente nessa modéstia deliberada de escopo, ele roda em segundos e serve como filtro antes de um diagnóstico caro, não como substituto dele.
 

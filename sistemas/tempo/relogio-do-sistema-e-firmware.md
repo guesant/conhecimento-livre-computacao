@@ -1,4 +1,4 @@
-# Relógio do sistema e firmware
+# Relógio de tempo real
 
 Um computador normalmente possui pelo menos dois relógios relevantes:
 

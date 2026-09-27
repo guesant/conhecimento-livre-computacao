@@ -86,10 +86,11 @@ quando a ameaça incluir ransomware ou perda do cluster.
 
 Uma cadeia pode ser descrita assim:
 
-```text
-full -> differential -> WAL
-full -> incremental -> incremental -> WAL
-full -> differential -> incremental -> WAL
+```mermaid
+flowchart LR
+    full1[Full] --> differential[Differential] --> wal1[WAL]
+    full2[Full] --> incremental1[Incremental] --> incremental2[Incremental] --> wal2[WAL]
+    full3[Full] --> differential2[Differential] --> incremental3[Incremental] --> wal3[WAL]
 ```
 
 O desenho exato depende da ferramenta. O importante é saber quais artefatos são necessários

@@ -1,4 +1,4 @@
-# WSL 1 e WSL 2
+# Comparação entre WSL 1 e WSL 2
 
 WSL 1 e WSL 2 oferecem a mesma intenção de integrar Linux ao Windows, mas usam modelos internos diferentes.
 

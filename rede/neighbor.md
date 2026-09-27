@@ -1,4 +1,4 @@
-# NDP e vizinhança
+# Neighbor Discovery Protocol
 
 A tabela de vizinhança associa endereços de rede a endereços de enlace no
 próximo salto local. ARP cumpre esse papel para IPv4 e Neighbor Discovery,

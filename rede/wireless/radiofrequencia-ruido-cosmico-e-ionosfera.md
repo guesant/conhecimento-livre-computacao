@@ -1,4 +1,4 @@
-# Radiofrequência, ruído cósmico e ionosfera
+# Mapa de radiofrequência, ruído cósmico e ionosfera
 
 Uma antena nunca recebe apenas o sinal desejado. Ela capta radiação natural do
 céu, emissões solares, ruído térmico do próprio sistema, interferência de

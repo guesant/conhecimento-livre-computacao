@@ -22,7 +22,7 @@ interoperabilidade perfeita entre versões e providers.
 
 ## Relações
 
-- [OpenTofu](opentofu.md) mantém compatibilidade de linguagem com governança
+- [OpenTofu](opentofu/index.md) mantém compatibilidade de linguagem com governança
   diferente.
 - [Pulumi](pulumi.md) usa linguagens gerais e outro modelo de state.
 - [HCL](hcl.md) define a linguagem comum.

@@ -1,4 +1,4 @@
-# Access point, modem, switch e roteador
+# Comparação entre access point, modem, switch e roteador
 
 Esses nomes descrevem responsabilidades diferentes, embora um produto residencial possa reunir todas elas no mesmo gabinete.
 

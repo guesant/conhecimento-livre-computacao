@@ -98,7 +98,7 @@ precisa de política para tentativas falhas, recuperação de conta, credenciais
 logs e cookies.
 
 Veja [Argon2](argon2.md), [bcrypt](bcrypt.md), [gerenciamento de segredos](../secrets/index.md)
-e [autenticação e autorização](../identidade/auth.md).
+e [autenticação e autorização](../identidade/fundamentos/index.md).
 
 ## Fontes primárias
 

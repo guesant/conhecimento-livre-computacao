@@ -1,4 +1,4 @@
-# Locks e transações no PostgreSQL
+# Mapa de concorrência no PostgreSQL
 
 PostgreSQL combina MVCC, locks de tabela, locks de linha, locks de predicado e locks
 consultivos. Esses mecanismos respondem a perguntas diferentes. MVCC permite que uma

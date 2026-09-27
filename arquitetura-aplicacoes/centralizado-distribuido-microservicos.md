@@ -1,4 +1,4 @@
-# Centralizado, distribuído e microsserviços
+# Comparação entre sistemas centralizados, distribuídos e microsserviços
 
 Centralizado, distribuído e microsserviços descrevem propriedades relacionadas, mas não equivalentes. Um sistema centralizado concentra estado, processamento ou controle. Um sistema distribuído executa componentes em processos ou hosts que se comunicam. Microsserviços são uma forma específica de organizar um sistema distribuído por capacidades de negócio, com autonomia de deploy e ownership.
 

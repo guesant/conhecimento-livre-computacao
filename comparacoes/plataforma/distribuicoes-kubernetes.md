@@ -1,4 +1,4 @@
-# K3s, MicroK8s e Kubernetes gerenciado
+# Comparação entre distribuições Kubernetes
 
 A API Kubernetes pode ser consumida por distribuições e modelos operacionais diferentes. A primeira decisão é quanto da plataforma a equipe quer operar diretamente.
 

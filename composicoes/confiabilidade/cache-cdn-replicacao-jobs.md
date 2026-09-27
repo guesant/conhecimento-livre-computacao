@@ -1,4 +1,4 @@
-# Cache, CDN, replicação e jobs
+# Mapa da composição de cache, CDN, replicação e jobs
 
 Cache, CDN, replicação e jobs podem formar uma cadeia de leitura, escrita e processamento
 assíncrono. Cada componente reduz um tipo de custo ou falha, mas também cria estado,

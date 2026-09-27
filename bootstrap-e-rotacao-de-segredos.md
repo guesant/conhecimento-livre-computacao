@@ -1,4 +1,4 @@
-# Ciclo de vida de segredos
+# Mapa do ciclo de vida de segredos
 
 As páginas canônicas de [bootstrap](seguranca/secrets/bootstrap.md) e
 [rotação](seguranca/secrets/rotation.md) tratam cada operação. Esta página

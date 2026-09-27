@@ -1,4 +1,4 @@
-# Netfilter
+# Mapa de Netfilter e nftables
 
 Esta página fica com a parte que os fundamentos de [firewall no Linux](firewalld.md) deixam para trás por design: o mecanismo interno do netfilter, como uma conexão inteira é rastreada, o que muda entre a arquitetura antiga de `iptables` e a atual de `nftables`, e a ordem prática de investigar um problema de rede quando algo dá errado.
 

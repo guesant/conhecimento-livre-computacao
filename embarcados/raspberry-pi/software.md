@@ -1,4 +1,4 @@
-# Software e ferramentas Raspberry Pi
+# Mapa de software Raspberry Pi
 
 O software Raspberry Pi depende da família de hardware. Computadores de placa única executam um sistema operacional e um bootloader; Pico executa firmware gravado em flash; Compute Modules combinam firmware, bootloader, armazenamento e uma carrier.
 

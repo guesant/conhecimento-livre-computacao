@@ -28,7 +28,8 @@ tanto o backend quanto o Secret materializado.
 Essa composição reduz a exposição de valores no Git e centraliza auditoria,
 mas acrescenta uma dependência de disponibilidade, autenticação e rede. Um
 backend externo não elimina bootstrap, backup ou recuperação. Em ambientes
-pequenos, [SOPS e age](criptografia-de-segredos-no-git.md) podem oferecer uma
+pequenos, [SOPS](seguranca/secrets/sops.md) com [age](seguranca/secrets/age.md)
+podem oferecer uma
 cadeia operacional menor.
 
 O cluster deste repositório usa SOPS com age. As alternativas desta página

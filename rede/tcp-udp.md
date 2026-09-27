@@ -1,4 +1,4 @@
-# TCP e UDP
+# Comparação entre TCP e UDP
 
 TCP e UDP são protocolos de transporte. Ambos multiplexam aplicações por
 portas, mas oferecem contratos diferentes para entrega e controle de fluxo.

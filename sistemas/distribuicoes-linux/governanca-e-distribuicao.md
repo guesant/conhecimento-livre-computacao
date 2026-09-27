@@ -1,4 +1,4 @@
-# Governança e distribuição das distribuições Linux
+# Mapa de governança e distribuição das distribuições Linux
 
 Uma distribuição Linux não é controlada por uma única entidade em todos os sentidos. Há uma diferença entre quem define a direção do projeto, quem mantém os pacotes, quem opera o processo de build, quem assina e publica os repositórios, quem mantém os espelhos e quem oferece suporte comercial. Em projetos comunitários essas funções podem estar espalhadas entre voluntários, fundações, associações e empresas. Em produtos empresariais, várias delas ficam sob o controle de uma companhia.
 

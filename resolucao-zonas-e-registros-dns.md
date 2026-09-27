@@ -1,4 +1,4 @@
-# Resolução, zonas e registros DNS
+# Mapa de resolução, zonas e registros DNS
 
 Uma consulta simples como `dig grafana.internal` devolve uma resposta em milissegundos. Isso esconde uma cadeia de decisões: quem respondeu, se a resposta veio de cache, e quantos servidores foram consultados pelo caminho. Um resolver busca a resposta em nome de um cliente, consultando vários outros servidores se precisar.
 

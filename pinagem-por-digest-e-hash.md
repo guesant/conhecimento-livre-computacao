@@ -1,4 +1,4 @@
-# Pinagem por digest e hash em cada ecossistema
+# Mapa de pinagem por digest e hash em cada ecossistema
 
 [Tags e digests de imagens](containers/tag.md) e [digest de imagem](containers/digest.md) estabelecem o conceito central: uma tag é um ponteiro que pode ser reapontado para um conteúdo diferente sem aviso, um digest é o hash do conteúdo em si, então fixá-lo garante que o que chega hoje é byte a byte igual ao que foi avaliado e aprovado, não uma versão futura republicada sob o mesmo nome.
 

@@ -147,6 +147,6 @@ Dogtag, DNS, ferramentas administrativas e integração de clientes.
 
 ## Continue por aqui
 
-[Autenticação e autorização](auth.md) explica a fronteira entre identidade e
+[Autenticação e autorização](fundamentos/index.md) explica a fronteira entre identidade e
 permissão. [SSSD](sssd.md) explica o cliente Linux. [MIT Kerberos](kerberos.md)
 explica autenticação por tickets.

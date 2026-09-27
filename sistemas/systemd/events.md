@@ -1,4 +1,4 @@
-# Eventos e ativação
+# Ativação orientada a eventos
 
 O systemd pode reagir a eventos em vez de manter todos os processos ativos desde o boot. Uma unit pode ser ativada por conexão em socket, mudança de arquivo, dispositivo, timer, target ou mensagem D-Bus. Essa abordagem reduz consumo ocioso e expressa dependências no mesmo grafo de lifecycle.
 

@@ -85,7 +85,7 @@ Também é importante separar filtragem de autorização. `Listar apenas os docu
 
 OIDC, OAuth 2.0, SAML e LDAP ajudam a autenticar ou transportar identidade e atributos. Eles não definem, por si só, se uma pessoa pode editar um recurso de negócio. Um token pode carregar grupos ou scopes, mas o serviço responsável ainda precisa interpretar esses dados dentro do seu modelo de autorização.
 
-Veja também [autenticação e autorização](../identidade/auth.md), [OAuth 2.0](../identidade/oauth2.md), [OpenID Connect](../identidade/openid-connect.md), [RBAC do Kubernetes](../../kubernetes/access/rbac.md), [policy enforcement](../iac/policy-enforcement.md) e o [comparativo das soluções](comparativo.md).
+Veja também [autenticação e autorização](../identidade/fundamentos/index.md), [OAuth 2.0](../identidade/oauth2.md), [OpenID Connect](../identidade/openid-connect.md), [RBAC do Kubernetes](../../kubernetes/access/rbac.md), [policy enforcement](../iac/policy-enforcement.md) e o [comparativo das soluções](comparativo.md).
 
 ## Fontes
 

@@ -1,4 +1,4 @@
-# Emissão de certificados e distribuição de confiança
+# Mapa da composição de emissão de certificados e distribuição de confiança
 
 PKI operacional exige duas direções diferentes: entregar identidade a quem apresenta um certificado e entregar confiança a quem precisa validá-lo.
 

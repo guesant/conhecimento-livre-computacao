@@ -1,4 +1,4 @@
-# Certificações de infraestrutura e nuvem
+# Mapa de certificações de infraestrutura e nuvem
 
 Validar formalmente o conhecimento operacional deste universo (Kubernetes, nuvem, automação) passa por um pequeno número de organizações certificadoras, e confundir os tipos de credencial que elas emitem leva a decisões de estudo erradas antes mesmo de abrir um material. A CNCF, ligada à Linux Foundation, mantém a família de certificações de Kubernetes propriamente dita (do nível introdutório até as especializações práticas) e um conjunto crescente de certificações por projeto individual do ecossistema cloud native, como Prometheus, Argo ou Cilium. Provedores de nuvem como AWS e Microsoft Azure mantêm suas próprias trilhas organizadas por papel profissional (arquitetura, operação, desenvolvimento, segurança), além de credenciais mais estreitas ligadas a um serviço específico. A Red Hat mantém certificações construídas em torno do OpenShift e do RHEL, historicamente conhecidas por provas de laboratório contra um ambiente ao vivo, não simulação nem múltipla escolha.
 

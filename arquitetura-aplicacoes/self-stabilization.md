@@ -1,4 +1,4 @@
-# Self-stabilization e autoestabilização
+# Self-stabilization
 
 Self-stabilization, ou autoestabilização, é uma propriedade de tolerância a falhas em que um sistema distribuído consegue alcançar um estado legítimo depois de começar em qualquer estado permitido ou sofrer uma falha transitória. O sistema não precisa estar correto imediatamente, mas deve convergir em tempo finito e permanecer correto enquanto as hipóteses do algoritmo forem mantidas.
 

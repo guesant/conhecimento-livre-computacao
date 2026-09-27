@@ -1,4 +1,4 @@
-# Armazenamento local e distribuído
+# Comparação entre armazenamento local e distribuído
 
 Armazenamento local vincula os dados ao disco de um nó. Ele costuma ter baixa
 latência, mas exige que o scheduler respeite o nó e que backup externo cubra a

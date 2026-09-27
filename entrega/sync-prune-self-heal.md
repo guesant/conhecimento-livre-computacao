@@ -1,4 +1,4 @@
-# Sync, prune e self-heal
+# Mapa de sync, prune e self-heal
 
 Sync aplica a revisão desejada ao ambiente. Prune remove recursos que não
 estão mais no conjunto renderizado. Self-heal reaplica o desejado quando o

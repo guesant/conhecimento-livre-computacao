@@ -1,4 +1,4 @@
-# PaaS autohospedado e plataformas de deploy
+# Mapa de PaaS autohospedado e plataformas de deploy
 
 Uma plataforma de deploy reduz o trabalho repetitivo entre o código e a aplicação em
 execução. Ela pode conectar um repositório Git, construir uma imagem, configurar uma rede,
