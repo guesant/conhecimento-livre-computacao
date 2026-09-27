@@ -19,8 +19,9 @@ de segurança.
   como restrições de colocação alteram essa decisão.
 - [Workloads batch](recursos/index.md) reúne jobs, CronJobs e condições de
   prontidão e desligamento.
-- [Segurança de workload](core/serviceaccount.md) reúne identidade, RBAC,
-  SecurityContext, Secrets e políticas de acesso.
+- [Segurança do cluster](seguranca/cluster/index.md) reúne acesso ao API
+  server e ao Kubelet, isolamento de workloads, proteção de nós, etcd,
+  auditoria, criptografia e operação segura.
 - [Extensibilidade](extensibility/crd.md) trata CRDs, operators, admission
   control e controllers.
 - [Lifecycle](lifecycle/finalizers.md) trata finalizers e owner references.

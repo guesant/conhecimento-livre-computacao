@@ -26,6 +26,11 @@ executa o bundle segundo a OCI Runtime Specification. [CRI](runtimes/cri.md)
 é a interface usada por um kubelet para conversar com runtimes de containers,
 não um engine local.
 
+Execução segura exige uma política além da escolha do engine. [Hardening de
+containers Docker](seguranca/hardening-docker.md) reúne controles para o host,
+daemon, imagens, privilégios, seccomp, filesystem, rede, recursos, segredos e
+operação.
+
 ## Distribuição e composição
 
 Um [registry OCI](distribuicao/registry.md) distribui manifestos e blobs. Um

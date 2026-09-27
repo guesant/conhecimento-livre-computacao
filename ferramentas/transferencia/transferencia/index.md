@@ -13,6 +13,10 @@ retomada, atomicidade aparente e o comportamento diante de uma interrupção.
 - [rsync](../rsync.md) sincroniza árvores de arquivos e transmite somente o
   que precisa ser atualizado.
 - [rclone](../rclone.md) abstrai múltiplos backends de storage.
+- [WinSCP](../winscp.md), [FileZilla](../filezilla.md) e [Cyberduck](../cyberduck.md)
+  oferecem interfaces gráficas para conexões e transferências.
+- [Dolphin](../dolphin.md) integra navegação remota ao desktop KDE por meio do
+  KIO.
 
 ## Escolha
 

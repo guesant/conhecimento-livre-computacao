@@ -11,6 +11,8 @@ processo local.
   SSH.
 - [rsync](../rsync.md) pode ser usado como operação de sincronização, mas não
   cria uma montagem persistente.
+- [Dolphin](../dolphin.md) usa workers KIO para navegar por recursos remotos no
+  desktop KDE.
 
 ## Cuidados
 

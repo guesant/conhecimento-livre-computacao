@@ -18,6 +18,14 @@ Desabilitar seccomp globalmente para resolver uma incompatibilidade elimina prot
 
 seccomp responde "esta syscall pode ser tentada?". Capabilities e LSMs respondem perguntas diferentes sobre privilégio e acesso. Permitir uma syscall não significa que a operação será autorizada.
 
+No Docker, o perfil seccomp padrão é uma camada de compatibilidade e redução de
+risco aplicada ao container. Ele deve permanecer ativo na maioria dos serviços
+e ser combinado com `--cap-drop=ALL`, `no-new-privileges`, user namespaces,
+AppArmor ou SELinux, filesystem somente leitura e limites de cgroups. O perfil
+não protege um socket do daemon, um bind mount do host ou uma capability que já
+conceda acesso amplo. [Hardening de containers Docker](../../containers/seguranca/hardening-docker.md)
+mostra como esses controles se relacionam na execução.
+
 ## Fontes
 
 - Linux kernel, seccomp filter: <https://docs.kernel.org/userspace-api/seccomp_filter.html>

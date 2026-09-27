@@ -12,7 +12,7 @@ GitOps usa estado declarativo versionado, agentes de reconciliação e observaç
 
 ## Implementações
 
-[Argo CD](../../argocd.md), [Flux](../flux.md) e [Kargo](../kargo.md) participam de partes diferentes do ciclo. Argo CD e Flux reconciliam aplicações. Kargo coordena promoção de artefatos e estados entre ambientes. A composição pode usar mais de uma ferramenta, mas as responsabilidades e os donos do estado precisam estar explícitos.
+[Argo CD](../../argocd.md), [Flux](../flux.md) e [Kargo](../kargo/index.md) participam de partes diferentes do ciclo. Argo CD e Flux reconciliam aplicações. Kargo coordena promoção de artefatos e estados entre ambientes. A composição pode usar mais de uma ferramenta, mas as responsabilidades e os donos do estado precisam estar explícitos.
 
 ## Relações
 

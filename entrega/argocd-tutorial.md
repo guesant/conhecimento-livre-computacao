@@ -288,7 +288,7 @@ O repositório GitOps precisa de revisão, proteção de branch e validação de
 - [ApplicationSet](applicationset.md) explica geração de aplicações.
 - [App of apps](app-of-apps.md) explica o bootstrap declarativo.
 - [Sync, prune e self-heal](sync-prune-self-heal.md) detalha as opções de reconciliação.
-- [Kargo](kargo.md) promove revisões antes de o Argo CD aplicá-las.
+- [Kargo](kargo/index.md) promove revisões antes de o Argo CD aplicá-las.
 
 ## Fontes primárias
 

@@ -15,8 +15,34 @@ microtasks, timers, fairness e bloqueio.
 
 [V8](v8.md) explica a engine que interpreta, compila e coleta JavaScript e WebAssembly.
 
+[SpiderMonkey](javascript/spidermonkey.md) explica a engine JavaScript e WebAssembly
+mantida pela Mozilla e usada pelo Firefox.
+
+[Blink](browser/blink.md), [WebKit](browser/webkit.md) e [Servo](browser/servo.md)
+explicam engines de navegador, que integram documentos, estilos, layout, renderização
+e APIs web com uma engine JavaScript e um host.
+
 [libuv](libuv.md) explica o loop multiplataforma, polling de I/O, handles, requests e
 thread pool usado por Node.js e outros projetos.
+
+## Engine, navegador e host
+
+Os termos costumam ser usados como se fossem sinônimos, mas representam camadas
+distintas. Uma engine JavaScript executa ECMAScript e pode executar WebAssembly. Uma
+engine de navegador também precisa lidar com documentos, DOM, CSS, layout e
+renderização. Um host conecta essas engines a rede, armazenamento, timers, processos,
+permissões, janelas e sistema operacional.
+
+| Camada | Exemplos | Responsabilidade principal |
+| --- | --- | --- |
+| Engine JavaScript | V8, SpiderMonkey, JavaScriptCore, QuickJS | Executar JavaScript e, quando suportado, WebAssembly |
+| Engine de navegador | Blink, WebKit, Servo | Processar documentos e renderizar a plataforma web |
+| Host ou produto | Chromium, Firefox, Safari, Node.js, Bun, GJS | Fornecer APIs, ciclo de vida, segurança e integração com o sistema |
+
+O limite não é absoluto em todos os projetos. Componentes podem ser distribuídos
+entre camadas, e um host pode integrar várias bibliotecas. Ainda assim, a distinção é
+útil para investigar compatibilidade, desempenho e segurança. Uma API ausente pode
+ser uma decisão do host, não uma limitação da linguagem ou da engine.
 
 ## Modelo mental
 

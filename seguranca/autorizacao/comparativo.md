@@ -2,6 +2,8 @@
 
 Casbin, Casdoor, Cedar, CASL e OpenFGA aparecem frequentemente na mesma pesquisa porque todos podem participar de uma arquitetura de controle de acesso. Eles não são substitutos diretos. A primeira decisão é identificar se o problema é autenticar pessoas, avaliar políticas locais, compartilhar regras entre camadas ou consultar relações persistentes.
 
+Este comparativo trata apenas de algumas soluções usadas como referência. O [catálogo de implementações](implementacoes/index.md) contém o inventário completo desta taxonomia, organizado por função e fronteira arquitetural. As páginas individuais devem ser consultadas para funcionamento, limitações e operação de cada projeto; esta página compara apenas as dimensões que ajudam na escolha.
+
 ## Posição de cada solução
 
 | Solução | Categoria | Modelo principal | Execução | Identidade própria |

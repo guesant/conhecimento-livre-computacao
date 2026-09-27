@@ -60,6 +60,12 @@ As cinco soluções desta seção não ocupam o mesmo lugar:
 
 Casdoor pode usar Casbin internamente, mas isso não transforma os dois em produtos equivalentes. CASL não substitui um provedor de identidade. Cedar não é um diretório de usuários. OpenFGA não é um servidor OIDC. Cada um resolve uma fronteira diferente. Os modelos de decisão estão detalhados na [taxonomia de modelos de autorização](modelos/index.md).
 
+## Taxonomia de autorização
+
+Esta área foi organizada em páginas canônicas para que o vocabulário, os modelos e as implementações não sejam confundidos. A [taxonomia de conceitos](conceitos/index.md) explica os elementos de uma decisão, como subject, resource, action, PDP e PEP. O [catálogo de implementações](implementacoes/index.md) separa engines de política, sistemas ReBAC, bibliotecas de aplicação, IAM, autorização de dados, políticas de Kubernetes e serviços gerenciados.
+
+Os nomes que são sinônimos, aliases ou componentes de uma mesma solução apontam para uma página canônica única. Isso evita duplicar conteúdo para OPA e Open Policy Agent, CEL e Common Expression Language, ou Ory Keto e Keto. Quando uma tecnologia tem um SDK, uma linguagem ou uma interface própria que merece consulta independente, ela recebe uma página específica e permanece ligada à página da implementação principal.
+
 ## Decisões operacionais
 
 Uma solução de autorização deve definir, antes da implementação:
