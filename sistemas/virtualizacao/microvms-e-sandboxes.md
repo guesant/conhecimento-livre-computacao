@@ -9,12 +9,14 @@ custo operacional diferente.
 Firecracker é um monitor de máquina virtual baseado em KVM, criado para
 workloads como Lambda e Fargate. Ele reduz dispositivos emulados e mantém um
 kernel convidado próprio, buscando combinar inicialização rápida com uma
-fronteira mais forte que namespaces compartilhados.
+fronteira mais forte que namespaces compartilhados. A página de
+[Firecracker](firecracker.md) é o endereço canônico da implementação.
 
-Kata Containers aplica uma ideia semelhante a containers e Pods: cada unidade
-roda dentro de uma VM leve, usando QEMU ou Firecracker por trás de um runtime
-compatível com OCI. O custo aparece em tempo de inicialização e memória por
-instância, mas o workload deixa de compartilhar o kernel do host.
+[Kata Containers](kata-containers.md) aplica uma ideia semelhante a containers
+e Pods: cada unidade roda dentro de uma VM leve, usando QEMU ou Firecracker por
+trás de um runtime compatível com OCI. O custo aparece em tempo de
+inicialização e memória por instância, mas o workload deixa de compartilhar o
+kernel do host.
 
 ## Sandboxes
 
@@ -22,11 +24,11 @@ gVisor intercepta chamadas de sistema por meio do componente Sentry e media o
 acesso ao filesystem com o Gofer. O runtime `runsc` o integra a Docker e
 Kubernetes. Essa abordagem reduz a superfície exposta ao kernel real sem
 exigir uma VM completa, mas pode ter incompatibilidades com chamadas de
-sistema menos comuns.
+sistema menos comuns. A página de [gVisor](gvisor.md) detalha a implementação.
 
-`bubblewrap` fica mais próximo de um container tradicional: usa namespaces do
-Linux, não possui daemon nem formato próprio de imagem e declara o sandbox por
-linha de comando.
+[bubblewrap](bubblewrap.md) fica mais próximo de um container tradicional: usa
+namespaces do Linux, não possui daemon nem formato próprio de imagem e declara
+o sandbox por linha de comando.
 
 ## Critérios
 

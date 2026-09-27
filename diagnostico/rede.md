@@ -60,6 +60,6 @@ falha real.
 
 ## Continue por aqui
 
-[Netfilter e nftables](../netfilter-nftables-e-diagnostico.md) explica o
+[Netfilter](../rede/firewall/netfilter.md) e [nftables](../rede/firewall/nftables.md) explicam o
 firewall do kernel. O [cookbook de comandos de rede e DNS](../../referencia/comandos-de-rede-e-dns.md)
 reúne a sintaxe rápida de `ping`, `ss` e `mtr`.

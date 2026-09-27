@@ -16,8 +16,10 @@ abstração usada.
 - [Containers de sistema](../../sistemas/virtualizacao/system-containers.md)
   compartilham o kernel do host, mas apresentam um ambiente de sistema mais
   amplo que um container de aplicação.
-- [Solaris Zones e BSD Jails](../../sistemas/virtualizacao/zones-jails.md)
+- [Solaris Zones](../../sistemas/virtualizacao/solaris-zones.md) e [BSD Jail](../../sistemas/virtualizacao/bsd-jail.md)
   representam mecanismos históricos e específicos de isolamento de sistema.
+- [Comparação entre Solaris Zones e BSD Jails](../../sistemas/virtualizacao/zones-jails.md)
+  relaciona as duas implementações.
 
 ## Fronteiras
 

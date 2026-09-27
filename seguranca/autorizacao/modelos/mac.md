@@ -8,9 +8,12 @@ Um sistema MAC pode associar ao sujeito uma autorização e ao objeto uma classi
 
 Bell-LaPadula é uma família voltada à confidencialidade. Biba é uma família voltada à integridade. SELinux fornece um mecanismo de política mandatory no Linux, mas sua linguagem e seus tipos não são simplesmente uma implementação de Bell-LaPadula.
 
-## SELinux e LSM
+## Implementações
 
-No Linux, SELinux usa o framework Linux Security Modules para aplicar decisões além das permissões discricionárias tradicionais. Contextos, tipos, domínios e regras determinam quais operações são permitidas. O processo pode ser dono de um arquivo e ainda assim ser negado pela política SELinux.
+No Linux, [SELinux](../../mac-selinux.md) e [AppArmor](../../mac-apparmor.md)
+usam o framework [Linux Security Modules](../../../sistemas/linux/lsm.md) para
+aplicar decisões além das permissões discricionárias tradicionais. Eles possuem
+modelos de política e operações diferentes, portanto não são intercambiáveis.
 
 MAC não substitui DAC. As camadas podem ser avaliadas em conjunto, e uma operação precisa passar por todas as restrições relevantes. Um troubleshooting correto identifica qual camada negou, em vez de desligar o mecanismo inteiro.
 

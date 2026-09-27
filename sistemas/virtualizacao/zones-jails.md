@@ -5,21 +5,18 @@ isolar múltiplos ambientes sobre um único kernel. Eles antecedem os
 namespaces do Linux e ajudam a separar o problema geral de isolamento das
 decisões específicas do Linux.
 
-## BSD Jails
+## BSD Jail
 
-O mecanismo de jail foi desenvolvido em 1999 para separar ambientes de
-clientes em um mesmo servidor físico e entrou no FreeBSD 4.0, lançado em
-2000. Um jail parte do conceito de `chroot`, que restringe apenas o sistema de
-arquivos, e também virtualiza usuários e rede. O processo isolado, portanto,
-não recebe apenas uma raiz de filesystem diferente; ele também opera em um
-escopo distinto de identidade e conectividade.
+[BSD Jail](bsd-jail.md) é o mecanismo de isolamento do FreeBSD baseado em
+kernel compartilhado, com escopos próprios de processos, filesystem, identidade
+e rede. A página canônica explica a evolução a partir de `chroot`, VNET,
+`devfs`, ciclo de vida, limites de segurança e critérios de operação.
 
 ## Solaris Zones
 
-Solaris Zones foi introduzida no Solaris 10. Uma zona global mantém o controle
-administrativo do host e uma ou mais zonas não globais isolam conjuntos de
-aplicações. Uma kernel zone adiciona um kernel próprio à zona, aproximando seu
-modelo do de uma máquina virtual.
+[Solaris Zones](solaris-zones.md) separa zonas globais e não globais sobre o
+kernel Solaris. A página canônica detalha zonas tradicionais, kernel zones,
+recursos delegados, ciclo de vida, fronteiras de segurança e relação com VMs.
 
 ## Relação com namespaces
 
@@ -36,6 +33,7 @@ atribuídas ao ambiente.
 
 ## Continue por aqui
 
-[Containers de sistema](system-containers.md) explica LXC, Incus e
-`systemd-nspawn`. [Namespaces](../linux/namespaces.md) mostra o mecanismo
-granular usado pelo Linux.
+[BSD Jail](bsd-jail.md), [Solaris Zones](solaris-zones.md) e
+[Containers de sistema](system-containers.md) são páginas canônicas das
+implementações comparadas aqui. [Namespaces](../linux/namespaces.md) mostra o
+mecanismo granular usado pelo Linux.

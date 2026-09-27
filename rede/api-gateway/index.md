@@ -17,8 +17,8 @@ latência, disponibilidade, configuração e blast radius de uma regra incorreta
 
 ## Relações
 
-- [Kong e catálogo](../../kong-e-o-catalogo-de-um-api-gateway.md) compara
-  modelos de configuração.
+- [Kong Gateway](kong.md) explica os modelos de catálogo e configuração do
+  gateway.
 - [Service](service.md) representa o upstream lógico.
 - [Route](route.md) seleciona o tráfego.
 - [Rate limiting](../rate-limiting/index.md) controla consumo.

@@ -13,7 +13,7 @@ Confirme o modelo e a imagem antes de atualizar. Preserve um método de recupera
 ## Relações
 
 - [OPNsense](opnsense.md) e [pfSense](pfsense.md) são opções mais orientadas a appliances x86.
-- [Netfilter](../../netfilter-nftables-e-diagnostico.md) explica parte da base de filtragem Linux.
+- [Netfilter](../firewall/netfilter.md) explica parte da base de filtragem Linux.
 
 ## Fonte primária
 

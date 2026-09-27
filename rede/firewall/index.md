@@ -20,7 +20,7 @@ namespaces e redes locais. O custo é administrar políticas em muitos hosts e l
 ordens de regra diferentes em cada sistema.
 
 `nftables`, `iptables`, `firewalld`, UFW, Windows Defender Firewall e PF são exemplos
-de mecanismos ou interfaces usados nesse espaço. [Netfilter e nftables](../../netfilter-nftables-e-diagnostico.md)
+de mecanismos ou interfaces usados nesse espaço. [Netfilter](netfilter.md) e [nftables](nftables.md)
 explica o caminho do pacote no Linux.
 
 ### Firewall de rede
@@ -155,7 +155,7 @@ difíceis de explicar e de depurar.
 ## Relações
 
 - [Firewalld](../../firewalld.md) explica uma interface de zonas para firewall Linux.
-- [Netfilter e nftables](../../netfilter-nftables-e-diagnostico.md) explica o datapath
+- [Netfilter](netfilter.md) explica o datapath e [nftables](nftables.md) explica a interface
   do kernel Linux.
 - [UFW e portas publicadas pelo Docker](../../ufw-e-portas-publicadas-pelo-docker.md)
   trata a interação entre firewall do host e NAT de containers.

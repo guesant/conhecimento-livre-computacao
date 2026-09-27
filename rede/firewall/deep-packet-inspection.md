@@ -98,7 +98,7 @@ o próprio mecanismo está degradado.
 ## Relações
 
 - [Tipos de firewall](index.md) organiza filtros stateless, stateful, WAF, IDS e IPS.
-- [Netfilter e nftables](../../netfilter-nftables-e-diagnostico.md) explica o caminho
+- [Netfilter](netfilter.md) explica o caminho
   de filtragem no Linux.
 - [TLS](../../seguranca/tls/index.md) explica a proteção criptográfica que
   limita inspeção intermediária.

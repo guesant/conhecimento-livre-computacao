@@ -15,7 +15,7 @@ CMake é adequado quando o projeto precisa suportar toolchains, plataformas, IDE
 ## Relações
 
 - [Ninja](ninja.md) executa o grafo gerado.
-- [Makefile](makefile.md) pode ser o backend Unix escolhido pelo CMake, mas não é a mesma camada.
+- [Makefile](makefile.md) é um formato de regras que pode ser gerado, e [GNU Make](gnu-make.md) é um executor compatível, mas nenhum dos dois é a mesma camada que CMake.
 - [LLVM](llvm.md) usa CMake como caminho principal de configuração do projeto.
 
 ## Fonte primária

@@ -32,7 +32,7 @@ ordem das regras, não na detecção.
 ## Relações
 
 - [Journal persistente](journald.md) preserva o log necessário ao diagnóstico.
-- [Netfilter e nftables](../../netfilter-nftables-e-diagnostico.md) executa o
+- [Netfilter](../../rede/firewall/netfilter.md) executa o
   bloqueio.
 - [Atualizações automáticas](automatic-updates.md) reduz vulnerabilidades que
   não são tratadas por bloqueio reativo.

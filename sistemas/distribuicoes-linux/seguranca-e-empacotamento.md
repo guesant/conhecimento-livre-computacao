@@ -21,13 +21,17 @@ systemctl --type=service --state=running
 
 `sshd -T` mostra a configuração efetiva, mas deve ser executado com uma configuração válida. `getenforce` só existe quando SELinux está instalado. `aa-status` só existe quando AppArmor está disponível. A ausência do comando não prova sozinha que nenhum mecanismo de confinamento existe.
 
-## AppArmor e SELinux
+## MAC nas distribuições
 
-AppArmor associa perfis a programas e restringe caminhos, capacidades e operações. A política é centrada na identidade do executável, o que facilita ajustes incrementais. Ubuntu instala e carrega AppArmor por padrão; Debian fornece suporte e perfis, mas a presença efetiva depende da instalação. openSUSE, Linux Mint e Kubuntu também podem usar AppArmor conforme a base e a imagem.
+[AppArmor](../../seguranca/mac-apparmor.md) e [SELinux](../../seguranca/mac-selinux.md)
+são implementações de Mandatory Access Control. Elas complementam DAC,
+capabilities, namespaces, seccomp e isolamento de serviços. Não substituem
+atualização, autenticação, firewall, auditoria ou autorização da aplicação.
 
-SELinux associa processos a domínios e objetos a tipos, usando uma política que pode expressar relações mais detalhadas entre identidade, contexto e recurso. RHEL e Fedora usam SELinux como mecanismo central e normalmente iniciam com a política targeted em modo enforcing. CentOS Stream segue o ecossistema RHEL. Outras distribuições podem oferecer SELinux, mas não devem ser consideradas protegidas por ele sem uma política e um modo efetivos.
-
-AppArmor e SELinux são MAC, mandatory access control. Eles complementam DAC, permissões tradicionais, capabilities, namespaces, seccomp e isolamento de serviços. Não substituem atualização, autenticação, firewall, auditoria ou autorização da aplicação.
+O default depende da distribuição, da edição, da imagem e da configuração do
+operador. A presença de um pacote ou perfil não prova que o mecanismo está
+carregado e em enforcing. Verifique o host real e leia as páginas canônicas para
+interpretar a política e as negações.
 
 ## SSH, sudo e umask
 

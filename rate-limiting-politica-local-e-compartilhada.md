@@ -1,6 +1,6 @@
 # Comparação entre políticas local e compartilhada de rate limiting
 
-Limitar quantas requisições uma origem pode fazer num intervalo de tempo é uma proteção comum em qualquer ponto de entrada de tráfego, seja um API gateway como o [Kong](kong-e-o-catalogo-de-um-api-gateway.md), um proxy reverso, ou a própria aplicação. A implementação por trás dessa contagem, porém, muda de comportamento de um jeito que só fica visível quando existe mais de uma réplica atendendo o mesmo tráfego, e escolher entre as duas famílias de política sem entender essa diferença produz um comportamento inesperado assim que o serviço deixa de ter uma única instância.
+Limitar quantas requisições uma origem pode fazer num intervalo de tempo é uma proteção comum em qualquer ponto de entrada de tráfego, seja um API gateway como o [Kong](rede/api-gateway/kong.md), um proxy reverso, ou a própria aplicação. A implementação por trás dessa contagem, porém, muda de comportamento de um jeito que só fica visível quando existe mais de uma réplica atendendo o mesmo tráfego, e escolher entre as duas famílias de política sem entender essa diferença produz um comportamento inesperado assim que o serviço deixa de ter uma única instância.
 
 ## Política local: rápida, mas cega ao todo
 
@@ -16,4 +16,4 @@ A escolha entre política local e compartilhada não é uma questão de qual é 
 
 ## Continue por aqui
 
-[Kong e o catálogo de um API gateway](kong-e-o-catalogo-de-um-api-gateway.md) cobre o gateway onde essa escolha de política costuma aparecer como uma configuração explícita por rota.
+[Kong Gateway](rede/api-gateway/kong.md) cobre o gateway onde essa escolha de política costuma aparecer como uma configuração explícita por rota.

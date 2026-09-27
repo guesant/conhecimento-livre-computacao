@@ -1,10 +1,10 @@
 # firewalld
 
-firewalld é um serviço de gestão de firewall para Linux que, por baixo, configura as mesmas tabelas de filtragem de pacote do [netfilter](netfilter-nftables-e-diagnostico.md), mas expõe um modelo de mais alto nível baseado em zonas, em vez de exigir que cada regra seja escrita diretamente na sintaxe de baixo nível dessas tabelas.
+firewalld é um serviço de gestão de firewall para Linux que, por baixo, configura as mesmas tabelas de filtragem de pacote do [Netfilter](rede/firewall/netfilter.md), mas expõe um modelo de mais alto nível baseado em zonas, em vez de exigir que cada regra seja escrita diretamente na sintaxe de baixo nível dessas tabelas.
 
 Isso facilita raciocinar sobre a política de firewall como um todo, ao custo de uma camada de abstração a mais entre a regra declarada e o pacote de rede real. A camada extra também define a fronteira do que a ferramenta enxerga: o que outro processo escreve direto nas tabelas do kernel continua valendo, e o firewalld não sabe que aquilo existe.
 
-Por isso a recomendação prática, numa máquina que adota firewalld, é passar toda regra por ele, mesmo as que seriam mais curtas de escrever direto no [netfilter](netfilter-nftables-e-diagnostico.md). Nas distribuições atuais o firewalld gera essas regras via [`nftables`](netfilter-nftables-e-diagnostico.md); em distribuições mais antigas, via [`iptables`](netfilter-nftables-e-diagnostico.md). A ferramenta de baixo nível muda, mas o modelo de zonas exposto ao operador é o mesmo nos dois casos.
+Por isso a recomendação prática, numa máquina que adota firewalld, é passar toda regra por ele, mesmo as que seriam mais curtas de escrever direto no [Netfilter](rede/firewall/netfilter.md). Nas distribuições atuais o firewalld gera essas regras via [`nftables`](rede/firewall/nftables.md); em distribuições mais antigas, via `iptables`. A ferramenta de baixo nível muda, mas o modelo de zonas exposto ao operador é o mesmo nos dois casos.
 
 ## Zonas
 
