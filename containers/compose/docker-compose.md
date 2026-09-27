@@ -20,6 +20,7 @@ Compose é apropriado para desenvolvimento, testes, automação local e serviço
 
 - [Compose Specification](specification.md) define o modelo compartilhado.
 - [Podman Compose](podman-compose.md) usa um provedor externo para operar uma composição no Podman.
+- [Docker Compose e Podman Quadlet](../../comparacoes/plataforma/docker-compose-quadlet.md) compara a aplicação multi-container com o ciclo de vida integrado ao systemd.
 - [Quando Kubernetes faz sentido](../../cenarios/execucao/quando-kubernetes.md) compara o custo da plataforma com as necessidades do cenário.
 - [Imagem de container](../image.md) é a unidade distribuída que um serviço pode consumir.
 

@@ -23,6 +23,7 @@ Para workloads de um único host com requisitos de lifecycle mais explícitos, [
 - [Compose Specification](specification.md) define o contrato compartilhado.
 - [Docker Compose](docker-compose.md) é outra implementação do mesmo modelo.
 - [Podman](../engines/podman.md) fornece o engine e o socket consumido pelo provedor.
+- [Docker Compose e Podman Quadlet](../../comparacoes/plataforma/docker-compose-quadlet.md) detalha quando o modelo de aplicação deve ser trocado pelo ciclo de vida do systemd.
 - [Orches](../../entrega/orches.md) e [Materia](../../entrega/materia.md) descrevem um cenário de host único.
 
 ## Fonte primária
