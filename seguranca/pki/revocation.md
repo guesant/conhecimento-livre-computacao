@@ -132,15 +132,15 @@ emissor estar definida, e um estado `good` só é usado depois de sua assinatura
 período serem validados.
 
 ```text
-path = build_certificate_path(leaf, trust_store, purpose)
-if path.is_invalid:
+certificate_path = build_certificate_path(leaf, trust_store, purpose)
+if certificate_path_is_invalid:
     reject("invalid path")
 
-key = (path.issuer.identifier, leaf.serial)
+key = (certificate_path.issuer.identifier, leaf.serial)
 status = revocation_cache.get(key)
 
 if status.missing or status.expired:
-    status = fetch_or_load_status(path.issuer, leaf)
+    status = fetch_or_load_status(certificate_path.issuer, leaf)
     if status.signature_invalid or status.subject_mismatch:
         reject("invalid revocation response")
     revocation_cache.put(key, status)
