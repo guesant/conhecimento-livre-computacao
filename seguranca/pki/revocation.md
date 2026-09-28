@@ -133,7 +133,7 @@ período serem validados.
 
 ```text
 path = build_certificate_path(leaf, trust_store, purpose)
-if path.invalid:
+if path.is_invalid:
     reject("invalid path")
 
 key = (path.issuer.identifier, leaf.serial)
