@@ -44,7 +44,7 @@ Coletores locais podem enviar sinais a backends externos ou centralizados. Isso 
 
 ## Implementações
 
-[Prometheus](prometheus.md) cobre métricas e regras. [Loki](loki.md) cobre logs. [Grafana](grafana.md) consulta e visualiza data sources. [Correlation ID](correlation-id.md) conecta registros sem substituir o contexto de tracing. OpenTelemetry padroniza instrumentação e transporte de múltiplos sinais. Alertmanager cuida de roteamento de alertas no ecossistema Prometheus. [Crescimento de erros e alertas](crescimento-de-erros-e-alertas.md) explica como transformar mudanças na taxa de erro em alertas acionáveis sem confundir crescimento de tráfego com regressão.
+[Prometheus](prometheus.md) cobre métricas e regras. [Loki](loki.md) cobre logs. [Grafana](grafana.md) consulta e visualiza data sources. [Sentry](sentry.md) agrupa erros, contexto de execução, releases e performance de aplicações. [Correlation ID](correlation-id.md) conecta registros sem substituir o contexto de tracing. OpenTelemetry padroniza instrumentação e transporte de múltiplos sinais. Alertmanager cuida de roteamento de alertas no ecossistema Prometheus. [Crescimento de erros e alertas](crescimento-de-erros-e-alertas.md) explica como transformar mudanças na taxa de erro em alertas acionáveis sem confundir crescimento de tráfego com regressão.
 
 ## Boas práticas
 
@@ -60,4 +60,4 @@ Instalar a stack antes de definir perguntas. Criar dashboards para cada métrica
 
 ## Continue por aqui
 
-Aprofunde [métricas](metricas.md), [logs](logs.md), [tracing](tracing.md), o [crescimento de erros e alertas](crescimento-de-erros-e-alertas.md) ou as implementações [Prometheus](prometheus.md), [Loki](loki.md) e [Grafana](grafana.md).
+Aprofunde [métricas](metricas.md), [logs](logs.md), [tracing](tracing.md), [Sentry](sentry.md), o [crescimento de erros e alertas](crescimento-de-erros-e-alertas.md) ou as implementações [Prometheus](prometheus.md), [Loki](loki.md) e [Grafana](grafana.md).
