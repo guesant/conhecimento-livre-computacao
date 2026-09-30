@@ -6,119 +6,35 @@ A base não é uma trilha fechada nem a documentação de um produto. Ela pode s
 
 A regra central é profundidade estreita. Uma página pode ser longa, mas deve aprofundar uma unidade de conhecimento. O formato depende do objetivo: tutoriais conduzem uma aprendizagem, guias orientam uma tarefa, cheatsheets condensam comandos e relações para consulta, e referências registram fatos, interfaces e fontes primárias. Quando ferramentas ou abordagens diferentes pertencem à mesma categoria, a categoria recebe uma página-mapa e cada assunto independente recebe endereço próprio.
 
-## Educação, pesquisa e formação tecnológica
+## Uma árvore estreita e profunda
 
-[Educação, pesquisa e formação tecnológica](educacao-pesquisa/index.md) explica como universidades, grupos de pesquisa, redes acadêmicas, fundações de apoio, políticas regionais, competições e ICTs se relacionam. A seção inclui RNP, C3SL, UFPR, Fundep, SUFRAMA, OBI, USP, Unicamp, PUCPR, PUC-Rio, NEPEN e Instituto Evolução.
+A navegação começa por cinco macroáreas e aprofunda o assunto progressivamente. Cada nível possui no máximo cinco itens navegáveis, sem contar a página de visão geral do próprio nível. A regra reduz escolhas simultâneas sem limitar a profundidade da coleção.
 
-## Sistemas e Linux
+### Fundamentos
 
-[Sistemas e Linux](sistemas/index.md) começa pela execução: CPU, níveis de privilégio, system calls, processos e mecanismos de isolamento. A partir daí entram namespaces, [cgroups](sistemas/linux/cgroups.md), [capabilities](sistemas/linux/capabilities.md), [seccomp](sistemas/linux/seccomp.md), Unix, shells, coreutils e systemd.
+[Fundamentos](educacao-pesquisa/index.md) reúne formação, estudo, padrões, governança e critérios de comparação. É a entrada para conceitos que orientam a leitura dos demais domínios.
 
-Essa base explica por que containers não são uma tecnologia única do kernel: eles combinam mecanismos diferentes de isolamento, controle de recursos, privilégio e filesystem.
+### Sistemas
 
-## Virtualização e containers
+[Sistemas](sistemas/index.md) cobre hardware, sistemas operacionais, Unix, containers, virtualização, Kubernetes, nuvem, hospedagem e computação de borda. Uma implementação concreta aparece depois do conceito que ela realiza.
 
-Máquinas virtuais e hipervisores introduzem isolamento por virtualização de hardware. Zones, jails e microVMs ocupam outros pontos do espectro. OCI formaliza formatos e interfaces do ecossistema de containers; imagens, registries e runtimes tratam de distribuição e execução; orquestradores tratam de ciclo de vida em escala.
+### Software
 
-A página [Containers e Kubernetes](plataforma/index.md) funciona como mapa entre esses níveis.
+[Software](engenharia-software/index.md) reúne desenvolvimento, arquitetura, linguagens, web, build, artefatos, automação, infraestrutura como código, entrega e qualidade. [Engenharia de software](engenharia-software/index.md) é uma das entradas conceituais desse domínio.
 
-## Redes
+### Dados e comunicação
 
-[Redes](rede/index.md) organiza o assunto em fundamentos, DNS, conectividade privada, firewall/gateway e rede de cluster.
+[Dados](dados/index.md) organiza SQL, bancos, consistência, armazenamento, colaboração e mensageria. [Redes](rede/index.md) conduz pelos fundamentos de comunicação, DNS, conectividade, tráfego e serviços de rede.
 
-DNS é desmembrado entre resolução e registros, servidores, [DNSSEC](rede/dns/dnssec.md), [mDNS](rede/dns/mdns.md) e [registro de domínio](rede/dns/registro-de-dominio.md). Conectividade separa [VPN](rede/conectividade/vpn.md), [tunneling](rede/conectividade/tunel.md) e [borda](rede/conectividade/borda.md).
+### Segurança e confiabilidade
 
-A progressão evita aprender Cilium, Gateway API ou service mesh antes de compreender rotas, DNS, transporte e fronteiras de rede.
+[Segurança](seguranca/index.md), [observabilidade](observabilidade/index.md), [confiabilidade](confiabilidade/resiliencia/index.md), backup e diagnóstico formam a área de proteção, operação e recuperação.
 
-## Kubernetes
+## Tipos de material
 
-Kubernetes é organizado por distribuição e arquitetura, recursos e extensibilidade, armazenamento, empacotamento e operação. [K3s](k3s.md) é uma distribuição concreta, não a definição da plataforma. Helm é uma forma de empacotar e renderizar recursos, não o modelo de recursos do Kubernetes.
+Quando um assunto possui materiais diferentes, eles são separados em cinco formatos: conceitos, tutoriais, guias, referências e cheatsheets. Um conceito explica o modelo mental; um tutorial conduz uma aprendizagem; um guia orienta uma tarefa; uma referência registra fatos e interfaces; um cheatsheet serve para consulta rápida.
 
-Operators, namespaces, Jobs, requests/limits, probes, PDBs, storage e manutenção de nó são tratados como conceitos independentes para evitar páginas que misturam todas as propriedades de um workload.
-
-## Automação e infraestrutura como código
-
-Esta área separa DevOps, IaC e GitOps como ideias relacionadas mas distintas. [Infraestrutura como código](iac/index.md) trata declaração e provisionamento; [Ansible](ansible.md) trata uma implementação de automação e configuração; SSH, just, jq/yq e ferramentas de transferência possuem responsabilidades próprias.
-
-## Ecossistema .NET
-
-[Ecossistema .NET](dotnet/index.md) separa execução de trabalho em background de resiliência
-de chamadas. [Hangfire](dotnet/hangfire.md) persiste e processa jobs fora do ciclo da
-requisição; [Polly](dotnet/polly.md) compõe timeout, retry, circuit breaker, rate limiting
-e outras estratégias para operações que podem falhar de forma transitória.
-
-As bibliotecas podem ser combinadas, mas têm responsabilidades diferentes. Hangfire
-coordena o ciclo de vida do trabalho. Polly controla a execução de uma tentativa ou de
-uma operação dentro desse trabalho.
-
-## Entrega e GitOps
-
-[Entrega e GitOps](entrega/index.md) organiza reconciliação, CI/CD e estratégias de rollout.
-
-Entrega progressiva é separada em [canary](entrega/progressiva/canary.md), [blue-green](entrega/progressiva/blue-green.md) e [Argo Rollouts](entrega/progressiva/argo-rollouts.md). Isso distingue a estratégia da ferramenta que a implementa. Feature flags aparecem ao lado porque podem complementar rollout, mas controlam ativação de comportamento em outro nível.
-
-## Segurança
-
-[Segurança](seguranca/index.md) é uma árvore própria.
-
-[Segurança de aplicações](seguranca/appsec/index.md) separa [SAST](seguranca/appsec/sast/index.md), [SCA](seguranca/appsec/sca/index.md), [DAST](seguranca/appsec/dast.md) e [secret scanning](seguranca/appsec/secret-scanning/index.md). Implementações como [CodeQL](seguranca/appsec/sast/codeql.md) e [OSV-Scanner](seguranca/appsec/sca/osv-scanner.md) ficam abaixo da abordagem que implementam.
-
-Segurança de CI/CD trata a pipeline como superfície própria, com [zizmor](seguranca/cicd/zizmor.md) como implementação especializada. [Segurança de IaC](seguranca/iac/index.md) distingue schema validation, configuration scanning, policy as code e posture/compliance scanning, com páginas próprias para [Checkov](seguranca/iac/checkov.md) e [KubeLinter](seguranca/iac/kubelinter.md).
-
-[PKI e confiança](seguranca/pki/index.md) separa protocolo, emissão e distribuição. [step-ca](seguranca/pki/step-ca.md) é uma CA; [trust-manager](seguranca/pki/trust-manager.md) distribui bundles de confiança. Segredos, RBAC, zero trust, threat modeling, MITRE ATT&CK, OWASP, compliance e supply chain permanecem categorias independentes.
-
-## Observabilidade
-
-[Observabilidade](observabilidade/index.md) começa pelos sinais antes das ferramentas.
-
-[Métricas](observabilidade/metricas.md), [logs](observabilidade/logs.md) e [distributed tracing](observabilidade/tracing.md) possuem modelos e custos próprios. [Prometheus](observabilidade/prometheus.md), [Loki](observabilidade/loki.md) e [Grafana](observabilidade/grafana.md) são implementações concretas e, por isso, não ficam mais comprimidos numa única página de "stack".
-
-## Dados e mensageria
-
-[Dados e mensageria](dados/index.md) evita usar "NoSQL" ou "mensageria" como categorias finais.
-
-[SQL](dados/sql/index.md) ensina bancos relacionais por meio de fundamentos, tutoriais, consultas, exemplos, recursos avançados, diferenças entre dialetos e uma folha de consulta rápida.
-
-[Bancos chave-valor](dados/bancos/key-value.md) e [bancos de documentos](dados/bancos/documentos.md) têm modelos diferentes. [Filas](dados/mensageria/filas.md) e [event streaming](dados/mensageria/event-streaming.md) também são separados porque retenção, consumo, replay e ordenação não funcionam da mesma maneira.
-
-[Cache](dados/cache.md) trata cópias derivadas e invalidação. [Replicação](dados/replicacao.md)
-trata cópias de um estado primário para disponibilidade ou escala de leitura. Nenhuma das
-duas transforma uma cópia em fonte de verdade sem uma decisão explícita de ownership.
-
-[Transações e ACID](dados/transacoes-acid.md) explica atomicidade, consistência, isolamento
-e durabilidade no limite de uma transação. Essas propriedades não são uma garantia
-automática para workflows que atravessam serviços, filas ou bancos diferentes.
-
-## Confiabilidade e resiliência
-
-[Resiliência](confiabilidade/resiliencia.md) trata a capacidade de continuar oferecendo
-comportamento aceitável durante falhas e de se recuperar. [Idempotência](confiabilidade/idempotencia.md)
-reduz o risco de retries e redelivery aplicarem efeitos duplicados. As duas propriedades
-se relacionam, mas não são sinônimas: resiliência trata o comportamento do sistema diante
-de falhas; idempotência trata o efeito de repetir uma operação.
-
-## Engenharia de software
-
-[Engenharia de software](engenharia-software/index.md) organiza princípios de desenho e
-manutenção. [SOLID](engenharia-software/solid.md) ajuda a avaliar responsabilidades,
-dependências, substituibilidade e coesão, mas não deve ser aplicado como uma coleção de
-regras mecânicas sem considerar o domínio.
-
-## Cenários, composições e comparações
-
-A árvore por domínio responde onde cada conceito pertence, mas decisões reais atravessam domínios. [Cenários e padrões de solução](cenarios/index.md) partem das restrições do ambiente, como single-node ou pequeno cluster. [Composições](composicoes/index.md) explicam como responsabilidades diferentes se conectam, como CNI + Gateway + mesh ou IaC + configuração + GitOps. [Comparações](comparacoes/index.md) colocam alternativas que disputam uma responsabilidade sob critérios comuns.
-
-Essas páginas apresentam princípios, alternativas e critérios de decisão de forma reutilizável. Uma implementação particular pode aplicar esses conhecimentos de maneiras diferentes conforme suas restrições, objetivos e contexto.
-
-## Backup e recuperação
-
-Backup começa por RPO e RTO, segue para retenção e testes de restauração e então chega às particularidades de etcd, CloudNativePG, chaves e reconstrução de cluster. A ordem é deliberada: ferramenta de backup sem objetivo de recuperação definido produz cópias, não necessariamente recuperabilidade.
-
-## Qualidade, governança e diagnóstico
-
-Padrões da Internet, fundações de software livre, linters e automação de dependências formam a camada de governança e qualidade. Diagnóstico reúne técnicas que atravessam domínios, como iperf3, tcpdump e strace.
-
-Essas páginas não substituem as páginas conceituais. Um diagnóstico com `strace`, por exemplo, fica mais útil depois que [system calls](sistemas/kernel/system-calls.md) já são compreendidas.
+Uma ferramenta não é uma categoria de primeiro nível. Keycloak aparece dentro de identidade, Tailscale dentro de conectividade privada, Cloudflare dentro de DNS ou borda e Raspberry Pi dentro de computadores de placa única. Comparações, composições, cenários e diagnósticos ficam junto do assunto que explicam.
 
 ## Como ler uma página
 

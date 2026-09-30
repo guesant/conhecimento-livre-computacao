@@ -14,8 +14,9 @@ implementar e revisar conhecimentos.
 A documentação publicada está em
 [guesant.github.io/conhecimento-livre-computacao](https://guesant.github.io/conhecimento-livre-computacao/).
 
-O conteúdo é organizado por assuntos e pode ser lido como trilha de estudo,
-consultado como referência ou usado para resolver uma tarefa específica.
+O conteúdo é organizado em uma árvore estreita e profunda, com no máximo cinco
+itens navegáveis por nível. Pode ser lido como trilha de estudo, consultado como
+referência ou usado para resolver uma tarefa específica.
 
 ## Licença
 

@@ -3,6 +3,13 @@ from pathlib import Path
 
 import yaml
 
+MAX_NAV_CHILDREN = 5
+OVERVIEW_LABELS = {"visão geral", "overview"}
+ALLOWED_COMPOUND_CATEGORIES = {
+  "Dados e comunicação",
+  "Segurança e confiabilidade",
+}
+
 
 def collect_nav_paths(node, paths):
   if isinstance(node, str):
@@ -51,12 +58,14 @@ def collect_mixed_categories(node, violations, path=()):
         non_index_pages = [
           (child_label, child_value)
           for child_label, child_value in pages
-          if Path(child_value).name != "index.md"
+          if child_label.lower() not in OVERVIEW_LABELS
+          and Path(child_value).name != "index.md"
         ]
         index_pages = [
           (child_label, child_value)
           for child_label, child_value in pages
-          if Path(child_value).name == "index.md"
+          if child_label.lower() in OVERVIEW_LABELS
+          or Path(child_value).name == "index.md"
         ]
         if has_categories and (non_index_pages or len(index_pages) > 1):
           violations.append((path + (label,), pages))
@@ -126,6 +135,26 @@ def collect_empty_entries(node, violations, path=()):
       collect_empty_entries(value, violations, path)
 
 
+def collect_wide_categories(node, violations, path=()):
+  if isinstance(node, dict):
+    for label, value in node.items():
+      if isinstance(value, list):
+        children = [child for child in value if isinstance(child, dict)]
+        navigable = [
+          child
+          for child in children
+          if next(iter(child)).lower() not in OVERVIEW_LABELS
+        ]
+        if len(navigable) > MAX_NAV_CHILDREN:
+          violations.append((path + (label,), len(navigable)))
+        collect_wide_categories(value, violations, path + (label,))
+    return
+
+  if isinstance(node, list):
+    for value in node:
+      collect_wide_categories(value, violations, path)
+
+
 def main():
   repository = Path(__file__).resolve().parent.parent
   config_path = repository / ".config" / "mkdocs.yml"
@@ -148,7 +177,8 @@ def main():
   compound_categories = sorted(
     label
     for label in category_labels
-    if "," in label or " e " in f" {label} "
+    if ("," in label or " e " in f" {label} ")
+    and label not in ALLOWED_COMPOUND_CATEGORIES
   )
   mixed_categories = []
   collect_mixed_categories(config["nav"], mixed_categories)
@@ -160,6 +190,8 @@ def main():
   collect_compound_titles(page_entries, compound_titles, docs_dir)
   empty_entries = []
   collect_empty_entries(config["nav"], empty_entries)
+  wide_categories = []
+  collect_wide_categories(config["nav"], wide_categories)
 
   if missing:
     print("nav references Markdown files that do not exist:")
@@ -189,6 +221,10 @@ def main():
   if empty_entries:
     print("nav contains empty categories or pages:")
     print("\n".join(f"  {' > '.join(path)}" for path in empty_entries))
+  if wide_categories:
+    print(f"nav categories contain more than {MAX_NAV_CHILDREN} navigable items:")
+    for path, count in wide_categories:
+      print(f"  {count}: {' > '.join(path)}")
 
   return (
     1
@@ -200,6 +236,7 @@ def main():
     or compound_pages
     or compound_titles
     or empty_entries
+    or wide_categories
     else 0
   )
 
