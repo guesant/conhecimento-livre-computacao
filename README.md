@@ -13,4 +13,4 @@ os caminhos e o histórico das páginas.
 
 ## Licença
 
-O projeto é distribuído sob a [GNU General Public License v3.0 ou posterior](LICENSE).
+O conteúdo é dedicado ao domínio público nos termos da [Unlicense](UNLICENSE).
