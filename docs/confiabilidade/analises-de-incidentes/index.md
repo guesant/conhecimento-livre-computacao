@@ -52,7 +52,7 @@ que a recuperação não era mais rápida ou segura.
 
 ## Relações com o restante da documentação
 
-Os casos devem ser lidos junto com o [runbook de resposta a incidente](https://guesant.github.io/hl-infrastructure/operacional/resposta-a-incidente/),
+Os casos devem ser lidos junto com um runbook de resposta a incidente,
 com os fundamentos de [backup](../backup/backup.md), [RPO](../backup/rpo.md)
 e [RTO](../backup/rto.md), e com os procedimentos de [teste de restauração](../backup/teste-de-restauracao.md).
 Os experimentos controlados descritos em [chaos engineering](../testes/chaos-engineering.md)

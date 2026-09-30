@@ -18,7 +18,7 @@ Dentro de uma zona, uma regra pode ser expressa de três formas. Um serviço é 
 
 Toda mudança em firewalld pode ser aplicada de formas diferentes: só na configuração em memória, que vale até o próximo reinício do serviço (runtime), ou também gravada em disco, que sobrevive a um reinício (`--permanent`). Uma regra aplicada só em runtime e nunca tornada permanente desaparece silenciosamente na próxima reinicialização da máquina, o que é uma causa comum e discreta de "a regra que eu apliquei sumiu".
 
-A separação existe justamente para tornar possível testar uma regra arriscada sem se comprometer com ela, já que um reinício desfaz o experimento. Uma automação, ao contrário de uma pessoa testando, quer o oposto, e as tarefas de firewall deste repositório escrevem sempre com `--permanent`, deixando a configuração em memória ser produzida pelo recarregamento no fim da role.
+A separação existe justamente para tornar possível testar uma regra arriscada sem se comprometer com ela, já que um reinício desfaz o experimento. Uma automação que pretende persistir uma mudança deve usar `--permanent` e recarregar a configuração de forma controlada.
 
 ## O recarregamento atômico
 
@@ -34,8 +34,8 @@ Uma ferramenta como o fail2ban não filtra pacote nenhum por conta própria: ela
 
 Numa máquina onde o firewalld já administra as regras, o backend mais coerente é um ipset que o próprio firewalld gerencia, em vez de uma regra escrita direto na tabela do kernel por fora dele. Assim as ferramentas nunca competem pela mesma configuração, e o firewalld continua sendo a única fonte da verdade sobre o que está bloqueado na máquina.
 
-É o arranjo da jaula de sshd deste node, que combina `banaction = firewallcmd-ipset` com `backend = systemd`, lendo as tentativas de login do journal em vez de um arquivo de log. Ler do journal importa num sistema onde o log de autenticação pode nem existir como arquivo separado, e o ipset importa porque guarda muitos endereços banidos numa estrutura só, consultada por uma regra única, em vez de uma regra por endereço.
+Um arranjo comum combina `banaction = firewallcmd-ipset` com `backend = systemd`, lendo as tentativas de login do journal em vez de um arquivo de log. Ler do journal importa num sistema onde o log de autenticação pode nem existir como arquivo separado, e o ipset importa porque guarda muitos endereços banidos numa estrutura só, consultada por uma regra única, em vez de uma regra por endereço.
 
 ## Continue por aqui
 
-[Modelo de ameaças](https://guesant.github.io/hl-infrastructure/arquitetura/modelo-de-ameacas/) explica por que uma zona de firewall só filtra a chain `INPUT`, e por que isso não protege uma porta exposta por um service do [Kubernetes](k3s.md) do tipo LoadBalancer ou NodePort, cujo tráfego passa pela chain `FORWARD` depois de um DNAT. A role real de firewall do hl-infrastructure está documentada em [Ansible: as roles do bootstrap](https://guesant.github.io/hl-infrastructure/arquitetura/ansible/).
+Uma zona de firewall só filtra a chain `INPUT`, e isso não protege uma porta exposta por um service do [Kubernetes](k3s.md) do tipo LoadBalancer ou NodePort, cujo tráfego passa pela chain `FORWARD` depois de um DNAT. A automação do firewall precisa considerar essa diferença entre tráfego destinado ao host e tráfego encaminhado.

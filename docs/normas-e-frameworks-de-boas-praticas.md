@@ -101,7 +101,7 @@ Um processo operacional maduro costuma conter:
 6. comunicação com usuários, clientes, autoridades e fornecedores quando aplicável;
 7. revisão sem culpa, com ações corretivas atribuídas, prazo e verificação de eficácia.
 
-O post-mortem deve explicar o sistema e as condições que permitiram o evento, não procurar um culpado conveniente. A ausência de culpa não elimina responsabilidade: ações devem ter donos, prazos e critérios verificáveis. A página [resposta a incidente](https://guesant.github.io/hl-infrastructure/operacional/resposta-a-incidente/) descreve o procedimento deste ambiente.
+O post-mortem deve explicar o sistema e as condições que permitiram o evento, não procurar um culpado conveniente. A ausência de culpa não elimina responsabilidade: ações devem ter donos, prazos e critérios verificáveis. Um runbook de resposta a incidente transforma esses critérios em procedimentos executáveis.
 
 ## Suporte ao usuário e gestão de serviços
 
@@ -207,7 +207,7 @@ Uma composição razoável para uma equipe de software pode ser:
 
 Essa composição não é um pacote obrigatório. A seleção deve considerar o tamanho da organização, o tipo de dado, o impacto do serviço, o contrato, a jurisdição, o custo de evidência e a capacidade de manter os controles. Adotar cinco frameworks sem dono e sem medição costuma produzir mais documentação, não mais segurança ou qualidade.
 
-## Relações com este repositório
+## Relações com práticas de qualidade
 
 - [Auditoria e abordagens de auditoria](auditoria-e-abordagens.md) explica sistemas, papéis, evidências, técnicas e estratégias de auditoria.
 - [Engenharia de software](engenharia-software/index.md) trata princípios e desenho de código.
@@ -216,7 +216,7 @@ Essa composição não é um pacote obrigatório. A seleção deve considerar o 
 - [Entrega e GitOps](entrega/index.md) trata reconciliação, rollout e promoção.
 - [Segurança no ciclo de vida](seguranca/appsec/seguranca-no-ciclo-de-vida.md) trata análise de segurança por etapa.
 - [Resiliência](confiabilidade/resiliencia.md) trata timeout, retry, fallback, circuit breaker e limites.
-- [Resposta a incidente](https://guesant.github.io/hl-infrastructure/operacional/resposta-a-incidente/) descreve a resposta operacional deste ambiente.
+- A resposta a incidente transforma controles e evidências em ações coordenadas durante uma falha ou ataque.
 - [Frameworks de compliance](frameworks-de-compliance.md) compara SOC 2, ISO 27001 e controles setoriais.
 
 ## Fontes primárias e referências

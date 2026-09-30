@@ -65,10 +65,10 @@ Um secret store externo compensa o serviço adicional quando a rotação de cred
 
 Integrar SOPS a um pipeline GitOps admite mais de um mecanismo de decifragem. Uma opção roda como um plugin de gerenciamento de configuração dentro do próprio `argocd-repo-server`, decifrando o arquivo no momento em que o Argo CD renderiza os manifests, antes de qualquer objeto chegar à API Kubernetes.
 
-Este cluster usa a outra opção: um operator dedicado, o sops-secrets-operator, que lê um recurso customizado já sincronizado pelo Argo CD e só então decifra o valor para escrever o `Secret` correspondente. A diferença prática está em onde a decifragem acontece, no processo que fala com o Git ou num controller que fala com a API, cada uma com sua própria superfície de configuração.
+Outra opção usa um operator dedicado, como o sops-secrets-operator, que lê um recurso customizado já sincronizado pelo Argo CD e só então decifra o valor para escrever o `Secret` correspondente. A diferença prática está em onde a decifragem acontece, no processo que fala com o Git ou num controller que fala com a API, cada uma com sua própria superfície de configuração.
 
 ## Continue por aqui
 
-Este cluster usa SOPS com age como sua única estratégia de segredos, decifrado dentro do cluster pelo sops-secrets-operator; o [modelo de ameaças](https://guesant.github.io/hl-infrastructure/arquitetura/modelo-de-ameacas/) detalha a seção "O caminho de um segredo", que mostra exatamente como um valor cifrado neste repositório chega a um Pod, e [estado fora do git](https://guesant.github.io/hl-infrastructure/operacional/estado-fora-do-git/) lista qual chave privada precisa sobreviver fora do Git para que esse fluxo continue funcionando.
+SOPS com age pode ser usado como estratégia de segredos decifrada dentro do cluster por um operator. Um modelo de ameaças deve registrar como um valor cifrado chega a um Pod e qual chave privada precisa sobreviver fora do Git para que esse fluxo continue funcionando.
 
-Para a família que este cluster não usa, veja [secret store externo](secret-store-externo.md); para o problema recorrente de como a primeira credencial de qualquer uma dessas estratégias chega ao ambiente, veja [bootstrap e rotação de segredos](bootstrap-e-rotacao-de-segredos.md).
+Para a outra família, veja [secret store externo](secret-store-externo.md); para o problema recorrente de como a primeira credencial de qualquer uma dessas estratégias chega ao ambiente, veja [bootstrap e rotação de segredos](bootstrap-e-rotacao-de-segredos.md).

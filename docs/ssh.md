@@ -16,15 +16,15 @@ Separar chaves por finalidade, em vez de reusar a mesma chave pessoal em toda au
 
 O arquivo `~/.ssh/config` permite declarar, por hospedeiro, qual chave usar, qual usuário, qual porta, e outras opções, sem precisar repetir tudo isso na linha de comando toda vez. Quem mantém esse arquivo acaba tendo, num lugar só, o mapa de quais destinos usa e com qual identidade em cada um.
 
-A contrapartida é que esse mapa passa a ser um alvo: ele não contém chave privada nenhuma, mas descreve a topologia de acesso de quem o escreveu, endereço por endereço. Uma automação que precisa das mesmas opções costuma preferir declará-las onde a própria automação vive, como o inventário do Ansible faz aqui ao guardar endereço, usuário e caminho da chave privada em `.local/operator/inventory.ini`, fora do git.
+A contrapartida é que esse mapa passa a ser um alvo: ele não contém chave privada nenhuma, mas descreve a topologia de acesso de quem o escreveu, endereço por endereço. Uma automação que precisa das mesmas opções costuma preferir declará-las onde a própria automação vive, mantendo endereços, usuários e caminhos de chave fora do Git quando contiverem informação sensível.
 
 O arquivo `~/.ssh/known_hosts` cumpre um papel diferente, de verificação em vez de conveniência: ele guarda a chave pública de cada servidor ao qual já se conectou. Na primeira conexão o cliente pergunta se aquela chave, a "impressão digital" do servidor, deve ser aceita, e da próxima vez em diante ele compara silenciosamente.
 
-Se a chave do servidor mudar sem explicação, reinstalação legítima à parte, o cliente recusa a conexão por padrão, porque isso é exatamente o sinal que um ataque de interceptação (man-in-the-middle) produziria. O elo fraco está justamente naquela primeira pergunta, que não se apoia em nada anterior, e é por isso que o [primeiro bootstrap](https://guesant.github.io/hl-infrastructure/operacional/primeiro-bootstrap/) manda comparar a impressão digital que o `ssh-keyscan` mostra com a que o próprio Pi imprime no console antes de gravar o arquivo.
+Se a chave do servidor mudar sem explicação, reinstalação legítima à parte, o cliente recusa a conexão por padrão, porque isso é exatamente o sinal que um ataque de interceptação (man-in-the-middle) produziria. O elo fraco está justamente naquela primeira pergunta, por isso a impressão digital obtida por `ssh-keyscan` deve ser comparada com uma fonte confiável antes de gravar o arquivo.
 
 A opção `IdentitiesOnly=yes` força o cliente a oferecer só a chave configurada explicitamente para aquele hospedeiro, em vez de tentar todas as chaves carregadas no agente SSH em sequência. O ganho mais óbvio é de privacidade: um servidor de destino deixa de descobrir, pela ordem de tentativas, quais outras chaves, e portanto quais outros destinos, o cliente possui.
 
-O segundo ganho é de disponibilidade, e aparece contra um servidor endurecido como este node, cujo drop-in de sshd fixa `MaxAuthTries 3`: um agente com várias chaves carregadas pode esgotar as tentativas antes de chegar à chave certa, e o login falha por contagem, não por credencial errada.
+O segundo ganho é de disponibilidade, e aparece contra um servidor endurecido cujo `sshd` fixa `MaxAuthTries 3`: um agente com várias chaves carregadas pode esgotar as tentativas antes de chegar à chave certa, e o login falha por contagem, não por credencial errada.
 
 ## O agente SSH, seu socket e o encaminhamento
 
@@ -64,8 +64,8 @@ Os quatro modos documentados em [Tunelamento de portas SSH](ssh-port-forwarding.
 
 Isso é útil para alcançar um serviço que só escuta numa rede interna, um banco de dados que não deveria estar exposto na internet, por exemplo, usando o próprio servidor SSH como ponte, sem abrir uma porta adicional exposta. O custo é que a superfície de acesso passa a depender de quem tem sessão SSH: qualquer pessoa que consiga entrar no node alcança, pelo túnel, tudo que o node alcança.
 
-Um túnel também é uma solução por sessão, que some quando a conexão cai, o que serve para depurar mas não para dar acesso permanente a alguém. Este repositório resolve o acesso permanente por outro caminho, com os nomes internos publicados pela tailnet do Tailscale, descritos em [Ingress: os nomes internos pela tailnet](https://guesant.github.io/hl-infrastructure/arquitetura/ingress/).
+Um túnel também é uma solução por sessão, que some quando a conexão cai, o que serve para depurar mas não para dar acesso permanente a alguém. Acesso permanente deve ser tratado por uma arquitetura de rede e identidade adequada ao ambiente, não por um túnel temporário mantido indefinidamente.
 
 ## Continue por aqui
 
-O modelo de ameaças deste repositório, em [Modelo de ameaças](https://guesant.github.io/hl-infrastructure/arquitetura/modelo-de-ameacas/), detalha a fronteira real entre a máquina do operador e o node via SSH, incluindo o que fica fora desse controle. A role real que aplica hardening de SSH no node está documentada em [Ansible: as roles do bootstrap](https://guesant.github.io/hl-infrastructure/arquitetura/ansible/).
+[Threat modeling](threat-modeling.md) ajuda a detalhar a fronteira entre a máquina do operador e o servidor via SSH, incluindo o que fica fora desse controle. Ferramentas de configuração podem automatizar o hardening do serviço, desde que a política e os testes sejam definidos pelo ambiente.

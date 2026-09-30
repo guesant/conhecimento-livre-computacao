@@ -2,6 +2,8 @@
 
 Esta área organiza persistência, consistência, mensageria, armazenamento e colaboração distribuída. Produtos concretos devem ser entendidos como implementações desses modelos, não como a definição da categoria.
 
+[SQL](sql/index.md) oferece uma trilha completa para bancos relacionais, dos fundamentos de definição e manipulação às consultas, funções de janela, CTEs, diferenças entre dialetos e consulta rápida.
+
 ## Categorias
 
 - [Bancos e persistência](bancos/index.md) trata modelos de consulta e estado persistido.

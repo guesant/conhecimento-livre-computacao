@@ -34,7 +34,7 @@ Essa distinção é o que permite ler uma execução inteira e saber, sem abrir 
 
 Checar antes de agir é o que permite rodar o mesmo playbook contra uma máquina nova e contra uma máquina já configurada sem medo de quebrar nada. Na prática, isso muda como se aplica uma mudança pequena: em vez de identificar o delta e aplicá-lo à mão, reexecuta-se o playbook inteiro e deixa-se que as tarefas já satisfeitas não façam nada.
 
-A idempotência não é automática, porém, e vem embutida nos módulos que descrevem estado, não em qualquer tarefa. Uma tarefa que dispara um comando cru precisa dizer ela mesma o que conta como mudança, como faz a role firewall deste repositório, que trata a resposta `ALREADY_ENABLED` do `firewall-cmd` como sinal de que a regra já estava lá.
+A idempotência não é automática, porém, e vem embutida nos módulos que descrevem estado, não em qualquer tarefa. Uma tarefa que dispara um comando cru precisa dizer ela mesma o que conta como mudança, como uma tarefa que trata a resposta `ALREADY_ENABLED` do `firewall-cmd` como sinal de que a regra já estava lá.
 
 ## Modo de verificação (`--check`)
 
@@ -110,7 +110,7 @@ Dividir um projeto em roles bem definidas, uma por responsabilidade, evita um ú
 
 Um playbook frequentemente precisa de valores sensíveis (senhas, chaves, tokens) que não devem ficar em texto claro dentro de um repositório git. O Ansible Vault resolve isso cifrando um arquivo inteiro (ou um valor dentro de um arquivo) com uma senha, de forma que o arquivo cifrado pode ser commitado com segurança e só é legível por quem tem a senha do Vault.
 
-O hl-infrastructure não usa o Vault para os próprios segredos: em vez de uma senha compartilhada, ele cifra com SOPS para um conjunto de chaves públicas age, e o arquivo cifrado também é commitado; a página [Variáveis](https://guesant.github.io/hl-infrastructure/arquitetura/variaveis/) explica essa escolha específica deste repositório.
+SOPS pode ser usado para cifrar segredos com um conjunto de chaves públicas age, mantendo o arquivo cifrado no controle de versão. A escolha entre esse modelo e um serviço externo de segredos depende dos requisitos de portabilidade, rotação e controle de acesso de cada ambiente.
 
 ## Testando roles: Molecule
 
@@ -118,7 +118,7 @@ Para quem escreve roles reutilizáveis, o Molecule é a ferramenta mais comum de
 
 Isso permite testar uma role de forma isolada e repetível, sem depender de uma máquina real ou de rodar o playbook inteiro para validar uma mudança pequena. O ganho é maior quando a role é publicada para terceiros, que a aplicarão em distribuições e versões que quem a escreveu nunca vai ver.
 
-O hl-infrastructure não usa Molecule: as roles daqui existem só para este node, e a verificação equivalente é o ansible-lint do recipe de lint deste repositório, somado a rodar o playbook com `--check --diff` contra o Pi real, que é a mesma máquina que a execução de verdade vai tocar.
+Molecule pode testar roles em ambientes efêmeros. Quando esse custo não for adequado, o `ansible-lint` combinado com a execução do playbook usando `--check --diff` oferece uma camada complementar de verificação, desde que suas limitações sejam conhecidas.
 
 ## Collections: como roles e módulos se distribuem
 
@@ -154,4 +154,4 @@ Três mecanismos reduzem o raio de impacto de um playbook antes de rodar contra 
 
 ## Continue por aqui
 
-[Ansible: as roles do bootstrap](https://guesant.github.io/hl-infrastructure/arquitetura/ansible/), na arquitetura, mostra como o hl-infrastructure aplica esses conceitos: a ordem real das roles listadas em `ansible/site.yml`, seu próprio mecanismo de gate para o modo de verificação, e como ele recupera de um conflito de campo imutável num apply de chart. O [primeiro bootstrap](https://guesant.github.io/hl-infrastructure/operacional/primeiro-bootstrap/), no operacional, é o comando real que dispara essa execução.
+O [tutorial completo de Ansible](ansible-tutorial.md) reúne práticas para estruturar, configurar, testar e executar playbooks com segurança.

@@ -83,7 +83,7 @@ Galera não é sharding. Todos os nós normalmente mantêm o mesmo conjunto de d
 - [Sharding](sharding.md) explica partições distribuídas, roteamento, rebalanço e transações entre shards.
 - [Transações e ACID](transacoes-acid.md) trata o que muda quando a transação atravessa processos ou nós.
 - [Revisões, exclusão e WAL](revisoes-exclusao-e-wal.md) explica WAL, MVCC, recuperação e limites do histórico.
-- [PostgreSQL compartilhado](https://guesant.github.io/hl-infrastructure/arquitetura/postgresql-compartilhado/) registra uma decisão específica deste repositório.
+- A escolha entre PostgreSQL compartilhado e bancos separados depende dos limites de isolamento, disponibilidade e custo de cada sistema.
 
 ## Fontes
 

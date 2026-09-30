@@ -21,9 +21,9 @@ respeitando as associações permitidas por `allowedRoutes`.
 ## Relações
 
 [Ingress](kubernetes/networking/ingress.md) continua sendo uma API válida e
-mais simples para cenários que não precisam dessa separação. [Ingress: os
-nomes internos pela tailnet](https://guesant.github.io/hl-infrastructure/arquitetura/ingress/) mostra como o
-hl-infrastructure configura a entrada do próprio ambiente.
+mais simples para cenários que não precisam dessa separação. A escolha entre
+Ingress e Gateway API depende da complexidade da topologia, do modelo de
+delegação e dos recursos oferecidos pelo controlador escolhido.
 
 ## Fontes primárias
 

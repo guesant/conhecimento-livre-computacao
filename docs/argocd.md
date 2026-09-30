@@ -13,7 +13,7 @@ responsabilidades do fluxo de entrega.
 
 ArgoCD é a implementação de GitOps mais usada para [Kubernetes](k3s.md). Ele roda dentro do próprio cluster, observa um ou mais repositórios git, e mantém o estado do cluster sincronizado com o que esses repositórios declaram. Como ele mesmo é um conjunto de pods, existe um problema de origem: alguém precisa instalá-lo antes que haja quem sincronize qualquer coisa.
 
-Neste repositório esse primeiro passo é do Ansible, que instala o Argo CD e aplica a aplicação raiz; daí em diante a raiz sincroniza tanto as aplicações filhas quanto os próprios `AppProject` que definem o que cada uma pode fazer.
+O primeiro passo precisa instalar o Argo CD e registrar uma aplicação inicial. A partir daí, essa aplicação pode sincronizar tanto aplicações filhas quanto os próprios `AppProject` que definem o que cada uma pode fazer.
 
 ## `Application` e `AppProject`
 
@@ -50,4 +50,4 @@ Isso soma uma dependência real ao ambiente (o binário do ksops precisa estar d
 
 ## Continue por aqui
 
-["GitOps: root e satélites"](https://guesant.github.io/hl-infrastructure/arquitetura/gitops-root-e-satelites/), na arquitetura, mostra como o hl-infrastructure usa exatamente esse padrão app-of-apps, com `AppProject`s de permissão bem diferente (infra e satellites), e como um satélite novo é registrado em [Adicionar um satélite novo](https://guesant.github.io/hl-infrastructure/operacional/adicionar-um-satelite/).
+O padrão app-of-apps é uma forma de organizar aplicações relacionadas, separando permissões e responsabilidades conforme as necessidades de cada ambiente.

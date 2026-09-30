@@ -28,8 +28,7 @@ integrar ao procedimento de cordon, drain, quorum e validação posterior.
 
 - [systemd timer](../systemd/timer.md) agenda tarefas periódicas.
 - [Journal persistente](journald.md) preserva evidência da execução.
-- [Manutenção de nó Kubernetes](https://guesant.github.io/hl-infrastructure/operacional/manutencao-de-no-cordon-drain-e-disco/)
-  cobre o caso de um host que participa de um cluster.
+- A manutenção de nó Kubernetes cobre o caso de um host que participa de um cluster.
 
 ## Fontes primárias
 

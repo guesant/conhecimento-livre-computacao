@@ -46,4 +46,4 @@ Publicar como `5432:5432`, sem endereço, normalmente faz bind em todas as inter
 
 ## Continue por aqui
 
-[Netfilter](rede/firewall/netfilter.md) cobre o mecanismo comum de chains e prioridade por trás desse conflito entre Docker e o firewall de host; [nftables](rede/firewall/nftables.md) explica o ruleset moderno, e [firewalld](firewalld.md) documenta como este cluster realmente configura o firewall do node, incluindo o `--permanent` e o recarregamento atômico que o UFW resolve de forma mais simples, mas menos expressiva.
+[Netfilter](rede/firewall/netfilter.md) cobre o mecanismo comum de chains e prioridade por trás desse conflito entre Docker e o firewall de host; [nftables](rede/firewall/nftables.md) explica o ruleset moderno, e [firewalld](firewalld.md) documenta como configurar regras persistentes e recarregá-las de forma atômica. O UFW resolve parte do problema de forma mais simples, mas menos expressiva.

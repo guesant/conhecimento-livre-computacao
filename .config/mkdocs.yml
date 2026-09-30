@@ -1,5 +1,5 @@
 site_name: conhecimento-livre-computacao
-site_description: Base livre de conhecimento sobre computação, sistemas e infraestrutura
+site_description: Base aberta e livre de conhecimento sobre Ciência da Computação, com tutoriais, guias, cheatsheets e referências
 site_url: https://guesant.github.io/conhecimento-livre-computacao/
 repo_url: https://github.com/guesant/conhecimento-livre-computacao
 repo_name: guesant/conhecimento-livre-computacao
@@ -42,7 +42,7 @@ extra_css:
   - overrides/extra.css
 
 nav:
-  - Aprender:
+  - Coleção:
       - Visão geral: index.md
       - Educação:
           - Visão geral: educacao-pesquisa/index.md
@@ -978,6 +978,7 @@ nav:
               - Túneis:
                   - VPN: rede/conectividade/vpn.md
                   - Túneis: rede/conectividade/tunel.md
+                  - Tailscale: rede/conectividade/tailscale.md
               - Borda:
                   - Borda de rede: rede/conectividade/borda.md
                   - WAN: rede/conectividade/wan.md
@@ -1808,6 +1809,23 @@ nav:
                       - Tipos de clone: qualidade/repositorio/clone-types.md
       - Dados:
           - Visão geral: dados/index.md
+          - SQL:
+              - Visão geral: dados/sql/index.md
+              - Fundamentos: dados/sql/fundamentos.md
+              - Manipulação de dados: dados/sql/manipulacao.md
+              - Consultas: dados/sql/consultas.md
+              - SQL avançado: dados/sql/avancado.md
+              - Funções: dados/sql/funcoes-texto-e-numericas.md
+              - Referência prática: dados/sql/referencia-pratica.md
+              - Datas: dados/sql/datas-e-horarios.md
+              - DML avançado: dados/sql/dml-avancado-e-views.md
+              - Dados estruturados: dados/sql/json-arrays-e-dados-estruturados.md
+              - Janelas: dados/sql/janelas-avancadas.md
+              - Performance: dados/sql/performance-e-explain.md
+              - Segurança: dados/sql/seguranca-e-permissoes.md
+              - Dialetos: dados/sql/dialetos.md
+              - Mapa de extensões e recursos: dados/sql/extensoes-praticas.md
+              - Cheatsheet: dados/sql/cheatsheet.md
           - Bancos:
               - Visão geral: dados/bancos/index.md
               - Persistência:

@@ -27,4 +27,4 @@ Qualidade precisa sobreviver ao deploy. Releases graduais, rollback, feature fla
 - [Testes de software](../engenharia-software/testes/index.md) organiza camadas e perguntas de teste.
 - [Observabilidade](../observabilidade/index.md) explica sinais usados para detectar e investigar comportamento.
 - [Confiabilidade](../confiabilidade/resiliencia/index.md) trata degradação, recuperação e continuidade.
-- [Checklist operacional](https://guesant.github.io/hl-infrastructure/operacional/checklist/) reúne critérios transversais de aceitação, segurança, performance e manutenção.
+- Checklists operacionais podem reunir critérios transversais de aceitação, segurança, performance e manutenção.

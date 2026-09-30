@@ -24,8 +24,7 @@ workload seja colocado em um domínio onde não deveria executar.
 - [Scheduler](../control-plane/scheduler.md) aplica a elegibilidade.
 - [DaemonSet](../core/daemonset.md) frequentemente usa tolerations para
   agentes de nó.
-- [Cordon e drain](https://guesant.github.io/hl-infrastructure/operacional/manutencao-de-no-cordon-drain-e-disco/) usam outro
-  mecanismo para manutenção voluntária.
+- Cordon e drain usam outro mecanismo para manutenção voluntária.
 
 ## Fonte primária
 

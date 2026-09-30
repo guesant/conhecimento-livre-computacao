@@ -14,4 +14,4 @@ A escolha entre esses frameworks depende da escala do problema. STRIDE é rápid
 
 ## Continue por aqui
 
-[Modelo de ameaças](https://guesant.github.io/hl-infrastructure/arquitetura/modelo-de-ameacas/), na arquitetura, é a aplicação concreta desse exercício a este cluster específico: os ativos protegidos, as fronteiras de confiança cruzadas, e o que mitiga cada travessia, na ordem inspirada por STRIDE ainda que sem nomear cada categoria explicitamente. [MITRE ATT&CK](mitre-attack.md) faz o percurso inverso, partindo do comportamento do atacante em vez dos ativos, e é o complemento natural deste exercício.
+A modelagem de ameaças aplica esse exercício a um sistema específico: os ativos protegidos, as fronteiras de confiança cruzadas e o que mitiga cada travessia, na ordem inspirada por STRIDE. [MITRE ATT&CK](mitre-attack.md) faz o percurso inverso, partindo do comportamento do atacante em vez dos ativos, e é o complemento natural deste exercício.

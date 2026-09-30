@@ -2,7 +2,7 @@
 
 Ferramentas raramente operam isoladas. Esta área explica como responsabilidades de categorias diferentes se conectam e onde existe sobreposição.
 
-Uma composição não documenta a configuração específica do `hl-infrastructure`. Ela descreve padrões reutilizáveis: quem produz, quem consome, qual interface conecta as peças, quais componentes são opcionais e quais combinações criam responsabilidades duplicadas.
+Uma composição não documenta a configuração de um ambiente específico. Ela descreve padrões reutilizáveis: quem produz, quem consome, qual interface conecta as peças, quais componentes são opcionais e quais combinações criam responsabilidades duplicadas.
 
 ## Plataforma Kubernetes
 

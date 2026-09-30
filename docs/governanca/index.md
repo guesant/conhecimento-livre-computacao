@@ -24,7 +24,7 @@ Da mesma forma, uma certificação, um selo de maturidade ou a participação em
 
 ## Relação com arquitetura e operação
 
-As páginas em Aprender descrevem conceitos e organizações de forma geral. A decisão de adotar uma fundação, um projeto ou um processo específico no `hl-infrastructure` pertence à seção [Arquitetura](https://guesant.github.io/hl-infrastructure/arquitetura/), quando existir. Os procedimentos para verificar, atualizar, promover ou recuperar componentes pertencem à seção [Operacional](https://guesant.github.io/hl-infrastructure/operacional/).
+As páginas desta coleção descrevem conceitos e organizações de forma geral. A decisão de adotar uma fundação, um projeto ou um processo específico pertence à documentação de arquitetura do ambiente que fizer essa escolha. Os procedimentos para verificar, atualizar, promover ou recuperar componentes pertencem à documentação operacional desse ambiente.
 
 Essa separação evita transformar a descrição de uma organização em uma justificativa implícita para uma decisão local. Também permite que a arquitetura do repositório evolua sem reescrever a explicação geral sobre as entidades que participam do ecossistema.
 

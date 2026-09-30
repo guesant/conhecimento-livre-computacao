@@ -61,5 +61,5 @@ falha real.
 ## Continue por aqui
 
 [Netfilter](../rede/firewall/netfilter.md) e [nftables](../rede/firewall/nftables.md) explicam o
-firewall do kernel. O [cookbook de comandos de rede e DNS](https://guesant.github.io/hl-infrastructure/referencia/comandos-de-rede-e-dns/)
-reúne a sintaxe rápida de `ping`, `ss` e `mtr`.
+firewall do kernel. Comandos como `ping`, `ss` e `mtr` ajudam a coletar evidências
+de conectividade, sockets e caminho de rede.

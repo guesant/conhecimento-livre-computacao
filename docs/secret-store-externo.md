@@ -31,7 +31,3 @@ backend externo não elimina bootstrap, backup ou recuperação. Em ambientes
 pequenos, [SOPS](seguranca/secrets/sops.md) com [age](seguranca/secrets/age.md)
 podem oferecer uma
 cadeia operacional menor.
-
-O cluster deste repositório usa SOPS com age. As alternativas desta página
-documentam conhecimento geral e não representam uma dependência da
-arquitetura atual.

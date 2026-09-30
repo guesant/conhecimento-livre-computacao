@@ -23,7 +23,7 @@ Uma política útil separa tags de release, pré-release, branch e ambiente. Ela
 - [Digest](digest.md) identifica o conteúdo de forma content-addressable.
 - [Manifesto](manifest.md) é o conteúdo que a tag resolve.
 - [Registry OCI](distribuicao/registry.md) armazena e serve essa associação.
-- [Rollout de imagens](https://guesant.github.io/hl-infrastructure/arquitetura/rollout-de-imagens/) trata a promoção no repositório deste projeto.
+- [Rollout de imagens](../entrega/rollouts/progressiva/index.md) trata estratégias para promover novas versões com segurança.
 
 ## Fonte primária
 

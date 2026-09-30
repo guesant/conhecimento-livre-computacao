@@ -55,7 +55,7 @@ Comece listando as operações, a frequência de cada operação, o tamanho dos 
 
 Uma estrutura rápida em memória pode ser inadequada quando os dados não cabem na RAM, quando a ordem precisa sobreviver a reinícios ou quando o padrão de acesso causa contenção. Da mesma forma, uma estrutura teoricamente boa pode perder para outra mais simples por causa de constantes, cache da CPU, alocações, coletor de lixo e custo de serialização.
 
-As páginas de [análise de complexidade](analise-de-complexidade.md) e [arrays fixos e dinâmicos](arrays-fixos-e-dinamicos.md) tratam esses custos em mais detalhe. A página de [livros e referências](https://guesant.github.io/hl-infrastructure/referencia/livros-e-referencias/) reúne cursos e fontes para aprofundamento.
+As páginas de [análise de complexidade](analise-de-complexidade.md) e [arrays fixos e dinâmicos](arrays-fixos-e-dinamicos.md) tratam esses custos em mais detalhe. Cursos, livros e artigos acadêmicos oferecem fontes complementares para aprofundamento.
 
 ## Fontes
 

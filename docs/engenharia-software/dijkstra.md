@@ -124,7 +124,7 @@ inconsistentes.
 
 O [arquivo de Dijkstra](https://www.cs.utexas.edu/~EWD/) resume a influência de seu trabalho
 em semáforos, mutual exclusion, deadlock, raciocínio sobre concorrência e
-self-stabilization. A documentação deste repositório também trata de
+self-stabilization. Esta coleção também trata de
 [autoestabilização](../arquitetura-aplicacoes/self-stabilization.md).
 
 ## Sistemas operacionais e linguagens

@@ -84,4 +84,4 @@ explica tabelas adicionais, a RPDB e cenários com múltiplas saídas.
 
 ## Continue por aqui
 
-[Netfilter](rede/firewall/netfilter.md) cobre o que decide se um pacote, já roteado pela lógica descrita aqui, é aceito ou descartado. [Diagnóstico de rede](diagnostico/rede.md) organiza a investigação prática. [Rede interna do cluster](rede-interna-do-cluster.md) mostra bridge, veth pair e VXLAN aplicados à CNI real deste cluster, e o [cookbook de comandos de rede e DNS](https://guesant.github.io/hl-infrastructure/referencia/comandos-de-rede-e-dns/) reúne a sintaxe rápida de diagnóstico e rota.
+[Netfilter](rede/firewall/netfilter.md) cobre o que decide se um pacote, já roteado pela lógica descrita aqui, é aceito ou descartado. [Diagnóstico de rede](diagnostico/rede.md) organiza a investigação prática. [Rede interna do cluster](rede-interna-do-cluster.md) mostra bridge, veth pair e VXLAN como componentes de uma rede de cluster, enquanto ferramentas como `ping`, `ss` e `mtr` ajudam no diagnóstico de rota.

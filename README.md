@@ -1,15 +1,21 @@
 # conhecimento-livre-computacao
 
-Base livre de conhecimento sobre computação, sistemas, redes, software,
-segurança e infraestrutura.
+Base aberta e livre de conhecimento sobre Ciência da Computação. O objetivo é
+reunir, organizar e tornar consultável o máximo possível de conhecimento útil,
+materiais e referências sobre computação, sistemas, redes, software, segurança
+e infraestrutura.
+
+O projeto reúne tutoriais, ensinamentos conceituais, guias práticos,
+cheatsheets para consulta rápida e referências para estudo e aprofundamento.
+Não é uma trilha fechada nem uma documentação de um produto específico: é um
+acervo em expansão, útil tanto para aprender quanto para pesquisar, comparar,
+implementar e revisar conhecimentos.
 
 A documentação publicada está em
 [guesant.github.io/conhecimento-livre-computacao](https://guesant.github.io/conhecimento-livre-computacao/).
 
-O conteúdo foi extraído de
-[`hl-infrastructure`](https://github.com/guesant/hl-infrastructure), onde
-originalmente vivia em `docs/aprender`. A árvore foi mantida para preservar
-os caminhos e o histórico das páginas.
+O conteúdo é organizado por assuntos e pode ser lido como trilha de estudo,
+consultado como referência ou usado para resolver uma tarefa específica.
 
 ## Licença
 

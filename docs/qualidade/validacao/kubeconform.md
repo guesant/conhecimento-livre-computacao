@@ -47,8 +47,7 @@ versão do API server.
 - [Schema validation](schema-validation.md) explica a responsabilidade do
   schema.
 - [Conftest](conftest.md) cobre regras organizacionais além da estrutura.
-- [Quality gates](https://guesant.github.io/hl-infrastructure/operacional/rodar-quality-gates-localmente/) trata
-  a execução dos gates deste repositório.
+- [CI/CD](../../ci-cd.md) relaciona validação local e execução automatizada de gates.
 
 ## Fonte primária
 

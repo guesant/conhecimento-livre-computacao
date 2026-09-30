@@ -43,4 +43,4 @@ Cada camada é uma chance de alguém interpretar o que não era seu, e o estrago
 
 ## Continue por aqui
 
-[Helm](containers/packaging/helm.md) explica o que compõe um chart e a sintaxe de template desde o início, para quem chegou aqui sem essa base. [GitOps: root e satélites](https://guesant.github.io/hl-infrastructure/arquitetura/gitops-root-e-satelites/) mostra esse padrão aplicado de verdade neste repositório, incluindo o motivo de `ApplicationSet` ter sido descartado aqui; [adicionar um satélite novo](https://guesant.github.io/hl-infrastructure/operacional/adicionar-um-satelite/) é o passo a passo operacional que usa os charts resultantes.
+[Helm](containers/packaging/helm.md) explica o que compõe um chart e a sintaxe de template desde o início, para quem chegou aqui sem essa base. O padrão app-of-apps e o recurso `ApplicationSet` podem ser estudados como formas de organizar aplicações relacionadas no Argo CD.

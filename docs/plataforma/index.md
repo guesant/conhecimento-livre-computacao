@@ -27,7 +27,7 @@ As categorias principais são workloads, rede, armazenamento, identidade/autoriz
 
 ## Continue por aqui
 
-[Distribuições Kubernetes](../comparacoes/plataforma/distribuicoes-kubernetes.md) compara formas de empacotar a plataforma. [K3s](../k3s.md) aprofunda a distribuição usada neste projeto.
+[Distribuições Kubernetes](../comparacoes/plataforma/distribuicoes-kubernetes.md) compara formas de empacotar a plataforma. [K3s](../k3s.md) aprofunda uma distribuição voltada a instalações leves.
 
 ## Nuvem e hospedagem
 

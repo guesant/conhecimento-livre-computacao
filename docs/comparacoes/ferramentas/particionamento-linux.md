@@ -139,7 +139,7 @@ Uma tabela de partições é metadado essencial, mas não é uma cópia dos dado
 
 - [GParted Live](../../sistemas/boot/gparted-live.md) explica o uso de um ambiente inicializável para editar volumes fora do sistema instalado.
 - [Ferramentas de instalação e boot](../../sistemas/boot/index.md) reúne mídias e métodos para iniciar ambientes de manutenção.
-- [Comandos de processos, disco e arquivos](https://guesant.github.io/hl-infrastructure/referencia/comandos-de-processos-disco-e-arquivos/) reúne comandos de inspeção e diagnóstico usados antes e depois do particionamento.
+- Ferramentas de processos, disco e arquivos ajudam a inspecionar o sistema antes e depois do particionamento.
 
 ## Fontes primárias
 

@@ -16,4 +16,4 @@ quadrantChart
 
 ## Continue por aqui
 
-[Categorização e organização](https://guesant.github.io/hl-infrastructure/contribuindo/categorizacao-e-organizacao/) explica como este repositório adapta essa separação nas suas próprias seções, incluindo onde e por que diverge do framework original.
+Diátaxis pode orientar a categorização e a organização de qualquer documentação, desde que a estrutura seja adaptada ao público e ao propósito do material.

@@ -295,8 +295,7 @@ Verifique usuário, chave, `become`, Python remoto, permissões, espaço em disc
 
 - [Configuração de frotas](entregar-configuracao-a-uma-frota-de-hosts.md) relaciona automação de hosts a um procedimento operacional.
 - [SSH](ssh.md) explica o canal de conexão normalmente usado pelo modo push.
-- [Variáveis da infraestrutura](https://guesant.github.io/hl-infrastructure/arquitetura/variaveis/) mostra uma decisão específica do repositório.
-- [Primeiro bootstrap](https://guesant.github.io/hl-infrastructure/operacional/primeiro-bootstrap/) é um runbook do ambiente, não um tutorial genérico de Ansible.
+- [Infraestrutura como código](iac/index.md) relaciona automação de configuração e provisionamento.
 
 ## Fontes primárias
 

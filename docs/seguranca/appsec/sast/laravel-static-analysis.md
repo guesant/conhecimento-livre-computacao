@@ -193,7 +193,7 @@ flowchart TD
 
 O diagrama é conceitual. Cada gate deve continuar executável de forma independente, para que um diagnóstico possa ser reproduzido localmente sem precisar rodar toda a CI.
 
-Neste repositório, o gate Laravel é chamado pelo recipe de verificação da aplicação. A execução passa pelo Compose para usar a mesma imagem PHP e o mesmo `vendor` que a aplicação usa. O `just check` também mantém as verificações já existentes do frontend, incluindo TypeScript, lint, regras AST, duplicação, dependências, secrets, vulnerabilidades e Semgrep automático. Ativar análise PHP não substitui esses gates do `public-app`.
+Em uma aplicação Laravel, o gate pode ser chamado por uma receita de verificação própria. A execução pode passar pelo Compose para usar a mesma imagem PHP e o mesmo `vendor` que a aplicação usa. A análise PHP deve complementar, e não substituir, as verificações do frontend, de lint, regras AST, duplicação, dependências, secrets, vulnerabilidades e Semgrep.
 
 Uma ordem prática para feedback é:
 

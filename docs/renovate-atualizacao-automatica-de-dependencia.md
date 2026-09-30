@@ -24,9 +24,9 @@ Quando uma dependência é referenciada por tag e digest juntos, a prática de p
 
 ## Checksums derivados da versão
 
-Alguns artefatos deste repositório não são referenciados como imagem com tag e digest. O instalador do K3s e os charts do Cilium e do Argo CD possuem uma versão em `ansible/group_vars/all/versions.yml` e um checksum do artefato correspondente no mesmo arquivo. O script `.tools/update-version-checksums.sh` baixa os artefatos selecionados por essas versões, calcula os checksums e compara ou atualiza os campos relacionados.
+Alguns artefatos não são referenciados como imagem com tag e digest. Um instalador ou chart pode possuir uma versão e um checksum correspondente em um arquivo de variáveis. Uma automação pode baixar o artefato selecionado, calcular o checksum e comparar ou atualizar os campos relacionados.
 
-`just version-checksums` executa a verificação sem modificar arquivos. `just version-checksums-update` recalcula e grava os valores. O Renovate executa a atualização no branch da própria proposta sempre que altera `versions.yml`, de modo que a nova versão e seu checksum entrem no mesmo pull request. O CI executa apenas a verificação e falha se os campos divergirem.
+Uma receita de verificação pode conferir os checksums sem modificar arquivos, enquanto uma receita separada recalcula e grava os valores. O Renovate pode executar a atualização no branch da própria proposta sempre que altera o arquivo de versões, de modo que a nova versão e seu checksum entrem na mesma mudança. A CI pode executar apenas a verificação e falhar se os campos divergirem.
 
 ## Continue por aqui
 

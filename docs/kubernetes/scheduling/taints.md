@@ -18,8 +18,7 @@ falha que deveria permanecer isolado.
 
 - [Tolerations](tolerations.md) expressa a permissão correspondente no Pod.
 - [Scheduler](../control-plane/scheduler.md) aplica a elegibilidade.
-- [Cordon e drain](https://guesant.github.io/hl-infrastructure/operacional/manutencao-de-no-cordon-drain-e-disco/) tratam de
-  manutenção voluntária.
+- Cordon e drain tratam de manutenção voluntária.
 
 ## Fonte primária
 

@@ -101,4 +101,4 @@ Um serviço de monitoramento externo de disponibilidade, seja um SaaS de uptime,
 
 ## Continue por aqui
 
-[Modelo de ameaças](https://guesant.github.io/hl-infrastructure/arquitetura/modelo-de-ameacas/) aplica esse mesmo raciocínio de credencial e raio de dano à arquitetura real deste repositório. [RBAC do Kubernetes](kubernetes/access/rbac.md) detalha o mecanismo que uma interface Kubernetes bem desenhada respeita em vez de contornar.
+[Threat modeling](threat-modeling.md) aplica esse mesmo raciocínio de credencial e raio de dano a qualquer arquitetura. [RBAC do Kubernetes](kubernetes/access/rbac.md) detalha o mecanismo que uma interface Kubernetes bem desenhada respeita em vez de contornar.

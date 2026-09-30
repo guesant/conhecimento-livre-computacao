@@ -21,7 +21,7 @@ Um resultado negativo também precisa ser interpretado com o contexto do teste. 
 
 [iperf3](../ferramentas/diagnostico/iperf3.md), [tcpdump](../ferramentas/diagnostico/tcpdump.md) e [strace](../ferramentas/diagnostico/strace.md) mostram as evidências necessárias quando o sintoma pode estar na rede, no transporte ou na interação entre o processo e o sistema operacional.
 
-Para um problema Kubernetes, comece pelo recurso e pelos eventos em [diagnóstico de Pod, nó, certificado e Argo CD](https://guesant.github.io/hl-infrastructure/operacional/diagnostico-de-pod-no-cluster-e-do-argocd/). Ferramentas de baixo nível devem ser usadas depois que a hipótese estiver suficientemente delimitada.
+Para um problema Kubernetes, comece pelo recurso, pelas condições e pelos eventos. Ferramentas de baixo nível devem ser usadas depois que a hipótese estiver suficientemente delimitada.
 
 ## Segurança e custo
 

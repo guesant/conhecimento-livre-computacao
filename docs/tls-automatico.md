@@ -30,7 +30,7 @@ Nenhum cliente fora da rede confia nessa CA por padrão, então ela precisa ser 
 
 ## `cmctl`: diagnosticar sem esperar o próximo ciclo de reconciliação
 
-O cert-manager expõe seu estado através dos próprios recursos que gerencia, a cadeia `Certificate`, `CertificateRequest` e os recursos de desafio ACME descrita em [Diagnóstico de Pod, nó, certificado e Argo CD](https://guesant.github.io/hl-infrastructure/operacional/diagnostico-de-pod-no-cluster-e-do-argocd/), mas inspecionar essa cadeia manualmente a cada vez é mais lento do que precisa ser.
+O cert-manager expõe seu estado através dos próprios recursos que gerencia, a cadeia `Certificate`, `CertificateRequest` e os recursos de desafio ACME. Inspecionar essa cadeia manualmente a cada vez é mais lento do que precisa ser, por isso diagnósticos devem acompanhar eventos, condições e logs do controller.
 
 `cmctl` é o cliente de linha de comando complementar ao próprio cert-manager, com atalhos específicos para isso: `cmctl status certificate` resume o estado de um certificado sem montar manualmente a consulta à cadeia inteira de recursos, e `cmctl renew` força uma tentativa de renovação imediata. Esse segundo comando serve para confirmar que a causa de uma falha já foi corrigida, sem esperar pelo próximo ciclo automático de renovação.
 
@@ -38,4 +38,4 @@ Um detalhe que vale reter para não errar a instalação: o `cmctl` versiona de 
 
 ## Continue por aqui
 
-O cert-manager entra neste cluster como `Application` de plataforma do Argo CD, sincronizada pelo root, e não por uma role própria do Ansible; veja [GitOps: root e satélites](https://guesant.github.io/hl-infrastructure/arquitetura/gitops-root-e-satelites/). O uso real dele aqui é justamente o caso de domínio interno descrito acima, para os nomes sob `guesant.internal` alcançáveis só pela tailnet: a cadeia de `ClusterIssuer` autoassinados e o certificado curinga que ela emite estão detalhados em [Ingress: os nomes internos pela tailnet](https://guesant.github.io/hl-infrastructure/arquitetura/ingress/).
+O cert-manager pode ser instalado por uma ferramenta de configuração, por GitOps ou por outro mecanismo de entrega. A escolha entre uma autoridade pública, uma autoridade privada e emissores autoassinados depende do domínio, da confiança necessária e da forma como os clientes validam o certificado.

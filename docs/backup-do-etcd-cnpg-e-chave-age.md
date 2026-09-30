@@ -30,7 +30,5 @@ corrompida, incompleta ou associada a uma rotação antiga.
 
 - [Backup](confiabilidade/backup/backup.md), [RPO](confiabilidade/backup/rpo.md) e [RTO](confiabilidade/backup/rto.md)
   define os objetivos de recuperação.
-- [Reconstrução de cluster single-node e recuperação de segredos](https://guesant.github.io/hl-infrastructure/operacional/reconstrucao-de-cluster-single-node-e-recuperacao-de-segredos/)
-  trata do cenário operacional deste ambiente.
-- [Estado fora do Git](https://guesant.github.io/hl-infrastructure/operacional/estado-fora-do-git/) lista o material
-  necessário para reconstrução.
+- A reconstrução de um cluster single-node e a recuperação de segredos exigem
+  um procedimento operacional próprio, com inventário do material necessário.

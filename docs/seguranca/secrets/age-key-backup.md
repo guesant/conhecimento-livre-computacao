@@ -20,8 +20,8 @@ por domínio de falha é mais simples do que reagir a uma exposição.
 - [age](age.md) explica o formato e o fluxo de cifragem.
 - [SOPS keyservice](sops-keyservice.md) trata da delegação de operações da
   chave privada.
-- [Estado fora do Git](https://guesant.github.io/hl-infrastructure/operacional/estado-fora-do-git/) lista o
-  material necessário para reconstrução.
+- Um plano de recuperação deve listar o material necessário para reconstruir o
+  ambiente e recuperar os segredos.
 
 ## Fonte primária
 

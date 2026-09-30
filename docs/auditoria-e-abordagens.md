@@ -238,12 +238,12 @@ Automatize coleta e comparação quando a regra for determinística. Preserve re
 - medir quantidade de findings e criar incentivo para produzir ruído;
 - declarar conformidade fora do período, produto ou ambiente efetivamente auditado.
 
-## Relações com este repositório
+## Relações com a coleção
 
 - [Normas e frameworks de boas práticas](normas-e-frameworks-de-boas-praticas.md) organiza referências de desenvolvimento, operação, incidentes, suporte e compliance.
 - [Frameworks de compliance](frameworks-de-compliance.md) compara SOC 2, ISO 27001 e padrões setoriais.
-- [Checklist de segurança](https://guesant.github.io/hl-infrastructure/arquitetura/checklist-de-seguranca/) registra controles e decisões deste ambiente.
-- [Resposta a incidente](https://guesant.github.io/hl-infrastructure/operacional/resposta-a-incidente/) descreve um procedimento operacional específico.
+- Checklists de segurança registram controles e decisões do ambiente que está sendo auditado.
+- Procedimentos de resposta a incidente devem ser definidos conforme os ativos, riscos e responsabilidades desse ambiente.
 - [Alertas acionáveis](observabilidade/alertas-acionaveis.md) relaciona telemetria a uma ação esperada.
 - [Supply chain e SBOM](seguranca/supply-chain/index.md) fornece evidências sobre componentes e artefatos.
 - [Qualidade e validação](qualidade/validacao/index.md) trata schema validation e policy as code.

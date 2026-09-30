@@ -1,8 +1,10 @@
-# Aprender
+# Conhecimento livre de computação
 
-Aprender explica conceitos, abordagens e ferramentas sem depender das decisões específicas do `hl-infrastructure`. A organização segue uma árvore de conhecimento: primeiro domínio e categoria, depois conceito ou abordagem e, por fim, implementações concretas.
+Esta é uma base aberta e livre de conhecimento. Seu objetivo é reunir, organizar e tornar consultável o máximo possível de conhecimento útil sobre Ciência da Computação, incluindo conceitos, abordagens, ferramentas, materiais e referências. O acervo reúne tutoriais, ensinamentos conceituais, guias práticos, cheatsheets para consulta rápida e fontes para estudo e aprofundamento, sem depender de uma implementação específica.
 
-A regra central é profundidade estreita. Uma página pode ser longa, mas deve aprofundar uma unidade de conhecimento. Quando ferramentas ou abordagens diferentes pertencem à mesma categoria, a categoria recebe uma página-mapa e cada assunto independente recebe endereço próprio.
+A base não é uma trilha fechada nem a documentação de um produto. Ela pode ser usada para aprender, pesquisar, comparar alternativas, implementar soluções e revisar conceitos. A organização segue uma árvore de conhecimento: primeiro domínio e categoria, depois conceito ou abordagem e, por fim, implementações concretas.
+
+A regra central é profundidade estreita. Uma página pode ser longa, mas deve aprofundar uma unidade de conhecimento. O formato depende do objetivo: tutoriais conduzem uma aprendizagem, guias orientam uma tarefa, cheatsheets condensam comandos e relações para consulta, e referências registram fatos, interfaces e fontes primárias. Quando ferramentas ou abordagens diferentes pertencem à mesma categoria, a categoria recebe uma página-mapa e cada assunto independente recebe endereço próprio.
 
 ## Educação, pesquisa e formação tecnológica
 
@@ -75,6 +77,8 @@ Segurança de CI/CD trata a pipeline como superfície própria, com [zizmor](seg
 
 [Dados e mensageria](dados/index.md) evita usar "NoSQL" ou "mensageria" como categorias finais.
 
+[SQL](dados/sql/index.md) ensina bancos relacionais por meio de fundamentos, tutoriais, consultas, exemplos, recursos avançados, diferenças entre dialetos e uma folha de consulta rápida.
+
 [Bancos chave-valor](dados/bancos/key-value.md) e [bancos de documentos](dados/bancos/documentos.md) têm modelos diferentes. [Filas](dados/mensageria/filas.md) e [event streaming](dados/mensageria/event-streaming.md) também são separados porque retenção, consumo, replay e ordenação não funcionam da mesma maneira.
 
 [Cache](dados/cache.md) trata cópias derivadas e invalidação. [Replicação](dados/replicacao.md)
@@ -104,7 +108,7 @@ regras mecânicas sem considerar o domínio.
 
 A árvore por domínio responde onde cada conceito pertence, mas decisões reais atravessam domínios. [Cenários e padrões de solução](cenarios/index.md) partem das restrições do ambiente, como single-node ou pequeno cluster. [Composições](composicoes/index.md) explicam como responsabilidades diferentes se conectam, como CNI + Gateway + mesh ou IaC + configuração + GitOps. [Comparações](comparacoes/index.md) colocam alternativas que disputam uma responsabilidade sob critérios comuns.
 
-Essas páginas não substituem Arquitetura. Elas podem concluir "sob estas premissas, este padrão tende a reduzir complexidade" de forma reutilizável; a decisão concreta de como o `hl-infrastructure` foi montado continua documentada em Arquitetura.
+Essas páginas apresentam princípios, alternativas e critérios de decisão de forma reutilizável. Uma implementação particular pode aplicar esses conhecimentos de maneiras diferentes conforme suas restrições, objetivos e contexto.
 
 ## Backup e recuperação
 
@@ -120,7 +124,7 @@ Essas páginas não substituem as páginas conceituais. Um diagnóstico com `str
 
 Páginas profundas procuram responder, quando aplicável: o que é; o que não é; como funciona; quando usar; quando não usar; exemplos; boas práticas; más práticas; falhas comuns; trade-offs; implicações de segurança e operação; alternativas; aplicações reais e fontes primárias.
 
-Exemplos em Aprender demonstram mecanismos. Passos destinados a alterar o cluster real pertencem a [Operacional](https://guesant.github.io/hl-infrastructure/operacional/). Decisões específicas deste repositório pertencem a [Arquitetura](https://guesant.github.io/hl-infrastructure/arquitetura/).
+Exemplos demonstram mecanismos e ajudam a relacionar a teoria com a prática. Procedimentos operacionais e decisões de arquitetura devem ser definidos pela documentação de cada ambiente que aplicar esses conhecimentos.
 
 ## Continue por aqui
 

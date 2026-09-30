@@ -10,4 +10,4 @@ CI/CD é geralmente pronunciado como um termo só, mas na verdade descreve prát
 
 ## Continue por aqui
 
-[A pipeline de CI](https://guesant.github.io/hl-infrastructure/arquitetura/ci/), na arquitetura, descreve os jobs paralelos que compõem a integração contínua deste repositório, listados em [ci.yml](https://github.com/guesant/hl-infrastructure/blob/main/.github/workflows/ci.yml), e por que ele para exatamente nesse ponto, sem implantação automática de si mesmo (o que muda automaticamente, via [ArgoCD](argocd.md), é o estado do cluster a partir do git, não o próprio processo de CI). ["GitOps: root e satélites"](https://guesant.github.io/hl-infrastructure/arquitetura/gitops-root-e-satelites/) explica como a convergência contínua do cluster se relaciona, e se diferencia, desses conceitos.
+[ArgoCD](argocd.md) e GitOps tratam da convergência contínua de um estado declarado, enquanto CI/CD trata da validação, construção e entrega de mudanças. A forma de combinar essas práticas deve ser escolhida conforme o produto, o ambiente e os requisitos de segurança.

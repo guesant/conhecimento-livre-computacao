@@ -12,7 +12,7 @@ A distinção mais prática ao decidir como se preparar não é qual organizaç�
 
 ## Estudo contínuo além da certificação
 
-Uma certificação valida um retrato do conhecimento num momento específico; acompanhar blogs de engenharia de empresas que efetivamente operam a escala e os problemas que este universo trata, e participar ou seguir conferências específicas da área (cloud native, DevOps, segurança de infraestrutura), é o que mantém esse conhecimento atualizado depois da prova, numa área onde uma ferramenta central pode mudar de comportamento recomendado de um ano para o outro. Um catálogo curado desse tipo de fonte tende a valer mais como um recurso vivo, atualizado fora deste repositório, do que como uma lista estática replicada aqui, sujeita a apodrecer assim que um blog muda de endereço ou uma conferência muda de nome.
+Uma certificação valida um retrato do conhecimento num momento específico; acompanhar blogs de engenharia de empresas que efetivamente operam a escala e os problemas que este universo trata, e participar ou seguir conferências específicas da área (cloud native, DevOps, segurança de infraestrutura), é o que mantém esse conhecimento atualizado depois da prova, numa área onde uma ferramenta central pode mudar de comportamento recomendado de um ano para o outro. Um catálogo curado desse tipo de fonte tende a valer mais como um recurso vivo, atualizado fora desta coleção, do que como uma lista estática replicada aqui, sujeita a apodrecer assim que um blog muda de endereço ou uma conferência muda de nome.
 
 ## Continue por aqui
 

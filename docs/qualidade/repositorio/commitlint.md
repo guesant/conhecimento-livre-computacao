@@ -34,8 +34,7 @@ qual consumidor depende da convenção.
 
 - [Manutenção de repositório](index.md) agrupa as práticas de qualidade do
   histórico e dos links.
-- [CI](https://guesant.github.io/hl-infrastructure/arquitetura/ci/) explica como os gates deste repositório são
-  encadeados.
+- [CI/CD](../../ci-cd.md) explica como validação, construção e entrega podem ser encadeadas.
 
 ## Fonte primária
 
